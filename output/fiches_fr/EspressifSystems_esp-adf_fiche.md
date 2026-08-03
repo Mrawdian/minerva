@@ -2,12 +2,18 @@
 ## EspressifSystems/esp-adf [MODIFIÉ]
 **Type :** Framework
 **Domaine :** Embarqué
-**Score de pertinence :** 73/100
-**Problème résolu :** Fournir un cadre d'application orienté produit pour le développement audio et vidéo ESP32/ESP32-S2, en abstrayant la complexité de bas niveau d'IDF. ADF v3.0 restructure le pipeline média en utilisant ESP-GMF et modularise les services (lecture audio, lecture vidéo, surveillance de batterie) appelables via Model Context Protocol.
-**Comment ça marche :** ADF v3.0 est construit sur ESP-IDF (v5.5.2+) et intègre ESP-GMF comme cadre multimédia principal. Il fournit des composants fonctionnels autonomes (playlist, gestionnaire de carte) et des services produits modulaires accessibles via MCP. Supporte le développement en C/C++, MicroPython et Arduino. L'architecture sépare les pilotes bas niveau (gérés par ESP-IDF) des services haut niveau (lecture audio/vidéo, OTA, service batterie) en mettant l'accent sur la faible empreinte mémoire et CPU.
-**Spécificité chinoise :** Espressif Systems (乐鑫, Shanghai) est le fabricant des SoCs ESP32/ESP32-S2 et maintient ce cadre officiel. Le référentiel Gitee est un miroir officiel synchronisé depuis GitHub ; aucune conformité à une norme chinoise particulière ou intégration de plateforme domestique mentionnée.
-**Équivalent occidental :** Zephyr (Linux Foundation, extensions multimédia), FreeRTOS avec bibliothèques audio (Amazon), TinyOS avec composants média
-**Maturité :** Actif (★ 72, 9 forks, mis à jour 2026-07)
+**Score de pertinence :** 74/100
+**Problème résolu :** ESP-ADF 是由乐鑫官方推出的针对 ESP32 和 ESP32-S2 系列芯片的音频开发框架。ESP-ADF 国内镜像仓库，Issues 和 PRs 请仍旧提交到 github。
+**Comment ça marche :** # Espressif Advanced Development Framework
+
+[中文版](./README_CN.md)
+
+## ⚠️ Important
+
+The `master` branch contains the new features for **ADF v3.0**, which are actively developed and **incompatible** with previous versions. For the stable ADF v2.x version, please switch to the [`release/v2.x`](https:/
+**Spécificité chinoise :** Espressif Systems (乐鑫, Shanghai) — fabricant des SoCs ESP8266/ESP32 ; miroir Gitee officiel synchronisé depuis GitHub.
+**Équivalent occidental :** Not identified
+**Maturité :** Actif (★ 72, 9 forks, mis à jour 2026-08)
 **Langue :** Bilingue CN-EN
 **Gitee :** https://gitee.com/EspressifSystems/esp-adf
 ---

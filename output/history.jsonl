@@ -1,1 +1,2 @@
 {"run": "2026-07-31T11:55:26+00:00", "build_date": "2026-07-31", "corpus_size": 105, "bootstrap": true, "new": [], "modified": [], "removed": []}
+{"run": "2026-08-03T09:23:28+00:00", "build_date": "2026-08-03", "corpus_size": 105, "bootstrap": false, "new": [], "modified": ["EspressifSystems/esp-adf", "EspressifSystems/esp-at", "EspressifSystems/esp-idf", "EspressifSystems/esp-rainmaker", "Tencent/ncnn", "alibaba/MNN", "kendryte/k230_rtos_sdk", "openLuat/LuatOS", "sophgo/bootloader-riscv", "unitreerobotics/xr_teleoperate"], "removed": []}

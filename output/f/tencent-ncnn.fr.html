@@ -4,19 +4,19 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Tencent/ncnn — Minerva (FR)</title>
-<meta name="description" content="Déployer des modèles d&#x27;apprentissage profond (PyTorch, ONNX) sur des appareils mobiles, embarqués et périphériques avec une surcharge d&#x27;exécution minimale et une latence d&#x27;inférence optimisée. Élimin…">
+<meta name="description" content="ncnn ncnn 是腾讯优图实验室首个开源项目，是一个为手机端极致优化的高性能神经网络前向计算框架">
 <link rel="icon" type="image/svg+xml" href="../favicon.svg">
-<link rel="canonical" href="https://mrawdian.github.io/minerva/f/tencent-ncnn.fr.html"><link rel="alternate" hreflang="en" href="https://mrawdian.github.io/minerva/f/tencent-ncnn.html"><link rel="alternate" hreflang="fr" href="https://mrawdian.github.io/minerva/f/tencent-ncnn.fr.html">
+<link rel="canonical" href="/f/tencent-ncnn.fr.html"><link rel="alternate" hreflang="en" href="/f/tencent-ncnn.html"><link rel="alternate" hreflang="fr" href="/f/tencent-ncnn.fr.html">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Tencent/ncnn — Minerva (FR)">
-<meta property="og:description" content="Déployer des modèles d&#x27;apprentissage profond (PyTorch, ONNX) sur des appareils mobiles, embarqués et périphériques avec une surcharge d&#x27;exécution minimale et une latence d&#x27;inférence optimisée. Élimin…">
-<meta property="og:url" content="https://mrawdian.github.io/minerva/f/tencent-ncnn.fr.html">
+<meta property="og:description" content="ncnn ncnn 是腾讯优图实验室首个开源项目，是一个为手机端极致优化的高性能神经网络前向计算框架">
+<meta property="og:url" content="/f/tencent-ncnn.fr.html">
 
 <meta property="og:site_name" content="Minerva">
 <meta property="og:locale" content="fr_FR">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Tencent/ncnn — Minerva (FR)">
-<meta name="twitter:description" content="Déployer des modèles d&#x27;apprentissage profond (PyTorch, ONNX) sur des appareils mobiles, embarqués et périphériques avec une surcharge d&#x27;exécution minimale et une latence d&#x27;inférence optimisée. Élimin…">
+<meta name="twitter:description" content="ncnn ncnn 是腾讯优图实验室首个开源项目，是一个为手机端极致优化的高性能神经网络前向计算框架">
 <style>
 :root{
   --paper:#F5F6F4; --surface:#FFFFFF; --surface-2:#FAFBF9;
@@ -174,7 +174,7 @@ aside .src:hover{background:var(--signal-2)}
   </span>
 </div></nav>
 <div class="status-line"><div class="wrap srow">
-  <span class="seg"><span class="dot"></span><span class="accent">Snapshot</span>&nbsp;· as of 2026-07-31</span>
+  <span class="seg"><span class="dot"></span><span class="accent">Snapshot</span>&nbsp;· as of 2026-08-03</span>
   <span class="seg">105 fiches</span>
   <span class="seg">reading: fiche · FR</span>
   <span class="ticks"><i></i><i></i><i></i><i></i><i></i></span>
@@ -184,35 +184,35 @@ aside .src:hover{background:var(--signal-2)}
   <div class="crumb"><a href="../index.html">Home</a><span class="sep">/</span><a href="../dashboard.html">Dashboard</a><span class="sep">/</span><a href="../dashboard.html?owner=Tencent">Tencent</a><span class="sep">/</span><span>ncnn</span><span style="margin-left:auto"><a href="tencent-ncnn.html" style="color:var(--signal);font-weight:600">EN →</a></span></div>
 
   <div class="readout" style="--dom-color:var(--d-edge);margin-top:16px">
-    <div class="rblock"><span class="rlab">Score</span><span class="rval tnum">90<span class="unit">/100</span></span></div>
-    <div class="rblock"><span class="rlab">Confiance</span><span class="rval conf">◆◆◆</span></div>
+    <div class="rblock"><span class="rlab">Score</span><span class="rval tnum">82<span class="unit">/100</span></span></div>
+    <div class="rblock"><span class="rlab">Confiance</span><span class="rval conf">◆<span class="off">◇◇</span></span></div>
     <div class="rblock"><span class="rlab">Domaine</span><span class="rval dom">Edge AI</span></div>
-    <div class="rmeta">Library · Actif</div>
+    <div class="rmeta">Framework · Actif</div>
   </div>
   <div class="rlegend"><b>score</b> = un signal de tri grossier, 0–100 (similarité sémantique au créneau embarqué/IoT/robotique/edge-AI + bonus d'activité) — une clé de tri, pas une mesure de l'écosystème · <b>marques ◆</b> = niveau de confiance (qualité des données : profondeur d'enrichissement, métadonnées, récence) — méthode dans docs/SCORING.md</div>
 
   <header class="fhead">
     <h1>Tencent/ncnn</h1>
-    <div class="tags"><span class="tag edge"><span class="d"></span>Edge AI</span><span class="tag plain">Library</span><span class="tag plain">Actif</span></div>
+    <div class="tags"><span class="tag edge"><span class="d"></span>Edge AI</span><span class="tag plain">Framework</span><span class="tag plain">Actif</span></div>
   </header>
 
   <div class="grid">
     <div class="main">
       <h2>Problème résolu</h2>
-      <p class="lede">Déployer des modèles d&#x27;apprentissage profond (PyTorch, ONNX) sur des appareils mobiles, embarqués et périphériques avec une surcharge d&#x27;exécution minimale et une latence d&#x27;inférence optimisée. Élimine la dépendance envers les frameworks lourds comme TensorFlow Lite ou CoreML en fournissant un moteur d&#x27;inférence C++ autonome avec accélération GPU ARM NEON et Vulkan.</p>
+      <p class="lede">ncnn ncnn 是腾讯优图实验室首个开源项目，是一个为手机端极致优化的高性能神经网络前向计算框架</p>
       <h2>Comment ça marche</h2>
-      <p>ncnn est un framework d&#x27;inférence C++ avec une liaison Python et une API C. Les composants principaux incluent un chargeur de modèle pour les fichiers au format `.param` et `.bin`, un moteur d&#x27;exécution CPU avec optimisations ARM NEON et planification multi-cœur, un backend GPU Vulkan optionnel, et l&#x27;outil pnnx pour convertir les modèles PyTorch et ONNX. Supporte le stockage fp16, la quantification int8 et l&#x27;enregistrement de couches personnalisées. Aucune dépendance externe BLAS, NNPACK ou runtime ; chargement de modèle avec mappage mémoire direct.</p>
+      <p>![ncnn](https://raw.githubusercontent.com/Tencent/ncnn/master/images/256-ncnn.png)</p>
       <h2>Spécificité chinoise</h2>
-      <p>Développé par le Youtu Lab de Tencent et déployé en production dans les applications Tencent (WeChat, QQ, Qzone, Pitu). Aucune intégration documentée avec les plateformes cloud chinoises ou les fournisseurs de chipsets ; la spécificité est principalement organisationnelle plutôt que basée sur l&#x27;écosystème.</p>
+      <p>Chinese open-source project</p>
       <h2 class="key">Équivalent occidental</h2>
-      <div class="keyblock"><p style="margin:0">TensorFlow Lite (Google), ONNX Runtime (Microsoft/Linux Foundation), CoreML (Apple)</p><div class="hint">← le pont qu'un annuaire ne vous donnera jamais</div></div>
+      <div class="keyblock"><p style="margin:0">Not identified</p><div class="hint">← le pont qu'un annuaire ne vous donnera jamais</div></div>
     </div>
     <aside>
-      <div class="r"><dt>Type</dt><dd>Library</dd></div>
+      <div class="r"><dt>Type</dt><dd>Framework</dd></div>
       <div class="r"><dt>Langage</dt><dd>Bilingue CN-EN</dd></div>
       <div class="r"><dt>Étoiles</dt><dd>303 ★</dd></div>
       <div class="r"><dt>Forks</dt><dd>3</dd></div>
-      <div class="r"><dt>Dernier push</dt><dd>2026-07</dd></div>
+      <div class="r"><dt>Dernier push</dt><dd>2026-08</dd></div>
       <a class="src" href="https://gitee.com/Tencent/ncnn" target="_blank" rel="noopener">Voir sur Gitee →</a>
     </aside>
   </div>
@@ -227,7 +227,7 @@ aside .src:hover{background:var(--signal-2)}
 
   <div class="nlbox">
     <h3>Cette fiche vous a été utile ?</h3>
-    <p>Recevez les fiches nouvelles et mises à jour après chaque run du corpus. Gratuit, désinscription en un clic.</p>
+    <p>Recevez chaque semaine les fiches nouvelles et mises à jour. Gratuit, désinscription en un clic.</p>
     <form class="form" onsubmit="return false">
   <input type="email" placeholder="you@email.com" disabled>
   <button class="btn btn-primary" type="button" disabled style="opacity:.55;cursor:not-allowed">S&#x27;abonner</button>

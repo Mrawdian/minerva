@@ -1,13 +1,22 @@
 ---
-## kendryte/k230_rtos_sdk
-**Type:** Board Support Package
+## kendryte/k230_rtos_sdk [MODIFIÉ]
+**Type:** RTOS
 **Domain:** Embedded
-**Relevance score:** 79/100
-**Problem solved:** Provide a complete SDK and build environment for the Kendryte K230 SoC running RT-Smart RTOS, enabling developers to compile custom firmware and deploy embedded applications without relying on proprietary toolchains.
-**How it works:** The SDK integrates the RT-Smart real-time operating system with the K230 chipset, offering a GCC-based toolchain for cross-compilation on Ubuntu 20.04/22.04 LTS or via Docker. It includes MicroPython bindings (CanMV_K230) for rapid prototyping, firmware image generation in gzip format, and flashing utilities for Linux (dd) and Windows. Daily builds and stable releases are distributed as pre-compiled images.
-**Chinese specificity:** Developed and maintained by Kendryte (嘉楠捷思), a Chinese AI chip vendor; the K230 is a proprietary Kendryte SoC. The project is hosted on both Gitee and GitHub, with technical support and resource distribution through Kendryte's official developer portal.
-**Western equivalent:** Zephyr SDK (Linux Foundation), ESP-IDF (Espressif), NuttX with board ports
-**Maturity:** Active (★ 15, 15 forks, updated 2026-07)
+**Relevance score:** 50/100
+**Problem solved:** Information not available
+**How it works:** # K230 RTOS Only SDK 开发指南
+
+## 概述
+
+K230 RTOS Only SDK 是基于K230芯片和RT-Smart实时操作系统的软件开发套件，提供完整的开发环境和工具链，帮助开发者快速构建嵌入式应用。CanMV_K230项目是本SDK的典型应用案例，通过MicroPython框架简化了硬件评估和原型开发流程。
+
+## 获取镜像
+
+### 每日构建版本
+- **下载地址**: [Daily Build镜像](https://kendryte-download.canaan-creative.com/developer/releases/canmv_k230_micro
+**Chinese specificity:** Chinese open-source project
+**Western equivalent:** Not identified
+**Maturity:** Active (★ 15, 15 forks, updated 2026-08)
 **Language:** Bilingual CN-EN
 **GitHub:** https://github.com/kendryte/k230_rtos_sdk
 ---

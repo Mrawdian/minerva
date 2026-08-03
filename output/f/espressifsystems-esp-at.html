@@ -4,19 +4,19 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>EspressifSystems/esp-at — Minerva</title>
-<meta name="description" content="Provide a standardized AT command interface for Espressif ESP32/ESP8266 SoCs to enable host microcontrollers to control wireless connectivity (WiFi, Bluetooth, cellular) without implementing full net…">
+<meta name="description" content="ESP-AT 是乐鑫官方基于 ESP-IDF 和 ESP8266-RTOS-SDK 推出的 AT 应用框架，可支持 ESP8266、ESP32、ESP32-S2。ESP-AT 国内镜像仓库。">
 <link rel="icon" type="image/svg+xml" href="../favicon.svg">
-<link rel="canonical" href="https://mrawdian.github.io/minerva/f/espressifsystems-esp-at.html"><link rel="alternate" hreflang="fr" href="https://mrawdian.github.io/minerva/f/espressifsystems-esp-at.fr.html"><link rel="alternate" hreflang="en" href="https://mrawdian.github.io/minerva/f/espressifsystems-esp-at.html">
+<link rel="canonical" href="/f/espressifsystems-esp-at.html"><link rel="alternate" hreflang="fr" href="/f/espressifsystems-esp-at.fr.html"><link rel="alternate" hreflang="en" href="/f/espressifsystems-esp-at.html">
 <meta property="og:type" content="article">
 <meta property="og:title" content="EspressifSystems/esp-at — Minerva">
-<meta property="og:description" content="Provide a standardized AT command interface for Espressif ESP32/ESP8266 SoCs to enable host microcontrollers to control wireless connectivity (WiFi, Bluetooth, cellular) without implementing full net…">
-<meta property="og:url" content="https://mrawdian.github.io/minerva/f/espressifsystems-esp-at.html">
+<meta property="og:description" content="ESP-AT 是乐鑫官方基于 ESP-IDF 和 ESP8266-RTOS-SDK 推出的 AT 应用框架，可支持 ESP8266、ESP32、ESP32-S2。ESP-AT 国内镜像仓库。">
+<meta property="og:url" content="/f/espressifsystems-esp-at.html">
 
 <meta property="og:site_name" content="Minerva">
 <meta property="og:locale" content="en_US">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="EspressifSystems/esp-at — Minerva">
-<meta name="twitter:description" content="Provide a standardized AT command interface for Espressif ESP32/ESP8266 SoCs to enable host microcontrollers to control wireless connectivity (WiFi, Bluetooth, cellular) without implementing full net…">
+<meta name="twitter:description" content="ESP-AT 是乐鑫官方基于 ESP-IDF 和 ESP8266-RTOS-SDK 推出的 AT 应用框架，可支持 ESP8266、ESP32、ESP32-S2。ESP-AT 国内镜像仓库。">
 <style>
 :root{
   --paper:#F5F6F4; --surface:#FFFFFF; --surface-2:#FAFBF9;
@@ -174,7 +174,7 @@ aside .src:hover{background:var(--signal-2)}
   </span>
 </div></nav>
 <div class="status-line"><div class="wrap srow">
-  <span class="seg"><span class="dot"></span><span class="accent">Snapshot</span>&nbsp;· as of 2026-07-31</span>
+  <span class="seg"><span class="dot"></span><span class="accent">Snapshot</span>&nbsp;· as of 2026-08-03</span>
   <span class="seg">105 fiches</span>
   <span class="seg">reading: fiche</span>
   <span class="ticks"><i></i><i></i><i></i><i></i><i></i></span>
@@ -183,51 +183,51 @@ aside .src:hover{background:var(--signal-2)}
 <div class="wrap">
   <div class="crumb"><a href="../index.html">Home</a><span class="sep">/</span><a href="../dashboard.html">Dashboard</a><span class="sep">/</span><a href="../dashboard.html?owner=EspressifSystems">EspressifSystems</a><span class="sep">/</span><span>esp-at</span><span style="margin-left:auto"><a href="espressifsystems-esp-at.fr.html" style="color:var(--signal);font-weight:600">FR →</a></span></div>
 
-  <div class="readout" style="--dom-color:var(--d-iot);margin-top:16px">
-    <div class="rblock"><span class="rlab">Score</span><span class="rval tnum">84<span class="unit">/100</span></span></div>
-    <div class="rblock"><span class="rlab">Confidence</span><span class="rval conf">◆◆◆</span></div>
-    <div class="rblock"><span class="rlab">Domain</span><span class="rval dom">IoT</span></div>
+  <div class="readout" style="--dom-color:var(--d-emb);margin-top:16px">
+    <div class="rblock"><span class="rlab">Score</span><span class="rval tnum">73<span class="unit">/100</span></span></div>
+    <div class="rblock"><span class="rlab">Confidence</span><span class="rval conf">◆<span class="off">◇◇</span></span></div>
+    <div class="rblock"><span class="rlab">Domain</span><span class="rval dom">Embedded</span></div>
     <div class="rmeta">Framework · Active</div>
   </div>
   <div class="rlegend"><b>score</b> = a coarse triage signal, 0–100 (semantic similarity to the embedded/IoT/robotics/edge-AI wedge + activity bonuses) — a sort key, not a measurement of the ecosystem · <b>◆ marks</b> = confidence tier (data-quality: enrichment depth, metadata, recency) — method in docs/SCORING.md</div>
 
   <header class="fhead">
     <h1>EspressifSystems/esp-at</h1>
-    <div class="tags"><span class="tag iot"><span class="d"></span>IoT</span><span class="tag plain">Framework</span><span class="tag plain">Active</span></div>
+    <div class="tags"><span class="tag emb"><span class="d"></span>Embedded</span><span class="tag plain">Framework</span><span class="tag plain">Active</span></div>
   </header>
 
   <div class="grid">
     <div class="main">
       <h2>Problem solved</h2>
-      <p class="lede">Provide a standardized AT command interface for Espressif ESP32/ESP8266 SoCs to enable host microcontrollers to control wireless connectivity (WiFi, Bluetooth, cellular) without implementing full network stacks, reducing firmware complexity on resource-constrained platforms.</p>
+      <p class="lede">ESP-AT 是乐鑫官方基于 ESP-IDF 和 ESP8266-RTOS-SDK 推出的 AT 应用框架，可支持 ESP8266、ESP32、ESP32-S2。ESP-AT 国内镜像仓库。</p>
       <h2>How it works</h2>
-      <p>ESP-AT is a firmware framework built on ESP-IDF and ESP8266-RTOS-SDK that runs on Espressif SoCs (ESP32, ESP32-C2, ESP32-C3, ESP32-C5, ESP32-C6, ESP32-C61, ESP32-S2) and exposes AT command sets for WiFi, Bluetooth, and TCP/IP operations. The host communicates via UART or SPI using text-based AT commands and receives structured responses. The framework includes built-in command handlers, customizable user-defined AT commands, and pre-compiled firmware binaries for each chip variant. Development targets Windows, Linux, and macOS.</p>
+      <p># ESP-AT</p>
       <h2>Chinese specificity</h2>
-      <p>Espressif Systems (Shanghai) is the manufacturer of ESP32/ESP8266 SoCs and maintains this as an official project; the Gitee repository is an official domestic mirror synchronized from GitHub. No integration with Chinese cloud platforms (Baidu, Alibaba, Tencent) or WeChat/Alipay APIs is evident in the provided context.</p>
+      <p>Espressif Systems (乐鑫, Shanghai) — fabricant des SoCs ESP8266/ESP32 ; miroir Gitee officiel synchronisé depuis GitHub.</p>
       <h2 class="key">Western equivalent</h2>
-      <div class="keyblock"><p style="margin:0">Arduino AT library (for Arduino boards), Quectel AT command framework (for cellular modules), u-blox AT command sets (for GNSS/cellular modules)</p><div class="hint">← the bridge a directory never gives you</div></div>
+      <div class="keyblock"><p style="margin:0">Not identified</p><div class="hint">← the bridge a directory never gives you</div></div>
     </div>
     <aside>
       <div class="r"><dt>Type</dt><dd>Framework</dd></div>
       <div class="r"><dt>Language</dt><dd>Bilingual CN-EN</dd></div>
       <div class="r"><dt>Stars</dt><dd>50 ★</dd></div>
       <div class="r"><dt>Forks</dt><dd>4</dd></div>
-      <div class="r"><dt>Last push</dt><dd>2026-07</dd></div>
+      <div class="r"><dt>Last push</dt><dd>2026-08</dd></div>
       <a class="src" href="https://gitee.com/EspressifSystems/esp-at" target="_blank" rel="noopener">View on Gitee →</a>
     </aside>
   </div>
 
-  <section class="related"><div class="lbl">Other fiches in IoT</div>
-    <div class="rel-grid"><a class="rc" href="espressifsystems-esp-iot-bridge.html"><div class="t"><span class="s tnum">★ 79</span><span class="tag iot"><span class="d"></span>IoT</span></div>
-  <h4>EspressifSystems/esp-iot-bridge</h4><p>Enable ESP32 and similar Espressif SoCs to bridge multiple network interfaces (Wi-Fi, Ethernet, USB, SPI, SDIO) and act as network gateways or wireless/wired network adapters, supporting use cases such as Wi-Fi routers, cellular hotspots, and network interface emulation for PCs and MCUs.</p></a>
-<a class="rc" href="alibaba-alios-things.html"><div class="t"><span class="s tnum">★ 75</span><span class="tag iot"><span class="d"></span>IoT</span></div>
-  <h4>alibaba/AliOS-Things</h4><p>Provide a scalable and modular real-time operating system specifically designed for IoT devices with limited resources, supporting multiple CPU architectures and natively integrating network connectivity and security.</p></a>
-<a class="rc" href="espressifsystems-esp-rainmaker.html"><div class="t"><span class="s tnum">★ 75</span><span class="tag iot"><span class="d"></span>IoT</span></div>
-  <h4>EspressifSystems/esp-rainmaker</h4><p>Enables remote control and monitoring of ESP32-based IoT devices without manual cloud configuration. Provides a firmware agent that automatically handles device claiming, cloud connectivity, and dynamic UI rendering on mobile clients.</p></a></div></section>
+  <section class="related"><div class="lbl">Other fiches in Embedded</div>
+    <div class="rel-grid"><a class="rc" href="espressifsystems-esp-adf.html"><div class="t"><span class="s tnum">★ 74</span><span class="tag emb"><span class="d"></span>Embedded</span></div>
+  <h4>EspressifSystems/esp-adf</h4><p>ESP-ADF 是由乐鑫官方推出的针对 ESP32 和 ESP32-S2 系列芯片的音频开发框架。ESP-ADF 国内镜像仓库，Issues 和 PRs 请仍旧提交到 github。</p></a>
+<a class="rc" href="openluat-luatos.html"><div class="t"><span class="s tnum">★ 72</span><span class="tag emb"><span class="d"></span>Embedded</span></div>
+  <h4>openLuat/LuatOS</h4><p>Powerful embedded Lua Engine for loT devices, withmany components</p></a>
+<a class="rc" href="rtthread-rsoc-rtt.html"><div class="t"><span class="s tnum">★ 75</span><span class="tag emb"><span class="d"></span>Embedded</span></div>
+  <h4>rtthread/rsoc-rtt</h4><p>Organize and centralize pedagogical notes and practical work of trainees in the RT-Thread summer program across different embedded hardware platforms.</p></a></div></section>
 
   <div class="nlbox">
     <h3>Enjoyed this fiche?</h3>
-    <p>Get the flagship new &amp; updated fiches after each corpus run. Free, unsubscribe in one click.</p>
+    <p>Get the flagship new &amp; updated fiches every week. Free, unsubscribe in one click.</p>
     <form class="form" onsubmit="return false">
   <input type="email" placeholder="you@email.com" disabled>
   <button class="btn btn-primary" type="button" disabled style="opacity:.55;cursor:not-allowed">Subscribe</button>

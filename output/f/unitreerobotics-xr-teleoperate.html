@@ -4,19 +4,19 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>unitreerobotics/xr_teleoperate — Minerva</title>
-<meta name="description" content="Enable real-time teleoperation of Unitree humanoid robots (H2, R1, G1 series) from XR headsets (Apple Vision Pro, Meta Quest, PICO) by mapping hand/arm pose from XR controllers to robot joint command…">
+<meta name="description" content="This repository implements teleoperation of the Unitree humanoid robot using XR Devices.">
 <link rel="icon" type="image/svg+xml" href="../favicon.svg">
-<link rel="canonical" href="https://mrawdian.github.io/minerva/f/unitreerobotics-xr-teleoperate.html"><link rel="alternate" hreflang="fr" href="https://mrawdian.github.io/minerva/f/unitreerobotics-xr-teleoperate.fr.html"><link rel="alternate" hreflang="en" href="https://mrawdian.github.io/minerva/f/unitreerobotics-xr-teleoperate.html">
+<link rel="canonical" href="/f/unitreerobotics-xr-teleoperate.html"><link rel="alternate" hreflang="fr" href="/f/unitreerobotics-xr-teleoperate.fr.html"><link rel="alternate" hreflang="en" href="/f/unitreerobotics-xr-teleoperate.html">
 <meta property="og:type" content="article">
 <meta property="og:title" content="unitreerobotics/xr_teleoperate — Minerva">
-<meta property="og:description" content="Enable real-time teleoperation of Unitree humanoid robots (H2, R1, G1 series) from XR headsets (Apple Vision Pro, Meta Quest, PICO) by mapping hand/arm pose from XR controllers to robot joint command…">
-<meta property="og:url" content="https://mrawdian.github.io/minerva/f/unitreerobotics-xr-teleoperate.html">
+<meta property="og:description" content="This repository implements teleoperation of the Unitree humanoid robot using XR Devices.">
+<meta property="og:url" content="/f/unitreerobotics-xr-teleoperate.html">
 
 <meta property="og:site_name" content="Minerva">
 <meta property="og:locale" content="en_US">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="unitreerobotics/xr_teleoperate — Minerva">
-<meta name="twitter:description" content="Enable real-time teleoperation of Unitree humanoid robots (H2, R1, G1 series) from XR headsets (Apple Vision Pro, Meta Quest, PICO) by mapping hand/arm pose from XR controllers to robot joint command…">
+<meta name="twitter:description" content="This repository implements teleoperation of the Unitree humanoid robot using XR Devices.">
 <style>
 :root{
   --paper:#F5F6F4; --surface:#FFFFFF; --surface-2:#FAFBF9;
@@ -174,7 +174,7 @@ aside .src:hover{background:var(--signal-2)}
   </span>
 </div></nav>
 <div class="status-line"><div class="wrap srow">
-  <span class="seg"><span class="dot"></span><span class="accent">Snapshot</span>&nbsp;· as of 2026-07-31</span>
+  <span class="seg"><span class="dot"></span><span class="accent">Snapshot</span>&nbsp;· as of 2026-08-03</span>
   <span class="seg">105 fiches</span>
   <span class="seg">reading: fiche</span>
   <span class="ticks"><i></i><i></i><i></i><i></i><i></i></span>
@@ -184,50 +184,50 @@ aside .src:hover{background:var(--signal-2)}
   <div class="crumb"><a href="../index.html">Home</a><span class="sep">/</span><a href="../dashboard.html">Dashboard</a><span class="sep">/</span><a href="../dashboard.html?owner=unitreerobotics">unitreerobotics</a><span class="sep">/</span><span>xr_teleoperate</span><span style="margin-left:auto"><a href="unitreerobotics-xr-teleoperate.fr.html" style="color:var(--signal);font-weight:600">FR →</a></span></div>
 
   <div class="readout" style="--dom-color:var(--d-rob);margin-top:16px">
-    <div class="rblock"><span class="rlab">Score</span><span class="rval tnum">88<span class="unit">/100</span></span></div>
-    <div class="rblock"><span class="rlab">Confidence</span><span class="rval conf">◆◆◆</span></div>
+    <div class="rblock"><span class="rlab">Score</span><span class="rval tnum">78<span class="unit">/100</span></span></div>
+    <div class="rblock"><span class="rlab">Confidence</span><span class="rval conf">◆<span class="off">◇◇</span></span></div>
     <div class="rblock"><span class="rlab">Domain</span><span class="rval dom">Robotics</span></div>
-    <div class="rmeta">Application · Stable</div>
+    <div class="rmeta">Library · Stable</div>
   </div>
   <div class="rlegend"><b>score</b> = a coarse triage signal, 0–100 (semantic similarity to the embedded/IoT/robotics/edge-AI wedge + activity bonuses) — a sort key, not a measurement of the ecosystem · <b>◆ marks</b> = confidence tier (data-quality: enrichment depth, metadata, recency) — method in docs/SCORING.md</div>
 
   <header class="fhead">
     <h1>unitreerobotics/xr_teleoperate</h1>
-    <div class="tags"><span class="tag rob"><span class="d"></span>Robotics</span><span class="tag plain">Application</span><span class="tag plain">Stable</span></div>
+    <div class="tags"><span class="tag rob"><span class="d"></span>Robotics</span><span class="tag plain">Library</span><span class="tag plain">Stable</span></div>
   </header>
 
   <div class="grid">
     <div class="main">
       <h2>Problem solved</h2>
-      <p class="lede">Enable real-time teleoperation of Unitree humanoid robots (H2, R1, G1 series) from XR headsets (Apple Vision Pro, Meta Quest, PICO) by mapping hand/arm pose from XR controllers to robot joint commands via a Python-based control stack.</p>
+      <p class="lede">This repository implements teleoperation of the Unitree humanoid robot using XR Devices.</p>
       <h2>How it works</h2>
-      <p>The system runs on Ubuntu 20.04/22.04 with a Python 3.10 conda environment, using pinocchio for inverse kinematics and unitree_sdk2_python for robot communication. Core modules include teleimager (vision/pose estimation), teleop_hand_and_arm.py (main control loop), and support for multiple input modes (hand tracking, BrainCo controller). Supports both hardware robots and Isaac Lab simulation with configurable end-effectors (dex3, dex5) and arm types (G1_29, G1_23, H2, R1_A5, R1_A7).</p>
+      <p>&lt;div align=&quot;center&quot;&gt;</p>
       <h2>Chinese specificity</h2>
-      <p>Hosted on GitHub by unitreerobotics (Unitree Robotics, a Chinese humanoid robot manufacturer); the project is tightly coupled to Unitree&#x27;s proprietary robot models and SDK ecosystem, with no broader Chinese standards or chipset vendor integration evident.</p>
+      <p>Chinese open-source project</p>
       <h2 class="key">Western equivalent</h2>
-      <div class="keyblock"><p style="margin:0">OpenTeleVision (open-source teleoperation framework), Boston Dynamics&#x27; Spot teleoperation APIs (proprietary), Shadow Robot teleoperation stack</p><div class="hint">← the bridge a directory never gives you</div></div>
+      <div class="keyblock"><p style="margin:0">Not identified</p><div class="hint">← the bridge a directory never gives you</div></div>
     </div>
     <aside>
-      <div class="r"><dt>Type</dt><dd>Application</dd></div>
+      <div class="r"><dt>Type</dt><dd>Library</dd></div>
       <div class="r"><dt>Language</dt><dd>Bilingual CN-EN</dd></div>
-      <div class="r"><dt>Stars</dt><dd>1 585 ★</dd></div>
-      <div class="r"><dt>Forks</dt><dd>306</dd></div>
-      <div class="r"><dt>Last push</dt><dd>2026-07</dd></div>
+      <div class="r"><dt>Stars</dt><dd>1 587 ★</dd></div>
+      <div class="r"><dt>Forks</dt><dd>309</dd></div>
+      <div class="r"><dt>Last push</dt><dd>2026-08</dd></div>
       <a class="src" href="https://github.com/unitreerobotics/xr_teleoperate" target="_blank" rel="noopener">View on GitHub →</a>
     </aside>
   </div>
 
   <section class="related"><div class="lbl">Other fiches in Robotics</div>
-    <div class="rel-grid"><a class="rc" href="unitreerobotics-unitree-ros.html"><div class="t"><span class="s tnum">★ 94</span><span class="tag rob"><span class="d"></span>Robotics</span></div>
-  <h4>unitreerobotics/unitree_ros</h4><p>Provide ROS packages for simulation and low-level control (torque, position, angular velocity) of joint articulations for Unitree quadruped and humanoid robots (A1, B1, B2, G1, GO1, GO2, H1, H2, R1, Z1, etc.) via Gazebo, as well as a control interface compatible with real robots via unitree_ros_to_real.</p></a>
-<a class="rc" href="unitreerobotics-unitree-sim-isaaclab.html"><div class="t"><span class="s tnum">★ 81</span><span class="tag rob"><span class="d"></span>Robotics</span></div>
+    <div class="rel-grid"><a class="rc" href="unitreerobotics-unitree-sim-isaaclab.html"><div class="t"><span class="s tnum">★ 81</span><span class="tag rob"><span class="d"></span>Robotics</span></div>
   <h4>unitreerobotics/unitree_sim_isaaclab</h4><p>Provide a DDS-based simulation environment for Unitree humanoid robots (G1, H1-2) that mirrors real-robot communication protocols, enabling offline task learning, dataset generation, and algorithm validation without hardware access.</p></a>
 <a class="rc" href="unitreerobotics-unitree-rl-lab.html"><div class="t"><span class="s tnum">★ 75</span><span class="tag rob"><span class="d"></span>Robotics</span></div>
-  <h4>unitreerobotics/unitree_rl_lab</h4><p>Provide reinforcement learning training environments for Unitree quadruped and humanoid robots (Go2, H1, G1-29dof) integrated with NVIDIA&#x27;s IsaacLab simulator, enabling sim-to-sim and sim-to-real policy transfer without proprietary training frameworks.</p></a></div></section>
+  <h4>unitreerobotics/unitree_rl_lab</h4><p>Provide reinforcement learning training environments for Unitree quadruped and humanoid robots (Go2, H1, G1-29dof) integrated with NVIDIA&#x27;s IsaacLab simulator, enabling sim-to-sim and sim-to-real policy transfer without proprietary training frameworks.</p></a>
+<a class="rc" href="unitreerobotics-unitree-rl-mjlab.html"><div class="t"><span class="s tnum">★ 74</span><span class="tag rob"><span class="d"></span>Robotics</span></div>
+  <h4>unitreerobotics/unitree_rl_mjlab</h4><p>Provide a lightweight, modular reinforcement learning framework for training and deploying locomotion policies on Unitree quadruped and humanoid robots using MuJoCo physics simulation, with direct sim-to-real transfer via ONNX export.</p></a></div></section>
 
   <div class="nlbox">
     <h3>Enjoyed this fiche?</h3>
-    <p>Get the flagship new &amp; updated fiches after each corpus run. Free, unsubscribe in one click.</p>
+    <p>Get the flagship new &amp; updated fiches every week. Free, unsubscribe in one click.</p>
     <form class="form" onsubmit="return false">
   <input type="email" placeholder="you@email.com" disabled>
   <button class="btn btn-primary" type="button" disabled style="opacity:.55;cursor:not-allowed">Subscribe</button>

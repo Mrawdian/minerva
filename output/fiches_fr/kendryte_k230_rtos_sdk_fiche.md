@@ -1,13 +1,22 @@
 ---
-## kendryte/k230_rtos_sdk
-**Type :** Board Support Package
+## kendryte/k230_rtos_sdk [MODIFIÉ]
+**Type :** RTOS
 **Domaine :** Embarqué
-**Score de pertinence :** 79/100
-**Problème résolu :** Fournir un SDK complet et un environnement de compilation pour le SoC Kendryte K230 exécutant le RTOS RT-Smart, permettant aux développeurs de compiler des micrologiciels personnalisés et de déployer des applications embarquées sans dépendre de chaînes d'outils propriétaires.
-**Comment ça marche :** Le SDK intègre le système d'exploitation temps réel RT-Smart avec le chipset K230, offrant une chaîne d'outils basée sur GCC pour la compilation croisée sur Ubuntu 20.04/22.04 LTS ou via Docker. Il inclut des liaisons MicroPython (CanMV_K230) pour le prototypage rapide, la génération d'images micrologicielles au format gzip, et des utilitaires de programmation pour Linux (dd) et Windows. Les compilations quotidiennes et les versions stables sont distribuées sous forme d'images précompilées.
-**Spécificité chinoise :** Développé et maintenu par Kendryte (嘉楠捷思), un fournisseur chinois de puces IA ; le K230 est un SoC propriétaire Kendryte. Le projet est hébergé sur Gitee et GitHub, avec support technique et distribution de ressources via le portail développeur officiel de Kendryte.
-**Équivalent occidental :** Zephyr SDK (Linux Foundation), ESP-IDF (Espressif), NuttX avec ports de cartes
-**Maturité :** Actif (★ 15, 15 forks, mis à jour 2026-07)
+**Score de pertinence :** 50/100
+**Problème résolu :** Information not available
+**Comment ça marche :** # K230 RTOS Only SDK 开发指南
+
+## 概述
+
+K230 RTOS Only SDK 是基于K230芯片和RT-Smart实时操作系统的软件开发套件，提供完整的开发环境和工具链，帮助开发者快速构建嵌入式应用。CanMV_K230项目是本SDK的典型应用案例，通过MicroPython框架简化了硬件评估和原型开发流程。
+
+## 获取镜像
+
+### 每日构建版本
+- **下载地址**: [Daily Build镜像](https://kendryte-download.canaan-creative.com/developer/releases/canmv_k230_micro
+**Spécificité chinoise :** Chinese open-source project
+**Équivalent occidental :** Not identified
+**Maturité :** Actif (★ 15, 15 forks, mis à jour 2026-08)
 **Langue :** Bilingue CN-EN
 **GitHub :** https://github.com/kendryte/k230_rtos_sdk
 ---

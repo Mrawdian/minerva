@@ -1,13 +1,24 @@
 ---
 ## EspressifSystems/esp-idf [MODIFIÉ]
 **Type :** Framework
-**Domaine :** Embarqué
-**Score de pertinence :** 94/100
-**Problème résolu :** Fournir un framework de développement unifié et un système de compilation pour les SoCs Espressif ESP32 et ESP32-S2, incluant le bootloader, la génération de table de partitions et l'abstraction matérielle sur les plateformes hôtes Windows, Linux et macOS.
-**Comment ça marche :** ESP-IDF est un framework de compilation basé sur CMake écrit en C/C++ avec des outils Python (CLI idf.py). Il inclut FreeRTOS comme noyau RTOS, les pilotes HAL pour les périphériques (GPIO, SPI, I2C, UART, WiFi, BLE), la gestion de la table de partitions et le support des mises à jour OTA. Le framework utilise les sous-modules git pour gérer les dépendances et fournit menuconfig pour la configuration du projet. Les cibles supportées incluent ESP32, ESP32-S2 et les anciens ESP8266/ESP8285 via un SDK RTOS séparé.
-**Spécificité chinoise :** Espressif Systems (乐鑫, Shanghai) est le fabricant des SoCs ESP32/ESP32-S2 et maintient ce framework officiel. Le référentiel Gitee est un miroir officiel synchronisé quotidiennement depuis GitHub ; aucune norme ou intégration spécifique à la Chine n'est évidente au-delà de l'origine du fournisseur.
-**Équivalent occidental :** Arduino IDE (pour les cartes ESP32), Zephyr RTOS (Linux Foundation), PlatformIO (développement embarqué multiplateforme)
-**Maturité :** Stable (★ 877, 390 forks, mis à jour 2026-07)
+**Domaine :** Edge AI
+**Score de pertinence :** 89/100
+**Problème résolu :** ESP-IDF 是由乐鑫官方推出的针对 ESP32 和 ESP32-S2 系列芯片的开发框架。ESP-IDF 国内镜像仓库，Issues 和 PRs 请仍旧提交到 github。
+重要：Gitee 中 ESP-IDF 仓库的使用，请先参看 https://gitee.com/EspressifSystems/esp-gitee-tools 中的说明文档。ESP-IDF 及其子模块，每日会自动同步
+**Comment ça marche :** # Espressif IoT Development Framework
+
+* [中文版](./README_CN.md)
+
+ESP-IDF is the development framework for Espressif SoCs supported on Windows, Linux and macOS.
+
+# ESP-IDF Release Support Schedule
+
+![Support Schedule](https://dl.espressif.com/dl/esp-idf/support-periods.svg?v=1)
+
+- Please read [the sup
+**Spécificité chinoise :** Espressif Systems (乐鑫, Shanghai) — fabricant des SoCs ESP8266/ESP32 ; miroir Gitee officiel synchronisé depuis GitHub.
+**Équivalent occidental :** Not identified
+**Maturité :** Stable (★ 877, 391 forks, mis à jour 2026-08)
 **Langue :** Bilingue CN-EN
 **Gitee :** https://gitee.com/EspressifSystems/esp-idf
 ---

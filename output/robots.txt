@@ -4,4 +4,4 @@ Disallow: /fiches/
 Disallow: /fiches_fr/
 Disallow: /logs/
 
-Sitemap: https://mrawdian.github.io/minerva/sitemap.xml
+Sitemap: /sitemap.xml

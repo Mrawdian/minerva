@@ -4,19 +4,19 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>EspressifSystems/esp-rainmaker — Minerva (FR)</title>
-<meta name="description" content="Permet le contrôle à distance et la surveillance des appareils IoT basés sur ESP32 sans configuration manuelle du cloud. Fournit un agent firmware qui gère automatiquement la revendication d&#x27;appareil…">
+<meta name="description" content="ESP RainMaker Agent for firmware development">
 <link rel="icon" type="image/svg+xml" href="../favicon.svg">
-<link rel="canonical" href="https://mrawdian.github.io/minerva/f/espressifsystems-esp-rainmaker.fr.html"><link rel="alternate" hreflang="en" href="https://mrawdian.github.io/minerva/f/espressifsystems-esp-rainmaker.html"><link rel="alternate" hreflang="fr" href="https://mrawdian.github.io/minerva/f/espressifsystems-esp-rainmaker.fr.html">
+<link rel="canonical" href="/f/espressifsystems-esp-rainmaker.fr.html"><link rel="alternate" hreflang="en" href="/f/espressifsystems-esp-rainmaker.html"><link rel="alternate" hreflang="fr" href="/f/espressifsystems-esp-rainmaker.fr.html">
 <meta property="og:type" content="article">
 <meta property="og:title" content="EspressifSystems/esp-rainmaker — Minerva (FR)">
-<meta property="og:description" content="Permet le contrôle à distance et la surveillance des appareils IoT basés sur ESP32 sans configuration manuelle du cloud. Fournit un agent firmware qui gère automatiquement la revendication d&#x27;appareil…">
-<meta property="og:url" content="https://mrawdian.github.io/minerva/f/espressifsystems-esp-rainmaker.fr.html">
+<meta property="og:description" content="ESP RainMaker Agent for firmware development">
+<meta property="og:url" content="/f/espressifsystems-esp-rainmaker.fr.html">
 
 <meta property="og:site_name" content="Minerva">
 <meta property="og:locale" content="fr_FR">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="EspressifSystems/esp-rainmaker — Minerva (FR)">
-<meta name="twitter:description" content="Permet le contrôle à distance et la surveillance des appareils IoT basés sur ESP32 sans configuration manuelle du cloud. Fournit un agent firmware qui gère automatiquement la revendication d&#x27;appareil…">
+<meta name="twitter:description" content="ESP RainMaker Agent for firmware development">
 <style>
 :root{
   --paper:#F5F6F4; --surface:#FFFFFF; --surface-2:#FAFBF9;
@@ -174,7 +174,7 @@ aside .src:hover{background:var(--signal-2)}
   </span>
 </div></nav>
 <div class="status-line"><div class="wrap srow">
-  <span class="seg"><span class="dot"></span><span class="accent">Snapshot</span>&nbsp;· as of 2026-07-31</span>
+  <span class="seg"><span class="dot"></span><span class="accent">Snapshot</span>&nbsp;· as of 2026-08-03</span>
   <span class="seg">105 fiches</span>
   <span class="seg">reading: fiche · FR</span>
   <span class="ticks"><i></i><i></i><i></i><i></i><i></i></span>
@@ -183,51 +183,51 @@ aside .src:hover{background:var(--signal-2)}
 <div class="wrap">
   <div class="crumb"><a href="../index.html">Home</a><span class="sep">/</span><a href="../dashboard.html">Dashboard</a><span class="sep">/</span><a href="../dashboard.html?owner=EspressifSystems">EspressifSystems</a><span class="sep">/</span><span>esp-rainmaker</span><span style="margin-left:auto"><a href="espressifsystems-esp-rainmaker.html" style="color:var(--signal);font-weight:600">EN →</a></span></div>
 
-  <div class="readout" style="--dom-color:var(--d-iot);margin-top:16px">
-    <div class="rblock"><span class="rlab">Score</span><span class="rval tnum">75<span class="unit">/100</span></span></div>
-    <div class="rblock"><span class="rlab">Confiance</span><span class="rval conf">◆◆◆</span></div>
-    <div class="rblock"><span class="rlab">Domaine</span><span class="rval dom">IoT</span></div>
-    <div class="rmeta">Framework · Actif</div>
+  <div class="readout" style="--dom-color:var(--d-emb);margin-top:16px">
+    <div class="rblock"><span class="rlab">Score</span><span class="rval tnum">55<span class="unit">/100</span></span></div>
+    <div class="rblock"><span class="rlab">Confiance</span><span class="rval conf">◆<span class="off">◇◇</span></span></div>
+    <div class="rblock"><span class="rlab">Domaine</span><span class="rval dom">Embarqué</span></div>
+    <div class="rmeta">Library · Actif</div>
   </div>
   <div class="rlegend"><b>score</b> = un signal de tri grossier, 0–100 (similarité sémantique au créneau embarqué/IoT/robotique/edge-AI + bonus d'activité) — une clé de tri, pas une mesure de l'écosystème · <b>marques ◆</b> = niveau de confiance (qualité des données : profondeur d'enrichissement, métadonnées, récence) — méthode dans docs/SCORING.md</div>
 
   <header class="fhead">
     <h1>EspressifSystems/esp-rainmaker</h1>
-    <div class="tags"><span class="tag iot"><span class="d"></span>IoT</span><span class="tag plain">Framework</span><span class="tag plain">Actif</span></div>
+    <div class="tags"><span class="tag emb"><span class="d"></span>Embarqué</span><span class="tag plain">Library</span><span class="tag plain">Actif</span></div>
   </header>
 
   <div class="grid">
     <div class="main">
       <h2>Problème résolu</h2>
-      <p class="lede">Permet le contrôle à distance et la surveillance des appareils IoT basés sur ESP32 sans configuration manuelle du cloud. Fournit un agent firmware qui gère automatiquement la revendication d&#x27;appareil, la connectivité cloud et le rendu dynamique de l&#x27;interface utilisateur sur les clients mobiles.</p>
+      <p class="lede">ESP RainMaker Agent for firmware development</p>
       <h2>Comment ça marche</h2>
-      <p>ESP RainMaker se compose d&#x27;un agent firmware (ce référentiel) écrit en C pour ESP-IDF, un service de revendication pour l&#x27;approvisionnement en identifiants, et un backend cloud. L&#x27;agent s&#x27;exécute sur les SoCs de la série ESP32 (ESP32, ESP32-S2, ESP32-S3, ESP32-C2, ESP32-C3, ESP32-C6, ESP32-H2, ESP32-C5) et communique avec le cloud RainMaker via MQTT ou HTTP. Les développeurs définissent des appareils et des paramètres personnalisés dans le firmware ; le cloud et les applications mobiles (Android/iOS) restituent dynamiquement l&#x27;interface utilisateur en fonction des métadonnées de l&#x27;appareil. Nécessite ESP-IDF 4.1 ou version ultérieure.</p>
+      <p># ESP RainMaker</p>
       <h2>Spécificité chinoise</h2>
-      <p>Hébergé sur Gitee/GitHub par EspressifSystems ; aucune spécificité chinoise particulière au-delà de l&#x27;auteur. Espressif Systems (乐鑫, Shanghai) est le fabricant des SoCs ESP32 et maintient ce référentiel officiel.</p>
+      <p>Espressif Systems (乐鑫, Shanghai) — fabricant des SoCs ESP8266/ESP32 ; miroir Gitee officiel synchronisé depuis GitHub.</p>
       <h2 class="key">Équivalent occidental</h2>
-      <div class="keyblock"><p style="margin:0">Amazon FreeRTOS avec AWS IoT Core, Google Cloud IoT Core avec des bibliothèques clientes intégrées, kits de développement Azure IoT Hub</p><div class="hint">← le pont qu'un annuaire ne vous donnera jamais</div></div>
+      <div class="keyblock"><p style="margin:0">Not identified</p><div class="hint">← le pont qu'un annuaire ne vous donnera jamais</div></div>
     </div>
     <aside>
-      <div class="r"><dt>Type</dt><dd>Framework</dd></div>
+      <div class="r"><dt>Type</dt><dd>Library</dd></div>
       <div class="r"><dt>Langage</dt><dd>Anglais</dd></div>
       <div class="r"><dt>Étoiles</dt><dd>11 ★</dd></div>
       <div class="r"><dt>Forks</dt><dd>0</dd></div>
-      <div class="r"><dt>Dernier push</dt><dd>2026-07</dd></div>
+      <div class="r"><dt>Dernier push</dt><dd>2026-08</dd></div>
       <a class="src" href="https://gitee.com/EspressifSystems/esp-rainmaker" target="_blank" rel="noopener">Voir sur Gitee →</a>
     </aside>
   </div>
 
-  <section class="related"><div class="lbl">Autres fiches en IoT</div>
-    <div class="rel-grid"><a class="rc" href="alibaba-alios-things.fr.html"><div class="t"><span class="s tnum">★ 75</span><span class="tag iot"><span class="d"></span>IoT</span></div>
-  <h4>alibaba/AliOS-Things</h4><p>Fournir un système d&#x27;exploitation temps réel scalable et modulaire spécifiquement conçu pour les appareils IoT avec ressources limitées, supportant plusieurs architectures CPU et intégrant nativement la connectivité réseau et la sécurité.</p></a>
-<a class="rc" href="espressifsystems-esp-iot-bridge.fr.html"><div class="t"><span class="s tnum">★ 79</span><span class="tag iot"><span class="d"></span>IoT</span></div>
-  <h4>EspressifSystems/esp-iot-bridge</h4><p>Permettre aux ESP32 et aux SoCs Espressif similaires de créer un pont entre plusieurs interfaces réseau (Wi-Fi, Ethernet, USB, SPI, SDIO) et d&#x27;agir comme passerelles réseau ou adaptateurs réseau sans fil/filaires, en supportant des cas d&#x27;usage tels que les routeurs Wi-Fi, les points d&#x27;accès cellulaires et l&#x27;émulation d&#x27;interface réseau pour PC et MCU.</p></a>
-<a class="rc" href="alibaba-iot-remote-access.fr.html"><div class="t"><span class="s tnum">★ 71</span><span class="tag iot"><span class="d"></span>IoT</span></div>
-  <h4>alibaba/iot_remote_access</h4><p>Fournit un accès à distance sécurisé aux appareils IoT sans adresse IP publique, permettant le SSH, le shell web, l&#x27;accès aux fichiers et le tunneling réseau à travers Internet.</p></a></div></section>
+  <section class="related"><div class="lbl">Autres fiches en Embarqué</div>
+    <div class="rel-grid"><a class="rc" href="sophgo-torch-tpu.fr.html"><div class="t"><span class="s tnum">★ 56</span><span class="tag emb"><span class="d"></span>Embarqué</span></div>
+  <h4>sophgo/torch-tpu</h4><p>Activer l&#x27;exécution de modèles PyTorch sur les dispositifs TPU Sophgo (SG2260, TPU1686) avec support des frameworks d&#x27;entraînement distribué (DeepSpeed, Megatron) et des grands modèles de langage, comblant le fossé entre l&#x27;écosystème CPU/GPU de PyTorch et le matériel TPU propriétaire de Sophgo.</p></a>
+<a class="rc" href="sophgo-sophon-sail.fr.html"><div class="t"><span class="s tnum">★ 54</span><span class="tag emb"><span class="d"></span>Embarqué</span></div>
+  <h4>sophgo/sophon-sail</h4><p>Simplifier le déploiement de modèles d&#x27;inférence d&#x27;apprentissage profond et de traitement d&#x27;images/vidéos sur les accélérateurs TPU SOPHON en fournissant des pipelines unifiés accélérés matériellement pour le décodage, le prétraitement et l&#x27;inférence avec liaisons C++ et Python.</p></a>
+<a class="rc" href="sophgo-tpu-megatron-patch.fr.html"><div class="t"><span class="s tnum">★ 54</span><span class="tag emb"><span class="d"></span>Embarqué</span></div>
+  <h4>sophgo/TPU-Megatron-Patch</h4><p>Adapter le framework d&#x27;entraînement distribué Megatron pour s&#x27;exécuter sur les accélérateurs TPU SOPHGO pour l&#x27;entraînement de modèles de langage volumineux (LLM) et de modèles de langage visuel (VLM), en remplaçant les pipelines d&#x27;entraînement centrés sur GPU par un entraînement distribué optimisé pour TPU.</p></a></div></section>
 
   <div class="nlbox">
     <h3>Cette fiche vous a été utile ?</h3>
-    <p>Recevez les fiches nouvelles et mises à jour après chaque run du corpus. Gratuit, désinscription en un clic.</p>
+    <p>Recevez chaque semaine les fiches nouvelles et mises à jour. Gratuit, désinscription en un clic.</p>
     <form class="form" onsubmit="return false">
   <input type="email" placeholder="you@email.com" disabled>
   <button class="btn btn-primary" type="button" disabled style="opacity:.55;cursor:not-allowed">S&#x27;abonner</button>

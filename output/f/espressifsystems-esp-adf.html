@@ -4,19 +4,19 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>EspressifSystems/esp-adf — Minerva</title>
-<meta name="description" content="Provide a product-oriented application framework for ESP32/ESP32-S2 audio and video development, abstracting away low-level IDF complexity. ADF v3.0 restructures the media pipeline using ESP-GMF and…">
+<meta name="description" content="ESP-ADF 是由乐鑫官方推出的针对 ESP32 和 ESP32-S2 系列芯片的音频开发框架。ESP-ADF 国内镜像仓库，Issues 和 PRs 请仍旧提交到 github。">
 <link rel="icon" type="image/svg+xml" href="../favicon.svg">
-<link rel="canonical" href="https://mrawdian.github.io/minerva/f/espressifsystems-esp-adf.html"><link rel="alternate" hreflang="fr" href="https://mrawdian.github.io/minerva/f/espressifsystems-esp-adf.fr.html"><link rel="alternate" hreflang="en" href="https://mrawdian.github.io/minerva/f/espressifsystems-esp-adf.html">
+<link rel="canonical" href="/f/espressifsystems-esp-adf.html"><link rel="alternate" hreflang="fr" href="/f/espressifsystems-esp-adf.fr.html"><link rel="alternate" hreflang="en" href="/f/espressifsystems-esp-adf.html">
 <meta property="og:type" content="article">
 <meta property="og:title" content="EspressifSystems/esp-adf — Minerva">
-<meta property="og:description" content="Provide a product-oriented application framework for ESP32/ESP32-S2 audio and video development, abstracting away low-level IDF complexity. ADF v3.0 restructures the media pipeline using ESP-GMF and…">
-<meta property="og:url" content="https://mrawdian.github.io/minerva/f/espressifsystems-esp-adf.html">
+<meta property="og:description" content="ESP-ADF 是由乐鑫官方推出的针对 ESP32 和 ESP32-S2 系列芯片的音频开发框架。ESP-ADF 国内镜像仓库，Issues 和 PRs 请仍旧提交到 github。">
+<meta property="og:url" content="/f/espressifsystems-esp-adf.html">
 
 <meta property="og:site_name" content="Minerva">
 <meta property="og:locale" content="en_US">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="EspressifSystems/esp-adf — Minerva">
-<meta name="twitter:description" content="Provide a product-oriented application framework for ESP32/ESP32-S2 audio and video development, abstracting away low-level IDF complexity. ADF v3.0 restructures the media pipeline using ESP-GMF and…">
+<meta name="twitter:description" content="ESP-ADF 是由乐鑫官方推出的针对 ESP32 和 ESP32-S2 系列芯片的音频开发框架。ESP-ADF 国内镜像仓库，Issues 和 PRs 请仍旧提交到 github。">
 <style>
 :root{
   --paper:#F5F6F4; --surface:#FFFFFF; --surface-2:#FAFBF9;
@@ -174,7 +174,7 @@ aside .src:hover{background:var(--signal-2)}
   </span>
 </div></nav>
 <div class="status-line"><div class="wrap srow">
-  <span class="seg"><span class="dot"></span><span class="accent">Snapshot</span>&nbsp;· as of 2026-07-31</span>
+  <span class="seg"><span class="dot"></span><span class="accent">Snapshot</span>&nbsp;· as of 2026-08-03</span>
   <span class="seg">105 fiches</span>
   <span class="seg">reading: fiche</span>
   <span class="ticks"><i></i><i></i><i></i><i></i><i></i></span>
@@ -184,8 +184,8 @@ aside .src:hover{background:var(--signal-2)}
   <div class="crumb"><a href="../index.html">Home</a><span class="sep">/</span><a href="../dashboard.html">Dashboard</a><span class="sep">/</span><a href="../dashboard.html?owner=EspressifSystems">EspressifSystems</a><span class="sep">/</span><span>esp-adf</span><span style="margin-left:auto"><a href="espressifsystems-esp-adf.fr.html" style="color:var(--signal);font-weight:600">FR →</a></span></div>
 
   <div class="readout" style="--dom-color:var(--d-emb);margin-top:16px">
-    <div class="rblock"><span class="rlab">Score</span><span class="rval tnum">73<span class="unit">/100</span></span></div>
-    <div class="rblock"><span class="rlab">Confidence</span><span class="rval conf">◆◆◆</span></div>
+    <div class="rblock"><span class="rlab">Score</span><span class="rval tnum">74<span class="unit">/100</span></span></div>
+    <div class="rblock"><span class="rlab">Confidence</span><span class="rval conf">◆<span class="off">◇◇</span></span></div>
     <div class="rblock"><span class="rlab">Domain</span><span class="rval dom">Embedded</span></div>
     <div class="rmeta">Framework · Active</div>
   </div>
@@ -199,20 +199,20 @@ aside .src:hover{background:var(--signal-2)}
   <div class="grid">
     <div class="main">
       <h2>Problem solved</h2>
-      <p class="lede">Provide a product-oriented application framework for ESP32/ESP32-S2 audio and video development, abstracting away low-level IDF complexity. ADF v3.0 restructures the media pipeline using ESP-GMF and modularizes services (audio playback, video playback, battery monitoring) callable via Model Context Protocol.</p>
+      <p class="lede">ESP-ADF 是由乐鑫官方推出的针对 ESP32 和 ESP32-S2 系列芯片的音频开发框架。ESP-ADF 国内镜像仓库，Issues 和 PRs 请仍旧提交到 github。</p>
       <h2>How it works</h2>
-      <p>ADF v3.0 is built on top of ESP-IDF (v5.5.2+) and integrates ESP-GMF as the core multimedia framework. It provides standalone functional components (playlist, board manager) and modular product services accessible through MCP. Supports development in C/C++, MicroPython, and Arduino. The architecture separates low-level drivers (handled by ESP-IDF) from high-level services (audio/video playback, OTA, battery service) with emphasis on low memory and CPU footprint.</p>
+      <p># Espressif Advanced Development Framework</p>
       <h2>Chinese specificity</h2>
-      <p>Espressif Systems (乐鑫, Shanghai) is the manufacturer of ESP32/ESP32-S2 SoCs and maintains this official framework. The Gitee repository is an official mirror synchronized from GitHub; no particular Chinese standard compliance or domestic platform integration mentioned.</p>
+      <p>Espressif Systems (乐鑫, Shanghai) — fabricant des SoCs ESP8266/ESP32 ; miroir Gitee officiel synchronisé depuis GitHub.</p>
       <h2 class="key">Western equivalent</h2>
-      <div class="keyblock"><p style="margin:0">Zephyr (Linux Foundation, multimedia extensions), FreeRTOS with audio libraries (Amazon), TinyOS with media components</p><div class="hint">← the bridge a directory never gives you</div></div>
+      <div class="keyblock"><p style="margin:0">Not identified</p><div class="hint">← the bridge a directory never gives you</div></div>
     </div>
     <aside>
       <div class="r"><dt>Type</dt><dd>Framework</dd></div>
       <div class="r"><dt>Language</dt><dd>Bilingual CN-EN</dd></div>
       <div class="r"><dt>Stars</dt><dd>72 ★</dd></div>
       <div class="r"><dt>Forks</dt><dd>9</dd></div>
-      <div class="r"><dt>Last push</dt><dd>2026-07</dd></div>
+      <div class="r"><dt>Last push</dt><dd>2026-08</dd></div>
       <a class="src" href="https://gitee.com/EspressifSystems/esp-adf" target="_blank" rel="noopener">View on Gitee →</a>
     </aside>
   </div>
@@ -220,14 +220,14 @@ aside .src:hover{background:var(--signal-2)}
   <section class="related"><div class="lbl">Other fiches in Embedded</div>
     <div class="rel-grid"><a class="rc" href="rtthread-rsoc-rtt.html"><div class="t"><span class="s tnum">★ 75</span><span class="tag emb"><span class="d"></span>Embedded</span></div>
   <h4>rtthread/rsoc-rtt</h4><p>Organize and centralize pedagogical notes and practical work of trainees in the RT-Thread summer program across different embedded hardware platforms.</p></a>
-<a class="rc" href="paddlepaddle-paddleocr.html"><div class="t"><span class="s tnum">★ 71</span><span class="tag emb"><span class="d"></span>Embedded</span></div>
-  <h4>paddlepaddle/PaddleOCR</h4><p>Convert PDF documents and images into structured, LLM-ready data (JSON/Markdown) with high accuracy. Provide multilingual OCR (100+ languages) and document layout parsing for RAG and agentic AI applications without relying on closed-source commercial solutions.</p></a>
-<a class="rc" href="sophgo-libsophon.html"><div class="t"><span class="s tnum">★ 71</span><span class="tag emb"><span class="d"></span>Embedded</span></div>
-  <h4>sophgo/libsophon</h4><p>Provide Linux kernel drivers and runtime libraries for Sophgo AI accelerator chips (TPU, VPU, JPU, VPP modules), enabling host systems to offload inference and media processing workloads to these specialized processors.</p></a></div></section>
+<a class="rc" href="espressifsystems-esp-at.html"><div class="t"><span class="s tnum">★ 73</span><span class="tag emb"><span class="d"></span>Embedded</span></div>
+  <h4>EspressifSystems/esp-at</h4><p>ESP-AT 是乐鑫官方基于 ESP-IDF 和 ESP8266-RTOS-SDK 推出的 AT 应用框架，可支持 ESP8266、ESP32、ESP32-S2。ESP-AT 国内镜像仓库。</p></a>
+<a class="rc" href="bouffalolab-bouffalo-sdk.html"><div class="t"><span class="s tnum">★ 76</span><span class="tag emb"><span class="d"></span>Embedded</span></div>
+  <h4>bouffalolab/bouffalo_sdk</h4><p>Provide a unified SDK supporting the entire range of Bouffalo microcontrollers (BL602, BL702/L, BL616, BL618) with a common HAL API (LHAL) to avoid fragmentation between previous bl_mcu_sdk and bl_iot_sdk. This enables developers to use a single codebase for various devices (ADC, SPI, UART, cryptography, camera, Ethernet) without rewriting drivers.</p></a></div></section>
 
   <div class="nlbox">
     <h3>Enjoyed this fiche?</h3>
-    <p>Get the flagship new &amp; updated fiches after each corpus run. Free, unsubscribe in one click.</p>
+    <p>Get the flagship new &amp; updated fiches every week. Free, unsubscribe in one click.</p>
     <form class="form" onsubmit="return false">
   <input type="email" placeholder="you@email.com" disabled>
   <button class="btn btn-primary" type="button" disabled style="opacity:.55;cursor:not-allowed">Subscribe</button>

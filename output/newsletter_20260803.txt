@@ -1,11 +1,11 @@
-Subject: Minerva — Open Source China Intelligence — 2026-07-31
+Subject: Minerva — Open Source China Intelligence — 2026-08-03
 
 ========================================================================
-  MINERVA NEWSLETTER — 2026-07-31
+  MINERVA NEWSLETTER — 2026-08-03
   Open source China intelligence: embedded / IoT / robotics / edge-AI
 ========================================================================
 
-Last pipeline run: 2026-07-31T11:55:26+00:00
+Last pipeline run: 2026-08-03T09:23:28+00:00
 
 ------------------------------------------------------------------------
 TOP 5 FINDINGS (by relevance score)
@@ -23,13 +23,13 @@ TOP 5 FINDINGS (by relevance score)
    Provide ROS packages for simulation and low-level control (torque, position, angular velocity) of joint articulations for Unitree quadruped and humanoid robots (A1, B1, B2, G1, GO1, GO2, H1, H2, R1,…
    https://github.com/unitreerobotics/unitree_ros
 
-4. [ 94/100] EspressifSystems/esp-idf  (★877)
-   Provide a unified development framework and build system for Espressif ESP32 and ESP32-S2 SoCs, including bootloader, partition table generation, and hardware abstraction across Windows, Linux, and m…
+4. [ 89/100] EspressifSystems/esp-idf  (★877)
+   ESP-IDF 是由乐鑫官方推出的针对 ESP32 和 ESP32-S2 系列芯片的开发框架。ESP-IDF 国内镜像仓库，Issues 和 PRs 请仍旧提交到 github。
    https://gitee.com/EspressifSystems/esp-idf
 
-5. [ 90/100] Tencent/ncnn  (★303)
-   Deploy deep learning models (PyTorch, ONNX) to mobile, embedded, and edge devices with minimal runtime overhead and optimized inference latency. Eliminates dependency on heavy frameworks like TensorF…
-   https://gitee.com/Tencent/ncnn
+5. [ 82/100] kendryte/nncase  (★898)
+   Compiling neural network models (TensorFlow, ONNX, etc.) into optimized code for Kendryte AI accelerators (K210, K510, K230), handling quantization and operation scheduling on specialized compute uni…
+   https://github.com/kendryte/nncase
 
 ------------------------------------------------------------------------
 KEY STATS
@@ -41,20 +41,20 @@ KEY STATS
   Big tech repos (8 orgs): 13
 
   Distribution by domain:
-    - Embedded                 59  (56.2%)
+    - Embedded                 60  (57.1%)
     - Edge AI                  28  (26.7%)
     - Robotics                 17  (16.2%)
-    - IoT                       6  (5.7%)
+    - IoT                       4  (3.8%)
 
   Distribution by type:
-    - Framework                25  (23.8%)
-    - Library                  22  (21.0%)
-    - Board Support Package    16  (15.2%)
+    - Library                  25  (23.8%)
+    - Framework                24  (22.9%)
     - Tool                     15  (14.3%)
-    - Application              11  (10.5%)
+    - Board Support Package    14  (13.3%)
+    - Application              10  (9.5%)
     - Driver                    7  (6.7%)
 
 ------------------------------------------------------------------------
 See the interactive dashboard: output/dashboard.html
-Rich version                 : output/newsletter_20260731.html
+Rich version                 : output/newsletter_20260803.html
 ------------------------------------------------------------------------

@@ -72,26 +72,26 @@
     "stars": 101
   },
   "EspressifSystems/esp-adf": {
-    "confidence": "High",
+    "confidence": "Low",
     "domaine": "Embedded",
     "first_seen": "2026-07-31",
-    "last_changed": "2026-07-31",
-    "pushed_at": "2026-07-30T06:04:28+08:00",
-    "pushed_at_month": "2026-07",
+    "last_changed": "2026-08-03",
+    "pushed_at": "2026-08-01T06:04:44+08:00",
+    "pushed_at_month": "2026-08",
     "removed": null,
-    "score": 73,
+    "score": 74,
     "source": "gitee",
     "stars": 72
   },
   "EspressifSystems/esp-at": {
-    "confidence": "High",
-    "domaine": "IoT",
+    "confidence": "Low",
+    "domaine": "Embedded",
     "first_seen": "2026-07-31",
-    "last_changed": "2026-07-31",
-    "pushed_at": "2026-07-29T06:04:25+08:00",
-    "pushed_at_month": "2026-07",
+    "last_changed": "2026-08-03",
+    "pushed_at": "2026-08-01T06:04:22+08:00",
+    "pushed_at_month": "2026-08",
     "removed": null,
-    "score": 84,
+    "score": 73,
     "source": "gitee",
     "stars": 50
   },
@@ -144,14 +144,14 @@
     "stars": 124
   },
   "EspressifSystems/esp-idf": {
-    "confidence": "High",
-    "domaine": "Embedded",
+    "confidence": "Low",
+    "domaine": "Edge AI",
     "first_seen": "2026-07-31",
-    "last_changed": "2026-07-31",
-    "pushed_at": "2026-07-31T06:03:51+08:00",
-    "pushed_at_month": "2026-07",
+    "last_changed": "2026-08-03",
+    "pushed_at": "2026-08-03T06:03:46+08:00",
+    "pushed_at_month": "2026-08",
     "removed": null,
-    "score": 94,
+    "score": 89,
     "source": "gitee",
     "stars": 877
   },
@@ -192,14 +192,14 @@
     "stars": 41
   },
   "EspressifSystems/esp-rainmaker": {
-    "confidence": "High",
-    "domaine": "IoT",
+    "confidence": "Low",
+    "domaine": "Embedded",
     "first_seen": "2026-07-31",
-    "last_changed": "2026-07-31",
-    "pushed_at": "2026-07-17T06:09:56+08:00",
-    "pushed_at_month": "2026-07",
+    "last_changed": "2026-08-03",
+    "pushed_at": "2026-08-01T06:06:37+08:00",
+    "pushed_at_month": "2026-08",
     "removed": null,
-    "score": 75,
+    "score": 55,
     "source": "gitee",
     "stars": 11
   },
@@ -240,14 +240,14 @@
     "stars": 2
   },
   "Tencent/ncnn": {
-    "confidence": "High",
+    "confidence": "Low",
     "domaine": "Edge AI",
     "first_seen": "2026-07-31",
-    "last_changed": "2026-07-31",
-    "pushed_at": "2026-07-28T00:29:49+08:00",
-    "pushed_at_month": "2026-07",
+    "last_changed": "2026-08-03",
+    "pushed_at": "2026-08-02T00:27:41+08:00",
+    "pushed_at_month": "2026-08",
     "removed": null,
-    "score": 90,
+    "score": 82,
     "source": "gitee",
     "stars": 303
   },
@@ -276,14 +276,14 @@
     "stars": 0
   },
   "alibaba/MNN": {
-    "confidence": "High",
+    "confidence": "Low",
     "domaine": "Edge AI",
     "first_seen": "2026-07-31",
-    "last_changed": "2026-07-31",
-    "pushed_at": "2026-07-30T00:13:50+08:00",
-    "pushed_at_month": "2026-07",
+    "last_changed": "2026-08-03",
+    "pushed_at": "2026-08-02T00:14:51+08:00",
+    "pushed_at_month": "2026-08",
     "removed": null,
-    "score": 76,
+    "score": 60,
     "source": "gitee",
     "stars": 7
   },
@@ -492,14 +492,14 @@
     "stars": 2
   },
   "kendryte/k230_rtos_sdk": {
-    "confidence": "High",
+    "confidence": "Low",
     "domaine": "Embedded",
     "first_seen": "2026-07-31",
-    "last_changed": "2026-07-31",
-    "pushed_at": "2026-07-30T08:40:29Z",
-    "pushed_at_month": "2026-07",
+    "last_changed": "2026-08-03",
+    "pushed_at": "2026-08-02T02:01:02Z",
+    "pushed_at_month": "2026-08",
     "removed": null,
-    "score": 79,
+    "score": 50,
     "source": "github",
     "stars": 15
   },
@@ -516,14 +516,14 @@
     "stars": 898
   },
   "openLuat/LuatOS": {
-    "confidence": "High",
+    "confidence": "Low",
     "domaine": "Embedded",
     "first_seen": "2026-07-31",
-    "last_changed": "2026-07-31",
-    "pushed_at": "2026-07-31T19:06:34+08:00",
-    "pushed_at_month": "2026-07",
+    "last_changed": "2026-08-03",
+    "pushed_at": "2026-08-03T17:19:50+08:00",
+    "pushed_at_month": "2026-08",
     "removed": null,
-    "score": 82,
+    "score": 72,
     "source": "gitee",
     "stars": 1862
   },
@@ -648,14 +648,14 @@
     "stars": 12
   },
   "sophgo/bootloader-riscv": {
-    "confidence": "Medium",
+    "confidence": "Low",
     "domaine": "Embedded",
     "first_seen": "2026-07-31",
-    "last_changed": "2026-07-31",
-    "pushed_at": "2026-07-31T09:21:57Z",
-    "pushed_at_month": "2026-07",
+    "last_changed": "2026-08-03",
+    "pushed_at": "2026-08-03T08:32:34Z",
+    "pushed_at_month": "2026-08",
     "removed": null,
-    "score": 55,
+    "score": 46,
     "source": "github",
     "stars": 26
   },
@@ -1056,7 +1056,7 @@
     "stars": 0
   },
   "unitreerobotics/unitree_actuator_sdk": {
-    "confidence": "High",
+    "confidence": "Medium",
     "domaine": "Edge AI",
     "first_seen": "2026-07-31",
     "last_changed": "2026-07-31",
@@ -1224,16 +1224,16 @@
     "stars": 0
   },
   "unitreerobotics/xr_teleoperate": {
-    "confidence": "High",
+    "confidence": "Low",
     "domaine": "Robotics",
     "first_seen": "2026-07-31",
-    "last_changed": "2026-07-31",
-    "pushed_at": "2026-07-30T12:33:28Z",
-    "pushed_at_month": "2026-07",
+    "last_changed": "2026-08-03",
+    "pushed_at": "2026-08-03T08:48:42Z",
+    "pushed_at_month": "2026-08",
     "removed": null,
-    "score": 88,
+    "score": 78,
     "source": "github",
-    "stars": 1585
+    "stars": 1587
   },
   "unitreerobotics/z1_ros": {
     "confidence": "Medium",

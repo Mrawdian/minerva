@@ -1,13 +1,18 @@
 ---
 ## Tencent/ncnn [MODIFIÉ]
-**Type:** Library
+**Type:** Framework
 **Domain:** Edge AI
-**Relevance score:** 90/100
-**Problem solved:** Deploy deep learning models (PyTorch, ONNX) to mobile, embedded, and edge devices with minimal runtime overhead and optimized inference latency. Eliminates dependency on heavy frameworks like TensorFlow Lite or CoreML by providing a self-contained C++ inference engine with ARM NEON and Vulkan GPU acceleration.
-**How it works:** ncnn is a C++ inference framework with a Python binding and C API. Core components include a model loader for `.param` and `.bin` format files, CPU execution engine with ARM NEON optimizations and multi-core scheduling, optional Vulkan GPU backend, and pnnx tool for converting PyTorch and ONNX models. Supports fp16 storage, int8 quantization, and custom layer registration. No external BLAS, NNPACK, or runtime dependencies; direct memory-mapped model loading.
-**Chinese specificity:** Developed by Tencent's Youtu Lab and deployed in production across Tencent applications (WeChat, QQ, Qzone, Pitu). No integration with Chinese cloud platforms or chipset vendors documented; specificity is primarily organizational rather than ecosystem-driven.
-**Western equivalent:** TensorFlow Lite (Google), ONNX Runtime (Microsoft/Linux Foundation), CoreML (Apple)
-**Maturity:** Active (★ 303, 3 forks, updated 2026-07)
+**Relevance score:** 82/100
+**Problem solved:** ncnn ncnn 是腾讯优图实验室首个开源项目，是一个为手机端极致优化的高性能神经网络前向计算框架
+**How it works:** ![ncnn](https://raw.githubusercontent.com/Tencent/ncnn/master/images/256-ncnn.png)
+
+# ncnn
+
+[![License](https://img.shields.io/badge/license-BSD_3_Clause-blue.svg?style=for-the-badge)](LICENSE.txt)
+[![Download Total Count](https://img.shields.io/github/downloads/Tencent/ncnn/total.svg?style=for-the-
+**Chinese specificity:** Chinese open-source project
+**Western equivalent:** Not identified
+**Maturity:** Active (★ 303, 3 forks, updated 2026-08)
 **Language:** Bilingual CN-EN
 **Gitee:** https://gitee.com/Tencent/ncnn
 ---
