@@ -309,6 +309,11 @@ def list_all_repos_by_owner(owner: str, page_retries: int = 3) -> list[dict]:
             break  # legitimate end
         if all_repos:
             raise GitHubPaginationError(owner, page, len(all_repos), page_status)
+        # Zero collected + hard error on page 1 = fetch failure, not an empty
+        # org — raise so the owner is protected from false deletion (mirror of
+        # fetcher.py; post-mortem 2026-08-03). 404 stays a real absence.
+        if page_status not in (200, 404):
+            raise GitHubPaginationError(owner, page, 0, page_status)
         break
 
     if all_repos:

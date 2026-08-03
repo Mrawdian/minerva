@@ -168,3 +168,17 @@ def test_github_seed_does_not_replace_fresher_copy(monkeypatch):
                         lambda owner, name: dict(older))
     pipeline._fetch_github_seeds(["kendryte/nncase"], repos)
     assert repos["kendryte/nncase"]["description"] == "fresher"
+
+
+# ─── Tripwire anti-effondrement de collecte (post-mortem 2026-08-03) ───
+
+def test_deletion_collapse_triggers_above_half():
+    assert pipeline._deletion_collapse(105, 105) is True
+    assert pipeline._deletion_collapse(105, 60) is True
+    assert pipeline._deletion_collapse(100, 51) is True
+
+
+def test_deletion_collapse_tolerates_normal_churn():
+    assert pipeline._deletion_collapse(105, 6) is False
+    assert pipeline._deletion_collapse(100, 50) is False   # exactement 50% = toléré
+    assert pipeline._deletion_collapse(5, 5) is False      # corpus trop petit pour juger

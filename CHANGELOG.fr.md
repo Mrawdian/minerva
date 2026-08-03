@@ -4,6 +4,34 @@
 Toutes les évolutions notables du projet Minerva sont consignées ici.
 Format inspiré de [Keep a Changelog](https://keepachangelog.com/).
 
+## [0.25.2] — 2026-08-03
+
+### Corrigé — Tripwire anti-effondrement de collecte (post-mortem du 1er cycle CI)
+
+Le premier cycle planifié a tourné avec des secrets corrompus (valeurs collées
+avec un retour à la ligne → HTTP 401 sur chaque appel Gitee ET GitHub). Chaque
+owner s'est « énuméré » vide, et le pipeline a conclu que tout le corpus avait
+disparu : **105/105 repos marqués supprimés**, state écrasé, 105 tombstones
+enregistrées. Rien n'a atteint le repo/site public uniquement parce que le
+rebuild a planté sur le corpus vide — un pare-feu accidentel, pas conçu.
+Désormais conçu :
+
+- **Fetchers (Gitee + GitHub)** : une erreur dure en page 1 avec zéro repo
+  collecté (401/403/5xx/réseau) lève désormais l'erreur de pagination pour que
+  l'owner rejoigne `failed_owners` et que ses repos soient protégés de la
+  fausse suppression — avant, ça retournait une liste vide (« normal
+  behavior »). 404 et comptes réellement vides inchangés.
+- **Tripwire pipeline** : si >50 % des repos suivis seraient supprimés en un
+  run (corpus ≥10), abandon avec `CollectionCollapseError` (exit 2) — state,
+  fiches et diff intacts. Une suppression de masse est un échec de collecte
+  jusqu'à preuve du contraire.
+- **Garde miroir `build_history`** : refuse de tombstoner >50 % du ledger
+  vivant (`--allow-mass-removal` pour passer outre délibérément) — l'artefact
+  d'historique ne doit jamais enregistrer un échec comme du signal.
+- +5 tests (**118** au total). La leçon de l'hystérésis d'admission (bearpi)
+  est arrivée à l'échelle maximale dès le cycle nº1 — elle est désormais
+  mécanisée aux trois niveaux.
+
 ## [0.25.1] — 2026-07-31
 
 ### Modifié — Adoucissement de l'esthétique de précision (verdict propriétaire, point 2)

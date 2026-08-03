@@ -110,3 +110,13 @@ def test_source_detection_github_vs_gitee():
     ledger, _ = compute_history({}, items, "2026-07-30T10:00:00+00:00")
     assert ledger["gh/repo"]["source"] == "github"
     assert ledger["ge/repo"]["source"] == "gitee"
+
+
+def test_is_mass_removal_tripwire():
+    """Le miroir du tripwire pipeline : l'artefact ne doit jamais enregistrer un
+    effondrement de collecte (105/105 tombstones) comme du signal."""
+    from build_history import is_mass_removal
+    assert is_mass_removal(105, 105) is True
+    assert is_mass_removal(105, 60) is True
+    assert is_mass_removal(105, 6) is False
+    assert is_mass_removal(9, 9) is False   # corpus trop petit

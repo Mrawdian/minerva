@@ -322,7 +322,14 @@ def list_all_repos_by_owner(owner: str, page_retries: int = 3) -> list[dict]:
         if all_repos:
             # partial data already collected → explicit signal
             raise FetchPaginationError(owner, page, len(all_repos), page_status)
-        # no data collected at all → normal behavior (account not found / etc.)
+        # Zero collected: a hard error on page 1 is a FETCH FAILURE, not an
+        # empty account. Raise so the pipeline marks the owner as failed and
+        # protects its repos from false deletion (post-mortem 2026-08-03: bad
+        # CI credentials → 401 on every owner → the whole corpus was about to
+        # be diffed away as "deleted"). Only 404 (account really gone) and 200
+        # (genuinely empty) are treated as real absences.
+        if page_status not in (200, 404):
+            raise FetchPaginationError(owner, page, 0, page_status)
         break
 
     if all_repos:

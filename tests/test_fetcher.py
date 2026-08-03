@@ -83,3 +83,25 @@ def test_configure_authenticated_sets_higher_rate():
     fetcher.configure(None)
     assert fetcher.MAX_REQUESTS_PER_HOUR == 50
     assert fetcher.DELAY_BETWEEN_REQUESTS_S == 2.0
+
+
+# ─── Post-mortem 2026-08-03 : un 401 page 1 = échec de fetch, pas un compte vide ───
+
+@patch.object(fetcher.time, "sleep")
+@patch.object(fetcher, "_session")
+def test_list_repos_hard_error_page1_raises_not_empty(mock_session, mock_sleep):
+    """Un 401 persistant dès la page 1 (zéro repo collecté) doit lever
+    FetchPaginationError pour que le pipeline protège l'owner — pas retourner
+    une liste vide (qui ferait passer tout le corpus de l'owner en 'supprimé')."""
+    import pytest
+    mock_session.get.return_value = FakeResponse(401)
+    with pytest.raises(fetcher.FetchPaginationError):
+        fetcher.list_all_repos_by_owner("someowner")
+
+
+@patch.object(fetcher.time, "sleep")
+@patch.object(fetcher, "_session")
+def test_list_repos_404_still_returns_empty(mock_session, mock_sleep):
+    """404 = compte réellement absent : liste vide légitime, pas d'exception."""
+    mock_session.get.return_value = FakeResponse(404)
+    assert fetcher.list_all_repos_by_owner("gone-owner") == []

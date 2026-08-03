@@ -51,6 +51,14 @@ def _pushed(item: dict) -> str:
     return item.get("pushed_at") or ""
 
 
+def is_mass_removal(prior_live_count: int, removed_count: int) -> bool:
+    """Tripwire mirror of pipeline._deletion_collapse (post-mortem 2026-08-03):
+    >50% of the live ledger tombstoned in one run = presumed collection
+    collapse, not world movement. The history artifact must never record a
+    failure as signal."""
+    return prior_live_count >= 10 and removed_count > 0.5 * prior_live_count
+
+
 def _source_of(item: dict) -> str:
     return "github" if "github.com" in (item.get("gitee_url") or "").lower() else "gitee"
 
@@ -139,6 +147,8 @@ def main() -> int:
     ap = argparse.ArgumentParser(description="Build Minerva run-history artifact.")
     ap.add_argument("--dry-run", action="store_true",
                     help="compute and print the diff; write nothing.")
+    ap.add_argument("--allow-mass-removal", action="store_true",
+                    help="record a >50%% removal anyway (only if the corpus REALLY shrank).")
     args = ap.parse_args()
 
     if not STATE_FILE.is_file():
@@ -160,6 +170,17 @@ def main() -> int:
     items, _ = build_items(repos)
     prior = load_ledger(LEDGER_FILE)
     ledger, run_line = compute_history(prior, items, last_run)
+
+    prior_live = sum(1 for e in prior.values() if not e.get("removed"))
+    if is_mass_removal(prior_live, len(run_line["removed"])) and not args.allow_mass_removal:
+        print(
+            f"TRIPWIRE: {len(run_line['removed'])}/{prior_live} live repos would be "
+            "tombstoned in one run (>50%) — presumed collection collapse; nothing "
+            "written. Fix the cause and re-run (--allow-mass-removal only if the "
+            "corpus really shrank).",
+            file=sys.stderr,
+        )
+        return 2
 
     tag = "BOOTSTRAP baseline" if run_line["bootstrap"] else "incremental"
     print(f"History run ({tag}) — as of {run_line['build_date']}")

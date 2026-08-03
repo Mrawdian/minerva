@@ -4,6 +4,32 @@
 All notable changes to the Minerva project are recorded here.
 Format inspired by [Keep a Changelog](https://keepachangelog.com/).
 
+## [0.25.2] — 2026-08-03
+
+### Fixed — Collection-collapse tripwire (post-mortem of the first CI cycle)
+
+The first scheduled cycle ran with corrupted secrets (values pasted with a
+trailing newline → HTTP 401 on every Gitee AND GitHub call). Every owner
+"enumerated" empty, and the pipeline concluded the whole corpus had vanished:
+**105/105 repos marked deleted**, state wiped, 105 tombstones recorded. Nothing
+reached the public repo/site only because the rebuild step happened to crash on
+the empty corpus — an accidental firewall, not a designed one. Now designed:
+
+- **Fetchers (Gitee + GitHub)**: a hard error on page 1 with zero repos
+  collected (401/403/5xx/network) now raises the pagination error so the owner
+  joins `failed_owners` and its repos are protected from false deletion —
+  previously it returned an empty list ("normal behavior"). 404 and genuinely
+  empty accounts unchanged.
+- **Pipeline tripwire**: if >50% of tracked repos would be deleted in one run
+  (corpus ≥10), abort with `CollectionCollapseError` (exit 2) — state, fiches
+  and diff untouched. A mass deletion is a collection failure until proven
+  otherwise.
+- **`build_history` mirror guard**: refuses to tombstone >50% of the live
+  ledger (`--allow-mass-removal` to override deliberately) — the history
+  artifact must never record a failure as signal.
+- +5 tests (**118** total). The admission-hysteresis lesson (bearpi) arrived at
+  maximum scale on cycle #1 — and is now mechanized at all three layers.
+
 ## [0.25.1] — 2026-07-31
 
 ### Changed — Precision-aesthetic softening (owner verdict, point 2)

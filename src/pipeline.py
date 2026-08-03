@@ -639,6 +639,27 @@ def _write_diff_report(
     return out_path
 
 
+# ─── Collection-collapse tripwire (post-mortem 2026-08-03, first CI cycle) ───
+# With bad credentials every owner "enumerates" empty and the diff would erase
+# the whole corpus as if the world vanished (105/105 "deleted"). A mass deletion
+# is a collection failure until proven otherwise: refuse to record it.
+COLLAPSE_MIN_PREV = 10     # only guard once the corpus is established
+COLLAPSE_RATIO = 0.5       # >50% of tracked repos gone in one run = presumed failure
+
+
+class CollectionCollapseError(RuntimeError):
+    def __init__(self, deleted: int, prev: int):
+        super().__init__(
+            f"{deleted}/{prev} tracked repos would be deleted in one run (>50%) — "
+            "presumed collection collapse (auth/API/network), refusing to write state"
+        )
+        self.deleted, self.prev = deleted, prev
+
+
+def _deletion_collapse(prev_count: int, deleted_count: int) -> bool:
+    return prev_count >= COLLAPSE_MIN_PREV and deleted_count > COLLAPSE_RATIO * prev_count
+
+
 def run_pipeline(token: str | None = None, dry_run: bool = False) -> dict:
     """Runs the complete pipeline with diff vs the previous run."""
     log.info("=== Minerva Pipeline démarré ===")
@@ -702,6 +723,13 @@ def run_pipeline(token: str | None = None, dry_run: bool = False) -> dict:
             protected_count += 1
             continue
         deleted_list.append(fn)
+    if _deletion_collapse(len(prev_repos_state), len(deleted_list)):
+        log.error(
+            f"TRIPWIRE : {len(deleted_list)}/{len(prev_repos_state)} repos seraient "
+            f"supprimés en un seul run — effondrement de collecte présumé "
+            f"(credentials/API/réseau). State, fiches et diff NON modifiés."
+        )
+        raise CollectionCollapseError(len(deleted_list), len(prev_repos_state))
     for fn in deleted_list:
         log.info(f"Repo supprimé : {fn}")
     if protected_count:
@@ -788,7 +816,11 @@ def main() -> int:
     log.info(f"Log file : {log_file}")
 
     token = args.token or os.environ.get("GITEE_TOKEN")
-    stats = run_pipeline(token=token, dry_run=args.dry_run)
+    try:
+        stats = run_pipeline(token=token, dry_run=args.dry_run)
+    except CollectionCollapseError as exc:
+        log.error(f"Pipeline interrompu : {exc}")
+        return 2
 
     print("\n" + json.dumps(stats, indent=2, ensure_ascii=False))
     return 0
