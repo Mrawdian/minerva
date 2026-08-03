@@ -67,7 +67,7 @@ Owner-side and blocking:
 
 1. **Rotate keys** — Gitee + Anthropic dev keys (see `SECURITY.md`), then run
    `scripts/secret_scan.py`. After the push, add them as **GitHub repo secrets**
-   (`GITEE_TOKEN`, `ANTHROPIC_API_KEY`, `GITHUB_API_TOKEN`) to activate the
+   (`GITEE_TOKEN`, `ANTHROPIC_API_KEY`, `GH_API_TOKEN`) to activate the
    weekly workflow (`.github/workflows/scheduled-run.yml` — inert until then).
 2. **Set a real `MINERVA_SITE_URL`** and rebuild — re-enables canonical /
    `og:url` / hreflang / sitemap `<loc>` / robots `Sitemap:` (all suppressed in
