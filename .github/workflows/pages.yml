@@ -17,6 +17,12 @@ on:
       - "output/**"
       - "scripts/collect_public.py"
       - ".github/workflows/pages.yml"
+  # The weekly bot pushes with the built-in GITHUB_TOKEN, whose events never
+  # trigger other workflows (GitHub anti-recursion rule) — so we chain on the
+  # weekly run's COMPLETION instead (fires normally, even for scheduled runs).
+  workflow_run:
+    workflows: ["Weekly pipeline run"]
+    types: [completed]
   workflow_dispatch: {}
 
 permissions:
@@ -30,6 +36,8 @@ concurrency:
 
 jobs:
   deploy:
+    # On workflow_run, deploy only if the weekly cycle actually succeeded.
+    if: github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success'
     runs-on: ubuntu-latest
     timeout-minutes: 10
     environment:
