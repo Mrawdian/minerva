@@ -1,0 +1,56 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+
+# Secrets — never commit any env file with real keys.
+# Covers .env, .env.local, .env.production, .env.bak, etc.
+# .env.example (placeholders only) is explicitly allowed for documentation.
+.env
+.env.*
+!.env.example
+
+# Common credential/secret file shapes (defense in depth)
+*.pem
+*.key
+*.p12
+*.pfx
+secrets.json
+credentials.json
+
+# Logs (per-run, regenerable)
+output/logs/
+
+# Embeddings cache (~26 MB binary, regenerated on demand via sentence-transformers)
+output/embeddings_cache.json
+
+# Per-run diff snapshots
+output/diff_*.md
+
+# One-off editorial dispatches (drafts / regenerable — not part of the shipped site)
+output/dispatch_*.md
+
+# Local archive of superseded artifacts (kept for reference, never shipped)
+archive/
+
+# Deploy set (derived from output/ by scripts/collect_public.py — rebuilt at will)
+publish/
+
+# Phase 0 sandbox (raw fixtures, old-format fiches, readmes — local only,
+# not a source of truth; scripts/run_offline.py is the legacy consumer)
+data/
+
+# Local backups (any cleanup/migration trace)
+*.before_cleanup
+*.before_cleanup/
+*.backup
+*.before_*
+
+# OS
+.DS_Store
+Thumbs.db

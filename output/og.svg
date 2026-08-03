@@ -1,0 +1,28 @@
+<svg viewBox="0 0 1200 630" width="1200" height="630" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <pattern id="g" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0H0V40" fill="none" stroke="#1B1E20" stroke-opacity="0.035" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="1200" height="630" fill="#F5F6F4"/>
+  <rect width="1200" height="630" fill="url(#g)"/>
+  <g transform="translate(80,84)">
+    <rect x="0" y="0" width="46" height="46" rx="9" fill="none" stroke="#1B1E20" stroke-width="5"/>
+    <rect x="30" y="-6" width="16" height="16" rx="3.5" fill="#2F5A5C"/>
+    <text x="66" y="34" font-family="Segoe UI,Helvetica,Arial,sans-serif" font-size="30" font-weight="700" fill="#1B1E20" letter-spacing="0.5">MINERVA</text>
+  </g>
+  <text x="80" y="250" font-family="Segoe UI,Helvetica,Arial,sans-serif" font-size="58" font-weight="700" fill="#1B1E20" letter-spacing="-1.5">Decision-ready intelligence</text>
+  <text x="80" y="318" font-family="Segoe UI,Helvetica,Arial,sans-serif" font-size="58" font-weight="700" fill="#1B1E20" letter-spacing="-1.5">on China's open-source hardware.</text>
+  <line x1="80" y1="372" x2="1120" y2="372" stroke="#CDD0CB" stroke-width="1"/>
+  <g font-family="Consolas,ui-monospace,monospace" font-size="24" fill="#565C61">
+    <text x="80" y="432"><tspan fill="#1B1E20" font-weight="700">105</tspan> fiches</text>
+    <text x="300" y="432">Gitee + GitHub</text>
+    <text x="580" y="432"><tspan fill="#1B1E20" font-weight="700">EN / FR</tspan></text>
+    <text x="760" y="432">Western-equivalent mapping</text>
+  </g>
+  <g transform="translate(80,478)">
+    <rect x="0" y="0" width="1040" height="72" rx="8" fill="#E9EEEC"/>
+    <text x="22" y="30" font-family="Consolas,ui-monospace,monospace" font-size="15" fill="#244748" letter-spacing="1">WESTERN EQUIVALENT</text>
+    <text x="22" y="56" font-family="Segoe UI,Helvetica,Arial,sans-serif" font-size="20" fill="#1B1E20" font-weight="600">sophgo/tpu-mlir  →  Apache TVM + a vendor toolchain (a la TensorRT / OpenVINO)</text>
+  </g>
+</svg>

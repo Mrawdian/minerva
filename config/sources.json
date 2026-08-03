@@ -1,0 +1,65 @@
+{
+  "comptes_gitee": [
+    "openharmony",
+    "EspressifSystems",
+    "Embedfire",
+    "rockchip",
+    "alios-things",
+    "rtthread",
+    "kendryte",
+    "Sipeed",
+    "robomaster",
+    "TencentOS",
+    "wch",
+    "openwch",
+    "alibaba",
+    "ByteDance",
+    "baidu",
+    "paddlepaddle",
+    "JD-opensource",
+    "Tencent",
+    "dongshanpi",
+    "licheepi",
+    "starfive",
+    "starfive-tech"
+  ],
+  "mots_cles_surveillance": [
+    "rt-thread",
+    "freertos",
+    "zephyr",
+    "liteos",
+    "esp-idf",
+    "luatos",
+    "openharmony",
+    "rockchip",
+    "bearpi"
+  ],
+  "seeds_gitee": [
+    "bearpi/bearpi-hm_nano",
+    "bouffalolab/bouffalo_sdk",
+    "bouffalolab/bl_mcu_sdk",
+    "openLuat/LuatOS"
+  ],
+  "comptes_github": [
+    "bouffalolab",
+    "sophgo",
+    "unitreerobotics",
+    "kendryte",
+    "allwinner-zh"
+  ],
+  "seeds_github": [
+    "sophgo/tpu-mlir",
+    "unitreerobotics/unitree_ros",
+    "kendryte/nncase",
+    "bouffalolab/bouffalo_sdk"
+  ],
+  "generalist_orgs": [
+    "alibaba",
+    "ByteDance",
+    "baidu",
+    "Tencent",
+    "JD-opensource",
+    "paddlepaddle"
+  ],
+  "min_score": 15
+}

@@ -1,0 +1,469 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Minerva Newsletter — 2026-07-31</title>
+<style>
+* { box-sizing: border-box; }
+body { font-family: -apple-system, "Segoe UI", Roboto, sans-serif; max-width: 880px;
+       margin: 0 auto; padding: 24px; color: #1a1a1a; line-height: 1.55; background: #fafafa; }
+h1 { font-size: 26px; margin: 0 0 6px; border-bottom: 3px solid #cc0000; padding-bottom: 10px; }
+.subtitle { color: #6b7280; font-size: 14px; margin: 0 0 26px; }
+h2 { font-size: 19px; margin: 32px 0 12px; padding-left: 10px; border-left: 4px solid #cc0000; }
+h3 { font-size: 15px; margin: 18px 0 8px; color: #374151; }
+.stats { display: flex; flex-wrap: wrap; gap: 12px; margin: 0 0 18px; }
+.stat { flex: 1 1 140px; padding: 12px 14px; background: #fff; border: 1px solid #e5e7eb;
+         border-radius: 6px; }
+.stat .num { font-size: 26px; font-weight: 700; color: #1a1a1a; }
+.stat .lbl { font-size: 12px; color: #6b7280; text-transform: uppercase; }
+.card { background: #fff; border: 1px solid #e5e7eb; border-radius: 6px; padding: 12px 14px;
+         margin: 0 0 10px; }
+.card.highlight { border-left: 3px solid #cc0000; }
+.card header { display: flex; align-items: center; gap: 10px; margin-bottom: 6px; }
+.card a { color: #0969da; text-decoration: none; }
+.card a:hover { text-decoration: underline; }
+.score { width: 34px; height: 34px; border-radius: 50%; display: inline-flex;
+          align-items: center; justify-content: center; color: #fff; font-weight: 700;
+          font-size: 12px; flex-shrink: 0; }
+.score-high { background: #1a7f37; }
+.score-mid  { background: #bf8700; }
+.score-low  { background: #6b7280; }
+.tags { display: flex; flex-wrap: wrap; gap: 5px; margin: 4px 0 6px; font-size: 11px; }
+.tag { padding: 2px 7px; border-radius: 3px; background: #f3f4f6; color: #374151; }
+.tag.domain { background: #dbeafe; color: #1e3a8a; }
+.tag.domain.edge-ai { background: #fef3c7; color: #78350f; font-weight: 600; }
+.tag.stars { background: #fff7ed; color: #9a3412; }
+.probleme { font-size: 13px; margin: 4px 0 4px; }
+.specificite { font-size: 12px; color: #6b7280; margin: 0; }
+.owner-group { background: #fff; border: 1px solid #e5e7eb; border-radius: 6px;
+                padding: 12px 14px; margin: 0 0 10px; }
+.owner-group h3 { margin: 0 0 6px; font-size: 14px; }
+.owner-list { display: flex; flex-wrap: wrap; gap: 6px; font-size: 12px; }
+.owner-list a { color: #0969da; text-decoration: none; padding: 2px 6px;
+                 background: #f6f8fa; border-radius: 3px; }
+.dist-row { display: flex; justify-content: space-between; padding: 4px 0;
+             border-bottom: 1px dashed #e5e7eb; font-size: 13px; }
+.dist-row:last-child { border: 0; }
+footer { margin-top: 30px; padding-top: 16px; border-top: 1px solid #e5e7eb;
+          font-size: 11px; color: #9ca3af; text-align: center; }
+</style></head><body>
+
+<h1>Minerva Newsletter</h1>
+<p class="subtitle">Open source China intelligence embedded/IoT/robotics/edge-AI · 2026-07-31<br>
+Last pipeline run: 2026-07-31T11:55:26+00:00</p>
+
+<div class="stats">
+  <div class="stat"><div class="num">105</div><div class="lbl">Active fiches</div></div>
+  <div class="stat"><div class="num">13</div><div class="lbl">Big tech (8 new orgs)</div></div>
+  <div class="stat"><div class="num">28</div><div class="lbl">Edge AI repos</div></div>
+  <div class="stat"><div class="num">14</div><div class="lbl">Monitored accounts</div></div>
+</div>
+
+<h2>🏆 Top 10 findings (by relevance score)</h2>
+
+<article class="card highlight">
+  <header>
+    <span class="score score-high">100</span>
+    <a href="https://gitee.com/rtthread/rt-thread" target="_blank" rel="noopener">
+      <strong>rtthread/rt-thread</strong>
+    </a>
+  </header>
+  <div class="tags">
+    <span class="tag">RTOS</span>
+    <span class="tag domain">Embedded</span>
+    <span class='tag stars'>★ 5527</span>
+    <span class='tag date'>push 2026-07</span>
+  </div>
+  <p class="probleme">Provide a scalable real-time operating system that runs on resource-constrained microcontrollers (ARM Cortex-M0 with 3 KB Flash / 1.2 KB RAM) while supporting larger IoT devices (ARM Cortex-A, MIPS32/64 multicore). Unifies kernel, BSP, device drivers, and a modular component ecosystem (VFS, FinSH CLI, network stack) under a single C-based RTOS.</p>
+  <p class="specificite"><em>Hosted on Gitee/GitHub by rtthread; no particular Chinese specificity beyond the author. Founded in 2006 as a community-driven open-source project; no documented affiliation with HiSilicon, Rockchip, Espressif, or other Chinese chipset vendors.</em></p>
+</article>
+
+
+<article class="card highlight">
+  <header>
+    <span class="score score-high">100</span>
+    <a href="https://gitee.com/EspressifSystems/ESP8266_RTOS_SDK" target="_blank" rel="noopener">
+      <strong>EspressifSystems/ESP8266_RTOS_SDK</strong>
+    </a>
+  </header>
+  <div class="tags">
+    <span class="tag">Board Support Package</span>
+    <span class="tag domain">Embedded</span>
+    <span class='tag stars'>★ 101</span>
+    <span class='tag date'>push 2026-07</span>
+  </div>
+  <p class="probleme">Provides an RTOS-based SDK for the ESP8266 microcontroller with FreeRTOS, lwIP, and Wi-Fi drivers integrated. Addresses the need for a complete development environment to build networked embedded applications on the ESP8266 without relying solely on the non-OS SDK.</p>
+  <p class="specificite"><em>Espressif Systems (乐鑫, Shanghai) is the manufacturer of the ESP8266 and ESP32 SoCs; this is the official SDK maintained by the vendor. No particular Chinese standard compliance or domestic ecosystem integration beyond the vendor&#x27;s role in the global IoT chipset market.</em></p>
+</article>
+
+
+<article class="card highlight">
+  <header>
+    <span class="score score-high">94</span>
+    <a href="https://github.com/unitreerobotics/unitree_ros" target="_blank" rel="noopener">
+      <strong>unitreerobotics/unitree_ros</strong>
+    </a>
+  </header>
+  <div class="tags">
+    <span class="tag">Framework</span>
+    <span class="tag domain">Robotics</span>
+    <span class='tag stars'>★ 1494</span>
+    <span class='tag date'>push 2026-07</span>
+  </div>
+  <p class="probleme">Provide ROS packages for simulation and low-level control (torque, position, angular velocity) of joint articulations for Unitree quadruped and humanoid robots (A1, B1, B2, G1, GO1, GO2, H1, H2, R1, Z1, etc.) via Gazebo, as well as a control interface compatible with real robots via unitree_ros_to_real.</p>
+  <p class="specificite"><em>Hosted on Gitee by unitreerobotics (Chinese manufacturer of quadruped and humanoid robots); no particular Chinese specificity beyond the author. No Chinese chipset vendor cited, no Chinese cloud integration (Baidu, Aliyun, etc.), no Chinese standard compliance detected.</em></p>
+</article>
+
+
+<article class="card highlight">
+  <header>
+    <span class="score score-high">94</span>
+    <a href="https://gitee.com/EspressifSystems/esp-idf" target="_blank" rel="noopener">
+      <strong>EspressifSystems/esp-idf</strong>
+    </a>
+  </header>
+  <div class="tags">
+    <span class="tag">Framework</span>
+    <span class="tag domain">Embedded</span>
+    <span class='tag stars'>★ 877</span>
+    <span class='tag date'>push 2026-07</span>
+  </div>
+  <p class="probleme">Provide a unified development framework and build system for Espressif ESP32 and ESP32-S2 SoCs, including bootloader, partition table generation, and hardware abstraction across Windows, Linux, and macOS host platforms.</p>
+  <p class="specificite"><em>Espressif Systems (乐鑫, Shanghai) is the manufacturer of ESP32/ESP32-S2 SoCs and maintains this official framework. The Gitee repository is an official mirror synchronized daily from GitHub; no Chinese-specific standards or integrations are evident beyond the vendor&#x27;s origin.</em></p>
+</article>
+
+
+<article class="card highlight">
+  <header>
+    <span class="score score-high">90</span>
+    <a href="https://gitee.com/Tencent/ncnn" target="_blank" rel="noopener">
+      <strong>Tencent/ncnn</strong>
+    </a>
+  </header>
+  <div class="tags">
+    <span class="tag">Library</span>
+    <span class="tag domain edge-ai">Edge AI</span>
+    <span class='tag stars'>★ 303</span>
+    <span class='tag date'>push 2026-07</span>
+  </div>
+  <p class="probleme">Deploy deep learning models (PyTorch, ONNX) to mobile, embedded, and edge devices with minimal runtime overhead and optimized inference latency. Eliminates dependency on heavy frameworks like TensorFlow Lite or CoreML by providing a self-contained C++ inference engine with ARM NEON and Vulkan GPU acceleration.</p>
+  <p class="specificite"><em>Developed by Tencent&#x27;s Youtu Lab and deployed in production across Tencent applications (WeChat, QQ, Qzone, Pitu). No integration with Chinese cloud platforms or chipset vendors documented; specificity is primarily organizational rather than ecosystem-driven.</em></p>
+</article>
+
+
+<article class="card highlight">
+  <header>
+    <span class="score score-high">88</span>
+    <a href="https://github.com/unitreerobotics/xr_teleoperate" target="_blank" rel="noopener">
+      <strong>unitreerobotics/xr_teleoperate</strong>
+    </a>
+  </header>
+  <div class="tags">
+    <span class="tag">Application</span>
+    <span class="tag domain">Robotics</span>
+    <span class='tag stars'>★ 1585</span>
+    <span class='tag date'>push 2026-07</span>
+  </div>
+  <p class="probleme">Enable real-time teleoperation of Unitree humanoid robots (H2, R1, G1 series) from XR headsets (Apple Vision Pro, Meta Quest, PICO) by mapping hand/arm pose from XR controllers to robot joint commands via a Python-based control stack.</p>
+  <p class="specificite"><em>Hosted on GitHub by unitreerobotics (Unitree Robotics, a Chinese humanoid robot manufacturer); the project is tightly coupled to Unitree&#x27;s proprietary robot models and SDK ecosystem, with no broader Chinese standards or chipset vendor integration evident.</em></p>
+</article>
+
+
+<article class="card highlight">
+  <header>
+    <span class="score score-high">84</span>
+    <a href="https://gitee.com/EspressifSystems/esp-at" target="_blank" rel="noopener">
+      <strong>EspressifSystems/esp-at</strong>
+    </a>
+  </header>
+  <div class="tags">
+    <span class="tag">Framework</span>
+    <span class="tag domain">IoT</span>
+    <span class='tag stars'>★ 50</span>
+    <span class='tag date'>push 2026-07</span>
+  </div>
+  <p class="probleme">Provide a standardized AT command interface for Espressif ESP32/ESP8266 SoCs to enable host microcontrollers to control wireless connectivity (WiFi, Bluetooth, cellular) without implementing full network stacks, reducing firmware complexity on resource-constrained platforms.</p>
+  <p class="specificite"><em>Espressif Systems (Shanghai) is the manufacturer of ESP32/ESP8266 SoCs and maintains this as an official project; the Gitee repository is an official domestic mirror synchronized from GitHub. No integration with Chinese cloud platforms (Baidu, Alibaba, Tencent) or WeChat/Alipay APIs is evident in the provided context.</em></p>
+</article>
+
+
+<article class="card highlight">
+  <header>
+    <span class="score score-high">82</span>
+    <a href="https://github.com/kendryte/nncase" target="_blank" rel="noopener">
+      <strong>kendryte/nncase</strong>
+    </a>
+  </header>
+  <div class="tags">
+    <span class="tag">Tool</span>
+    <span class="tag domain edge-ai">Edge AI</span>
+    <span class='tag stars'>★ 898</span>
+    <span class='tag date'>push 2026-07</span>
+  </div>
+  <p class="probleme">Compiling neural network models (TensorFlow, ONNX, etc.) into optimized code for Kendryte AI accelerators (K210, K510, K230), handling quantization and operation scheduling on specialized compute units (KPU).</p>
+  <p class="specificite"><em>Developed by Canaan Creative (creator of the Kendryte chipset), this compiler is the official deployment tool for the K2xx product line. The ecosystem includes Canaan resources (pre-trained models, SDK images, Bilibili tutorials) and native integration with K230_SDK and Canmv (MicroPython for Kendryte).</em></p>
+</article>
+
+
+<article class="card highlight">
+  <header>
+    <span class="score score-high">82</span>
+    <a href="https://gitee.com/openLuat/LuatOS" target="_blank" rel="noopener">
+      <strong>openLuat/LuatOS</strong>
+    </a>
+  </header>
+  <div class="tags">
+    <span class="tag">Framework</span>
+    <span class="tag domain">Embedded</span>
+    <span class='tag stars'>★ 1862</span>
+    <span class='tag date'>push 2026-07</span>
+  </div>
+  <p class="probleme">Enable rapid IoT application development on Hezhou cellular modules (Air8000/Air8101/Air780E series) using Lua scripting instead of C/C++, reducing firmware development cycles for industrial IoT devices.</p>
+  <p class="specificite"><em>Developed by openLuat (合宙&#x27;s software division) specifically for Hezhou&#x27;s proprietary cellular module lineup (Air8000/Air8101/Air780E series), which dominate Chinese industrial IoT deployments. Hezhou is a major cellular module vendor in China&#x27;s IoT supply chain.</em></p>
+</article>
+
+
+<article class="card highlight">
+  <header>
+    <span class="score score-high">81</span>
+    <a href="https://gitee.com/EspressifSystems/esp-iot-solution" target="_blank" rel="noopener">
+      <strong>EspressifSystems/esp-iot-solution</strong>
+    </a>
+  </header>
+  <div class="tags">
+    <span class="tag">Library</span>
+    <span class="tag domain">Embedded</span>
+    <span class='tag stars'>★ 41</span>
+    <span class='tag date'>push 2026-07</span>
+  </div>
+  <p class="probleme">Provides a collection of device drivers and middleware components (sensors, displays, audio, input devices, actuators) that extend ESP-IDF capabilities, reducing boilerplate code for IoT applications on ESP32 and related SoCs. Includes frameworks for low-power operation, security, and storage management.</p>
+  <p class="specificite"><em>Hosted on Gitee by EspressifSystems (乐鑫, Shanghai-based SoC vendor); no particular Chinese specificity beyond the author. Espressif manufactures the ESP8266/ESP32 chipsets and maintains this library as official supplementary documentation and drivers for their IoT ecosystem.</em></p>
+</article>
+
+<h2>🤖 Spotlight: new Edge AI domain (28 repos)</h2>
+<p>The <strong>Edge AI</strong> domain was added this week to capture Chinese mobile inference frameworks, NPU, and AI hardware acceleration.</p>
+
+<article class="card">
+  <header>
+    <span class="score score-high">90</span>
+    <a href="https://gitee.com/Tencent/ncnn" target="_blank" rel="noopener">
+      <strong>Tencent/ncnn</strong>
+    </a>
+  </header>
+  <div class="tags">
+    <span class="tag">Library</span>
+    <span class="tag domain edge-ai">Edge AI</span>
+    <span class='tag stars'>★ 303</span>
+    <span class='tag date'>push 2026-07</span>
+  </div>
+  <p class="probleme">Deploy deep learning models (PyTorch, ONNX) to mobile, embedded, and edge devices with minimal runtime overhead and optimized inference latency. Eliminates dependency on heavy frameworks like TensorFlow Lite or CoreML by providing a self-contained C++ inference engine with ARM NEON and Vulkan GPU acceleration.</p>
+  <p class="specificite"><em>Developed by Tencent&#x27;s Youtu Lab and deployed in production across Tencent applications (WeChat, QQ, Qzone, Pitu). No integration with Chinese cloud platforms or chipset vendors documented; specificity is primarily organizational rather than ecosystem-driven.</em></p>
+</article>
+
+
+<article class="card">
+  <header>
+    <span class="score score-high">82</span>
+    <a href="https://github.com/kendryte/nncase" target="_blank" rel="noopener">
+      <strong>kendryte/nncase</strong>
+    </a>
+  </header>
+  <div class="tags">
+    <span class="tag">Tool</span>
+    <span class="tag domain edge-ai">Edge AI</span>
+    <span class='tag stars'>★ 898</span>
+    <span class='tag date'>push 2026-07</span>
+  </div>
+  <p class="probleme">Compiling neural network models (TensorFlow, ONNX, etc.) into optimized code for Kendryte AI accelerators (K210, K510, K230), handling quantization and operation scheduling on specialized compute units (KPU).</p>
+  <p class="specificite"><em>Developed by Canaan Creative (creator of the Kendryte chipset), this compiler is the official deployment tool for the K2xx product line. The ecosystem includes Canaan resources (pre-trained models, SDK images, Bilibili tutorials) and native integration with K230_SDK and Canmv (MicroPython for Kendryte).</em></p>
+</article>
+
+
+<article class="card">
+  <header>
+    <span class="score score-high">77</span>
+    <a href="https://github.com/unitreerobotics/unitree_lerobot" target="_blank" rel="noopener">
+      <strong>unitreerobotics/unitree_lerobot</strong>
+    </a>
+  </header>
+  <div class="tags">
+    <span class="tag">Framework</span>
+    <span class="tag domain edge-ai">Edge AI</span>
+    <span class='tag stars'>★ 728</span>
+    <span class='tag date'>push 2026-05</span>
+  </div>
+  <p class="probleme">Enable training and deployment of imitation learning policies on Unitree G1 dual-arm robots using the LeRobot framework, with data conversion utilities for proprietary Unitree hand formats (Dex1, Dex3, BrainCo, Inspire1) into LeRobot-compatible datasets.</p>
+  <p class="specificite"><em>Unitree Robotics is a Chinese robotics manufacturer specializing in quadruped and humanoid platforms; this project directly integrates their proprietary G1 robot hardware and dexterous hand variants (Dex1, Dex3) with the open-source LeRobot framework, enabling Chinese roboticists to leverage imitation learning on Unitree platforms.</em></p>
+</article>
+
+
+<article class="card">
+  <header>
+    <span class="score score-high">77</span>
+    <a href="https://gitee.com/EspressifSystems/esp-insights" target="_blank" rel="noopener">
+      <strong>EspressifSystems/esp-insights</strong>
+    </a>
+  </header>
+  <div class="tags">
+    <span class="tag">Framework</span>
+    <span class="tag domain edge-ai">Edge AI</span>
+    <span class='tag stars'>★ 2</span>
+    <span class='tag date'>push 2026-07</span>
+  </div>
+  <p class="probleme">Capture and remotely transmit device diagnostics (error/warning logs, crashes, metrics, reset reasons) from ESP32/ESP8266 devices in the field to a cloud dashboard, enabling developers to diagnose issues that only occur in specific deployment environments without physical access.</p>
+  <p class="specificite"><em>Hosted on Gitee/GitHub by EspressifSystems; no particular Chinese specificity beyond the author. Espressif Systems (乐鑫, Shanghai) is the manufacturer of ESP8266 and ESP32 SoCs, and this project is their official remote diagnostics framework for their own chipset ecosystem.</em></p>
+</article>
+
+
+<article class="card">
+  <header>
+    <span class="score score-high">76</span>
+    <a href="https://gitee.com/alibaba/MNN" target="_blank" rel="noopener">
+      <strong>alibaba/MNN</strong>
+    </a>
+  </header>
+  <div class="tags">
+    <span class="tag">Framework</span>
+    <span class="tag domain edge-ai">Edge AI</span>
+    <span class='tag stars'>★ 7</span>
+    <span class='tag date'>push 2026-07</span>
+  </div>
+  <p class="probleme">Deploy deep learning models (LLMs, diffusion models, vision models) for on-device inference on mobile, IoT, and embedded systems with minimal latency and memory footprint, avoiding cloud dependency.</p>
+  <p class="specificite"><em>Developed and maintained by Alibaba; integrated into 30+ Alibaba applications (Taobao, Tmall, Youku, DingTalk) covering 70+ production scenarios. Supports Qwen (Alibaba&#x27;s LLM series) and other Chinese LLM models (Baichuan, Zhipu). Walle system (OSDI&#x27;22) uses MNN as the core inference module for device-cloud collaborative ML in Alibaba&#x27;s production infrastructure.</em></p>
+</article>
+
+
+<article class="card">
+  <header>
+    <span class="score score-high">75</span>
+    <a href="https://github.com/unitreerobotics/unitree_rl_lab" target="_blank" rel="noopener">
+      <strong>unitreerobotics/unitree_rl_lab</strong>
+    </a>
+  </header>
+  <div class="tags">
+    <span class="tag">Framework</span>
+    <span class="tag domain edge-ai">Robotics / Edge AI</span>
+    <span class='tag stars'>★ 1245</span>
+    <span class='tag date'>push 2026-05</span>
+  </div>
+  <p class="probleme">Provide reinforcement learning training environments for Unitree quadruped and humanoid robots (Go2, H1, G1-29dof) integrated with NVIDIA&#x27;s IsaacLab simulator, enabling sim-to-sim and sim-to-real policy transfer without proprietary training frameworks.</p>
+  <p class="specificite"><em>Hosted by Unitree Robotics, a Chinese manufacturer of quadruped and humanoid robots; no integration with Chinese cloud platforms or chipset vendors (uses NVIDIA GPUs for training, standard x86/ARM for deployment). The project is specific to Unitree hardware but otherwise follows Western open-source conventions.</em></p>
+</article>
+
+
+<article class="card">
+  <header>
+    <span class="score score-high">75</span>
+    <a href="https://github.com/unitreerobotics/unitree_sdk2" target="_blank" rel="noopener">
+      <strong>unitreerobotics/unitree_sdk2</strong>
+    </a>
+  </header>
+  <div class="tags">
+    <span class="tag">Library</span>
+    <span class="tag domain edge-ai">Edge AI</span>
+    <span class='tag stars'>★ 1258</span>
+    <span class='tag date'>push 2026-07</span>
+  </div>
+  <p class="probleme">Provide a unified C++ SDK for controlling Unitree quadruped robots (Go1, Go2, B1, H1 series) across heterogeneous compute platforms (aarch64, x86_64) without requiring proprietary closed-source libraries or vendor-specific toolchains.</p>
+  <p class="specificite"><em>Unitree Robotics is a Chinese manufacturer of quadruped robots (Go1, Go2, B1, H1) headquartered in Hangzhou; this SDK is the official second-generation control interface for their product line. No integration with Chinese cloud platforms (Baidu, Alibaba) or cellular standards (NB-IoT, 5G) is documented.</em></p>
+</article>
+
+
+<article class="card">
+  <header>
+    <span class="score score-high">75</span>
+    <a href="https://gitee.com/EspressifSystems/esp-rainmaker" target="_blank" rel="noopener">
+      <strong>EspressifSystems/esp-rainmaker</strong>
+    </a>
+  </header>
+  <div class="tags">
+    <span class="tag">Framework</span>
+    <span class="tag domain edge-ai">IoT / Edge AI</span>
+    <span class='tag stars'>★ 11</span>
+    <span class='tag date'>push 2026-07</span>
+  </div>
+  <p class="probleme">Enables remote control and monitoring of ESP32-based IoT devices without manual cloud configuration. Provides a firmware agent that automatically handles device claiming, cloud connectivity, and dynamic UI rendering on mobile clients.</p>
+  <p class="specificite"><em>Hosted on Gitee/GitHub by EspressifSystems; no particular Chinese specificity beyond the author. Espressif Systems (乐鑫, Shanghai) is the manufacturer of ESP32 SoCs and maintains this official repository.</em></p>
+</article>
+
+
+<article class="card">
+  <header>
+    <span class="score score-high">73</span>
+    <a href="https://gitee.com/EspressifSystems/esp-drone" target="_blank" rel="noopener">
+      <strong>EspressifSystems/esp-drone</strong>
+    </a>
+  </header>
+  <div class="tags">
+    <span class="tag">Application</span>
+    <span class="tag domain edge-ai">Edge AI</span>
+    <span class='tag stars'>★ 64</span>
+    <span class='tag date'>push 2026-06</span>
+  </div>
+  <p class="probleme">Provide a Wi-Fi-controlled quadcopter firmware stack for ESP32/ESP32-S2/ESP32-S3 microcontrollers, enabling flight stabilization and position-hold modes without proprietary drone platforms. Ported from Crazyflie to reduce development friction for educational and hobbyist UAV projects.</p>
+  <p class="specificite"><em>Developed and maintained by Espressif Systems (Shanghai), the manufacturer of ESP32 SoCs; official Gitee mirror synchronized from GitHub. Leverages Espressif&#x27;s ESP-IDF ecosystem and hardware platform as the sole target architecture.</em></p>
+</article>
+
+
+<article class="card">
+  <header>
+    <span class="score score-high">71</span>
+    <a href="https://github.com/unitreerobotics/UniArmL1" target="_blank" rel="noopener">
+      <strong>unitreerobotics/UniArmL1</strong>
+    </a>
+  </header>
+  <div class="tags">
+    <span class="tag">Framework</span>
+    <span class="tag domain edge-ai">Edge AI</span>
+    <span class='tag stars'>★ 11</span>
+    <span class='tag date'>push 2026-05</span>
+  </div>
+  <p class="probleme">Provide a lightweight 6-DOF robotic arm teleoperation framework with standardized data collection for imitation learning. Enables seamless integration of VR controller, keyboard, and leader-follower control modes with synchronized multi-camera recording at fixed frequency for downstream training pipelines.</p>
+  <p class="specificite"><em>Hosted on GitHub by unitreerobotics (Unitree Robotics, a Chinese quadruped/robotic systems company). No specific chipset vendor or Chinese standard compliance documented; the project is a software framework for a custom 6-DOF arm design derived from open-source SO-ARM100 hardware.</em></p>
+</article>
+
+<p><em>+18 more Edge AI repos in the dashboard.</em></p>
+<h2>🏢 Focus: 8 new big-tech orgs added (13 repos)</h2>
+<p>This week, integration of the official Gitee accounts of the Chinese giants: Alibaba, ByteDance, Baidu, PaddlePaddle, Tencent, JD, plus DongshanPi and LicheePi (RISC-V boards).</p>
+<div class="owner-group"><h3>alibaba (10 fiches)</h3>
+<div class="owner-list">
+<a href="https://gitee.com/alibaba/MNN" target="_blank">MNN (76)</a>
+<a href="https://gitee.com/alibaba/AliOS-Things" target="_blank">AliOS-Things (75)</a>
+<a href="https://gitee.com/alibaba/iot_remote_access" target="_blank">iot_remote_access (71)</a>
+<a href="https://gitee.com/alibaba/id2_client_sdk" target="_blank">id2_client_sdk (67)</a>
+<a href="https://gitee.com/alibaba/sionnx" target="_blank">sionnx (64)</a>
+<a href="https://gitee.com/alibaba/alibaba-rsocket-broker" target="_blank">alibaba-rsocket-broker (62)</a>
+<a href="https://gitee.com/alibaba/MNNKit" target="_blank">MNNKit (62)</a>
+<a href="https://gitee.com/alibaba/Dummy-RISC-V-VPU" target="_blank">Dummy-RISC-V-VPU (59)</a>
+<a href="https://gitee.com/alibaba/collabobot" target="_blank">collabobot (57)</a>
+<a href="https://gitee.com/alibaba/system-register-tools" target="_blank">system-register-tools (41)</a>
+</div></div>
+<div class="owner-group"><h3>tencent (1 fiches)</h3>
+<div class="owner-list">
+<a href="https://gitee.com/Tencent/ncnn" target="_blank">ncnn (90)</a>
+</div></div>
+<div class="owner-group"><h3>paddlepaddle (1 fiches)</h3>
+<div class="owner-list">
+<a href="https://gitee.com/paddlepaddle/PaddleOCR" target="_blank">PaddleOCR (71)</a>
+</div></div>
+<div class="owner-group"><h3>bytedance (1 fiches)</h3>
+<div class="owner-list">
+<a href="https://gitee.com/ByteDance/coap" target="_blank">coap (54)</a>
+</div></div>
+<h2>📊 Distribution by domain</h2>
+<div class="dist-row"><span>Embedded</span><span><strong>59</strong> (56.2%)</span></div>
+<div class="dist-row"><span>Edge AI</span><span><strong>28</strong> (26.7%)</span></div>
+<div class="dist-row"><span>Robotics</span><span><strong>17</strong> (16.2%)</span></div>
+<div class="dist-row"><span>IoT</span><span><strong>6</strong> (5.7%)</span></div>
+<h2>🧱 Distribution by type</h2>
+<div class="dist-row"><span>Framework</span><span><strong>25</strong> (23.8%)</span></div>
+<div class="dist-row"><span>Library</span><span><strong>22</strong> (21.0%)</span></div>
+<div class="dist-row"><span>Board Support Package</span><span><strong>16</strong> (15.2%)</span></div>
+<div class="dist-row"><span>Tool</span><span><strong>15</strong> (14.3%)</span></div>
+<div class="dist-row"><span>Application</span><span><strong>11</strong> (10.5%)</span></div>
+<div class="dist-row"><span>Driver</span><span><strong>7</strong> (6.7%)</span></div>
+<div class="dist-row"><span>Documentation</span><span><strong>7</strong> (6.7%)</span></div>
+<div class="dist-row"><span>RTOS</span><span><strong>2</strong> (1.9%)</span></div>
+
+<footer>Generated automatically by Minerva — Chinese tech intelligence pipeline.
+See the interactive dashboard: <code>output/dashboard.html</code></footer>
+</body></html>

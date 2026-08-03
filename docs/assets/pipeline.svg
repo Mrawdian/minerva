@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1040 380" font-family="-apple-system, Segoe UI, Roboto, sans-serif" role="img" aria-label="Minerva pipeline: collect from Gitee and GitHub, score semantically, enrich with Claude, output bilingual fiches, dashboard and newsletter">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0b0e14"/>
+      <stop offset="1" stop-color="#11131d"/>
+    </linearGradient>
+    <linearGradient id="acc" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#ff3344"/>
+      <stop offset="1" stop-color="#ff5566"/>
+    </linearGradient>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#6b7280"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="1040" height="380" rx="18" fill="url(#bg)"/>
+  <rect x="0" y="0" width="1040" height="380" rx="18" fill="none" stroke="#232838" stroke-width="1"/>
+
+  <!-- title -->
+  <text x="40" y="52" fill="#f0f0f5" font-size="26" font-weight="800" letter-spacing="-0.5">Minerva</text>
+  <text x="146" y="52" fill="#9aa0ad" font-size="15" font-weight="500">— Chinese open-source tech-watch pipeline</text>
+  <rect x="40" y="66" width="54" height="3" rx="2" fill="url(#acc)"/>
+
+  <!-- stages -->
+  <g font-size="15" font-weight="700" fill="#f0f0f5">
+    <!-- Sources -->
+    <rect x="40" y="110" width="150" height="150" rx="12" fill="#151a24" stroke="#2a3040" stroke-width="1"/>
+    <text x="115" y="138" text-anchor="middle" fill="#9aa0ad" font-size="11" font-weight="600" letter-spacing="1">SOURCES</text>
+    <rect x="60" y="152" width="110" height="34" rx="7" fill="#0f1420" stroke="#2a3040"/>
+    <text x="115" y="174" text-anchor="middle" font-size="13">Gitee API v5</text>
+    <rect x="60" y="196" width="110" height="34" rx="7" fill="#0f1420" stroke="#2a3040"/>
+    <text x="115" y="218" text-anchor="middle" font-size="13">GitHub REST</text>
+
+    <!-- Collect -->
+    <rect x="230" y="135" width="150" height="100" rx="12" fill="#151a24" stroke="#2a3040" stroke-width="1"/>
+    <text x="305" y="180" text-anchor="middle">Collect</text>
+    <text x="305" y="202" text-anchor="middle" fill="#9aa0ad" font-size="11" font-weight="500">rate-limit · retry · diff</text>
+
+    <!-- Score -->
+    <rect x="420" y="135" width="150" height="100" rx="12" fill="#151a24" stroke="#4f8eff" stroke-width="1.5"/>
+    <text x="495" y="180" text-anchor="middle">Score</text>
+    <text x="495" y="202" text-anchor="middle" fill="#9aa0ad" font-size="11" font-weight="500">semantic embeddings</text>
+
+    <!-- Enrich -->
+    <rect x="610" y="135" width="150" height="100" rx="12" fill="#151a24" stroke="#f472b6" stroke-width="1.5"/>
+    <text x="685" y="180" text-anchor="middle">Enrich</text>
+    <text x="685" y="202" text-anchor="middle" fill="#9aa0ad" font-size="11" font-weight="500">Claude Haiku 4.5</text>
+
+    <!-- Outputs -->
+    <rect x="800" y="110" width="200" height="150" rx="12" fill="#151a24" stroke="#2a3040" stroke-width="1"/>
+    <text x="900" y="138" text-anchor="middle" fill="#9aa0ad" font-size="11" font-weight="600" letter-spacing="1">OUTPUTS</text>
+    <rect x="820" y="150" width="160" height="30" rx="7" fill="#0f1420" stroke="#2a3040"/>
+    <text x="900" y="170" text-anchor="middle" font-size="12.5">Bilingual fiches EN/FR</text>
+    <rect x="820" y="186" width="160" height="30" rx="7" fill="#0f1420" stroke="#2a3040"/>
+    <text x="900" y="206" text-anchor="middle" font-size="12.5">Interactive dashboard</text>
+    <rect x="820" y="222" width="160" height="30" rx="7" fill="#0f1420" stroke="#2a3040"/>
+    <text x="900" y="242" text-anchor="middle" font-size="12.5">Email newsletter</text>
+  </g>
+
+  <!-- arrows -->
+  <g stroke="#6b7280" stroke-width="2" fill="none">
+    <line x1="192" y1="185" x2="226" y2="185" marker-end="url(#arrow)"/>
+    <line x1="382" y1="185" x2="416" y2="185" marker-end="url(#arrow)"/>
+    <line x1="572" y1="185" x2="606" y2="185" marker-end="url(#arrow)"/>
+    <line x1="762" y1="185" x2="796" y2="185" marker-end="url(#arrow)"/>
+  </g>
+
+  <!-- incremental loop -->
+  <g>
+    <rect x="230" y="290" width="530" height="46" rx="10" fill="#0f1420" stroke="#2a3040"/>
+    <text x="252" y="318" fill="#fbbf24" font-size="13" font-weight="700">↻ Incremental</text>
+    <text x="360" y="318" fill="#9aa0ad" font-size="12.5" font-weight="500">state.json tracks pushed_at — only new / changed repos hit the LLM</text>
+  </g>
+  <g stroke="#3a4152" stroke-width="1.5" fill="none" stroke-dasharray="4 4">
+    <path d="M495 235 L495 290" marker-end="url(#arrow)"/>
+    <path d="M685 235 L685 290" marker-end="url(#arrow)"/>
+  </g>
+
+  <!-- footer stats -->
+  <text x="40" y="320" fill="#6b7280" font-size="12" font-weight="600">27 orgs</text>
+  <text x="40" y="338" fill="#6b7280" font-size="12" font-weight="600">4 domains</text>
+  <text x="900" y="320" text-anchor="middle" fill="#6b7280" font-size="12" font-weight="600">~$0.005 / fiche</text>
+  <text x="900" y="338" text-anchor="middle" fill="#6b7280" font-size="12" font-weight="600">77 tests · CI</text>
+</svg>

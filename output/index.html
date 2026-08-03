@@ -1,0 +1,309 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Minerva — Decision-ready intelligence on China&#x27;s open-source hardware</title>
+<meta name="description" content="105 decision-ready EN/FR fiches on Chinese embedded, IoT, robotics and edge-AI open source (Gitee + GitHub) — with Western-equivalent mapping, maturity and confidence. Tech scouting, competitive intelligence, sourcing.">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Minerva — Decision-ready intelligence on China&#x27;s open-source hardware">
+<meta property="og:description" content="105 decision-ready EN/FR fiches on Chinese embedded, IoT, robotics and edge-AI open source (Gitee + GitHub) — with Western-equivalent mapping, maturity and confidence. Tech scouting, competitive intelligence, sourcing.">
+
+
+<meta property="og:site_name" content="Minerva">
+<meta property="og:locale" content="en_US">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Minerva — Decision-ready intelligence on China&#x27;s open-source hardware">
+<meta name="twitter:description" content="105 decision-ready EN/FR fiches on Chinese embedded, IoT, robotics and edge-AI open source (Gitee + GitHub) — with Western-equivalent mapping, maturity and confidence. Tech scouting, competitive intelligence, sourcing.">
+<style>
+:root{
+  --paper:#F5F6F4; --surface:#FFFFFF; --surface-2:#FAFBF9;
+  --ink:#1B1E20; --ink-2:#565C61; --ink-3:#8A9096; --ink-4:#B9BEC2;
+  --line:#E4E6E2; --line-2:#CDD0CB; --grid:rgba(27,30,32,0.028);
+  --signal:#2F5A5C; --signal-2:#244748; --signal-soft:#E9EEEC;
+  --d-emb:#4C6FA4; --d-edge:#8A6AA0; --d-rob:#5E8C6A; --d-iot:#B4894C;
+  --sans:-apple-system,"Segoe UI",Inter,Roboto,Helvetica,Arial,sans-serif;
+  --mono:ui-monospace,"SF Mono","JetBrains Mono",Menlo,Consolas,monospace;
+
+  /* D5 — bounded instrument register (status-line + readout panels ONLY;
+     never a page-wide theme — this is not dark mode). */
+  --slab:#1B1E20; --slab-2:#262B2D; --slab-ink:#F5F6F4;
+  --slab-line:rgba(245,246,244,0.14); --signal-on-slab:#5B948F;
+  /* D5 — flattened radius scale: kills the generic "SaaS card" 5-8px softness. */
+  --r-0:0px; --r-sm:2px; --r-pill:100px;
+  --tick:var(--ink-4);
+}
+*{box-sizing:border-box} html,body{margin:0}
+body{
+  background:var(--paper); color:var(--ink); font-family:var(--sans);
+  font-size:15px; line-height:1.6; -webkit-font-smoothing:antialiased;
+  font-feature-settings:"tnum","cv02","cv03";
+  background-image:linear-gradient(var(--grid) 1px,transparent 1px),
+                   linear-gradient(90deg,var(--grid) 1px,transparent 1px);
+  background-size:34px 34px;
+}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1060px;margin:0 auto;padding:0 28px}
+.mono{font-family:var(--mono)} .tnum{font-variant-numeric:tabular-nums}
+
+/* NAV */
+nav{position:sticky;top:0;z-index:30;background:rgba(245,246,244,0.86);
+  backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border-bottom:1px solid var(--line-2)}
+nav .row{display:flex;align-items:center;gap:20px;padding:13px 0}
+.brand{display:flex;align-items:center;gap:9px;color:var(--ink)}
+.mark{width:14px;height:14px;border:2px solid var(--ink);border-radius:var(--r-sm);position:relative;flex:none}
+.mark::after{content:"";position:absolute;inset:3px 3px auto auto;width:4px;height:4px;background:var(--signal)}
+.brand b{font-family:var(--mono);font-size:14.5px;font-weight:600;letter-spacing:0.02em}
+nav .links{margin-left:auto;display:flex;gap:20px;align-items:center}
+nav .links a{font-size:13.5px;color:var(--ink-2);font-weight:500}
+nav .links a:hover{color:var(--ink)}
+nav .links a.active{color:var(--signal)}
+nav .links .pro{border:1px solid var(--line-2);border-radius:var(--r-sm);padding:5px 12px;color:var(--ink)}
+nav .links .pro:hover{border-color:var(--signal);color:var(--signal)}
+
+/* STATUS LINE — one shared, bounded instrument band under nav, on every page.
+   Slab-registered (ink bg) but confined to this strip only — not a page theme. */
+.status-line{background:var(--slab);color:var(--slab-ink)}
+.status-line .srow{display:flex;align-items:center;gap:0;padding:7px 0;font-family:var(--mono);font-size:11px;letter-spacing:0.02em}
+.status-line .seg{display:flex;align-items:center;gap:7px;padding:0 16px;position:relative}
+.status-line .seg:first-child{padding-left:0}
+.status-line .seg:not(:last-child)::after{content:"";position:absolute;right:0;top:2px;bottom:2px;width:1px;background:var(--slab-line)}
+.status-line .dot{width:5px;height:5px;border-radius:var(--r-sm);background:var(--signal-on-slab);flex:none}
+.status-line .accent{color:var(--signal-on-slab);font-weight:600}
+.status-line .ticks{margin-left:auto;display:flex;gap:4px}
+.status-line .ticks i{display:block;width:1px;height:10px;background:var(--slab-line)}
+
+/* SHARED ATOMS */
+.seclabel{font-family:var(--mono);font-size:12px;text-transform:uppercase;letter-spacing:0.09em;
+  color:var(--ink-3);font-weight:600;margin:0 0 18px}
+.seclabel .n{color:var(--signal);margin-right:8px}
+.btn{display:inline-flex;align-items:center;gap:7px;font-family:var(--sans);font-size:14px;font-weight:600;
+  padding:11px 18px;border-radius:var(--r-sm);border:1px solid transparent;cursor:pointer;
+  transition:background .14s,border-color .14s,color .14s}
+.btn-primary{background:var(--signal);color:#fff;border-color:var(--signal)}
+.btn-primary:hover{background:var(--signal-2);border-color:var(--signal-2)}
+.btn-ghost{background:var(--surface);color:var(--ink);border-color:var(--line-2)}
+.btn-ghost:hover{border-color:var(--signal);color:var(--signal)}
+.btn-link{color:var(--signal);font-weight:600;font-size:14px;border-bottom:1px solid var(--line-2);padding-bottom:2px}
+.btn-link:hover{border-color:var(--signal)}
+.tag{display:inline-flex;align-items:center;gap:6px;font-family:var(--mono);font-size:11px;font-weight:600;
+  letter-spacing:0.02em;padding:3px 8px;border-radius:var(--r-sm);border:1px solid var(--line-2);color:var(--ink-2);background:var(--surface)}
+.tag .d{width:7px;height:7px;border-radius:var(--r-sm);display:inline-block}
+.tag.emb .d{background:var(--d-emb)} .tag.edge .d{background:var(--d-edge)}
+.tag.rob .d{background:var(--d-rob)} .tag.iot .d{background:var(--d-iot)}
+.tag.plain{color:var(--ink-2)}
+.conf{font-family:var(--mono);font-size:11px;color:var(--ink-2);display:inline-flex;align-items:center;gap:6px}
+.conf .dm{letter-spacing:1px;color:var(--ink)} .conf .off{color:var(--ink-4)}
+.score{display:flex;align-items:center;gap:9px}
+.score .n{font-family:var(--mono);font-size:14px;font-weight:600}
+.meter{width:96px;height:4px;background:var(--line);border-radius:var(--r-sm);overflow:hidden}
+.meter i{display:block;height:100%;background:var(--signal)}
+.badge{display:inline-flex;align-items:center;gap:8px;font-family:var(--mono);font-size:11.5px;color:var(--ink-2);
+  background:var(--surface);border:1px solid var(--line-2);border-radius:var(--r-pill);padding:5px 12px;letter-spacing:0.02em}
+.badge .d{width:6px;height:6px;border-radius:var(--r-sm);background:var(--signal)}
+.form{display:flex;gap:8px;max-width:440px;flex-wrap:wrap}
+.form input{flex:1 1 200px;background:var(--surface);border:1px solid var(--line-2);border-radius:var(--r-sm);
+  padding:11px 14px;font-family:var(--sans);font-size:14px;color:var(--ink)}
+.form input:focus{outline:none;border-color:var(--signal);box-shadow:0 0 0 3px var(--signal-soft)}
+.form .btn{flex:0 0 auto}
+.fine{font-family:var(--mono);font-size:11.5px;color:var(--ink-3);margin-top:12px}
+
+/* READOUT — score/confidence/domain as a structural instrument panel (D5).
+   Shared by the landing proof-fiche and the fiche page. This is the ONE readout
+   slab per surface — do not add a second one on the same page (stay calm). */
+.readout{background:var(--slab);color:var(--slab-ink);border-radius:var(--r-0);
+  padding:18px 22px;display:flex;align-items:center;gap:28px;flex-wrap:wrap;position:relative;overflow:hidden}
+.readout::before{content:"";position:absolute;left:0;top:0;bottom:0;width:5px;background:var(--dom-color,var(--ink-4))}
+.readout .rblock{display:flex;flex-direction:column;gap:3px}
+.readout .rlab{font-family:var(--mono);font-size:9.5px;text-transform:uppercase;letter-spacing:0.09em;color:var(--ink-4)}
+.readout .rval{font-family:var(--mono);font-size:26px;font-weight:600;letter-spacing:-0.01em;color:var(--slab-ink);line-height:1}
+.readout .rval .unit{font-size:12px;color:var(--ink-4);font-weight:500;margin-left:2px}
+.readout .rval.conf{font-size:18px;letter-spacing:2px}
+.readout .rval.dom{font-size:15px;letter-spacing:0;color:var(--slab-ink);font-weight:600}
+.readout .off{color:#4A5052}
+.readout .rmeta{margin-left:auto;font-family:var(--mono);font-size:10.5px;color:var(--ink-4);text-align:right;line-height:1.5}
+/* Legend — an instrument without a legend is a decorative number (audit fix). */
+.rlegend{font-family:var(--mono);font-size:10.5px;color:var(--ink-3);margin-top:8px;line-height:1.5}
+.rlegend b{color:var(--ink-2);font-weight:600}
+
+/* FOOTER */
+footer{padding:28px 0 44px;border-top:1px solid var(--line);margin-top:16px}
+footer .frow{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-family:var(--mono);font-size:12px;color:var(--ink-3)}
+footer a{color:var(--ink-2)} footer a:hover{color:var(--signal)}
+
+.hero{padding:56px 0 56px}
+.hero h1{font-family:var(--sans);font-size:clamp(34px,5vw,52px);letter-spacing:-0.03em;line-height:1.05;margin:20px 0 20px;font-weight:700;max-width:16ch}
+.hero .lede{font-size:clamp(16px,1.7vw,19px);color:var(--ink-2);max-width:640px;margin:0 0 30px}
+.hero .lede b{color:var(--ink);font-weight:600}
+.cta{display:flex;gap:14px;align-items:center;flex-wrap:wrap}
+.trust{margin-top:30px;display:flex;gap:24px;flex-wrap:wrap;font-family:var(--mono);font-size:12.5px;color:var(--ink-3)}
+.trust b{color:var(--ink);font-weight:600}
+section{border-bottom:1px solid var(--line)}
+.sec{padding:52px 0}
+h2{font-family:var(--sans);font-size:26px;letter-spacing:-0.02em;margin:0 0 8px;font-weight:680}
+.lead{font-size:15px;color:var(--ink-2);max-width:620px;margin:0}
+.fiche{background:var(--surface);border:1px solid var(--ink-4);border-radius:var(--r-0);max-width:720px;overflow:hidden;margin-top:24px}
+.fiche .fnamerow{display:flex;align-items:center;gap:12px;flex-wrap:wrap;padding:15px 20px;border-bottom:1px solid var(--line);background:var(--surface-2)}
+.fiche .fname{font-family:var(--mono);font-weight:600;font-size:15px;color:var(--ink)}
+.fiche .fname:hover{color:var(--signal)}
+.field{padding:14px 20px;border-bottom:1px solid var(--line)}
+.field .k{font-family:var(--mono);font-size:11px;text-transform:uppercase;letter-spacing:0.08em;color:var(--ink-3);margin-bottom:5px;display:flex;gap:8px;flex-wrap:wrap;align-items:baseline}
+.field .v{font-size:14.5px;line-height:1.55}
+.field.key{background:var(--signal-soft)} .field.key .k{color:var(--signal-2)} .field.key .v{font-weight:560}
+.field .k .hint{font-family:var(--sans);text-transform:none;letter-spacing:0;color:var(--signal);font-weight:600;font-size:11px}
+.prov{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;padding:12px 20px;font-family:var(--mono);font-size:11.5px;color:var(--ink-3);background:var(--surface-2)}
+.prov a{color:var(--signal)}
+.uc-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:24px}
+.uc{display:block;background:var(--surface);border:1px solid var(--line);border-radius:var(--r-0);padding:18px 20px;transition:border-color .14s}
+.uc:hover{border-color:var(--ink-4)}
+.uc .h{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:8px}
+.uc .h b{font-size:15.5px}
+.uc .job{font-size:14px;font-weight:560;margin:0 0 6px} .uc .ex{font-size:13px;color:var(--ink-2);margin:0;line-height:1.5} .uc .ex b{color:var(--ink)}
+.how{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:24px}
+.step{background:var(--surface);border:1px solid var(--line);border-radius:var(--r-0);padding:18px}
+.step .num{font-family:var(--mono);font-size:11px;color:var(--signal);font-weight:700;letter-spacing:0.08em}
+.step h4{margin:8px 0 6px;font-size:14.5px;font-weight:620} .step p{margin:0;font-size:12.5px;color:var(--ink-2);line-height:1.5}
+.step code{font-family:var(--mono);font-size:11.5px;background:var(--surface-2);border:1px solid var(--line);border-radius:var(--r-sm);padding:0 5px;color:var(--ink)}
+.dom{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:24px}
+.cell{background:var(--surface);border:1px solid var(--line);border-radius:var(--r-0);padding:16px 18px}
+.cell .top{display:flex;align-items:center;gap:8px;margin-bottom:8px}
+.cell .dot{width:8px;height:8px;border-radius:var(--r-sm)} .cell .top b{font-size:14.5px} .cell .top .c{margin-left:auto;font-family:var(--mono);font-weight:600;color:var(--ink)}
+.cell .bar{height:3px;background:var(--line);border-radius:var(--r-sm);overflow:hidden;margin-bottom:8px} .cell .bar i{display:block;height:100%}
+.cell p{margin:0;font-size:12px;color:var(--ink-2);line-height:1.45}
+.trustband ul{list-style:none;padding:0;margin:20px 0 0;display:grid;grid-template-columns:1fr 1fr;gap:10px 28px}
+.trustband li{font-size:13.5px;color:var(--ink-2);padding-left:22px;position:relative}
+.trustband li::before{content:"✓";position:absolute;left:0;color:var(--signal);font-weight:700}
+.capture{padding:64px 0;text-align:center}
+.capture h2{margin-bottom:10px} .capture .lead{margin:0 auto 24px}
+.capture .form{margin:0 auto;justify-content:center} .capture .fine{text-align:center}
+@media(max-width:780px){.uc-grid,.how,.dom,.trustband ul{grid-template-columns:1fr 1fr}}
+@media(max-width:520px){.how,.dom{grid-template-columns:1fr 1fr}.uc-grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<nav><div class="wrap row">
+  <a class="brand" href="index.html"><span class="mark"></span><b>MINERVA</b></a>
+  <span class="links">
+    <a href="dashboard.html">Dashboard</a>
+    <a href="index.html#newsletter">Newsletter</a>
+    <a href="pro.html" class="pro">Pro</a>
+  </span>
+</div></nav>
+<div class="status-line"><div class="wrap srow">
+  <span class="seg"><span class="dot"></span><span class="accent">Snapshot</span>&nbsp;· as of 2026-07-31</span>
+  <span class="seg">105 fiches</span>
+  
+  <span class="ticks"><i></i><i></i><i></i><i></i><i></i></span>
+</div></div>
+
+<header class="hero wrap">
+  <h1>Decision-ready intelligence on China's open-source hardware.</h1>
+  <p class="lede">The Chinese embedded / IoT / robotics / edge-AI ecosystem ships fast — in
+  Mandarin, split across Gitee and GitHub. Minerva turns it into <b>structured EN/FR fiches
+  you can act on</b>: what a project does, how mature it is, and its <b>Western equivalent</b>.
+  Intelligence, not a repo directory.</p>
+  <div class="cta">
+    <a class="btn btn-primary" href="dashboard.html">Explore the dashboard →</a>
+    <a class="btn-link" href="#newsletter">Get the brief</a>
+  </div>
+  <div class="trust">
+    <span><b>105</b> fiches</span>
+    <span><b>14</b> orgs · Gitee + GitHub</span>
+    <span><b>88%</b> hardware vendors</span>
+    <span><b>EN + FR</b></span>
+    <span>Apache 2.0</span>
+  </div>
+</header>
+
+<section><div class="wrap sec">
+  <p class="seclabel"><span class="n">01</span>What one fiche looks like</p>
+  <h2>Not a link and a star count — the decision layer.</h2>
+  <p class="lead">Generated from the description and README, mapped to what you already know.
+  This is the anti-directory proof.</p>
+  <article class="fiche">
+  <div class="readout" style="--dom-color:var(--d-emb)">
+    <div class="rblock"><span class="rlab">Score</span><span class="rval tnum">78<span class="unit">/100</span></span></div>
+    <div class="rblock"><span class="rlab">Confidence</span><span class="rval conf">◆◆◆</span></div>
+    <div class="rblock"><span class="rlab">Domain</span><span class="rval dom">Embedded</span></div>
+    <div class="rmeta">Stable (★ 954, 226 forks, updated 2026-07)</div>
+  </div>
+  <div class="fnamerow">
+    <a class="fname" href="f/sophgo-tpu-mlir.html">sophgo/tpu-mlir</a>
+    <span class="tag emb"><span class="d"></span>Embedded</span>
+  </div>
+  <div class="field"><div class="k">Problem solved</div><div class="v">Compiling pre-trained neural network models (PyTorch, ONNX, TFLite, Caffe, HuggingFace) into optimized binaries (bmodel) executable on Sophgo TPU, with full support for quantization (INT8, BF16, F16) and LLM.</div></div>
+  <div class="field"><div class="k">How it works</div><div class="v">Two-stage MLIR pipeline: import front-end (model_transform.py) converts standard formats to MLIR Top dialect, then back-end (model_deploy.py) lowers to Tpu dialect with optimizations (layer-group memory planning, pattern rewrites, symmetric/asymmetric quantization, AWQ/GPTQ/Auto…</div></div>
+  <div class="field"><div class="k">Chinese specificity</div><div class="v">Sophgo is a Chinese fabless company specializing in TPU SoCs; this compiler directly targets its TPU architectures (bm1684x cited). Native integration of popular HuggingFace models in China (Qwen, MiniCPM-V). Bilingual…</div></div>
+  <div class="field key"><div class="k">Western equivalent <span class="hint">← the bridge a directory never gives you</span></div><div class="v">TVM (Apache), ONNX Runtime (Microsoft), TensorFlow Lite Converter (Google), PyTorch Export (Meta) — but none offer the same MLIR compiler integration + quantization + proprietary TPU targeting.</div></div>
+  <div class="prov"><span>Maturity: Stable (★ 954, 226 forks, updated 2026-07)</span><a href="https://github.com/sophgo/tpu-mlir" target="_blank" rel="noopener">View on GitHub →</a></div>
+</article>
+</div></section>
+
+<section><div class="wrap sec">
+  <p class="seclabel"><span class="n">02</span>What you'd use it for</p>
+  <h2>Four jobs, each wired to a real view.</h2>
+  <div class="uc-grid">
+    <a class="uc" href="dashboard.html"><div class="h"><b>Tech scouting</b><span class="tag edge"><span class="d"></span>Edge AI</span></div>
+  <p class="job">Find the Chinese counterpart to a Western framework</p><p class="ex">“Is there a Chinese ncnn/TVM?” — the <b>Western-equivalent</b> field maps each project to what you already know.</p></a>
+<a class="uc" href="dashboard.html"><div class="h"><b>Competitive intelligence</b><span class="tag rob"><span class="d"></span>Robotics</span></div>
+  <p class="job">Watch a competitor's open-source footprint</p><p class="ex">Track what a vendor (Sophgo, Unitree, Bouffalo…) ships and how mature it is — before it lands in a product.</p></a>
+<a class="uc" href="dashboard.html"><div class="h"><b>Sourcing / BOM</b><span class="tag emb"><span class="d"></span>Embedded</span></div>
+  <p class="job">De-risk a chipset SDK before you design it in</p><p class="ex">Read the maturity, activity and real scope of a vendor's RTOS/BSP/SDK, not a marketing page.</p></a>
+<a class="uc" href="dashboard.html"><div class="h"><b>Edge-AI benchmarking</b><span class="tag edge"><span class="d"></span>Edge AI</span></div>
+  <p class="job">Line up inference runtimes on Chinese silicon</p><p class="ex">ncnn vs MNN vs tpu-mlir vs nncase — targets, quantization and Western equivalents side by side.</p></a>
+  </div>
+</div></section>
+
+<section><div class="wrap sec">
+  <p class="seclabel"><span class="n">03</span>How it works</p>
+  <h2>A monitoring engine, not a one-shot scrape.</h2>
+  <div class="how">
+    <div class="step"><div class="num">01 · COLLECT</div><h4>Collect</h4><p>Official <b>Gitee</b> &amp; <b>GitHub</b> APIs across 27 watched orgs; 14 currently yield fiches. Public metadata &amp; READMEs only.</p></div>
+    <div class="step"><div class="num">02 · SCORE</div><h4>Score</h4><p>Multilingual <b>semantic embeddings</b> vs 4 domains, plus an anti-noise filter that keeps vendors and drops generic big-tech repos.</p></div>
+    <div class="step"><div class="num">03 · ENRICH</div><h4>Enrich</h4><p><code>Claude Haiku 4.5</code> writes problem, how-it-works, Chinese specificity and <b>Western equivalent</b> — in EN &amp; FR.</p></div>
+    <div class="step"><div class="num">04 · TRACK</div><h4>Track</h4><p>Incremental <b>NEW / MODIFIED / REMOVED</b> diff via persisted state — dated to each run, not a one-shot scrape.</p></div>
+  </div>
+</div></section>
+
+<section><div class="wrap sec">
+  <p class="seclabel"><span class="n">04</span>The corpus, honestly</p>
+  <h2>105 fiches, 14 orgs, 88% from hardware vendors.</h2>
+  <p class="lead">Generic big-tech deliberately filtered down. Quality over quantity.</p>
+  <div class="dom">
+    <div class="cell"><div class="top"><span class="dot" style="background:var(--d-emb)"></span><b>Embedded</b><span class="c tnum">59</span></div>
+  <div class="bar"><i style="width:100%;background:var(--d-emb)"></i></div><p>RTOS, BSP, drivers, bare-metal firmware.</p></div><div class="cell"><div class="top"><span class="dot" style="background:var(--d-edge)"></span><b>Edge AI</b><span class="c tnum">28</span></div>
+  <div class="bar"><i style="width:47%;background:var(--d-edge)"></i></div><p>NPU/TPU inference, quantization, OCR, vision.</p></div><div class="cell"><div class="top"><span class="dot" style="background:var(--d-rob)"></span><b>Robotics</b><span class="c tnum">17</span></div>
+  <div class="bar"><i style="width:29%;background:var(--d-rob)"></i></div><p>ROS, SLAM, teleop, motor control, quadrupeds.</p></div><div class="cell"><div class="top"><span class="dot" style="background:var(--d-iot)"></span><b>IoT</b><span class="c tnum">6</span></div>
+  <div class="bar"><i style="width:10%;background:var(--d-iot)"></i></div><p>MQTT/CoAP stacks, cellular modules, device OSes.</p></div>
+  </div>
+</div></section>
+
+<section><div class="wrap sec trustband">
+  <p class="seclabel"><span class="n">05</span>Sources &amp; method you can trust</p>
+  <h2>Auditable by design.</h2>
+  <ul>
+    <li>Official Gitee &amp; GitHub APIs only — no scraping, within published rate limits</li>
+    <li>Public repository metadata &amp; READMEs only — no private or personal data</li>
+    <li>No code redistributed — original summaries + a link back to every source</li>
+    <li>Transparent relevance &amp; confidence scoring — every fiche is auditable</li>
+  </ul>
+</div></section>
+
+<section><div class="wrap capture" id="newsletter">
+  <h2>The free brief.</h2>
+  <p class="lead">The flagship new & updated fiches, in your inbox after each corpus run. No tracking, unsubscribe in one click.</p>
+  <form class="form" onsubmit="return false">
+  <input type="email" placeholder="you@email.com" disabled>
+  <button class="btn btn-primary" type="button" disabled style="opacity:.55;cursor:not-allowed">Subscribe</button>
+</form><p class="fine">Email sign-up opens at launch.</p>
+  <p class="fine">Need always-fresh data, history or a custom competitor watch? <a href="pro.html" style="color:var(--signal)">See Pro &amp; Enterprise →</a></p>
+</div></section>
+
+<footer><div class="wrap frow">
+  <span>▮ MINERVA · Apache 2.0 · open source</span>
+  <span><a href="index.html">Home</a> · <a href="dashboard.html">Dashboard</a> · <a href="pro.html">Pro</a> · <a href="legal.html">Legal &amp; privacy</a></span>
+</div></footer>
+</body>
+</html>

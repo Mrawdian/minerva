@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /fiches/
+Disallow: /fiches_fr/
+Disallow: /logs/

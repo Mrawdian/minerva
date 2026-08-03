@@ -1,0 +1,119 @@
+{
+  "_format_note": "Format v2 (semantic) : chaque domaine a une 'definition' (paragraphe dense, embeddé une fois pour calculer la similarité cosinus avec chaque repo). Les champs 'mots_cles' restent disponibles pour fallback si l'embedder n'est pas dispo (mode dégradé).",
+  "domains": [
+    {
+      "nom": "Embarqué",
+      "definition": "Systèmes embarqués bas niveau et programmation matérielle : noyaux temps réel RTOS (FreeRTOS, RT-Thread, Zephyr, LiteOS, mbedOS), microcontrôleurs ARM Cortex-M, RISC-V, MIPS, DSP. Drivers HAL pour périphériques matériels (UART, SPI, I2C, ADC, PWM, GPIO). BSP (Board Support Package) pour cartes spécifiques : STM32, ESP32, GD32, Hi35xx, Allwinner, Rockchip RK35xx, Kendryte K210/K230, Sipeed Maix. Bootloaders, firmwares bare-metal, programmation C/C++/assembleur sur SoC. Gestion mémoire statique, interruptions, accès direct au matériel, FPGA, signal processing.",
+      "mots_cles": [
+        "mcu",
+        "rtos",
+        "firmware",
+        "bootloader",
+        "bsp",
+        "hal",
+        "embedded",
+        "单片机",
+        "嵌入式",
+        "cortex",
+        "arm",
+        "mips",
+        "dsp",
+        "fpga",
+        "soc",
+        "risc-v",
+        "riscv",
+        "toolchain",
+        "u-boot",
+        "maix",
+        "maixpy",
+        "maixcdk"
+      ],
+      "poids": 10
+    },
+    {
+      "nom": "IoT",
+      "definition": "Internet des objets et connectivité d'appareils contraints : stacks réseau pour objets connectés (MQTT, CoAP, AMQP, LwM2M, OPC UA), protocoles radio basse consommation (LoRaWAN, Zigbee, BLE, Bluetooth Mesh, NB-IoT, LTE-M, Wi-Fi HaLow). Modules cellulaires (Air8000, Air8101, Air780E de Hezhou, EC25 de Quectel, SIM800, ESP32 Wi-Fi). OS pour objets connectés : OpenHarmony, AliOS Things, TencentOS-tiny, LuatOS. Brokers MQTT, passerelles edge, intégration cloud (AWS IoT, Aliyun IoT, Tencent IoT Hub), gestion de fleet, OTA, provisioning d'appareils, smart home, agriculture connectée, ville intelligente.",
+      "mots_cles": [
+        "iot",
+        "mqtt",
+        "lora",
+        "zigbee",
+        "ble",
+        "wifi",
+        "nb-iot",
+        "物联网",
+        "esp32",
+        "esp8266",
+        "coap",
+        "openharmony",
+        "harmonyos"
+      ],
+      "poids": 10
+    },
+    {
+      "nom": "Robotique",
+      "definition": "Robotique mobile, manipulation et drones : framework ROS et ROS2, navigation autonome, SLAM (cartographie et localisation simultanées), perception LiDAR, vision stéréo, contrôle moteur PID, asservissement, planification de trajectoire, manipulation par bras articulés, robotique collaborative (cobots), drones autonomes (PX4, ArduPilot, MAVLink), contrôleurs de vol, simulation Gazebo, calibration capteurs IMU/encoder, traitement temps réel, robots quadrupèdes (Unitree, DeepRobotics), robots éducatifs, RoboMaster.",
+      "mots_cles": [
+        "robot",
+        "ros",
+        "slam",
+        "lidar",
+        "电机",
+        "机器人",
+        "伺服",
+        "ros2",
+        "quadruped",
+        "unitree",
+        "motor",
+        "servo",
+        "motion control"
+      ],
+      "poids": 10
+    },
+    {
+      "nom": "Edge AI",
+      "definition": "Inférence (PAS entraînement, PAS recherche académique pure) d'intelligence artificielle en périphérie sur appareils contraints : frameworks d'inférence mobile et embarquée (ncnn de Tencent, MNN d'Alibaba, TFLite, ONNX Runtime, Paddle Lite, TNN, mindspore lite, OpenVINO). Accélérateurs matériels NPU/TPU/DPU (Huawei Ascend, Kendryte KPU, Rockchip NPU). Quantification de modèles pour déploiement edge (INT8, INT4), pruning, distillation. Frameworks pour exécuter OCR, vision par ordinateur, détection d'objets (YOLO), classification d'images SUR un appareil contraint comme un smartphone, MCU, NPU dédié. Optimisation SIMD/NEON pour ML, inférence temps-réel sur Snapdragon/MediaTek/Apple A-series. Cible : déploiement embarqué, pas la recherche académique en deep learning ni les modèles cloud.",
+      "mots_cles": [
+        "ncnn",
+        "tflite",
+        "onnx",
+        "tensorrt",
+        "mnn",
+        "tnn",
+        "paddle-lite",
+        "paddlelite",
+        "openvino",
+        "mindspore lite",
+        "mindspore-lite",
+        "ocr",
+        "edge ai",
+        "mobile ai",
+        "推理",
+        "神经网络",
+        "npu",
+        "kpu",
+        "dpu",
+        "rknn",
+        "snpe",
+        "coreml",
+        "tpu"
+      ],
+      "poids": 10
+    }
+  ],
+  "_anti_domains_note": "Anti-domaines (admission v2) : catégories HORS wedge, embarquées comme les domaines. Un repo est rejeté si sa similarité au meilleur anti-domaine dépasse sa similarité au meilleur domaine wedge (+ marge). Cible le bruit big-tech générique sans toucher la formule de score.",
+  "anti_domains": [
+    {
+      "nom": "ML research & large models",
+      "definition": "Recherche académique en apprentissage automatique et grands modèles : entraînement de réseaux de neurones, LLM et modèles de fondation (GPT, BERT, ERNIE, transformers de plusieurs milliards de paramètres), fine-tuning, RLHF, papiers de recherche avec code, benchmarks académiques, datasets d'entraînement, notebooks d'expérimentation, frameworks d'entraînement distribué multi-GPU sur cluster cloud, AutoML, recommandation à grande échelle, publicité computationnelle, NLP de recherche, génération d'images par diffusion. Modèles servis dans le cloud sur GPU datacenter, PAS d'inférence embarquée sur appareil contraint. 大模型 训练 深度学习研究"
+    },
+    {
+      "nom": "Web & app development",
+      "definition": "Développement web et applicatif généraliste : frameworks frontend (React, Vue, Angular), players vidéo HTML5, bibliothèques UI et design systems, plateformes low-code/no-code par glisser-déposer, mini-programs WeChat/Alipay, applications mobiles grand public (iOS/Android app frameworks), sites e-commerce, CMS, outils de build JavaScript/TypeScript (bundlers, transpilers), state management, éditeurs de texte riches, dashboards d'entreprise web, backends d'API REST pour applications web. 前端 网页 小程序 低代码"
+    },
+    {
+      "nom": "Cloud & big-data infrastructure",
+      "definition": "Infrastructure cloud et traitement de données massives : bases de données distribuées, moteurs SQL/OLAP, data pipelines et streaming (Flink, Spark, Kafka connectors), orchestration Kubernetes, microservices et service mesh, middleware d'entreprise (RPC, message queues), observabilité datacenter, CI/CD, virtualisation, stockage objet, datasets et outils de données pour le cloud (réseaux optiques, télémétrie datacenter), gouvernance de données, outils DevOps. Fonctionne sur serveurs datacenter, PAS sur microcontrôleur ni appareil embarqué. 云计算 大数据 数据库 中间件"
+    }
+  ]
+}

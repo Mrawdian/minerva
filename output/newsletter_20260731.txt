@@ -1,0 +1,60 @@
+Subject: Minerva — Open Source China Intelligence — 2026-07-31
+
+========================================================================
+  MINERVA NEWSLETTER — 2026-07-31
+  Open source China intelligence: embedded / IoT / robotics / edge-AI
+========================================================================
+
+Last pipeline run: 2026-07-31T11:55:26+00:00
+
+------------------------------------------------------------------------
+TOP 5 FINDINGS (by relevance score)
+------------------------------------------------------------------------
+
+1. [100/100] rtthread/rt-thread  (★5527)
+   Provide a scalable real-time operating system that runs on resource-constrained microcontrollers (ARM Cortex-M0 with 3 KB Flash / 1.2 KB RAM) while supporting larger IoT devices (ARM Cortex-A, MIPS32…
+   https://gitee.com/rtthread/rt-thread
+
+2. [100/100] EspressifSystems/ESP8266_RTOS_SDK  (★101)
+   Provides an RTOS-based SDK for the ESP8266 microcontroller with FreeRTOS, lwIP, and Wi-Fi drivers integrated. Addresses the need for a complete development environment to build networked embedded app…
+   https://gitee.com/EspressifSystems/ESP8266_RTOS_SDK
+
+3. [ 94/100] unitreerobotics/unitree_ros  (★1494)
+   Provide ROS packages for simulation and low-level control (torque, position, angular velocity) of joint articulations for Unitree quadruped and humanoid robots (A1, B1, B2, G1, GO1, GO2, H1, H2, R1,…
+   https://github.com/unitreerobotics/unitree_ros
+
+4. [ 94/100] EspressifSystems/esp-idf  (★877)
+   Provide a unified development framework and build system for Espressif ESP32 and ESP32-S2 SoCs, including bootloader, partition table generation, and hardware abstraction across Windows, Linux, and m…
+   https://gitee.com/EspressifSystems/esp-idf
+
+5. [ 90/100] Tencent/ncnn  (★303)
+   Deploy deep learning models (PyTorch, ONNX) to mobile, embedded, and edge devices with minimal runtime overhead and optimized inference latency. Eliminates dependency on heavy frameworks like TensorF…
+   https://gitee.com/Tencent/ncnn
+
+------------------------------------------------------------------------
+KEY STATS
+------------------------------------------------------------------------
+
+  Active fiches         : 105
+  Monitored accounts    : 14
+  Edge AI repos         : 28
+  Big tech repos (8 orgs): 13
+
+  Distribution by domain:
+    - Embedded                 59  (56.2%)
+    - Edge AI                  28  (26.7%)
+    - Robotics                 17  (16.2%)
+    - IoT                       6  (5.7%)
+
+  Distribution by type:
+    - Framework                25  (23.8%)
+    - Library                  22  (21.0%)
+    - Board Support Package    16  (15.2%)
+    - Tool                     15  (14.3%)
+    - Application              11  (10.5%)
+    - Driver                    7  (6.7%)
+
+------------------------------------------------------------------------
+See the interactive dashboard: output/dashboard.html
+Rich version                 : output/newsletter_20260731.html
+------------------------------------------------------------------------

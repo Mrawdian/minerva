@@ -1,0 +1,165 @@
+<!doctype html>
+<!-- SUPERSEDED DESIGN MOCKUP — the built site (output/*.html via scripts/build_*.py)
+     is the single source of truth for all copy and claims. Never copy wording from
+     this file into the builders; the flow is builders -> output, mockups are history. -->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Minerva — brand assets (D4)</title>
+<style>
+  :root{
+    --paper:#F5F6F4; --surface:#FFFFFF; --surface-2:#FAFBF9;
+    --ink:#1B1E20; --ink-2:#565C61; --ink-3:#8A9096; --ink-4:#B9BEC2;
+    --line:#E4E6E2; --line-2:#CDD0CB; --grid:rgba(27,30,32,0.028);
+    --signal:#2F5A5C; --signal-2:#244748; --signal-soft:#E9EEEC;
+    --sans:-apple-system,"Segoe UI",Inter,Roboto,Helvetica,Arial,sans-serif;
+    --mono:ui-monospace,"SF Mono","JetBrains Mono",Menlo,Consolas,monospace;
+  }
+  *{box-sizing:border-box} html,body{margin:0}
+  body{background:var(--paper);color:var(--ink);font-family:var(--sans);font-size:15px;line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+    background-image:linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px);
+    background-size:34px 34px}
+  .wrap{max-width:1000px;margin:0 auto;padding:0 28px}
+  .mono{font-family:var(--mono)}
+  header.top{border-bottom:1px solid var(--line-2);background:var(--surface)}
+  header.top .row{display:flex;align-items:center;gap:12px;padding:14px 0}
+  .brand{display:flex;align-items:center;gap:9px;font-weight:600}
+  .markmini{width:14px;height:14px;border:2px solid var(--ink);border-radius:2px;position:relative}
+  .markmini::after{content:"";position:absolute;inset:3px 3px auto auto;width:4px;height:4px;background:var(--signal)}
+  .stamp{margin-left:auto;font-family:var(--mono);font-size:11px;color:var(--ink-3)}
+
+  section{padding:40px 0;border-bottom:1px solid var(--line)}
+  h1{font-size:30px;letter-spacing:-0.02em;margin:0 0 8px;font-weight:650}
+  h2{font-family:var(--mono);font-size:12px;text-transform:uppercase;letter-spacing:0.09em;color:var(--ink-3);margin:0 0 18px;font-weight:600}
+  h2 .n{color:var(--signal);margin-right:8px}
+  .lead{color:var(--ink-2);max-width:620px;margin:0}
+  .grid2{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+  .card{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:24px}
+  .cap{font-family:var(--mono);font-size:11px;color:var(--ink-3);margin-top:12px}
+
+  /* mark large */
+  .markbig{width:72px;height:72px;border:6px solid var(--ink);border-radius:12px;position:relative}
+  .markbig::after{content:"";position:absolute;inset:12px 12px auto auto;width:18px;height:18px;border-radius:4px;background:var(--signal)}
+  .lockup{display:flex;align-items:center;gap:16px}
+  .lockup .wm{font-size:34px;font-weight:650;letter-spacing:-0.01em}
+
+  .wmrow{display:flex;flex-direction:column;gap:16px}
+  .wm-sans{font-size:30px;font-weight:650;letter-spacing:-0.01em}
+  .wm-mono{font-family:var(--mono);font-size:26px;font-weight:600;letter-spacing:0.02em}
+  .wm-mono .tick{color:var(--signal)}
+
+  .swrow{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+  .sw{border:1px solid var(--line);border-radius:6px;overflow:hidden;background:var(--surface)}
+  .sw .chip{height:56px} .sw .meta{padding:8px 10px;font-family:var(--mono);font-size:11px;color:var(--ink-2);display:flex;justify-content:space-between;border-top:1px solid var(--line)}
+  .sw .meta b{color:var(--ink)}
+
+  .favrow{display:flex;align-items:flex-end;gap:22px}
+  .favrow .fav img{display:block;image-rendering:auto}
+  .favrow .fav{text-align:center}
+  .favrow .fav .n{font-family:var(--mono);font-size:10px;color:var(--ink-3);margin-top:6px}
+  .tabsim{display:inline-flex;align-items:center;gap:7px;background:var(--surface-2);border:1px solid var(--line-2);border-radius:6px 6px 0 0;padding:6px 12px 8px;font-size:12px;color:var(--ink-2)}
+
+  .ogwrap{border:1px solid var(--line-2);border-radius:8px;overflow:hidden;max-width:760px}
+  svg{display:block;width:100%;height:auto}
+  .note{font-family:var(--mono);font-size:11.5px;color:var(--ink-3);margin-top:10px}
+</style>
+</head>
+<body>
+
+<header class="top"><div class="wrap row">
+  <span class="brand"><span class="markmini"></span><b>MINERVA</b></span>
+  <span class="stamp">brand assets · D4 · draft for validation</span>
+</div></header>
+
+<section class="wrap">
+  <h1>Brand assets</h1>
+  <p class="lead">A register/aperture mark, one wordmark, one signal tick. Calm,
+  precise, instrument-grade — the same grammar as the product surfaces.</p>
+</section>
+
+<section class="wrap">
+  <h2><span class="n">01</span>Mark &amp; lockup</h2>
+  <div class="grid2">
+    <div class="card">
+      <div class="lockup"><span class="markbig"></span><span class="wm">MINERVA</span></div>
+      <div class="cap">Primary lockup — mark + wordmark. The ink frame reads as a register / aperture mark; the mineral tick is the single signal.</div>
+    </div>
+    <div class="card">
+      <div class="wmrow">
+        <div class="wm-sans">MINERVA</div>
+        <div class="wm-mono">MINERVA<span class="tick">▮</span></div>
+      </div>
+      <div class="cap">Wordmark — humanist sans (primary) · mono technical variant with signal tick (for footers, code, technical contexts).</div>
+    </div>
+  </div>
+</section>
+
+<section class="wrap">
+  <h2><span class="n">02</span>Favicon — self-contained, reads on light or dark tabs</h2>
+  <div class="card">
+    <div class="favrow">
+      <div class="fav"><img src="favicon.svg" width="16" height="16" alt=""><div class="n">16px</div></div>
+      <div class="fav"><img src="favicon.svg" width="32" height="32" alt=""><div class="n">32px</div></div>
+      <div class="fav"><img src="favicon.svg" width="48" height="48" alt=""><div class="n">48px</div></div>
+      <div class="fav" style="margin-left:12px">
+        <span class="tabsim"><img src="favicon.svg" width="15" height="15" alt=""> Minerva — decision-ready…</span>
+        <div class="n">browser tab</div>
+      </div>
+    </div>
+    <div class="cap">SVG, paper tile + ink frame + mineral tick. <code style="font-family:var(--mono)">docs/design/favicon.svg</code></div>
+  </div>
+</section>
+
+<section class="wrap">
+  <h2><span class="n">03</span>Core colors</h2>
+  <div class="swrow">
+    <div class="sw"><div class="chip" style="background:#2F5A5C"></div><div class="meta"><b>Signal</b><span>#2F5A5C</span></div></div>
+    <div class="sw"><div class="chip" style="background:#1B1E20"></div><div class="meta"><b>Ink</b><span>#1B1E20</span></div></div>
+    <div class="sw"><div class="chip" style="background:#F5F6F4;border-bottom:1px solid var(--line)"></div><div class="meta"><b>Paper</b><span>#F5F6F4</span></div></div>
+  </div>
+</section>
+
+<section class="wrap">
+  <h2><span class="n">04</span>Social / OG image — 1200 × 630</h2>
+  <div class="ogwrap">
+    <svg viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <pattern id="g" width="40" height="40" patternUnits="userSpaceOnUse">
+          <path d="M40 0H0V40" fill="none" stroke="#1B1E20" stroke-opacity="0.035" stroke-width="1"/>
+        </pattern>
+      </defs>
+      <rect width="1200" height="630" fill="#F5F6F4"/>
+      <rect width="1200" height="630" fill="url(#g)"/>
+      <!-- mark + wordmark -->
+      <g transform="translate(80,84)">
+        <rect x="0" y="0" width="46" height="46" rx="9" fill="none" stroke="#1B1E20" stroke-width="5"/>
+        <rect x="30" y="-6" width="16" height="16" rx="3.5" fill="#2F5A5C"/>
+        <text x="66" y="34" font-family="Segoe UI,Helvetica,Arial,sans-serif" font-size="30" font-weight="700" fill="#1B1E20" letter-spacing="0.5">MINERVA</text>
+      </g>
+      <!-- tagline -->
+      <text x="80" y="250" font-family="Segoe UI,Helvetica,Arial,sans-serif" font-size="58" font-weight="700" fill="#1B1E20" letter-spacing="-1.5">Decision-ready intelligence</text>
+      <text x="80" y="318" font-family="Segoe UI,Helvetica,Arial,sans-serif" font-size="58" font-weight="700" fill="#1B1E20" letter-spacing="-1.5">on China's open-source hardware.</text>
+      <!-- rule -->
+      <line x1="80" y1="372" x2="1120" y2="372" stroke="#CDD0CB" stroke-width="1"/>
+      <!-- mono stat row -->
+      <g font-family="Consolas,ui-monospace,monospace" font-size="24" fill="#565C61">
+        <text x="80" y="432"><tspan fill="#1B1E20" font-weight="700">106</tspan> fiches</text>
+        <text x="300" y="432">Gitee + GitHub</text>
+        <text x="580" y="432"><tspan fill="#1B1E20" font-weight="700">EN / FR</tspan></text>
+        <text x="760" y="432">Western-equivalent mapping</text>
+      </g>
+      <!-- signal chip: Western equivalent teaser -->
+      <g transform="translate(80,478)">
+        <rect x="0" y="0" width="1040" height="72" rx="8" fill="#E9EEEC"/>
+        <text x="22" y="30" font-family="Consolas,ui-monospace,monospace" font-size="15" fill="#244748" letter-spacing="1">WESTERN EQUIVALENT</text>
+        <text x="22" y="56" font-family="Segoe UI,Helvetica,Arial,sans-serif" font-size="20" fill="#1B1E20" font-weight="600">sophgo/tpu-mlir  →  Apache TVM + a vendor toolchain (à la TensorRT / OpenVINO)</text>
+      </g>
+    </svg>
+  </div>
+  <div class="note">Instrument-grade share card: paper + faint grid, mark + wordmark, mono stat row, and the Western-equivalent bridge as the signal moment. Exported to PNG at wiring time (raster required for OG).</div>
+</section>
+
+</body>
+</html>

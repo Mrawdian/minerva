@@ -1,0 +1,128 @@
+# Hosted freshness — the weekly pipeline run that backs the public "weekly brief"
+# promise (owner arbitration, 2026-07-31). The clock of the living product.
+#
+# Safe by construction:
+#   - Does NOTHING until the repo secrets exist (explicit guard, green no-op) —
+#     so committing this file before the public push is inert.
+#   - Never touches keys outside GitHub's encrypted secrets.
+#   - Commits only regenerated outputs; [skip ci] prevents loops.
+#
+# Required repo secrets (add AFTER rotating keys — see SECURITY.md):
+#   GITEE_TOKEN, ANTHROPIC_API_KEY, GITHUB_API_TOKEN (fine-grained, read-only).
+# Optional repo variables: MINERVA_SITE_URL, MINERVA_NEWSLETTER, MINERVA_CONTACT.
+#
+# The newsletter SEND stays a manual owner gesture (arbitration 2): this job
+# regenerates newsletter_*.html; the owner pastes it into Buttondown.
+#
+# Flip rule (owner, 2026-07-31): the "weekly" wording is EARNED by the first
+# successful cycle of this workflow (collect → rebuild → commit), not by merging
+# this YAML. That holds by construction: MINERVA_CADENCE=weekly below only takes
+# effect inside a run that actually collected and rebuilt — the guard means no
+# secrets, no run, no weekly wording. Do not set MINERVA_CADENCE anywhere else.
+
+name: Weekly pipeline run
+
+on:
+  schedule:
+    - cron: "0 6 * * 1"   # Mondays 06:00 UTC
+  workflow_dispatch: {}
+
+concurrency:
+  group: weekly-pipeline
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    env:
+      USE_TF: "0"
+      USE_FLAX: "0"
+    steps:
+      - name: Guard — skip cleanly until secrets are configured
+        id: guard
+        env:
+          GITEE_TOKEN: ${{ secrets.GITEE_TOKEN }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: |
+          if [ -z "$GITEE_TOKEN" ] || [ -z "$ANTHROPIC_API_KEY" ]; then
+            echo "Secrets not configured yet — skipping (this is expected pre-launch)."
+            echo "ready=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "ready=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - uses: actions/checkout@v4
+        if: steps.guard.outputs.ready == 'true'
+
+      - uses: actions/setup-python@v5
+        if: steps.guard.outputs.ready == 'true'
+        with:
+          python-version: "3.10"
+          cache: pip
+
+      - name: Install dependencies
+        if: steps.guard.outputs.ready == 'true'
+        run: pip install -r requirements.txt
+
+      - name: Cache embeddings + model
+        if: steps.guard.outputs.ready == 'true'
+        uses: actions/cache@v4
+        with:
+          path: |
+            output/embeddings_cache.json
+            ~/.cache/huggingface
+          key: embeddings-${{ hashFiles('config/domains.json') }}
+          restore-keys: embeddings-
+
+      - name: Run pipeline (incremental)
+        if: steps.guard.outputs.ready == 'true'
+        env:
+          GITEE_TOKEN: ${{ secrets.GITEE_TOKEN }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_API_TOKEN }}
+        run: python src/pipeline.py
+
+      - name: Append run history (ledger + history.jsonl)
+        if: steps.guard.outputs.ready == 'true'
+        run: python scripts/build_history.py
+
+      - name: Rebuild outputs (dashboard · site · newsletter)
+        if: steps.guard.outputs.ready == 'true'
+        env:
+          MINERVA_SITE_URL: ${{ vars.MINERVA_SITE_URL }}
+          MINERVA_NEWSLETTER: ${{ vars.MINERVA_NEWSLETTER }}
+          MINERVA_CONTACT: ${{ vars.MINERVA_CONTACT }}
+          # Cadence doctrine: ONLY this weekly workflow may claim "weekly" in the
+          # copy. Local/manual builds never set this — they promise no cadence.
+          MINERVA_CADENCE: weekly
+        run: |
+          # publication hygiene: keep only the latest dated newsletter
+          rm -f output/newsletter_*.html output/newsletter_*.txt
+          python scripts/build_dashboard.py
+          python scripts/build_site.py
+          python scripts/build_newsletter.py
+
+      - name: Secret scan (must stay clean)
+        if: steps.guard.outputs.ready == 'true'
+        run: python scripts/secret_scan.py
+
+      - name: Tests
+        if: steps.guard.outputs.ready == 'true'
+        run: python -m pytest -q
+
+      - name: Commit refreshed outputs
+        if: steps.guard.outputs.ready == 'true'
+        run: |
+          git config user.name "minerva-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add -A output/
+          if git diff --cached --quiet; then
+            echo "No changes this week."
+          else
+            git commit -m "chore: weekly pipeline run $(date -u +%F) [skip ci]"
+            git push
+          fi

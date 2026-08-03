@@ -1,0 +1,238 @@
+<!doctype html>
+<!-- SUPERSEDED DESIGN MOCKUP — the built site (output/*.html via scripts/build_*.py)
+     is the single source of truth for all copy and claims. Never copy wording from
+     this file into the builders; the flow is builders -> output, mockups are history. -->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Minerva — Dashboard (D3 re-skin, calm analytical instrument)</title>
+<style>
+  :root{
+    --paper:#F5F6F4; --surface:#FFFFFF; --surface-2:#FAFBF9;
+    --ink:#1B1E20; --ink-2:#565C61; --ink-3:#8A9096; --ink-4:#B9BEC2;
+    --line:#E4E6E2; --line-2:#CDD0CB; --grid:rgba(27,30,32,0.028);
+    --signal:#2F5A5C; --signal-2:#244748; --signal-soft:#E9EEEC;
+    --d-emb:#4C6FA4; --d-edge:#8A6AA0; --d-rob:#5E8C6A; --d-iot:#B4894C;
+    --sans:-apple-system,"Segoe UI",Inter,Roboto,Helvetica,Arial,sans-serif;
+    --mono:ui-monospace,"SF Mono","JetBrains Mono",Menlo,Consolas,monospace;
+  }
+  *{box-sizing:border-box} html,body{margin:0}
+  body{background:var(--paper);color:var(--ink);font-family:var(--sans);font-size:15px;line-height:1.6;
+    -webkit-font-smoothing:antialiased;font-feature-settings:"tnum";
+    background-image:linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px);
+    background-size:34px 34px}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:1180px;margin:0 auto;padding:0 28px}
+  .mono{font-family:var(--mono)} .tnum{font-variant-numeric:tabular-nums}
+
+  nav{position:sticky;top:0;z-index:30;background:rgba(245,246,244,0.86);
+    backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border-bottom:1px solid var(--line-2)}
+  nav .row{display:flex;align-items:center;gap:20px;padding:13px 0}
+  .brand{display:flex;align-items:center;gap:9px;font-weight:600;letter-spacing:-0.01em}
+  .mark{width:14px;height:14px;border:2px solid var(--ink);border-radius:2px;position:relative}
+  .mark::after{content:"";position:absolute;inset:3px 3px auto auto;width:4px;height:4px;background:var(--signal)}
+  .brand b{font-size:16px}
+  nav .links{margin-left:auto;display:flex;gap:20px;align-items:center}
+  nav .links a{font-size:13.5px;color:var(--ink-2);font-weight:500}
+  nav .links a.active{color:var(--signal)}
+  nav .links .pro{border:1px solid var(--line-2);border-radius:5px;padding:5px 12px;color:var(--ink)}
+
+  /* HERO */
+  .hero{padding:40px 0 28px;border-bottom:1px solid var(--line)}
+  .badge{display:inline-flex;align-items:center;gap:8px;font-family:var(--mono);font-size:11.5px;color:var(--ink-2);
+    background:var(--surface);border:1px solid var(--line-2);border-radius:100px;padding:5px 12px;letter-spacing:0.02em}
+  .badge .d{width:6px;height:6px;border-radius:2px;background:var(--signal)}
+  .hero h1{font-size:clamp(26px,3.4vw,38px);letter-spacing:-0.02em;line-height:1.1;margin:16px 0 12px;font-weight:640;max-width:20ch}
+  .hero .lede{font-size:16px;color:var(--ink-2);max-width:680px;margin:0}
+  .hero .lede b{color:var(--ink);font-weight:600}
+  .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:26px;border:1px solid var(--line);border-radius:6px;overflow:hidden;background:var(--surface)}
+  .stats .c{padding:16px 18px;border-right:1px solid var(--line)}
+  .stats .c:last-child{border-right:none}
+  .stats .num{font-family:var(--mono);font-size:26px;font-weight:600;letter-spacing:-0.01em}
+  .stats .num em{font-style:normal;font-size:13px;color:var(--ink-3)}
+  .stats .lbl{font-family:var(--mono);font-size:11px;text-transform:uppercase;letter-spacing:0.06em;color:var(--ink-3);margin-top:2px}
+  .metaline{margin-top:16px;display:flex;gap:18px;flex-wrap:wrap;font-family:var(--mono);font-size:11.5px;color:var(--ink-3)}
+  .metaline b{color:var(--ink-2);font-weight:600}
+  .metaline code{background:var(--surface);border:1px solid var(--line);border-radius:3px;padding:0 5px;color:var(--ink)}
+
+  /* PRESETS + FILTERS */
+  .tools{padding:22px 0 14px}
+  .seclabel{font-family:var(--mono);font-size:12px;text-transform:uppercase;letter-spacing:0.09em;color:var(--ink-3);font-weight:600;margin:0 0 14px}
+  .seclabel .n{color:var(--signal);margin-right:8px}
+  .presets{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px}
+  .preset{font-family:var(--sans);font-size:12.5px;font-weight:600;color:var(--ink-2);background:var(--surface);
+    border:1px solid var(--line-2);border-radius:100px;padding:6px 13px;cursor:pointer;transition:all .14s}
+  .preset:hover{border-color:var(--signal);color:var(--signal)}
+  .preset.on{background:var(--signal);color:#fff;border-color:var(--signal)}
+  .filters{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+  .search{flex:1 1 260px;display:flex;align-items:center;gap:8px;background:var(--surface);border:1px solid var(--line-2);border-radius:5px;padding:8px 12px}
+  .search input{border:none;outline:none;background:none;flex:1;font-family:var(--mono);font-size:13px;color:var(--ink)}
+  .search .k{font-family:var(--mono);font-size:11px;color:var(--ink-3);border:1px solid var(--line-2);border-radius:3px;padding:0 5px}
+  .chip{font-family:var(--sans);font-size:12.5px;font-weight:600;color:var(--ink-2);background:var(--surface);
+    border:1px solid var(--line-2);border-radius:5px;padding:7px 11px;cursor:pointer}
+  .chip:hover{border-color:var(--signal);color:var(--signal)}
+  .sel{font-family:var(--sans);font-size:12.5px;color:var(--ink-2);background:var(--surface);border:1px solid var(--line-2);border-radius:5px;padding:7px 11px}
+  .count{font-family:var(--mono);font-size:12px;color:var(--ink-3);margin:14px 0 10px}
+  .count b{color:var(--ink)}
+
+  /* EXPLORER 2-pane */
+  .explorer{display:grid;grid-template-columns:1fr 1fr;gap:18px;padding-bottom:50px;align-items:start}
+  .exlist{border:1px solid var(--line);border-radius:6px;overflow:hidden;background:var(--surface)}
+  .row{display:grid;grid-template-columns:26px 44px 1fr auto;gap:10px;align-items:center;
+    padding:10px 14px;border-bottom:1px solid var(--line);cursor:pointer;border-left:2px solid transparent}
+  .row:last-child{border-bottom:none}
+  .row:hover{background:var(--surface-2)}
+  .row.on{background:var(--signal-soft);border-left-color:var(--signal)}
+  .row .rk{font-family:var(--mono);font-size:11px;color:var(--ink-4);text-align:right}
+  .row .sc{font-family:var(--mono);font-size:13px;font-weight:600;color:var(--ink)}
+  .row .nm{font-family:var(--mono);font-size:13px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+  .row .rt{display:flex;align-items:center;gap:8px}
+  .dchip{width:8px;height:8px;border-radius:2px;display:inline-block}
+  .dchip.emb{background:var(--d-emb)} .dchip.edge{background:var(--d-edge)} .dchip.rob{background:var(--d-rob)} .dchip.iot{background:var(--d-iot)}
+  .dm{font-family:var(--mono);font-size:11px;letter-spacing:1px;color:var(--ink)} .dm .off{color:var(--ink-4)}
+  .upd{font-family:var(--mono);font-size:9.5px;font-weight:700;letter-spacing:0.06em;color:var(--signal-2);background:var(--signal-soft);border:1px solid var(--line-2);border-radius:3px;padding:1px 4px}
+
+  /* detail panel */
+  .exdetail{position:sticky;top:74px;border:1px solid var(--line-2);border-radius:6px;background:var(--surface);overflow:hidden}
+  .exdetail .dh{display:flex;align-items:center;gap:12px;flex-wrap:wrap;padding:15px 18px;border-bottom:1px solid var(--line);background:var(--surface-2)}
+  .exdetail .dh .name{font-family:var(--mono);font-weight:600;font-size:14.5px}
+  .exdetail .dh .right{margin-left:auto;display:flex;align-items:center;gap:12px}
+  .score{display:flex;align-items:center;gap:8px}
+  .score .n{font-family:var(--mono);font-size:14px;font-weight:600}
+  .meter{width:80px;height:4px;background:var(--line);border-radius:2px;overflow:hidden}
+  .meter i{display:block;height:100%;background:var(--signal)}
+  .tag{display:inline-flex;align-items:center;gap:6px;font-family:var(--mono);font-size:11px;font-weight:600;
+    padding:3px 8px;border-radius:3px;border:1px solid var(--line-2);color:var(--ink-2);background:var(--surface)}
+  .tag .d{width:7px;height:7px;border-radius:2px;display:inline-block}
+  .tag.emb .d{background:var(--d-emb)}
+  .conf{font-family:var(--mono);font-size:11px;color:var(--ink-2);display:inline-flex;align-items:center;gap:6px}
+  .conf .dm2{letter-spacing:1px;color:var(--ink)}
+  .df{padding:12px 18px;border-bottom:1px solid var(--line)}
+  .df .k{font-family:var(--mono);font-size:10.5px;text-transform:uppercase;letter-spacing:0.08em;color:var(--ink-3);margin-bottom:4px;display:flex;gap:8px;flex-wrap:wrap;align-items:baseline}
+  .df .v{font-size:13.5px;line-height:1.5}
+  .df.key{background:var(--signal-soft)} .df.key .k{color:var(--signal-2)} .df.key .v{font-weight:560}
+  .df .k .hint{font-family:var(--sans);text-transform:none;letter-spacing:0;color:var(--signal);font-weight:600;font-size:10.5px}
+  .dprov{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;padding:11px 18px;font-family:var(--mono);font-size:11px;color:var(--ink-3);background:var(--surface-2)}
+  .dprov a{color:var(--signal)}
+  .navhint{font-family:var(--mono);font-size:10.5px;color:var(--ink-4);padding:9px 18px;border-top:1px solid var(--line);text-align:right}
+
+  footer{padding:26px 0 40px;border-top:1px solid var(--line)}
+  footer .row{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-family:var(--mono);font-size:11.5px;color:var(--ink-3)}
+  footer .row2{margin-top:8px;font-size:11px}
+  @media(max-width:900px){.stats{grid-template-columns:1fr 1fr}.explorer{grid-template-columns:1fr}.exdetail{position:static}}
+</style>
+</head>
+<body>
+
+<nav><div class="wrap row">
+  <span class="brand"><span class="mark"></span><b>MINERVA</b></span>
+  <span class="links"><a href="#" class="active">Dashboard</a><a href="#">Newsletter</a><a href="#" class="pro">Pro</a></span>
+</div></nav>
+
+<header class="hero"><div class="wrap">
+  <span class="badge"><span class="d"></span>Snapshot · as of 2026-07-30</span>
+  <h1>Decision-ready watch on China's open-source hardware ecosystem.</h1>
+  <p class="lede">Minerva scans <b>15 organizations</b> across <b>Gitee and GitHub</b>,
+  scores each repo across <b>4 technical domains</b>, and turns them into structured
+  EN/FR fiches — each mapped to its <b>Western equivalent</b>. <b>106 projects</b> are
+  tracked in this snapshot.</p>
+  <div class="stats">
+    <div class="c"><div class="num tnum">106</div><div class="lbl">Active fiches</div></div>
+    <div class="c"><div class="num tnum">15</div><div class="lbl">Organizations</div></div>
+    <div class="c"><div class="num tnum">33k<em> ★</em></div><div class="lbl">Total stars</div></div>
+    <div class="c"><div class="num tnum">64<em>/100</em></div><div class="lbl">Average score</div></div>
+  </div>
+  <div class="metaline">
+    <span><b>Stack</b> Python 3.10 · Claude Haiku 4.5 · Gitee + GitHub APIs</span>
+    <span><b>LLM cost</b> ~$0.01 per bilingual fiche pair</span>
+    <span><b>Run</b> <code>python src/pipeline.py</code></span>
+  </div>
+</div></header>
+
+<section class="tools"><div class="wrap">
+  <p class="seclabel"><span class="n">01</span>Explore the corpus</p>
+  <div class="presets">
+    <span class="preset">⚡ Edge-AI benchmarking</span>
+    <span class="preset">🦾 Robotics stacks</span>
+    <span class="preset">🔧 RTOS / BSP / firmware</span>
+    <span class="preset">◆ High-confidence only</span>
+  </div>
+  <div class="filters">
+    <span class="search"><span style="color:var(--ink-3)">⌕</span><input placeholder="Search across 106 fiches…"><span class="k">/</span></span>
+    <span class="chip">Embedded</span><span class="chip">IoT</span><span class="chip">Robotics</span><span class="chip">Edge AI</span>
+    <span class="sel">All accounts ▾</span><span class="sel">Score ↓</span><span class="chip">Reset</span>
+  </div>
+  <div class="count"><b>106</b> / 106 fiches · no active filter</div>
+
+  <div class="explorer">
+    <div class="exlist">
+      <div class="row on">
+        <span class="rk tnum">01</span><span class="sc tnum">100</span>
+        <span class="nm">rtthread/rt-thread</span>
+        <span class="rt"><span class="dchip emb"></span><span class="dm">◆◆◆</span><span class="upd">UPD</span></span>
+      </div>
+      <div class="row">
+        <span class="rk tnum">02</span><span class="sc tnum">100</span>
+        <span class="nm">EspressifSystems/esp-idf</span>
+        <span class="rt"><span class="dchip emb"></span><span class="dm">◆◆◆</span></span>
+      </div>
+      <div class="row">
+        <span class="rk tnum">03</span><span class="sc tnum">97</span>
+        <span class="nm">sophgo/tpu-mlir</span>
+        <span class="rt"><span class="dchip edge"></span><span class="dm">◆◆◆</span></span>
+      </div>
+      <div class="row">
+        <span class="rk tnum">04</span><span class="sc tnum">88</span>
+        <span class="nm">unitreerobotics/xr_teleoperate</span>
+        <span class="rt"><span class="dchip rob"></span><span class="dm">◆◆<span class="off">◇</span></span></span>
+      </div>
+      <div class="row">
+        <span class="rk tnum">05</span><span class="sc tnum">86</span>
+        <span class="nm">EspressifSystems/esp-gitee-tools</span>
+        <span class="rt"><span class="dchip edge"></span><span class="dm">◆◆<span class="off">◇</span></span></span>
+      </div>
+      <div class="row">
+        <span class="rk tnum">06</span><span class="sc tnum">81</span>
+        <span class="nm">Tencent/ncnn</span>
+        <span class="rt"><span class="dchip edge"></span><span class="dm">◆◆◆</span></span>
+      </div>
+      <div class="row">
+        <span class="rk tnum">07</span><span class="sc tnum">74</span>
+        <span class="nm">kendryte/nncase</span>
+        <span class="rt"><span class="dchip edge"></span><span class="dm">◆◆<span class="off">◇</span></span></span>
+      </div>
+      <div class="row">
+        <span class="rk tnum">08</span><span class="sc tnum">70</span>
+        <span class="nm">bouffalolab/bl_iot_sdk</span>
+        <span class="rt"><span class="dchip emb"></span><span class="dm">◆◆<span class="off">◇</span></span><span class="upd">UPD</span></span>
+      </div>
+    </div>
+
+    <div class="exdetail">
+      <div class="dh">
+        <span class="score"><span class="n tnum">100</span><span class="meter"><i style="width:100%"></i></span></span>
+        <span class="name">rtthread/rt-thread</span>
+        <span class="right"><span class="tag emb"><span class="d"></span>Embedded</span><span class="conf"><span class="dm2">◆◆◆</span> High</span></span>
+      </div>
+      <div class="df"><div class="k">Problem solved</div>
+        <div class="v">A scalable real-time OS that runs on resource-constrained MCUs (Cortex-M0, 3 KB Flash) yet scales up to Cortex-A / multicore IoT devices, unifying kernel, BSP, drivers and a modular component ecosystem.</div></div>
+      <div class="df"><div class="k">How it works</div>
+        <div class="v">A monolithic C kernel (threads, scheduler, IPC, timers) with a layered libcpu/BSP porting layer and a components layer (VFS, FinSH CLI, network stacks). A package manager offers 450+ modules; GCC/Keil/IAR toolchains.</div></div>
+      <div class="df"><div class="k">Chinese specificity</div>
+        <div class="v">Founded 2006; the largest home-grown Chinese RTOS community, widely designed into domestic industrial and IoT products.</div></div>
+      <div class="df key"><div class="k">Western equivalent <span class="hint">← the bridge a directory never gives you</span></div>
+        <div class="v">FreeRTOS / Zephyr — closest to Zephyr for its component ecosystem and package manager, but with a larger Chinese-industrial install base.</div></div>
+      <div class="dprov"><span>Active · ★ 9.8k · 4.9k forks · pushed 2026-07</span><a href="#">Open full fiche →</a></div>
+      <div class="navhint">↑ ↓ to move · click a row · detail stays light</div>
+    </div>
+  </div>
+</div></section>
+
+<footer><div class="wrap">
+  <div class="row"><span>▮ MINERVA · Apache 2.0 · single-file dashboard</span><span>Last pipeline run: <b style="color:var(--ink)">2026-07-30</b></span></div>
+  <div class="row row2"><span>Sources: official Gitee &amp; GitHub APIs · public repository metadata only · every fiche links back to its source.</span><span>Enrichment: Claude Haiku 4.5 · fiches may contain “to be confirmed”.</span></div>
+</div></footer>
+
+</body>
+</html>

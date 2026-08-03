@@ -1,0 +1,346 @@
+<!doctype html>
+<!-- SUPERSEDED DESIGN MOCKUP — the built site (output/*.html via scripts/build_*.py)
+     is the single source of truth for all copy and claims. Never copy wording from
+     this file into the builders; the flow is builders -> output, mockups are history. -->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Minerva — Design language D1 (calm analytical instrument, light-first)</title>
+<style>
+  :root{
+    /* Paper & ink */
+    --paper:#F5F6F4; --surface:#FFFFFF; --surface-2:#FAFBF9;
+    --ink:#1B1E20; --ink-2:#565C61; --ink-3:#8A9096; --ink-4:#B9BEC2;
+    --line:#E4E6E2; --line-2:#CDD0CB;
+    --grid:rgba(27,30,32,0.028);
+    /* Single cool signal accent — mineral teal-slate (dried down, not friendly-SaaS) */
+    --signal:#2F5A5C; --signal-2:#244748; --signal-soft:#E9EEEC;
+    /* Muted, instrument-grade categorical domains (de-neoned) */
+    --d-emb:#4C6FA4; --d-edge:#8A6AA0; --d-rob:#5E8C6A; --d-iot:#B4894C;
+    --d-emb-s:#EAEFF6; --d-edge-s:#F1ECF5; --d-rob-s:#EAF2ED; --d-iot-s:#F5EEE2;
+    /* type */
+    --sans:-apple-system,"Segoe UI",Inter,Roboto,Helvetica,Arial,sans-serif;
+    --mono:ui-monospace,"SF Mono","JetBrains Mono",Menlo,Consolas,monospace;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0}
+  body{
+    background:var(--paper); color:var(--ink);
+    font-family:var(--sans); font-size:15px; line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+    font-feature-settings:"tnum","cv02","cv03";
+    /* discreet technical grid, very faint */
+    background-image:linear-gradient(var(--grid) 1px,transparent 1px),
+                     linear-gradient(90deg,var(--grid) 1px,transparent 1px);
+    background-size:32px 32px;
+  }
+  .wrap{max-width:1080px;margin:0 auto;padding:0 28px}
+  .mono{font-family:var(--mono)}
+  .tnum{font-variant-numeric:tabular-nums}
+
+  /* top bar */
+  header.top{border-bottom:1px solid var(--line-2);background:var(--surface)}
+  header.top .row{display:flex;align-items:center;gap:16px;padding:14px 0}
+  .brand{display:flex;align-items:center;gap:9px;font-weight:600;letter-spacing:-0.01em}
+  .mark{width:14px;height:14px;border:2px solid var(--ink);border-radius:2px;
+        position:relative}
+  .mark::after{content:"";position:absolute;inset:3px 3px auto auto;width:4px;height:4px;
+        background:var(--signal)}
+  .brand b{font-size:16px}
+  .brand .sub{font-family:var(--mono);font-size:11px;color:var(--ink-3);
+        letter-spacing:0.04em;margin-left:2px}
+  .top .spacer{margin-left:auto}
+  .stamp{font-family:var(--mono);font-size:11px;color:var(--ink-3)}
+
+  section{padding:40px 0;border-bottom:1px solid var(--line)}
+  h1{font-size:34px;letter-spacing:-0.02em;line-height:1.1;margin:0 0 10px;font-weight:650}
+  h2{font-size:13px;font-family:var(--mono);text-transform:uppercase;letter-spacing:0.09em;
+     color:var(--ink-3);margin:0 0 20px;font-weight:600}
+  h3{font-size:20px;letter-spacing:-0.01em;margin:0 0 6px;font-weight:620}
+  .lede{font-size:17px;color:var(--ink-2);max-width:620px;margin:0}
+  p{margin:0 0 12px}
+  .muted{color:var(--ink-2)}
+
+  .grid2{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+  .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+
+  /* swatches */
+  .sw{border:1px solid var(--line);border-radius:5px;overflow:hidden;background:var(--surface)}
+  .sw .chip{height:64px}
+  .sw .meta{padding:8px 10px;font-family:var(--mono);font-size:11px;color:var(--ink-2);
+     display:flex;justify-content:space-between;border-top:1px solid var(--line)}
+  .sw .meta b{color:var(--ink);font-weight:600}
+  .swrow{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+  .swrow.six{grid-template-columns:repeat(6,1fr)}
+
+  /* type specimen */
+  .specimen > *{margin:0 0 6px}
+  .lbl{font-family:var(--mono);font-size:11px;text-transform:uppercase;letter-spacing:0.08em;
+       color:var(--ink-3)}
+  .metric{font-family:var(--mono);font-size:30px;font-weight:600;letter-spacing:-0.01em}
+
+  /* components */
+  .btn{display:inline-flex;align-items:center;gap:7px;font-family:var(--sans);
+    font-size:13.5px;font-weight:600;padding:9px 15px;border-radius:5px;border:1px solid transparent;
+    cursor:pointer;transition:background .14s,border-color .14s,color .14s}
+  .btn-primary{background:var(--signal);color:#fff;border-color:var(--signal)}
+  .btn-primary:hover{background:var(--signal-2);border-color:var(--signal-2)}
+  .btn-ghost{background:var(--surface);color:var(--ink);border-color:var(--line-2)}
+  .btn-ghost:hover{border-color:var(--signal);color:var(--signal)}
+  .btn-link{color:var(--signal);font-weight:600;font-size:13.5px}
+  .btn-link:hover{color:var(--signal-2)}
+
+  .tag{display:inline-flex;align-items:center;gap:6px;font-family:var(--mono);font-size:11px;
+    font-weight:600;letter-spacing:0.02em;padding:3px 8px;border-radius:3px;
+    border:1px solid var(--line-2);color:var(--ink-2);background:var(--surface)}
+  .tag .d{width:7px;height:7px;border-radius:2px;display:inline-block}
+  .tag.emb .d{background:var(--d-emb)} .tag.edge .d{background:var(--d-edge)}
+  .tag.rob .d{background:var(--d-rob)} .tag.iot .d{background:var(--d-iot)}
+  .tag.plain{color:var(--ink-2)}
+
+  /* confidence = mark-based, hue-neutral (3 ink diamonds) */
+  .conf{font-family:var(--mono);font-size:11px;letter-spacing:0.02em;color:var(--ink-2);
+    display:inline-flex;align-items:center;gap:6px}
+  .conf .dm{letter-spacing:1px;color:var(--ink)}
+  .conf .dm .off{color:var(--ink-4)}
+
+  /* score meter */
+  .score{display:flex;align-items:center;gap:10px}
+  .score .n{font-family:var(--mono);font-size:15px;font-weight:600}
+  .meter{width:120px;height:4px;background:var(--line);border-radius:2px;overflow:hidden}
+  .meter i{display:block;height:100%;background:var(--signal)}
+
+  /* ruled data table */
+  table{width:100%;border-collapse:collapse;font-size:13.5px}
+  th,td{text-align:left;padding:9px 10px;border-bottom:1px solid var(--line)}
+  th{font-family:var(--mono);font-size:11px;text-transform:uppercase;letter-spacing:0.07em;
+     color:var(--ink-3);font-weight:600}
+  td.mono{font-family:var(--mono)}
+  tr:hover td{background:var(--surface-2)}
+
+  /* fiche specimen (the decision layer in the new skin) */
+  .fiche{background:var(--surface);border:1px solid var(--line-2);border-radius:6px;
+    max-width:720px;overflow:hidden}
+  .fiche .fh{display:flex;align-items:center;gap:12px;flex-wrap:wrap;
+    padding:16px 20px;border-bottom:1px solid var(--line);background:var(--surface-2)}
+  .fiche .fh .name{font-family:var(--mono);font-weight:600;font-size:15px}
+  .fiche .fh .right{margin-left:auto;display:flex;align-items:center;gap:14px}
+  .field{padding:14px 20px;border-bottom:1px solid var(--line)}
+  .field:last-child{border-bottom:none}
+  .field .k{font-family:var(--mono);font-size:11px;text-transform:uppercase;letter-spacing:0.08em;
+    color:var(--ink-3);margin-bottom:5px;display:flex;align-items:center;gap:8px}
+  .field .v{font-size:14.5px;line-height:1.55;color:var(--ink)}
+  .field.key{background:var(--signal-soft)}
+  .field.key .k{color:var(--signal-2)}
+  .field.key .v{font-weight:560}
+  .field .k .hint{font-family:var(--sans);text-transform:none;letter-spacing:0;
+    color:var(--signal);font-size:11px;font-weight:600}
+  .provline{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;
+    padding:12px 20px;font-family:var(--mono);font-size:11.5px;color:var(--ink-3);
+    background:var(--surface-2)}
+  .provline a{color:var(--signal);text-decoration:none}
+
+  /* do / don't */
+  .rules{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+  .rules .card{border:1px solid var(--line);border-radius:5px;background:var(--surface);padding:16px 18px}
+  .rules ul{margin:8px 0 0;padding-left:18px}
+  .rules li{margin:5px 0;font-size:13.5px;color:var(--ink-2)}
+  .rules .do h4{color:var(--signal-2)} .rules .dont h4{color:#9A5B4A}
+  .rules h4{margin:0;font-size:13px;font-family:var(--mono);text-transform:uppercase;letter-spacing:0.07em}
+
+  .note{font-family:var(--mono);font-size:11.5px;color:var(--ink-3);margin-top:14px}
+  @media(max-width:760px){.grid2,.grid3,.rules{grid-template-columns:1fr}.swrow{grid-template-columns:repeat(2,1fr)}}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap row">
+    <span class="brand"><span class="mark"></span><b>MINERVA</b>
+      <span class="sub">design language · D1</span></span>
+    <span class="spacer"></span>
+    <span class="stamp">calm analytical instrument · light-first · draft for validation</span>
+  </div>
+</header>
+
+<section class="wrap">
+  <h1>The calm analytical instrument.</h1>
+  <p class="lede">Ink on technical paper, a discreet grid, one cool signal accent, and
+  monospace for everything quantitative. Dense but legible; authoritative without
+  drama. This page is the system — not a product screen. Validate it before we skin
+  the landing.</p>
+</section>
+
+<!-- PALETTE -->
+<section class="wrap">
+  <h2>01 · Palette — paper, ink, one signal</h2>
+  <div class="swrow six">
+    <div class="sw"><div class="chip" style="background:#F5F6F4"></div><div class="meta"><b>Paper</b><span>#F5F6F4</span></div></div>
+    <div class="sw"><div class="chip" style="background:#FFFFFF"></div><div class="meta"><b>Surface</b><span>#FFFFFF</span></div></div>
+    <div class="sw"><div class="chip" style="background:#1B1E20"></div><div class="meta"><b>Ink</b><span>#1B1E20</span></div></div>
+    <div class="sw"><div class="chip" style="background:#565C61"></div><div class="meta"><b>Ink-2</b><span>#565C61</span></div></div>
+    <div class="sw"><div class="chip" style="background:#8A9096"></div><div class="meta"><b>Ink-3</b><span>#8A9096</span></div></div>
+    <div class="sw"><div class="chip" style="background:#2F5A5C"></div><div class="meta"><b>Signal</b><span>#2F5A5C</span></div></div>
+  </div>
+  <p class="note">One accent only. It carries links, primary actions and focus — never
+  decoration. The old alarm-red and the neon glow are gone.</p>
+
+  <h2 style="margin-top:32px">Domains — muted, instrument-grade categorical</h2>
+  <div class="swrow">
+    <div class="sw"><div class="chip" style="background:#4C6FA4"></div><div class="meta"><b>Embedded</b><span>#4C6FA4</span></div></div>
+    <div class="sw"><div class="chip" style="background:#8A6AA0"></div><div class="meta"><b>Edge AI</b><span>#8A6AA0</span></div></div>
+    <div class="sw"><div class="chip" style="background:#5E8C6A"></div><div class="meta"><b>Robotics</b><span>#5E8C6A</span></div></div>
+    <div class="sw"><div class="chip" style="background:#B4894C"></div><div class="meta"><b>IoT</b><span>#B4894C</span></div></div>
+  </div>
+  <p class="note">De-neoned, equal weight, distinct from the signal accent. Data as
+  identity: these four never change hue across the product.</p>
+</section>
+
+<!-- TYPE -->
+<section class="wrap">
+  <h2>02 · Typography — humanist sans for prose, mono for data</h2>
+  <div class="grid2">
+    <div class="specimen">
+      <div class="lbl">Sans · reading & headings</div>
+      <div style="font-size:34px;letter-spacing:-0.02em;font-weight:650">Decision-ready intelligence</div>
+      <div style="font-size:21px;letter-spacing:-0.01em;font-weight:620">On China's open-source hardware</div>
+      <div style="font-size:15px;color:var(--ink-2)">Body copy stays calm and readable at 15px, generous line height, no tight tech cramping. Prose is where the sans lives.</div>
+    </div>
+    <div class="specimen">
+      <div class="lbl">Mono · every quantitative / identifier value</div>
+      <div class="metric tnum">106 <span style="font-size:13px;color:var(--ink-3)">fiches</span></div>
+      <div class="mono" style="font-size:14px">sophgo/tpu-mlir</div>
+      <div class="mono tnum" style="font-size:13px;color:var(--ink-2)">score 97 · ★ 412 · pushed 2026-07 · High</div>
+      <div class="lbl" style="margin-top:6px">Field labels are mono, uppercase, tracked — the instrument panel.</div>
+    </div>
+  </div>
+  <p class="note">Rule: if it's a number, a score, a repo id, a date, a metric or a
+  field label → mono + tabular-nums. If it's a sentence a human reads → sans.</p>
+</section>
+
+<!-- COMPONENTS -->
+<section class="wrap">
+  <h2>03 · Components — flat, hairline, small radii</h2>
+  <div class="grid3">
+    <div>
+      <div class="lbl" style="margin-bottom:10px">Actions</div>
+      <div style="display:flex;gap:10px;flex-wrap:wrap;align-items:center">
+        <button class="btn btn-primary">View source</button>
+        <button class="btn btn-ghost">Explore</button>
+        <a class="btn-link" href="#">Get the brief →</a>
+      </div>
+    </div>
+    <div>
+      <div class="lbl" style="margin-bottom:10px">Domain tags</div>
+      <div style="display:flex;gap:6px;flex-wrap:wrap">
+        <span class="tag emb"><span class="d"></span>Embedded</span>
+        <span class="tag edge"><span class="d"></span>Edge AI</span>
+        <span class="tag rob"><span class="d"></span>Robotics</span>
+        <span class="tag iot"><span class="d"></span>IoT</span>
+      </div>
+      <div style="margin-top:8px"><span class="tag plain">RTOS</span> <span class="tag plain">Stable</span></div>
+    </div>
+    <div>
+      <div class="lbl" style="margin-bottom:10px">Confidence &amp; score</div>
+      <div class="conf">Confidence <span class="dm">◆◆◆</span> High</div>
+      <div class="conf" style="margin-top:6px">Confidence <span class="dm">◆◆<span class="off">◇</span></span> Medium</div>
+      <div class="conf" style="margin-top:6px">Confidence <span class="dm">◆<span class="off">◇◇</span></span> Low</div>
+      <div class="score" style="margin-top:12px"><span class="n tnum">97</span><span class="meter"><i style="width:97%"></i></span></div>
+    </div>
+  </div>
+  <p class="note">Confidence is mark-based (ink diamonds), not another color — it stays
+  legible next to the four domain hues. Elevation is a hairline border + a faint
+  surface shift, never a floating shadow.</p>
+</section>
+
+<!-- DATA TABLE -->
+<section class="wrap">
+  <h2>04 · Tabular data — ruled, mono, scannable</h2>
+  <table>
+    <thead><tr><th>Repo</th><th>Domain</th><th>Score</th><th>Confidence</th><th>Pushed</th></tr></thead>
+    <tbody>
+      <tr><td class="mono">sophgo/tpu-mlir</td><td><span class="tag edge"><span class="d"></span>Edge AI</span></td><td class="mono tnum">97</td><td><span class="conf"><span class="dm">◆◆◆</span></span></td><td class="mono tnum">2026-07</td></tr>
+      <tr><td class="mono">rtthread/rt-thread</td><td><span class="tag emb"><span class="d"></span>Embedded</span></td><td class="mono tnum">100</td><td><span class="conf"><span class="dm">◆◆◆</span></span></td><td class="mono tnum">2026-07</td></tr>
+      <tr><td class="mono">unitreerobotics/xr_teleoperate</td><td><span class="tag rob"><span class="d"></span>Robotics</span></td><td class="mono tnum">88</td><td><span class="conf"><span class="dm">◆◆<span class="off">◇</span></span></span></td><td class="mono tnum">2026-06</td></tr>
+    </tbody>
+  </table>
+</section>
+
+<!-- FICHE SPECIMEN -->
+<section class="wrap">
+  <h2>05 · The fiche in the new skin — decision layer first</h2>
+  <div class="fiche">
+    <div class="fh">
+      <span class="score"><span class="n tnum">97</span><span class="meter"><i style="width:97%"></i></span></span>
+      <span class="name">sophgo/tpu-mlir</span>
+      <span class="right">
+        <span class="tag edge"><span class="d"></span>Edge AI</span>
+        <span class="conf"><span class="dm">◆◆◆</span> High</span>
+      </span>
+    </div>
+    <div class="field">
+      <div class="k">Problem solved</div>
+      <div class="v">Compile and quantize trained neural networks into deployable
+      binaries for Sophgo's TPU accelerators, without hand-writing kernels.</div>
+    </div>
+    <div class="field">
+      <div class="k">How it works</div>
+      <div class="v">An MLIR-based compiler: imports ONNX/Caffe/TFLite graphs, lowers
+      them through a TPU dialect, applies INT8/BF16 quantization and emits a bmodel
+      for the runtime.</div>
+    </div>
+    <div class="field">
+      <div class="k">Chinese specificity</div>
+      <div class="v">Tied to Sophgo's domestic BM1684X / CV18xx silicon — a
+      home-grown alternative to the CUDA/TensorRT stack under export constraints.</div>
+    </div>
+    <div class="field key">
+      <div class="k">Western equivalent <span class="hint">← the bridge a directory never gives you</span></div>
+      <div class="v">Apache TVM + a vendor toolchain (à la TensorRT / OpenVINO), but
+      targeting Sophgo TPUs instead of NVIDIA/Intel.</div>
+    </div>
+    <div class="provline">
+      <span>Maturity: active · ★ 412 · 68 forks · pushed 2026-07</span>
+      <a href="#">View on GitHub →</a>
+    </div>
+  </div>
+  <p class="note">Same content contract as today — Western equivalent highlighted with
+  the single signal accent, confidence as marks, everything quantitative in mono.
+  Calm, dense, provenance visible.</p>
+</section>
+
+<!-- MOTION + RULES -->
+<section class="wrap">
+  <h2>06 · Motion &amp; guardrails</h2>
+  <p class="muted" style="max-width:640px">Motion is functional only: 120–160&nbsp;ms
+  ease on hover/focus, crisp focus rings, quiet detail swaps. No pulse, no glow, no
+  bounce, no motion that implies real-time. Dated snapshots stay labeled “as of {run}”.</p>
+  <div class="rules" style="margin-top:18px">
+    <div class="card do">
+      <h4>Do</h4>
+      <ul>
+        <li>Ink on paper, hairline rules, a visible-but-faint grid.</li>
+        <li>Mono for all data, scores, ids, dates, labels.</li>
+        <li>One cool signal accent, used sparingly.</li>
+        <li>Muted, equal-weight domain hues; confidence as marks.</li>
+        <li>Small radii, flat surfaces, calm density.</li>
+      </ul>
+    </div>
+    <div class="card dont">
+      <h4>Don't</h4>
+      <ul>
+        <li>Terminal cosplay / hacker look / neon-on-black.</li>
+        <li>Alarm-red, saturated gradients, glow.</li>
+        <li>Demonstrative “techno” grids or futuristic-AI UI.</li>
+        <li>Floating drop-shadows and pill-everything.</li>
+        <li>Any “live” cue on static, dated data.</li>
+      </ul>
+    </div>
+  </div>
+  <p class="note">Dark calm is a later paired theme derived from these same tokens —
+  not the centre of gravity of the vitrine.</p>
+</section>
+
+</body>
+</html>

@@ -1,0 +1,320 @@
+<!doctype html>
+<!-- SUPERSEDED DESIGN MOCKUP — the built site (output/*.html via scripts/build_*.py)
+     is the single source of truth for all copy and claims. Never copy wording from
+     this file into the builders; the flow is builders -> output, mockups are history. -->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Minerva — Decision-ready intelligence on China's open-source hardware (D2 landing re-skin)</title>
+<style>
+  :root{
+    --paper:#F5F6F4; --surface:#FFFFFF; --surface-2:#FAFBF9;
+    --ink:#1B1E20; --ink-2:#565C61; --ink-3:#8A9096; --ink-4:#B9BEC2;
+    --line:#E4E6E2; --line-2:#CDD0CB; --grid:rgba(27,30,32,0.028);
+    --signal:#2F5A5C; --signal-2:#244748; --signal-soft:#E9EEEC;
+    --d-emb:#4C6FA4; --d-edge:#8A6AA0; --d-rob:#5E8C6A; --d-iot:#B4894C;
+    --sans:-apple-system,"Segoe UI",Inter,Roboto,Helvetica,Arial,sans-serif;
+    --mono:ui-monospace,"SF Mono","JetBrains Mono",Menlo,Consolas,monospace;
+  }
+  *{box-sizing:border-box} html,body{margin:0}
+  body{
+    background:var(--paper); color:var(--ink); font-family:var(--sans);
+    font-size:15px; line-height:1.6; -webkit-font-smoothing:antialiased;
+    font-feature-settings:"tnum","cv02","cv03";
+    background-image:linear-gradient(var(--grid) 1px,transparent 1px),
+                     linear-gradient(90deg,var(--grid) 1px,transparent 1px);
+    background-size:34px 34px;
+  }
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:1060px;margin:0 auto;padding:0 28px}
+  .mono{font-family:var(--mono)} .tnum{font-variant-numeric:tabular-nums}
+
+  /* NAV */
+  nav{position:sticky;top:0;z-index:20;background:rgba(245,246,244,0.86);
+    backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);
+    border-bottom:1px solid var(--line-2)}
+  nav .row{display:flex;align-items:center;gap:20px;padding:13px 0}
+  .brand{display:flex;align-items:center;gap:9px;font-weight:600;letter-spacing:-0.01em}
+  .mark{width:14px;height:14px;border:2px solid var(--ink);border-radius:2px;position:relative}
+  .mark::after{content:"";position:absolute;inset:3px 3px auto auto;width:4px;height:4px;background:var(--signal)}
+  .brand b{font-size:16px}
+  nav .links{margin-left:auto;display:flex;align-items:center;gap:20px}
+  nav .links a{font-size:13.5px;color:var(--ink-2);font-weight:500}
+  nav .links a:hover{color:var(--ink)}
+  nav .links .pro{border:1px solid var(--line-2);border-radius:5px;padding:5px 12px;color:var(--ink)}
+  nav .links .pro:hover{border-color:var(--signal);color:var(--signal)}
+
+  section{border-bottom:1px solid var(--line)}
+  .seclabel{font-family:var(--mono);font-size:12px;text-transform:uppercase;
+    letter-spacing:0.09em;color:var(--ink-3);font-weight:600;margin:0 0 20px}
+  .seclabel .n{color:var(--signal);margin-right:8px}
+  h2{font-size:26px;letter-spacing:-0.015em;margin:0 0 8px;font-weight:640}
+  .lead{font-size:15px;color:var(--ink-2);max-width:620px;margin:0}
+
+  /* HERO */
+  .hero{padding:74px 0 56px}
+  .badge{display:inline-flex;align-items:center;gap:8px;font-family:var(--mono);
+    font-size:11.5px;color:var(--ink-2);background:var(--surface);
+    border:1px solid var(--line-2);border-radius:100px;padding:5px 12px;letter-spacing:0.02em}
+  .badge .d{width:6px;height:6px;border-radius:50%;background:var(--signal)}
+  h1{font-size:clamp(34px,5vw,52px);letter-spacing:-0.025em;line-height:1.08;
+    margin:20px 0 20px;font-weight:660;max-width:16ch}
+  .hero .lede{font-size:clamp(16px,1.7vw,19px);color:var(--ink-2);max-width:640px;margin:0 0 30px}
+  .hero .lede b{color:var(--ink);font-weight:600}
+  .cta{display:flex;gap:14px;align-items:center;flex-wrap:wrap}
+  .btn{display:inline-flex;align-items:center;gap:7px;font-family:var(--sans);
+    font-size:14px;font-weight:600;padding:11px 18px;border-radius:5px;border:1px solid transparent;
+    transition:background .14s,border-color .14s,color .14s;cursor:pointer}
+  .btn-primary{background:var(--signal);color:#fff;border-color:var(--signal)}
+  .btn-primary:hover{background:var(--signal-2);border-color:var(--signal-2)}
+  .btn-link{color:var(--signal);font-weight:600;font-size:14px;
+    border-bottom:1px solid var(--line-2);padding-bottom:2px}
+  .btn-link:hover{border-color:var(--signal)}
+  .trust{margin-top:30px;display:flex;gap:24px;flex-wrap:wrap;font-family:var(--mono);
+    font-size:12.5px;color:var(--ink-3)}
+  .trust b{color:var(--ink);font-weight:600}
+
+  /* generic section padding */
+  .sec{padding:52px 0}
+
+  /* PROOF FICHE */
+  .fiche{background:var(--surface);border:1px solid var(--line-2);border-radius:6px;
+    max-width:720px;overflow:hidden;margin-top:24px}
+  .fiche .fh{display:flex;align-items:center;gap:12px;flex-wrap:wrap;
+    padding:15px 20px;border-bottom:1px solid var(--line);background:var(--surface-2)}
+  .fiche .fh .name{font-family:var(--mono);font-weight:600;font-size:15px}
+  .fiche .fh .right{margin-left:auto;display:flex;align-items:center;gap:14px}
+  .score{display:flex;align-items:center;gap:9px}
+  .score .n{font-family:var(--mono);font-size:15px;font-weight:600}
+  .meter{width:96px;height:4px;background:var(--line);border-radius:2px;overflow:hidden}
+  .meter i{display:block;height:100%;background:var(--signal)}
+  .tag{display:inline-flex;align-items:center;gap:6px;font-family:var(--mono);font-size:11px;
+    font-weight:600;padding:3px 8px;border-radius:3px;border:1px solid var(--line-2);
+    color:var(--ink-2);background:var(--surface)}
+  .tag .d{width:7px;height:7px;border-radius:2px;display:inline-block}
+  .tag.emb .d{background:var(--d-emb)} .tag.edge .d{background:var(--d-edge)}
+  .tag.rob .d{background:var(--d-rob)} .tag.iot .d{background:var(--d-iot)}
+  .conf{font-family:var(--mono);font-size:11px;color:var(--ink-2);display:inline-flex;align-items:center;gap:6px}
+  .conf .dm{letter-spacing:1px;color:var(--ink)} .conf .dm .off{color:var(--ink-4)}
+  .field{padding:14px 20px;border-bottom:1px solid var(--line)}
+  .field .k{font-family:var(--mono);font-size:11px;text-transform:uppercase;letter-spacing:0.08em;
+    color:var(--ink-3);margin-bottom:5px;display:flex;gap:8px;flex-wrap:wrap;align-items:baseline}
+  .field .v{font-size:14.5px;line-height:1.55}
+  .field.key{background:var(--signal-soft)} .field.key .k{color:var(--signal-2)} .field.key .v{font-weight:560}
+  .field .k .hint{font-family:var(--sans);text-transform:none;letter-spacing:0;color:var(--signal);font-weight:600;font-size:11px}
+  .provline{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;
+    padding:12px 20px;font-family:var(--mono);font-size:11.5px;color:var(--ink-3);background:var(--surface-2)}
+  .provline a{color:var(--signal)}
+
+  /* USE CASES */
+  .uc-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:24px}
+  .uc{display:block;background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:18px 20px;transition:border-color .14s}
+  .uc:hover{border-color:var(--line-2)}
+  .uc .h{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:8px}
+  .uc .h b{font-size:15.5px}
+  .uc .job{font-size:14px;font-weight:560;margin:0 0 6px}
+  .uc .ex{font-size:13px;color:var(--ink-2);margin:0;line-height:1.5}
+  .uc .ex b{color:var(--ink)}
+
+  /* HOW */
+  .how{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:24px}
+  .step{background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:18px;position:relative}
+  .step .num{font-family:var(--mono);font-size:11px;color:var(--signal);font-weight:700;letter-spacing:0.08em}
+  .step h4{margin:8px 0 6px;font-size:14.5px;font-weight:620}
+  .step p{margin:0;font-size:12.5px;color:var(--ink-2);line-height:1.5}
+  .step code{font-family:var(--mono);font-size:11.5px;background:var(--surface-2);border:1px solid var(--line);border-radius:3px;padding:0 5px;color:var(--ink)}
+
+  /* CORPUS */
+  .dom{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:24px}
+  .cell{background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:16px 18px}
+  .cell .top{display:flex;align-items:center;gap:8px;margin-bottom:8px}
+  .cell .dot{width:8px;height:8px;border-radius:2px}
+  .cell .top b{font-size:14.5px} .cell .top .c{margin-left:auto;font-family:var(--mono);font-weight:600;color:var(--ink)}
+  .cell .bar{height:3px;background:var(--line);border-radius:2px;overflow:hidden;margin-bottom:8px}
+  .cell .bar i{display:block;height:100%}
+  .cell p{margin:0;font-size:12px;color:var(--ink-2);line-height:1.45}
+
+  /* TRUST */
+  .trustband ul{list-style:none;padding:0;margin:20px 0 0;display:grid;grid-template-columns:1fr 1fr;gap:10px 28px}
+  .trustband li{font-size:13.5px;color:var(--ink-2);padding-left:22px;position:relative}
+  .trustband li::before{content:"✓";position:absolute;left:0;color:var(--signal);font-weight:700}
+
+  /* CTA */
+  .capture{padding:64px 0;text-align:center}
+  .capture h2{margin-bottom:10px}
+  .capture .lead{margin:0 auto 24px}
+  .form{display:flex;gap:8px;max-width:440px;margin:0 auto;justify-content:center;flex-wrap:wrap}
+  .form input{flex:1 1 220px;background:var(--surface);border:1px solid var(--line-2);border-radius:5px;
+    padding:11px 14px;font-family:var(--sans);font-size:14px;color:var(--ink)}
+  .form input:focus{outline:none;border-color:var(--signal);box-shadow:0 0 0 3px var(--signal-soft)}
+  .form .btn-primary{flex:0 0 auto}
+  .fine{font-family:var(--mono);font-size:11.5px;color:var(--ink-3);margin-top:12px}
+
+  footer{padding:30px 0 44px}
+  footer .row{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;
+    font-family:var(--mono);font-size:12px;color:var(--ink-3)}
+  footer a{color:var(--ink-2)} footer a:hover{color:var(--signal)}
+
+  @media(max-width:780px){
+    .uc-grid,.how,.dom,.trustband ul{grid-template-columns:1fr 1fr}
+  }
+  @media(max-width:520px){
+    .how,.dom{grid-template-columns:1fr 1fr}.uc-grid{grid-template-columns:1fr}
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap row">
+    <span class="brand"><span class="mark"></span><b>MINERVA</b></span>
+    <span class="links">
+      <a href="#">Dashboard</a>
+      <a href="#">Newsletter</a>
+      <a href="#" class="pro">Pro</a>
+    </span>
+  </div>
+</nav>
+
+<header class="hero wrap">
+  <span class="badge"><span class="d"></span>106 decision-ready fiches · Gitee + GitHub · as of 2026-07-30</span>
+  <h1>Decision-ready intelligence on China's open-source hardware.</h1>
+  <p class="lede">The Chinese embedded / IoT / robotics / edge-AI ecosystem ships
+  fast — in Mandarin, split across Gitee and GitHub. Minerva turns it into
+  <b>structured EN/FR fiches you can act on</b>: what a project does, how mature it
+  is, and its <b>Western equivalent</b>. Intelligence, not a repo directory.</p>
+  <div class="cta">
+    <a class="btn btn-primary" href="#">Explore the dashboard →</a>
+    <a class="btn-link" href="#">Get the brief</a>
+  </div>
+  <div class="trust">
+    <span><b>106</b> fiches</span>
+    <span><b>15</b> orgs · Gitee + GitHub</span>
+    <span><b>88%</b> hardware vendors</span>
+    <span><b>EN + FR</b></span>
+    <span>Apache 2.0</span>
+  </div>
+</header>
+
+<section>
+  <div class="wrap sec">
+    <p class="seclabel"><span class="n">01</span>What one fiche looks like</p>
+    <h2>Not a link and a star count — the decision layer.</h2>
+    <p class="lead">Generated from the description and README, mapped to what you
+    already know. This is the anti-directory proof.</p>
+    <div class="fiche">
+      <div class="fh">
+        <span class="score"><span class="n tnum">97</span><span class="meter"><i style="width:97%"></i></span></span>
+        <span class="name">sophgo/tpu-mlir</span>
+        <span class="right">
+          <span class="tag edge"><span class="d"></span>Edge AI</span>
+          <span class="conf"><span class="dm">◆◆◆</span> High</span>
+        </span>
+      </div>
+      <div class="field"><div class="k">Problem solved</div>
+        <div class="v">Compile and quantize trained neural networks into deployable binaries for Sophgo's TPU accelerators, without hand-writing kernels.</div></div>
+      <div class="field"><div class="k">How it works</div>
+        <div class="v">An MLIR-based compiler: imports ONNX/Caffe/TFLite graphs, lowers them through a TPU dialect, applies INT8/BF16 quantization and emits a bmodel for the runtime.</div></div>
+      <div class="field"><div class="k">Chinese specificity</div>
+        <div class="v">Tied to Sophgo's domestic BM1684X / CV18xx silicon — a home-grown alternative to the CUDA/TensorRT stack under export constraints.</div></div>
+      <div class="field key"><div class="k">Western equivalent <span class="hint">← the bridge a directory never gives you</span></div>
+        <div class="v">Apache TVM + a vendor toolchain (à la TensorRT / OpenVINO), but targeting Sophgo TPUs instead of NVIDIA/Intel.</div></div>
+      <div class="provline">
+        <span>Maturity: active · ★ 412 · 68 forks · pushed 2026-07</span>
+        <a href="#">View on GitHub →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap sec">
+    <p class="seclabel"><span class="n">02</span>What you'd use it for</p>
+    <h2>Four jobs, each wired to a real view.</h2>
+    <div class="uc-grid">
+      <a class="uc" href="#"><div class="h"><b>Tech scouting</b><span class="tag edge"><span class="d"></span>Edge AI</span></div>
+        <p class="job">Find the Chinese counterpart to a Western framework.</p>
+        <p class="ex">“Is there a Chinese ncnn/TVM?” — the <b>Western-equivalent</b> field maps each project to what you already know.</p></a>
+      <a class="uc" href="#"><div class="h"><b>Competitive intelligence</b><span class="tag rob"><span class="d"></span>Robotics</span></div>
+        <p class="job">Watch a competitor's open-source footprint.</p>
+        <p class="ex">Track what a vendor (Sophgo, Unitree, Bouffalo…) ships and how mature it is — before it lands in a product.</p></a>
+      <a class="uc" href="#"><div class="h"><b>Sourcing / BOM</b><span class="tag emb"><span class="d"></span>Embedded</span></div>
+        <p class="job">De-risk a chipset SDK before you design it in.</p>
+        <p class="ex">Read the maturity, activity and real scope of a vendor's RTOS/BSP/SDK, not a marketing page.</p></a>
+      <a class="uc" href="#"><div class="h"><b>Edge-AI benchmarking</b><span class="tag edge"><span class="d"></span>Edge AI</span></div>
+        <p class="job">Line up inference runtimes on Chinese silicon.</p>
+        <p class="ex">ncnn vs MNN vs tpu-mlir vs nncase — targets, quantization and Western equivalents side by side.</p></a>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap sec">
+    <p class="seclabel"><span class="n">03</span>How it works</p>
+    <h2>A monitoring engine, not a one-shot scrape.</h2>
+    <div class="how">
+      <div class="step"><div class="num">01 · COLLECT</div><h4>Collect</h4>
+        <p>Official <b>Gitee</b> &amp; <b>GitHub</b> APIs across 15 watched orgs. Public metadata &amp; READMEs only.</p></div>
+      <div class="step"><div class="num">02 · SCORE</div><h4>Score</h4>
+        <p>Multilingual <b>semantic embeddings</b> vs 4 domains, plus an anti-noise filter that keeps vendors and drops generic big-tech repos.</p></div>
+      <div class="step"><div class="num">03 · ENRICH</div><h4>Enrich</h4>
+        <p><code>Claude Haiku 4.5</code> writes problem, how-it-works, Chinese specificity and <b>Western equivalent</b> — in EN &amp; FR.</p></div>
+      <div class="step"><div class="num">04 · TRACK</div><h4>Track</h4>
+        <p>Incremental <b>NEW / MODIFIED / REMOVED</b> diff via persisted state — always dated “as of {run}”.</p></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap sec">
+    <p class="seclabel"><span class="n">04</span>The corpus, honestly</p>
+    <h2>106 fiches, 15 orgs, 88% from hardware vendors.</h2>
+    <p class="lead">Generic big-tech deliberately filtered down. Quality over quantity.</p>
+    <div class="dom">
+      <div class="cell"><div class="top"><span class="dot" style="background:var(--d-emb)"></span><b>Embedded</b><span class="c tnum">55</span></div>
+        <div class="bar"><i style="width:100%;background:var(--d-emb)"></i></div><p>RTOS, BSP, drivers, bare-metal firmware.</p></div>
+      <div class="cell"><div class="top"><span class="dot" style="background:var(--d-edge)"></span><b>Edge AI</b><span class="c tnum">45</span></div>
+        <div class="bar"><i style="width:82%;background:var(--d-edge)"></i></div><p>NPU/TPU inference, quantization, OCR, vision.</p></div>
+      <div class="cell"><div class="top"><span class="dot" style="background:var(--d-rob)"></span><b>Robotics</b><span class="c tnum">9</span></div>
+        <div class="bar"><i style="width:16%;background:var(--d-rob)"></i></div><p>ROS, SLAM, teleop, motor control, quadrupeds.</p></div>
+      <div class="cell"><div class="top"><span class="dot" style="background:var(--d-iot)"></span><b>IoT</b><span class="c tnum">2</span></div>
+        <div class="bar"><i style="width:4%;background:var(--d-iot)"></i></div><p>MQTT/CoAP stacks, cellular modules, device OSes.</p></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap sec trustband">
+    <p class="seclabel"><span class="n">05</span>Sources &amp; method you can trust</p>
+    <h2>Auditable by design.</h2>
+    <ul>
+      <li>Official Gitee &amp; GitHub APIs only — no scraping, within published rate limits</li>
+      <li>Public repository metadata &amp; READMEs only — no private or personal data</li>
+      <li>No code redistributed — original summaries + a link back to every source</li>
+      <li>Transparent relevance &amp; confidence scoring — every fiche is auditable</li>
+    </ul>
+  </div>
+</section>
+
+<section>
+  <div class="wrap capture">
+    <h2>The free brief.</h2>
+    <p class="lead">The flagship new &amp; updated fiches, in your inbox after each corpus run. No tracking, unsubscribe in one click.</p>
+    <form class="form" onsubmit="return false">
+      <input type="email" placeholder="you@email.com">
+      <button class="btn btn-primary" type="submit">Subscribe</button>
+    </form>
+    <p class="fine">Need always-fresh data, history or a custom competitor watch? See Pro &amp; Enterprise →</p>
+  </div>
+</section>
+
+<footer class="wrap">
+  <div class="row">
+    <span>▮ MINERVA · Apache 2.0 · open source</span>
+    <span><a href="#">Dashboard</a> · <a href="#">Newsletter</a> · <a href="#">Pro</a></span>
+  </div>
+</footer>
+
+</body>
+</html>
