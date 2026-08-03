@@ -182,3 +182,17 @@ def test_deletion_collapse_tolerates_normal_churn():
     assert pipeline._deletion_collapse(105, 6) is False
     assert pipeline._deletion_collapse(100, 50) is False   # exactement 50% = toléré
     assert pipeline._deletion_collapse(5, 5) is False      # corpus trop petit pour juger
+
+
+def test_compute_deletions_protects_seeds_and_failed_owners():
+    """Post-mortem run nº2 : un seed dont le fetch individuel échoue (401) ne doit
+    jamais être supprimé ; idem pour les repos d'un owner en échec d'énumération."""
+    prev = {"openLuat/LuatOS": "t1", "vendor/gone": "t2", "failed/kept": "t3", "ok/alive": "t4"}
+    repos = {"ok/alive": {}}
+    deleted, protected = pipeline._compute_deletions(
+        prev, repos,
+        failed_owners={"failed"},
+        seed_names={"openluat/luatos"},
+    )
+    assert deleted == ["vendor/gone"]
+    assert protected == 2

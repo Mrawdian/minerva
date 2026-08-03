@@ -660,6 +660,24 @@ def _deletion_collapse(prev_count: int, deleted_count: int) -> bool:
     return prev_count >= COLLAPSE_MIN_PREV and deleted_count > COLLAPSE_RATIO * prev_count
 
 
+def _compute_deletions(prev_repos_state: dict, repos: dict,
+                       failed_owners: set[str], seed_names: set[str]) -> tuple[list[str], int]:
+    """Deletion detection with two protections: owners whose enumeration failed,
+    and configured SEEDS (post-mortem 2026-08-03 run #2: a 401 on a seed's
+    individual fetch deleted openLuat/LuatOS). A seed is owner-curated config —
+    it can only leave the corpus by being removed from sources.json first."""
+    deleted, protected = [], 0
+    for fn in prev_repos_state:
+        if fn in repos:
+            continue
+        owner = fn.split("/", 1)[0].lower()
+        if owner in failed_owners or fn.lower() in seed_names:
+            protected += 1
+            continue
+        deleted.append(fn)
+    return deleted, protected
+
+
 def run_pipeline(token: str | None = None, dry_run: bool = False) -> dict:
     """Runs the complete pipeline with diff vs the previous run."""
     log.info("=== Minerva Pipeline démarré ===")
@@ -711,18 +729,13 @@ def run_pipeline(token: str | None = None, dry_run: bool = False) -> dict:
             f"— leurs repos sont exemptés de détection de suppression ce run"
         )
 
-    # Deletion detection: a repo is marked deleted only if its owner
-    # was completely enumerated (otherwise = fetch bug, not a real deletion).
-    deleted_list: list[str] = []
-    protected_count = 0
-    for fn in prev_repos_state:
-        if fn in repos:
-            continue
-        owner = fn.split("/", 1)[0].lower()
-        if owner in failed_owners:
-            protected_count += 1
-            continue
-        deleted_list.append(fn)
+    # Deletion detection: a repo is marked deleted only if its owner was
+    # completely enumerated (otherwise = fetch bug, not a real deletion), and
+    # configured seeds are never deleted by a failed individual fetch.
+    seed_names = {s.lower() for s in (sources.get("seeds_gitee") or [])} | \
+                 {s.lower() for s in (sources.get("seeds_github") or [])}
+    deleted_list, protected_count = _compute_deletions(
+        prev_repos_state, repos, failed_owners, seed_names)
     if _deletion_collapse(len(prev_repos_state), len(deleted_list)):
         log.error(
             f"TRIPWIRE : {len(deleted_list)}/{len(prev_repos_state)} repos seraient "
