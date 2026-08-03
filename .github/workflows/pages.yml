@@ -1,0 +1,55 @@
+# Deploys the public web set to GitHub Pages — publish/ only, never raw output/.
+# The deploy root is built by scripts/collect_public.py (allowlist, stdlib-only:
+# internals like state.json / ledger / newsletters can never ship by accident).
+#
+# Trigger: every push to main that touches the built site (including the weekly
+# scheduled run's commit — its message must NOT contain [skip ci], see
+# scheduled-run.yml), plus manual dispatch.
+#
+# One-time owner step: Settings → Pages → Source = "GitHub Actions".
+
+name: Deploy site (Pages)
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "output/**"
+      - "scripts/collect_public.py"
+      - ".github/workflows/pages.yml"
+  workflow_dispatch: {}
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+
+      - name: Collect the public set (allowlist)
+        run: |
+          python scripts/collect_public.py
+          python scripts/collect_public.py --check
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: publish/
+
+      - id: deployment
+        uses: actions/deploy-pages@v4

@@ -417,7 +417,10 @@ def page_shell(title: str, description: str, canonical_path: str, body: str,
     canonical = f"{SITE_URL}{canonical_path}"
     canonical_tag = "" if IS_PLACEHOLDER_URL else f'<link rel="canonical" href="{html.escape(canonical)}">'
     ogurl_tag = "" if IS_PLACEHOLDER_URL else f'<meta property="og:url" content="{html.escape(canonical)}">'
-    ogimg_tag = "" if IS_PLACEHOLDER_URL else f'<meta property="og:image" content="{html.escape(SITE_URL)}/og.png">'
+    # og:image only when the raster ACTUALLY exists (social platforms need PNG,
+    # we ship og.svg as the design source) — never a meta tag pointing at a 404.
+    ogimg_tag = ("" if (IS_PLACEHOLDER_URL or not (OUT_DIR / "og.png").is_file())
+                 else f'<meta property="og:image" content="{html.escape(SITE_URL)}/og.png">')
     alt_tag = ""
     if alternate and not IS_PLACEHOLDER_URL:
         alt_lang, alt_path = alternate

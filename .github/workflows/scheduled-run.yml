@@ -123,6 +123,9 @@ jobs:
           if git diff --cached --quiet; then
             echo "No changes this week."
           else
-            git commit -m "chore: weekly pipeline run $(date -u +%F) [skip ci]"
+            # No [skip ci] here: this push must trigger the Pages deploy
+            # (pages.yml), or the site would silently stop refreshing. This
+            # workflow itself only runs on schedule/dispatch, so no loop risk.
+            git commit -m "chore: weekly pipeline run $(date -u +%F)"
             git push
           fi

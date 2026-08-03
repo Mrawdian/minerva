@@ -39,6 +39,8 @@ ALLOW_FILES = [
 ALLOW_DIRS = {
     "f": "*.html",   # per-fiche pages, EN (.html) + FR (.fr.html)
 }
+# Copied when present, no error when absent (og.png exists only once rasterized).
+ALLOW_OPTIONAL = ["og.png"]
 
 
 def build() -> int:
@@ -54,6 +56,11 @@ def build() -> int:
             continue
         shutil.copy2(src, PUB / name)
         n += 1
+    for name in ALLOW_OPTIONAL:
+        src = OUT / name
+        if src.is_file():
+            shutil.copy2(src, PUB / name)
+            n += 1
     for d, pattern in ALLOW_DIRS.items():
         (PUB / d).mkdir()
         for p in sorted((OUT / d).glob(pattern)):
@@ -68,7 +75,7 @@ def build() -> int:
 
 
 def check(quiet: bool = False) -> int:
-    allowed = {PUB / f for f in ALLOW_FILES}
+    allowed = {PUB / f for f in ALLOW_FILES} | {PUB / f for f in ALLOW_OPTIONAL}
     strays = []
     for p in PUB.rglob("*"):
         if p.is_dir():
