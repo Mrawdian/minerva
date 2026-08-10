@@ -1,13 +1,19 @@
 ---
-## bouffalolab/bouffalo_sdk
-**Type :** Board Support Package
-**Domaine :** Embarqué
-**Score de pertinence :** 76/100
-**Problème résolu :** Fournir un SDK unifié supportant l'ensemble de la gamme de microcontrôleurs Bouffalo (BL602, BL702/L, BL616, BL618) avec une API HAL commune (LHAL) pour éviter la fragmentation entre bl_mcu_sdk et bl_iot_sdk antérieurs. Cela permet aux développeurs d'utiliser une seule base de code pour des périphériques variés (ADC, SPI, UART, cryptographie, caméra, Ethernet) sans réécrire les drivers.
-**Comment ça marche :** Architecture modulaire en C avec couches : BSP (clock, pinmux, heap, console), drivers LHAL (périphériques génériques supportant tous les chips), drivers SOC (périphériques spécifiques), composants (stacks réseau, sécurité), et exemples. Support de périphériques : UART, SPI, I2C, I2S, GPIO, ADC, DAC, DMA, FLASH, RTC, timers, AES/SHA/TRNG/PKA, caméra (CAM), MJPEG (BL616/618), Ethernet (EMAC). Inclut tests unitaires et outils de build.
-**Spécificité chinoise :** Bouffalo Lab est le fabricant des chipsets Bouffalo (BL602, BL702, BL616, BL618) ; ce SDK est le kit de développement officiel pour cette gamme propriétaire chinoise. Pas d'intégration spécifique à des services cloud chinois (WeChat, Alipay, Baidu) détectée dans le README.
-**Équivalent occidental :** Zephyr Project (Linux Foundation, multi-vendor), FreeRTOS + HAL vendor-spécifique (Amazon/Texas Instruments), STM32CubeSDK (STMicroelectronics)
-**Maturité :** Actif (★ 486, 178 forks, mis à jour 2026-07)
+## bouffalolab/bouffalo_sdk [MODIFIÉ]
+**Type :** Framework
+**Domaine :** Embarqué / Edge AI
+**Score de pertinence :** 66/100
+**Problème résolu :** BouffaloSDK is the IOT and MCU software development kit provided by the Bouffalo Lab Team, supports all the series of Bouffalo chips. Also it is the combination of bl_mcu_sdk and bl_iot_sdk 
+**Comment ça marche :** [![License](https://img.shields.io/badge/License-Apache--2.0-brightgreen)](LICENSE)
+
+[中文版](README_zh.md)
+
+# Introduction
+
+**BouffaloSDK** is the IOT and MCU software development kit provided by the Bouffalo Lab Team, supports all the series of Bouffalo chips. Also it is the combination of **bl_mcu_s
+**Spécificité chinoise :** Chinese open-source project
+**Équivalent occidental :** Not identified
+**Maturité :** Actif (★ 488, 178 forks, mis à jour 2026-08)
 **Langue :** Bilingue CN-EN
 **GitHub :** https://github.com/bouffalolab/bouffalo_sdk
 ---

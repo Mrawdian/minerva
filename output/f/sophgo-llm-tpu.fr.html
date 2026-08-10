@@ -4,19 +4,19 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>sophgo/LLM-TPU — Minerva (FR)</title>
-<meta name="description" content="Déployer des modèles de langage volumineux (LLM) et des modèles vision-langage (VLM) avec quantification et parallélisme multi-puces sur les accélérateurs TPU SOPHGO BM1684X/BM1688, en convertissant…">
+<meta name="description" content="Run generative AI models in sophgo BM1684X/BM1688">
 <link rel="icon" type="image/svg+xml" href="../favicon.svg">
 <link rel="canonical" href="/f/sophgo-llm-tpu.fr.html"><link rel="alternate" hreflang="en" href="/f/sophgo-llm-tpu.html"><link rel="alternate" hreflang="fr" href="/f/sophgo-llm-tpu.fr.html">
 <meta property="og:type" content="article">
 <meta property="og:title" content="sophgo/LLM-TPU — Minerva (FR)">
-<meta property="og:description" content="Déployer des modèles de langage volumineux (LLM) et des modèles vision-langage (VLM) avec quantification et parallélisme multi-puces sur les accélérateurs TPU SOPHGO BM1684X/BM1688, en convertissant…">
+<meta property="og:description" content="Run generative AI models in sophgo BM1684X/BM1688">
 <meta property="og:url" content="/f/sophgo-llm-tpu.fr.html">
-
+<meta property="og:image" content="/og.png">
 <meta property="og:site_name" content="Minerva">
 <meta property="og:locale" content="fr_FR">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="sophgo/LLM-TPU — Minerva (FR)">
-<meta name="twitter:description" content="Déployer des modèles de langage volumineux (LLM) et des modèles vision-langage (VLM) avec quantification et parallélisme multi-puces sur les accélérateurs TPU SOPHGO BM1684X/BM1688, en convertissant…">
+<meta name="twitter:description" content="Run generative AI models in sophgo BM1684X/BM1688">
 <style>
 :root{
   --paper:#F5F6F4; --surface:#FFFFFF; --surface-2:#FAFBF9;
@@ -174,7 +174,7 @@ aside .src:hover{background:var(--signal-2)}
   </span>
 </div></nav>
 <div class="status-line"><div class="wrap srow">
-  <span class="seg"><span class="dot"></span><span class="accent">Snapshot</span>&nbsp;· as of 2026-08-03</span>
+  <span class="seg"><span class="dot"></span><span class="accent">Snapshot</span>&nbsp;· as of 2026-08-10</span>
   <span class="seg">105 fiches</span>
   <span class="seg">reading: fiche · FR</span>
   <span class="ticks"><i></i><i></i><i></i><i></i><i></i></span>
@@ -184,46 +184,46 @@ aside .src:hover{background:var(--signal-2)}
   <div class="crumb"><a href="../index.html">Home</a><span class="sep">/</span><a href="../dashboard.html">Dashboard</a><span class="sep">/</span><a href="../dashboard.html?owner=sophgo">sophgo</a><span class="sep">/</span><span>LLM-TPU</span><span style="margin-left:auto"><a href="sophgo-llm-tpu.html" style="color:var(--signal);font-weight:600">EN →</a></span></div>
 
   <div class="readout" style="--dom-color:var(--d-emb);margin-top:16px">
-    <div class="rblock"><span class="rlab">Score</span><span class="rval tnum">67<span class="unit">/100</span></span></div>
-    <div class="rblock"><span class="rlab">Confiance</span><span class="rval conf">◆◆◆</span></div>
+    <div class="rblock"><span class="rlab">Score</span><span class="rval tnum">70<span class="unit">/100</span></span></div>
+    <div class="rblock"><span class="rlab">Confiance</span><span class="rval conf">◆<span class="off">◇◇</span></span></div>
     <div class="rblock"><span class="rlab">Domaine</span><span class="rval dom">Embarqué</span></div>
-    <div class="rmeta">Tool · Actif</div>
+    <div class="rmeta">Library · Actif</div>
   </div>
   <div class="rlegend"><b>score</b> = un signal de tri grossier, 0–100 (similarité sémantique au créneau embarqué/IoT/robotique/edge-AI + bonus d'activité) — une clé de tri, pas une mesure de l'écosystème · <b>marques ◆</b> = niveau de confiance (qualité des données : profondeur d'enrichissement, métadonnées, récence) — méthode dans docs/SCORING.md</div>
 
   <header class="fhead">
     <h1>sophgo/LLM-TPU</h1>
-    <div class="tags"><span class="tag emb"><span class="d"></span>Embarqué</span><span class="tag plain">Tool</span><span class="tag plain">Actif</span></div>
+    <div class="tags"><span class="tag emb"><span class="d"></span>Embarqué</span><span class="tag plain">Library</span><span class="tag plain">Actif</span></div>
   </header>
 
   <div class="grid">
     <div class="main">
       <h2>Problème résolu</h2>
-      <p class="lede">Déployer des modèles de langage volumineux (LLM) et des modèles vision-langage (VLM) avec quantification et parallélisme multi-puces sur les accélérateurs TPU SOPHGO BM1684X/BM1688, en convertissant directement les poids HuggingFace au format bmodel sans optimisation manuelle.</p>
+      <p class="lede">Run generative AI models in sophgo BM1684X/BM1688</p>
       <h2>Comment ça marche</h2>
-      <p>Le projet fournit llm_convert.py, un compilateur basé sur Python qui ingère des modèles quantifiés (AWQ/GPTQ) depuis HuggingFace et génère des binaires bmodel pour les TPU SOPHGO via la chaîne d&#x27;outils TPU-MLIR. L&#x27;inférence est exécutée via des liaisons de runtime C++ et Python qui gèrent le cache KV, la compilation de forme dynamique et la distribution multi-puces. Des bmodels pré-compilés sont hébergés pour un déploiement rapide ; les modèles supportés incluent les familles Qwen, Llama, DeepSeek, InternVL, MiniCPM et Phi avec support multimodal (texte, image, vidéo, audio).</p>
+      <p>&lt;div align=&quot;center&quot;&gt;</p>
       <h2>Spécificité chinoise</h2>
-      <p>SOPHGO est un fournisseur de semi-conducteurs chinois spécialisé dans les accélérateurs IA ; les BM1684X et BM1688 sont des puces TPU propriétaires SOPHGO. Le projet est officiellement maintenu par SOPHGO et cible leur gamme de produits TPU domestiques, représentant un chemin de déploiement clé pour l&#x27;IA générative sur des accélérateurs conçus en Chine.</p>
+      <p>Chinese open-source project</p>
       <h2 class="key">Équivalent occidental</h2>
-      <div class="keyblock"><p style="margin:0">TensorRT (NVIDIA), OpenVINO (Intel), ONNX Runtime (Microsoft/Linux Foundation) — bien que ces derniers ciblent des écosystèmes d&#x27;accélérateurs différents ; aucun équivalent occidental direct pour le déploiement TPU SOPHGO n&#x27;existe.</p><div class="hint">← le pont qu'un annuaire ne vous donnera jamais</div></div>
+      <div class="keyblock"><p style="margin:0">Not identified</p><div class="hint">← le pont qu'un annuaire ne vous donnera jamais</div></div>
     </div>
     <aside>
-      <div class="r"><dt>Type</dt><dd>Tool</dd></div>
+      <div class="r"><dt>Type</dt><dd>Library</dd></div>
       <div class="r"><dt>Langage</dt><dd>Bilingue CN-EN</dd></div>
       <div class="r"><dt>Étoiles</dt><dd>297 ★</dd></div>
-      <div class="r"><dt>Forks</dt><dd>49</dd></div>
-      <div class="r"><dt>Dernier push</dt><dd>2026-07</dd></div>
+      <div class="r"><dt>Forks</dt><dd>50</dd></div>
+      <div class="r"><dt>Dernier push</dt><dd>2026-08</dd></div>
       <a class="src" href="https://github.com/sophgo/LLM-TPU" target="_blank" rel="noopener">Voir sur GitHub →</a>
     </aside>
   </div>
 
   <section class="related"><div class="lbl">Autres fiches en Embarqué</div>
-    <div class="rel-grid"><a class="rc" href="espressifsystems-esp-skainet.fr.html"><div class="t"><span class="s tnum">★ 67</span><span class="tag emb"><span class="d"></span>Embarqué</span></div>
-  <h4>EspressifSystems/esp-skainet</h4><p>Fournir une solution complète de reconnaissance de mots-clés de réveil et de commandes vocales offline sur microcontrôleurs ESP32 avec faible consommation mémoire et latence réduite.</p></a>
-<a class="rc" href="embedfire-linux-firmware.fr.html"><div class="t"><span class="s tnum">★ 67</span><span class="tag emb"><span class="d"></span>Embarqué</span></div>
-  <h4>Embedfire/linux-firmware</h4><p>Fournir les blobs de firmware et les binaires d&#x27;arborescence de périphériques requis par le noyau Linux pour initialiser et exploiter les périphériques matériels (WiFi, Bluetooth, GPU, modem, etc.) sur diverses SoCs et cartes embarquées.</p></a>
-<a class="rc" href="sophgo-sophgo-riscv-utils.fr.html"><div class="t"><span class="s tnum">★ 66</span><span class="tag emb"><span class="d"></span>Embarqué</span></div>
-  <h4>sophgo/sophgo-riscv-utils</h4><p>Fournir des utilitaires et des outils pour les systèmes embarqués basés sur RISC-V, en particulier ceux fabriqués par SOPHGO (un fournisseur de SoC chinois). Le projet répond au besoin de support spécifique à RISC-V pour le développement et l&#x27;exécution sur les lignes de processeurs de SOPHGO.</p></a></div></section>
+    <div class="rel-grid"><a class="rc" href="bouffalolab-bl-iot-sdk-components.fr.html"><div class="t"><span class="s tnum">★ 70</span><span class="tag emb"><span class="d"></span>Embarqué</span></div>
+  <h4>bouffalolab/bl_iot_sdk-components</h4><p>Fournir des composants modulaires et réutilisables pour les applications IoT construites sur la famille de SoC BL602/BL604, en découplant la logique du firmware des abstractions matérielles bas niveau pour réduire la duplication entre les projets utilisant les chipsets Bouffalo Lab.</p></a>
+<a class="rc" href="sophgo-tpu-mlir.fr.html"><div class="t"><span class="s tnum">★ 70</span><span class="tag emb"><span class="d"></span>Embarqué</span></div>
+  <h4>sophgo/tpu-mlir</h4><p>Machine learning compiler based on MLIR for Sophgo TPU.</p></a>
+<a class="rc" href="paddlepaddle-paddleocr.fr.html"><div class="t"><span class="s tnum">★ 71</span><span class="tag emb"><span class="d"></span>Embarqué</span></div>
+  <h4>paddlepaddle/PaddleOCR</h4><p>Convertir des documents PDF et des images en données structurées prêtes pour les LLM (JSON/Markdown) avec une haute précision. Fournir une reconnaissance optique de caractères multilingue (100+ langues) et une analyse de la mise en page des documents pour les applications RAG et IA agentive sans dépendre de solutions commerciales propriétaires.</p></a></div></section>
 
   <div class="nlbox">
     <h3>Cette fiche vous a été utile ?</h3>

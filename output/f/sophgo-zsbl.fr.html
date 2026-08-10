@@ -4,19 +4,19 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>sophgo/zsbl — Minerva (FR)</title>
-<meta name="description" content="Fournir un chargeur d&#x27;amorçage RISC-V pour les SoC SOPHGO qui initialise le processeur, charge le chargeur d&#x27;amorçage de l&#x27;étape suivante ou le noyau, et gère la configuration matérielle précoce avan…">
+<meta name="description" content="SOPHGO RISC-V Zero Stage BootLoader">
 <link rel="icon" type="image/svg+xml" href="../favicon.svg">
 <link rel="canonical" href="/f/sophgo-zsbl.fr.html"><link rel="alternate" hreflang="en" href="/f/sophgo-zsbl.html"><link rel="alternate" hreflang="fr" href="/f/sophgo-zsbl.fr.html">
 <meta property="og:type" content="article">
 <meta property="og:title" content="sophgo/zsbl — Minerva (FR)">
-<meta property="og:description" content="Fournir un chargeur d&#x27;amorçage RISC-V pour les SoC SOPHGO qui initialise le processeur, charge le chargeur d&#x27;amorçage de l&#x27;étape suivante ou le noyau, et gère la configuration matérielle précoce avan…">
+<meta property="og:description" content="SOPHGO RISC-V Zero Stage BootLoader">
 <meta property="og:url" content="/f/sophgo-zsbl.fr.html">
-
+<meta property="og:image" content="/og.png">
 <meta property="og:site_name" content="Minerva">
 <meta property="og:locale" content="fr_FR">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="sophgo/zsbl — Minerva (FR)">
-<meta name="twitter:description" content="Fournir un chargeur d&#x27;amorçage RISC-V pour les SoC SOPHGO qui initialise le processeur, charge le chargeur d&#x27;amorçage de l&#x27;étape suivante ou le noyau, et gère la configuration matérielle précoce avan…">
+<meta name="twitter:description" content="SOPHGO RISC-V Zero Stage BootLoader">
 <style>
 :root{
   --paper:#F5F6F4; --surface:#FFFFFF; --surface-2:#FAFBF9;
@@ -174,7 +174,7 @@ aside .src:hover{background:var(--signal-2)}
   </span>
 </div></nav>
 <div class="status-line"><div class="wrap srow">
-  <span class="seg"><span class="dot"></span><span class="accent">Snapshot</span>&nbsp;· as of 2026-08-03</span>
+  <span class="seg"><span class="dot"></span><span class="accent">Snapshot</span>&nbsp;· as of 2026-08-10</span>
   <span class="seg">105 fiches</span>
   <span class="seg">reading: fiche · FR</span>
   <span class="ticks"><i></i><i></i><i></i><i></i><i></i></span>
@@ -184,46 +184,46 @@ aside .src:hover{background:var(--signal-2)}
   <div class="crumb"><a href="../index.html">Home</a><span class="sep">/</span><a href="../dashboard.html">Dashboard</a><span class="sep">/</span><a href="../dashboard.html?owner=sophgo">sophgo</a><span class="sep">/</span><span>zsbl</span><span style="margin-left:auto"><a href="sophgo-zsbl.html" style="color:var(--signal);font-weight:600">EN →</a></span></div>
 
   <div class="readout" style="--dom-color:var(--d-emb);margin-top:16px">
-    <div class="rblock"><span class="rlab">Score</span><span class="rval tnum">52<span class="unit">/100</span></span></div>
-    <div class="rblock"><span class="rlab">Confiance</span><span class="rval conf">◆◆◆</span></div>
+    <div class="rblock"><span class="rlab">Score</span><span class="rval tnum">58<span class="unit">/100</span></span></div>
+    <div class="rblock"><span class="rlab">Confiance</span><span class="rval conf">◆<span class="off">◇◇</span></span></div>
     <div class="rblock"><span class="rlab">Domaine</span><span class="rval dom">Embarqué</span></div>
-    <div class="rmeta">Board Support Package · Actif</div>
+    <div class="rmeta">Library · Actif</div>
   </div>
   <div class="rlegend"><b>score</b> = un signal de tri grossier, 0–100 (similarité sémantique au créneau embarqué/IoT/robotique/edge-AI + bonus d'activité) — une clé de tri, pas une mesure de l'écosystème · <b>marques ◆</b> = niveau de confiance (qualité des données : profondeur d'enrichissement, métadonnées, récence) — méthode dans docs/SCORING.md</div>
 
   <header class="fhead">
     <h1>sophgo/zsbl</h1>
-    <div class="tags"><span class="tag emb"><span class="d"></span>Embarqué</span><span class="tag plain">Board Support Package</span><span class="tag plain">Actif</span></div>
+    <div class="tags"><span class="tag emb"><span class="d"></span>Embarqué</span><span class="tag plain">Library</span><span class="tag plain">Actif</span></div>
   </header>
 
   <div class="grid">
     <div class="main">
       <h2>Problème résolu</h2>
-      <p class="lede">Fournir un chargeur d&#x27;amorçage RISC-V pour les SoC SOPHGO qui initialise le processeur, charge le chargeur d&#x27;amorçage de l&#x27;étape suivante ou le noyau, et gère la configuration matérielle précoce avant que le système d&#x27;exploitation principal prenne le contrôle.</p>
+      <p class="lede">SOPHGO RISC-V Zero Stage BootLoader</p>
       <h2>Comment ça marche</h2>
-      <p>ZSBL (Zero Stage BootLoader) est un chargeur d&#x27;amorçage minimal de première étape écrit pour les processeurs RISC-V SOPHGO. Il effectue l&#x27;initialisation du processeur, la configuration de la mémoire et le transfert vers un chargeur d&#x27;amorçage secondaire ou une image de noyau. Le projet est écrit en C et en assembleur, ciblant la gamme de SoC RISC-V de SOPHGO. Les dépendances et les séquences d&#x27;initialisation matérielle spécifiques doivent être confirmées à partir du code source.</p>
+      <p>See the project README</p>
       <h2>Spécificité chinoise</h2>
-      <p>SOPHGO est une entreprise chinoise de semi-conducteurs sans usine spécialisée dans les accélérateurs d&#x27;IA et les SoC RISC-V ; ce chargeur d&#x27;amorçage fait partie de leur pile logicielle open-source pour leur famille de processeurs RISC-V propriétaires.</p>
+      <p>Chinese open-source project</p>
       <h2 class="key">Équivalent occidental</h2>
-      <div class="keyblock"><p style="margin:0">U-Boot (Denx), coreboot (Linux Foundation), OpenSBI (RISC-V Foundation)</p><div class="hint">← le pont qu'un annuaire ne vous donnera jamais</div></div>
+      <div class="keyblock"><p style="margin:0">Not identified</p><div class="hint">← le pont qu'un annuaire ne vous donnera jamais</div></div>
     </div>
     <aside>
-      <div class="r"><dt>Type</dt><dd>Board Support Package</dd></div>
+      <div class="r"><dt>Type</dt><dd>Library</dd></div>
       <div class="r"><dt>Langage</dt><dd>Anglais</dd></div>
       <div class="r"><dt>Étoiles</dt><dd>33 ★</dd></div>
       <div class="r"><dt>Forks</dt><dd>35</dd></div>
-      <div class="r"><dt>Dernier push</dt><dd>2026-07</dd></div>
+      <div class="r"><dt>Dernier push</dt><dd>2026-08</dd></div>
       <a class="src" href="https://github.com/sophgo/zsbl" target="_blank" rel="noopener">Voir sur GitHub →</a>
     </aside>
   </div>
 
   <section class="related"><div class="lbl">Autres fiches en Embarqué</div>
-    <div class="rel-grid"><a class="rc" href="sophgo-cvikernel.fr.html"><div class="t"><span class="s tnum">★ 51</span><span class="tag emb"><span class="d"></span>Embarqué</span></div>
-  <h4>sophgo/cvikernel</h4><p>Générer des instructions TPU pour les unités de traitement tensoriel de SOPHGO sans écrire d&#x27;assembleur brut. Fournit une API C/C++ pour construire et émettre programmatiquement des séquences d&#x27;instructions TPU, remplaçant le codage assembleur manuel.</p></a>
-<a class="rc" href="kendryte-k230-rtos-docs.fr.html"><div class="t"><span class="s tnum">★ 51</span><span class="tag emb"><span class="d"></span>Embarqué</span></div>
-  <h4>kendryte/k230_rtos_docs</h4><p>Fournir une documentation et des matériaux de référence pour la plateforme RTOS Kendryte K230, permettant aux développeurs de comprendre l&#x27;architecture du système d&#x27;exploitation temps réel, les API et les modèles d&#x27;intégration spécifiques au SoC K230.</p></a>
-<a class="rc" href="sophgo-sophon-sail.fr.html"><div class="t"><span class="s tnum">★ 54</span><span class="tag emb"><span class="d"></span>Embarqué</span></div>
-  <h4>sophgo/sophon-sail</h4><p>Simplifier le déploiement de modèles d&#x27;inférence d&#x27;apprentissage profond et de traitement d&#x27;images/vidéos sur les accélérateurs TPU SOPHON en fournissant des pipelines unifiés accélérés matériellement pour le décodage, le prétraitement et l&#x27;inférence avec liaisons C++ et Python.</p></a></div></section>
+    <div class="rel-grid"><a class="rc" href="alibaba-dummy-risc-v-vpu.fr.html"><div class="t"><span class="s tnum">★ 59</span><span class="tag emb"><span class="d"></span>Embarqué</span></div>
+  <h4>alibaba/Dummy-RISC-V-VPU</h4><p>Aucun README ou description accessible ; le nom du projet suggère un simulateur ou émulateur d&#x27;unité de traitement vectoriel RISC-V (VPU), probablement destiné à la validation d&#x27;ensemble d&#x27;instructions ou à l&#x27;exploration architecturale des extensions vectorielles RISC-V, mais la déclaration de problème concrète ne peut pas être vérifiée.</p></a>
+<a class="rc" href="sophgo-cviruntime.fr.html"><div class="t"><span class="s tnum">★ 59</span><span class="tag emb"><span class="d"></span>Embarqué</span></div>
+  <h4>sophgo/cviruntime</h4><p>Fournir une bibliothèque runtime et un SDK pour développer des applications ciblant les accélérateurs TPU SOPHGO (séries CV181x, BM1880v2). Permet l&#x27;exécution d&#x27;inférence sur matériel TPU avec capacités de chargement de modèles, d&#x27;exécution et de profilage.</p></a>
+<a class="rc" href="sophgo-fsbl.fr.html"><div class="t"><span class="s tnum">★ 57</span><span class="tag emb"><span class="d"></span>Embarqué</span></div>
+  <h4>sophgo/fsbl</h4><p>Fournir un chargeur d&#x27;amorçage de première étape (FSBL) pour les SoC de la série CV18xx qui agit comme étape BL2 d&#x27;ARM Trusted Firmware (ATF), permettant l&#x27;amorçage sécurisé et le chargement du micrologiciel sur les processeurs de Sophgo.</p></a></div></section>
 
   <div class="nlbox">
     <h3>Cette fiche vous a été utile ?</h3>

@@ -4,19 +4,19 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>bouffalolab/bouffalo_sdk — Minerva</title>
-<meta name="description" content="Provide a unified SDK supporting the entire range of Bouffalo microcontrollers (BL602, BL702/L, BL616, BL618) with a common HAL API (LHAL) to avoid fragmentation between previous bl_mcu_sdk and bl_io…">
+<meta name="description" content="BouffaloSDK is the IOT and MCU software development kit provided by the Bouffalo Lab Team, supports all the series of Bouffalo chips. Also it is the combination of bl_mcu_sdk and bl_iot_sdk">
 <link rel="icon" type="image/svg+xml" href="../favicon.svg">
 <link rel="canonical" href="/f/bouffalolab-bouffalo-sdk.html"><link rel="alternate" hreflang="fr" href="/f/bouffalolab-bouffalo-sdk.fr.html"><link rel="alternate" hreflang="en" href="/f/bouffalolab-bouffalo-sdk.html">
 <meta property="og:type" content="article">
 <meta property="og:title" content="bouffalolab/bouffalo_sdk — Minerva">
-<meta property="og:description" content="Provide a unified SDK supporting the entire range of Bouffalo microcontrollers (BL602, BL702/L, BL616, BL618) with a common HAL API (LHAL) to avoid fragmentation between previous bl_mcu_sdk and bl_io…">
+<meta property="og:description" content="BouffaloSDK is the IOT and MCU software development kit provided by the Bouffalo Lab Team, supports all the series of Bouffalo chips. Also it is the combination of bl_mcu_sdk and bl_iot_sdk">
 <meta property="og:url" content="/f/bouffalolab-bouffalo-sdk.html">
-
+<meta property="og:image" content="/og.png">
 <meta property="og:site_name" content="Minerva">
 <meta property="og:locale" content="en_US">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="bouffalolab/bouffalo_sdk — Minerva">
-<meta name="twitter:description" content="Provide a unified SDK supporting the entire range of Bouffalo microcontrollers (BL602, BL702/L, BL616, BL618) with a common HAL API (LHAL) to avoid fragmentation between previous bl_mcu_sdk and bl_io…">
+<meta name="twitter:description" content="BouffaloSDK is the IOT and MCU software development kit provided by the Bouffalo Lab Team, supports all the series of Bouffalo chips. Also it is the combination of bl_mcu_sdk and bl_iot_sdk">
 <style>
 :root{
   --paper:#F5F6F4; --surface:#FFFFFF; --surface-2:#FAFBF9;
@@ -174,7 +174,7 @@ aside .src:hover{background:var(--signal-2)}
   </span>
 </div></nav>
 <div class="status-line"><div class="wrap srow">
-  <span class="seg"><span class="dot"></span><span class="accent">Snapshot</span>&nbsp;· as of 2026-08-03</span>
+  <span class="seg"><span class="dot"></span><span class="accent">Snapshot</span>&nbsp;· as of 2026-08-10</span>
   <span class="seg">105 fiches</span>
   <span class="seg">reading: fiche</span>
   <span class="ticks"><i></i><i></i><i></i><i></i><i></i></span>
@@ -184,46 +184,46 @@ aside .src:hover{background:var(--signal-2)}
   <div class="crumb"><a href="../index.html">Home</a><span class="sep">/</span><a href="../dashboard.html">Dashboard</a><span class="sep">/</span><a href="../dashboard.html?owner=bouffalolab">bouffalolab</a><span class="sep">/</span><span>bouffalo_sdk</span><span style="margin-left:auto"><a href="bouffalolab-bouffalo-sdk.fr.html" style="color:var(--signal);font-weight:600">FR →</a></span></div>
 
   <div class="readout" style="--dom-color:var(--d-emb);margin-top:16px">
-    <div class="rblock"><span class="rlab">Score</span><span class="rval tnum">76<span class="unit">/100</span></span></div>
-    <div class="rblock"><span class="rlab">Confidence</span><span class="rval conf">◆◆◆</span></div>
+    <div class="rblock"><span class="rlab">Score</span><span class="rval tnum">66<span class="unit">/100</span></span></div>
+    <div class="rblock"><span class="rlab">Confidence</span><span class="rval conf">◆<span class="off">◇◇</span></span></div>
     <div class="rblock"><span class="rlab">Domain</span><span class="rval dom">Embedded</span></div>
-    <div class="rmeta">Board Support Package · Active</div>
+    <div class="rmeta">Framework · Active</div>
   </div>
   <div class="rlegend"><b>score</b> = a coarse triage signal, 0–100 (semantic similarity to the embedded/IoT/robotics/edge-AI wedge + activity bonuses) — a sort key, not a measurement of the ecosystem · <b>◆ marks</b> = confidence tier (data-quality: enrichment depth, metadata, recency) — method in docs/SCORING.md</div>
 
   <header class="fhead">
     <h1>bouffalolab/bouffalo_sdk</h1>
-    <div class="tags"><span class="tag emb"><span class="d"></span>Embedded</span><span class="tag plain">Board Support Package</span><span class="tag plain">Active</span></div>
+    <div class="tags"><span class="tag emb"><span class="d"></span>Embedded</span><span class="tag plain">Framework</span><span class="tag plain">Active</span></div>
   </header>
 
   <div class="grid">
     <div class="main">
       <h2>Problem solved</h2>
-      <p class="lede">Provide a unified SDK supporting the entire range of Bouffalo microcontrollers (BL602, BL702/L, BL616, BL618) with a common HAL API (LHAL) to avoid fragmentation between previous bl_mcu_sdk and bl_iot_sdk. This enables developers to use a single codebase for various devices (ADC, SPI, UART, cryptography, camera, Ethernet) without rewriting drivers.</p>
+      <p class="lede">BouffaloSDK is the IOT and MCU software development kit provided by the Bouffalo Lab Team, supports all the series of Bouffalo chips. Also it is the combination of bl_mcu_sdk and bl_iot_sdk</p>
       <h2>How it works</h2>
-      <p>Modular C architecture with layers: BSP (clock, pinmux, heap, console), LHAL drivers (generic peripherals supporting all chips), SOC drivers (chip-specific peripherals), components (network stacks, security), and examples. Peripheral support: UART, SPI, I2C, I2S, GPIO, ADC, DAC, DMA, FLASH, RTC, timers, AES/SHA/TRNG/PKA, camera (CAM), MJPEG (BL616/618), Ethernet (EMAC). Includes unit tests and build tools.</p>
+      <p>[![License](https://img.shields.io/badge/License-Apache--2.0-brightgreen)](LICENSE)</p>
       <h2>Chinese specificity</h2>
-      <p>Bouffalo Lab is the manufacturer of Bouffalo chipsets (BL602, BL702, BL616, BL618); this SDK is the official development kit for this proprietary Chinese product line. No integration with specific Chinese cloud services (WeChat, Alipay, Baidu) detected in the README.</p>
+      <p>Chinese open-source project</p>
       <h2 class="key">Western equivalent</h2>
-      <div class="keyblock"><p style="margin:0">Zephyr Project (Linux Foundation, multi-vendor), FreeRTOS + vendor-specific HAL (Amazon/Texas Instruments), STM32CubeSDK (STMicroelectronics)</p><div class="hint">← the bridge a directory never gives you</div></div>
+      <div class="keyblock"><p style="margin:0">Not identified</p><div class="hint">← the bridge a directory never gives you</div></div>
     </div>
     <aside>
-      <div class="r"><dt>Type</dt><dd>Board Support Package</dd></div>
+      <div class="r"><dt>Type</dt><dd>Framework</dd></div>
       <div class="r"><dt>Language</dt><dd>Bilingual CN-EN</dd></div>
-      <div class="r"><dt>Stars</dt><dd>486 ★</dd></div>
+      <div class="r"><dt>Stars</dt><dd>488 ★</dd></div>
       <div class="r"><dt>Forks</dt><dd>178</dd></div>
-      <div class="r"><dt>Last push</dt><dd>2026-07</dd></div>
+      <div class="r"><dt>Last push</dt><dd>2026-08</dd></div>
       <a class="src" href="https://github.com/bouffalolab/bouffalo_sdk" target="_blank" rel="noopener">View on GitHub →</a>
     </aside>
   </div>
 
   <section class="related"><div class="lbl">Other fiches in Embedded</div>
-    <div class="rel-grid"><a class="rc" href="bouffalolab-bouffalo-drivers.html"><div class="t"><span class="s tnum">★ 76</span><span class="tag emb"><span class="d"></span>Embedded</span></div>
-  <h4>bouffalolab/bouffalo_drivers</h4><p>Provide hardware abstraction layer (HAL), RF parameter management, and SoC-level drivers for Bouffalo Lab microcontrollers and wireless SoCs, enabling firmware developers to access peripheral interfaces (GPIO, UART, SPI, I2C, ADC, RF) without direct register manipulation.</p></a>
-<a class="rc" href="rtthread-rsoc-rtt.html"><div class="t"><span class="s tnum">★ 75</span><span class="tag emb"><span class="d"></span>Embedded</span></div>
-  <h4>rtthread/rsoc-rtt</h4><p>Organize and centralize pedagogical notes and practical work of trainees in the RT-Thread summer program across different embedded hardware platforms.</p></a>
-<a class="rc" href="sophgo-tpu-mlir.html"><div class="t"><span class="s tnum">★ 78</span><span class="tag emb"><span class="d"></span>Embedded</span></div>
-  <h4>sophgo/tpu-mlir</h4><p>Compiling pre-trained neural network models (PyTorch, ONNX, TFLite, Caffe, HuggingFace) into optimized binaries (bmodel) executable on Sophgo TPU, with full support for quantization (INT8, BF16, F16) and LLM.</p></a></div></section>
+    <div class="rel-grid"><a class="rc" href="sophgo-sophgo-riscv-utils.html"><div class="t"><span class="s tnum">★ 66</span><span class="tag emb"><span class="d"></span>Embedded</span></div>
+  <h4>sophgo/sophgo-riscv-utils</h4><p>Provide utilities and tooling for RISC-V based embedded systems, particularly those manufactured by SOPHGO (a Chinese SoC vendor). The project addresses the need for RISC-V-specific development and runtime support on SOPHGO&#x27;s processor lines.</p></a>
+<a class="rc" href="sophgo-cvi-mpi.html"><div class="t"><span class="s tnum">★ 66</span><span class="tag emb"><span class="d"></span>Embedded</span></div>
+  <h4>sophgo/cvi_mpi</h4><p>Provide multimedia codec and image processing libraries (encoding, decoding, ISP pipeline) for the CV18xx series SoC, which is a family of low-power vision processors used in edge AI and IoT applications.</p></a>
+<a class="rc" href="espressifsystems-esp-skainet.html"><div class="t"><span class="s tnum">★ 67</span><span class="tag emb"><span class="d"></span>Embedded</span></div>
+  <h4>EspressifSystems/esp-skainet</h4><p>Provide a complete solution for wake-word keyword recognition and offline voice commands on ESP32 microcontrollers with low memory consumption and reduced latency.</p></a></div></section>
 
   <div class="nlbox">
     <h3>Enjoyed this fiche?</h3>

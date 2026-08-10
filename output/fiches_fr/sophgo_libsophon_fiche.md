@@ -1,13 +1,35 @@
 ---
-## sophgo/libsophon
-**Type :** Driver
+## sophgo/libsophon [MODIFIÉ]
+**Type :** Library
 **Domaine :** Embarqué
 **Score de pertinence :** 71/100
-**Problème résolu :** Fournir les pilotes du noyau Linux et les bibliothèques d'exécution pour les puces accélératrices IA Sophgo (modules TPU, VPU, JPU, VPP), permettant aux systèmes hôtes de décharger les charges de travail d'inférence et de traitement multimédia vers ces processeurs spécialisés.
-**Comment ça marche :** libsophon comprend les pilotes du noyau Linux (module sg_x86_pcie_device pour PCIe), la bibliothèque d'exécution bmlib, le runtime TPU avec support de quantification statique (int8), la bibliothèque de traitement multimédia bmcv, et l'outil de surveillance bm-smi. Écrit en C/C++, construit avec CMake/Ninja, supporte les architectures x86_64 PCIe, ARM64 (aarch64) et LoongArch64 via des chaînes d'outils de compilation croisée. Le chargement du micrologiciel via /lib/firmware et l'insertion du module noyau (insmod) sont requis pour le fonctionnement.
-**Spécificité chinoise :** Sophgo est un fournisseur chinois de puces IA ; libsophon est la pile officielle de pilotes et d'exécution pour leurs processeurs BM1684x et apparentés. Aucune intégration avec les plateformes cloud chinoises ou les normes documentées dans le README.
-**Équivalent occidental :** NVIDIA CUDA (propriétaire, x86/ARM), Intel OpenVINO (runtime d'inférence), Qualcomm Hexagon SDK (pilotes DSP/NPU)
-**Maturité :** Actif (★ 26, 16 forks, mis à jour 2026-07)
+**Problème résolu :** Sophgo AI chips driver and runtime library.
+**Comment ça marche :** libsophon概述
+-------------
+
+libsophon目前包含如下组件：
+
+1. TPU、VPU、JPU、VPP这几个模块的Linux驱动
+2. 运行时库
+    1. bmlib
+    2. tpu runtime
+    3. bmcv
+3. 运行时库的开发环境（头文件等）
+4. 辅助工具
+
+**如何从源码编译PCIe版本：**
+
+**安装依赖包：**
+
+::
+
+    sudo -E apt update
+    sudo -E apt-get install -y \
+            build-essential \
+            cmake \
+**Spécificité chinoise :** Chinese open-source project
+**Équivalent occidental :** Not identified
+**Maturité :** Actif (★ 27, 16 forks, mis à jour 2026-08)
 **Langue :** Bilingue CN-EN
 **GitHub :** https://github.com/sophgo/libsophon
 ---

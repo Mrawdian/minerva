@@ -4,19 +4,19 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>sophgo/libsophon — Minerva (FR)</title>
-<meta name="description" content="Fournir les pilotes du noyau Linux et les bibliothèques d&#x27;exécution pour les puces accélératrices IA Sophgo (modules TPU, VPU, JPU, VPP), permettant aux systèmes hôtes de décharger les charges de tra…">
+<meta name="description" content="Sophgo AI chips driver and runtime library.">
 <link rel="icon" type="image/svg+xml" href="../favicon.svg">
 <link rel="canonical" href="/f/sophgo-libsophon.fr.html"><link rel="alternate" hreflang="en" href="/f/sophgo-libsophon.html"><link rel="alternate" hreflang="fr" href="/f/sophgo-libsophon.fr.html">
 <meta property="og:type" content="article">
 <meta property="og:title" content="sophgo/libsophon — Minerva (FR)">
-<meta property="og:description" content="Fournir les pilotes du noyau Linux et les bibliothèques d&#x27;exécution pour les puces accélératrices IA Sophgo (modules TPU, VPU, JPU, VPP), permettant aux systèmes hôtes de décharger les charges de tra…">
+<meta property="og:description" content="Sophgo AI chips driver and runtime library.">
 <meta property="og:url" content="/f/sophgo-libsophon.fr.html">
-
+<meta property="og:image" content="/og.png">
 <meta property="og:site_name" content="Minerva">
 <meta property="og:locale" content="fr_FR">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="sophgo/libsophon — Minerva (FR)">
-<meta name="twitter:description" content="Fournir les pilotes du noyau Linux et les bibliothèques d&#x27;exécution pour les puces accélératrices IA Sophgo (modules TPU, VPU, JPU, VPP), permettant aux systèmes hôtes de décharger les charges de tra…">
+<meta name="twitter:description" content="Sophgo AI chips driver and runtime library.">
 <style>
 :root{
   --paper:#F5F6F4; --surface:#FFFFFF; --surface-2:#FAFBF9;
@@ -174,7 +174,7 @@ aside .src:hover{background:var(--signal-2)}
   </span>
 </div></nav>
 <div class="status-line"><div class="wrap srow">
-  <span class="seg"><span class="dot"></span><span class="accent">Snapshot</span>&nbsp;· as of 2026-08-03</span>
+  <span class="seg"><span class="dot"></span><span class="accent">Snapshot</span>&nbsp;· as of 2026-08-10</span>
   <span class="seg">105 fiches</span>
   <span class="seg">reading: fiche · FR</span>
   <span class="ticks"><i></i><i></i><i></i><i></i><i></i></span>
@@ -185,34 +185,34 @@ aside .src:hover{background:var(--signal-2)}
 
   <div class="readout" style="--dom-color:var(--d-emb);margin-top:16px">
     <div class="rblock"><span class="rlab">Score</span><span class="rval tnum">71<span class="unit">/100</span></span></div>
-    <div class="rblock"><span class="rlab">Confiance</span><span class="rval conf">◆◆◆</span></div>
+    <div class="rblock"><span class="rlab">Confiance</span><span class="rval conf">◆<span class="off">◇◇</span></span></div>
     <div class="rblock"><span class="rlab">Domaine</span><span class="rval dom">Embarqué</span></div>
-    <div class="rmeta">Driver · Actif</div>
+    <div class="rmeta">Library · Actif</div>
   </div>
   <div class="rlegend"><b>score</b> = un signal de tri grossier, 0–100 (similarité sémantique au créneau embarqué/IoT/robotique/edge-AI + bonus d'activité) — une clé de tri, pas une mesure de l'écosystème · <b>marques ◆</b> = niveau de confiance (qualité des données : profondeur d'enrichissement, métadonnées, récence) — méthode dans docs/SCORING.md</div>
 
   <header class="fhead">
     <h1>sophgo/libsophon</h1>
-    <div class="tags"><span class="tag emb"><span class="d"></span>Embarqué</span><span class="tag plain">Driver</span><span class="tag plain">Actif</span></div>
+    <div class="tags"><span class="tag emb"><span class="d"></span>Embarqué</span><span class="tag plain">Library</span><span class="tag plain">Actif</span></div>
   </header>
 
   <div class="grid">
     <div class="main">
       <h2>Problème résolu</h2>
-      <p class="lede">Fournir les pilotes du noyau Linux et les bibliothèques d&#x27;exécution pour les puces accélératrices IA Sophgo (modules TPU, VPU, JPU, VPP), permettant aux systèmes hôtes de décharger les charges de travail d&#x27;inférence et de traitement multimédia vers ces processeurs spécialisés.</p>
+      <p class="lede">Sophgo AI chips driver and runtime library.</p>
       <h2>Comment ça marche</h2>
-      <p>libsophon comprend les pilotes du noyau Linux (module sg_x86_pcie_device pour PCIe), la bibliothèque d&#x27;exécution bmlib, le runtime TPU avec support de quantification statique (int8), la bibliothèque de traitement multimédia bmcv, et l&#x27;outil de surveillance bm-smi. Écrit en C/C++, construit avec CMake/Ninja, supporte les architectures x86_64 PCIe, ARM64 (aarch64) et LoongArch64 via des chaînes d&#x27;outils de compilation croisée. Le chargement du micrologiciel via /lib/firmware et l&#x27;insertion du module noyau (insmod) sont requis pour le fonctionnement.</p>
+      <p>libsophon概述</p>
       <h2>Spécificité chinoise</h2>
-      <p>Sophgo est un fournisseur chinois de puces IA ; libsophon est la pile officielle de pilotes et d&#x27;exécution pour leurs processeurs BM1684x et apparentés. Aucune intégration avec les plateformes cloud chinoises ou les normes documentées dans le README.</p>
+      <p>Chinese open-source project</p>
       <h2 class="key">Équivalent occidental</h2>
-      <div class="keyblock"><p style="margin:0">NVIDIA CUDA (propriétaire, x86/ARM), Intel OpenVINO (runtime d&#x27;inférence), Qualcomm Hexagon SDK (pilotes DSP/NPU)</p><div class="hint">← le pont qu'un annuaire ne vous donnera jamais</div></div>
+      <div class="keyblock"><p style="margin:0">Not identified</p><div class="hint">← le pont qu'un annuaire ne vous donnera jamais</div></div>
     </div>
     <aside>
-      <div class="r"><dt>Type</dt><dd>Driver</dd></div>
+      <div class="r"><dt>Type</dt><dd>Library</dd></div>
       <div class="r"><dt>Langage</dt><dd>Bilingue CN-EN</dd></div>
-      <div class="r"><dt>Étoiles</dt><dd>26 ★</dd></div>
+      <div class="r"><dt>Étoiles</dt><dd>27 ★</dd></div>
       <div class="r"><dt>Forks</dt><dd>16</dd></div>
-      <div class="r"><dt>Dernier push</dt><dd>2026-07</dd></div>
+      <div class="r"><dt>Dernier push</dt><dd>2026-08</dd></div>
       <a class="src" href="https://github.com/sophgo/libsophon" target="_blank" rel="noopener">Voir sur GitHub →</a>
     </aside>
   </div>

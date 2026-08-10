@@ -4,19 +4,19 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>sophgo/zsbl — Minerva</title>
-<meta name="description" content="Provide a RISC-V bootloader for SOPHGO SoCs that initializes the processor, loads the next stage bootloader or kernel, and handles early hardware setup before the main OS takes control.">
+<meta name="description" content="SOPHGO RISC-V Zero Stage BootLoader">
 <link rel="icon" type="image/svg+xml" href="../favicon.svg">
 <link rel="canonical" href="/f/sophgo-zsbl.html"><link rel="alternate" hreflang="fr" href="/f/sophgo-zsbl.fr.html"><link rel="alternate" hreflang="en" href="/f/sophgo-zsbl.html">
 <meta property="og:type" content="article">
 <meta property="og:title" content="sophgo/zsbl — Minerva">
-<meta property="og:description" content="Provide a RISC-V bootloader for SOPHGO SoCs that initializes the processor, loads the next stage bootloader or kernel, and handles early hardware setup before the main OS takes control.">
+<meta property="og:description" content="SOPHGO RISC-V Zero Stage BootLoader">
 <meta property="og:url" content="/f/sophgo-zsbl.html">
-
+<meta property="og:image" content="/og.png">
 <meta property="og:site_name" content="Minerva">
 <meta property="og:locale" content="en_US">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="sophgo/zsbl — Minerva">
-<meta name="twitter:description" content="Provide a RISC-V bootloader for SOPHGO SoCs that initializes the processor, loads the next stage bootloader or kernel, and handles early hardware setup before the main OS takes control.">
+<meta name="twitter:description" content="SOPHGO RISC-V Zero Stage BootLoader">
 <style>
 :root{
   --paper:#F5F6F4; --surface:#FFFFFF; --surface-2:#FAFBF9;
@@ -174,7 +174,7 @@ aside .src:hover{background:var(--signal-2)}
   </span>
 </div></nav>
 <div class="status-line"><div class="wrap srow">
-  <span class="seg"><span class="dot"></span><span class="accent">Snapshot</span>&nbsp;· as of 2026-08-03</span>
+  <span class="seg"><span class="dot"></span><span class="accent">Snapshot</span>&nbsp;· as of 2026-08-10</span>
   <span class="seg">105 fiches</span>
   <span class="seg">reading: fiche</span>
   <span class="ticks"><i></i><i></i><i></i><i></i><i></i></span>
@@ -184,46 +184,46 @@ aside .src:hover{background:var(--signal-2)}
   <div class="crumb"><a href="../index.html">Home</a><span class="sep">/</span><a href="../dashboard.html">Dashboard</a><span class="sep">/</span><a href="../dashboard.html?owner=sophgo">sophgo</a><span class="sep">/</span><span>zsbl</span><span style="margin-left:auto"><a href="sophgo-zsbl.fr.html" style="color:var(--signal);font-weight:600">FR →</a></span></div>
 
   <div class="readout" style="--dom-color:var(--d-emb);margin-top:16px">
-    <div class="rblock"><span class="rlab">Score</span><span class="rval tnum">52<span class="unit">/100</span></span></div>
-    <div class="rblock"><span class="rlab">Confidence</span><span class="rval conf">◆◆<span class="off">◇</span></span></div>
+    <div class="rblock"><span class="rlab">Score</span><span class="rval tnum">58<span class="unit">/100</span></span></div>
+    <div class="rblock"><span class="rlab">Confidence</span><span class="rval conf">◆<span class="off">◇◇</span></span></div>
     <div class="rblock"><span class="rlab">Domain</span><span class="rval dom">Embedded</span></div>
-    <div class="rmeta">Board Support Package · Active</div>
+    <div class="rmeta">Library · Active</div>
   </div>
   <div class="rlegend"><b>score</b> = a coarse triage signal, 0–100 (semantic similarity to the embedded/IoT/robotics/edge-AI wedge + activity bonuses) — a sort key, not a measurement of the ecosystem · <b>◆ marks</b> = confidence tier (data-quality: enrichment depth, metadata, recency) — method in docs/SCORING.md</div>
 
   <header class="fhead">
     <h1>sophgo/zsbl</h1>
-    <div class="tags"><span class="tag emb"><span class="d"></span>Embedded</span><span class="tag plain">Board Support Package</span><span class="tag plain">Active</span></div>
+    <div class="tags"><span class="tag emb"><span class="d"></span>Embedded</span><span class="tag plain">Library</span><span class="tag plain">Active</span></div>
   </header>
 
   <div class="grid">
     <div class="main">
       <h2>Problem solved</h2>
-      <p class="lede">Provide a RISC-V bootloader for SOPHGO SoCs that initializes the processor, loads the next stage bootloader or kernel, and handles early hardware setup before the main OS takes control.</p>
+      <p class="lede">SOPHGO RISC-V Zero Stage BootLoader</p>
       <h2>How it works</h2>
-      <p>ZSBL (Zero Stage BootLoader) is a minimal first-stage bootloader written for SOPHGO RISC-V processors. It performs CPU initialization, memory setup, and handoff to a secondary bootloader or kernel image. The project is written in C and assembly, targeting SOPHGO&#x27;s RISC-V SoC lineup. Dependencies and specific hardware initialization sequences are to be confirmed from the source code.</p>
+      <p>See the project README</p>
       <h2>Chinese specificity</h2>
-      <p>SOPHGO is a Chinese fabless semiconductor company specializing in AI accelerators and RISC-V SoCs; this bootloader is part of their open-source software stack for their proprietary RISC-V processor family.</p>
+      <p>Chinese open-source project</p>
       <h2 class="key">Western equivalent</h2>
-      <div class="keyblock"><p style="margin:0">U-Boot (Denx), coreboot (Linux Foundation), OpenSBI (RISC-V Foundation)</p><div class="hint">← the bridge a directory never gives you</div></div>
+      <div class="keyblock"><p style="margin:0">Not identified</p><div class="hint">← the bridge a directory never gives you</div></div>
     </div>
     <aside>
-      <div class="r"><dt>Type</dt><dd>Board Support Package</dd></div>
+      <div class="r"><dt>Type</dt><dd>Library</dd></div>
       <div class="r"><dt>Language</dt><dd>English</dd></div>
       <div class="r"><dt>Stars</dt><dd>33 ★</dd></div>
       <div class="r"><dt>Forks</dt><dd>35</dd></div>
-      <div class="r"><dt>Last push</dt><dd>2026-07</dd></div>
+      <div class="r"><dt>Last push</dt><dd>2026-08</dd></div>
       <a class="src" href="https://github.com/sophgo/zsbl" target="_blank" rel="noopener">View on GitHub →</a>
     </aside>
   </div>
 
   <section class="related"><div class="lbl">Other fiches in Embedded</div>
-    <div class="rel-grid"><a class="rc" href="sophgo-cvikernel.html"><div class="t"><span class="s tnum">★ 51</span><span class="tag emb"><span class="d"></span>Embedded</span></div>
-  <h4>sophgo/cvikernel</h4><p>Generate TPU instructions for SOPHGO&#x27;s tensor processing units without writing raw assembly. Provides a C/C++ API to programmatically construct and emit TPU instruction sequences, replacing manual assembly coding.</p></a>
-<a class="rc" href="kendryte-k230-rtos-docs.html"><div class="t"><span class="s tnum">★ 51</span><span class="tag emb"><span class="d"></span>Embedded</span></div>
-  <h4>kendryte/k230_rtos_docs</h4><p>Provide documentation and reference materials for the Kendryte K230 RTOS platform, enabling developers to understand the real-time operating system architecture, APIs, and integration patterns specific to the K230 SoC.</p></a>
-<a class="rc" href="sophgo-sophon-sail.html"><div class="t"><span class="s tnum">★ 54</span><span class="tag emb"><span class="d"></span>Embedded</span></div>
-  <h4>sophgo/sophon-sail</h4><p>Streamline deployment of deep-learning inference models and image/video processing on SOPHON TPU accelerators by providing unified hardware-accelerated pipelines for decoding, preprocessing, and inference with C++ and Python bindings.</p></a></div></section>
+    <div class="rel-grid"><a class="rc" href="alibaba-dummy-risc-v-vpu.html"><div class="t"><span class="s tnum">★ 59</span><span class="tag emb"><span class="d"></span>Embedded</span></div>
+  <h4>alibaba/Dummy-RISC-V-VPU</h4><p>No README or description accessible; project name suggests a RISC-V Vector Processing Unit (VPU) simulator or emulator, likely for instruction-set validation or architectural exploration of RISC-V vector extensions, but concrete problem statement cannot be verified.</p></a>
+<a class="rc" href="sophgo-cviruntime.html"><div class="t"><span class="s tnum">★ 59</span><span class="tag emb"><span class="d"></span>Embedded</span></div>
+  <h4>sophgo/cviruntime</h4><p>Provide a runtime library and SDK for developing applications targeting SOPHGO TPU accelerators (CV181x, BM1880v2 series). Enables inference execution on TPU hardware with model loading, execution, and profiling capabilities.</p></a>
+<a class="rc" href="sophgo-fsbl.html"><div class="t"><span class="s tnum">★ 57</span><span class="tag emb"><span class="d"></span>Embedded</span></div>
+  <h4>sophgo/fsbl</h4><p>Provide a first-stage bootloader (FSBL) for CV18xx series SoCs that acts as an ARM Trusted Firmware (ATF) BL2 stage, enabling secure boot and firmware loading on Sophgo&#x27;s processors.</p></a></div></section>
 
   <div class="nlbox">
     <h3>Enjoyed this fiche?</h3>

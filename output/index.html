@@ -11,7 +11,7 @@
 <meta property="og:title" content="Minerva — Decision-ready intelligence on China&#x27;s open-source hardware">
 <meta property="og:description" content="105 decision-ready EN/FR fiches on Chinese embedded, IoT, robotics and edge-AI open source (Gitee + GitHub) — with Western-equivalent mapping, maturity and confidence. Tech scouting, competitive intelligence, sourcing.">
 <meta property="og:url" content="/">
-
+<meta property="og:image" content="/og.png">
 <meta property="og:site_name" content="Minerva">
 <meta property="og:locale" content="en_US">
 <meta name="twitter:card" content="summary_large_image">
@@ -192,7 +192,7 @@ h2{font-family:var(--sans);font-size:26px;letter-spacing:-0.02em;margin:0 0 8px;
   </span>
 </div></nav>
 <div class="status-line"><div class="wrap srow">
-  <span class="seg"><span class="dot"></span><span class="accent">Snapshot</span>&nbsp;· as of 2026-08-03</span>
+  <span class="seg"><span class="dot"></span><span class="accent">Snapshot</span>&nbsp;· as of 2026-08-10</span>
   <span class="seg">105 fiches</span>
   
   <span class="ticks"><i></i><i></i><i></i><i></i><i></i></span>
@@ -224,20 +224,20 @@ h2{font-family:var(--sans);font-size:26px;letter-spacing:-0.02em;margin:0 0 8px;
   This is the anti-directory proof.</p>
   <article class="fiche">
   <div class="readout" style="--dom-color:var(--d-emb)">
-    <div class="rblock"><span class="rlab">Score</span><span class="rval tnum">78<span class="unit">/100</span></span></div>
-    <div class="rblock"><span class="rlab">Confidence</span><span class="rval conf">◆◆◆</span></div>
+    <div class="rblock"><span class="rlab">Score</span><span class="rval tnum">70<span class="unit">/100</span></span></div>
+    <div class="rblock"><span class="rlab">Confidence</span><span class="rval conf">◆<span class="off">◇◇</span></span></div>
     <div class="rblock"><span class="rlab">Domain</span><span class="rval dom">Embedded</span></div>
-    <div class="rmeta">Stable (★ 954, 226 forks, updated 2026-07)</div>
+    <div class="rmeta">Stable (★ 961, 226 forks, updated 2026-08)</div>
   </div>
   <div class="fnamerow">
     <a class="fname" href="f/sophgo-tpu-mlir.html">sophgo/tpu-mlir</a>
     <span class="tag emb"><span class="d"></span>Embedded</span>
   </div>
-  <div class="field"><div class="k">Problem solved</div><div class="v">Compiling pre-trained neural network models (PyTorch, ONNX, TFLite, Caffe, HuggingFace) into optimized binaries (bmodel) executable on Sophgo TPU, with full support for quantization (INT8, BF16, F16) and LLM.</div></div>
-  <div class="field"><div class="k">How it works</div><div class="v">Two-stage MLIR pipeline: import front-end (model_transform.py) converts standard formats to MLIR Top dialect, then back-end (model_deploy.py) lowers to Tpu dialect with optimizations (layer-group memory planning, pattern rewrites, symmetric/asymmetric quantization, AWQ/GPTQ/Auto…</div></div>
-  <div class="field"><div class="k">Chinese specificity</div><div class="v">Sophgo is a Chinese fabless company specializing in TPU SoCs; this compiler directly targets its TPU architectures (bm1684x cited). Native integration of popular HuggingFace models in China (Qwen, MiniCPM-V). Bilingual…</div></div>
-  <div class="field key"><div class="k">Western equivalent <span class="hint">← the bridge a directory never gives you</span></div><div class="v">TVM (Apache), ONNX Runtime (Microsoft), TensorFlow Lite Converter (Google), PyTorch Export (Meta) — but none offer the same MLIR compiler integration + quantization + proprietary TPU targeting.</div></div>
-  <div class="prov"><span>Maturity: Stable (★ 954, 226 forks, updated 2026-07)</span><a href="https://github.com/sophgo/tpu-mlir" target="_blank" rel="noopener">View on GitHub →</a></div>
+  <div class="field"><div class="k">Problem solved</div><div class="v">Machine learning compiler based on MLIR for Sophgo TPU.</div></div>
+  <div class="field"><div class="k">How it works</div><div class="v">&lt;p align=&quot;center&quot;&gt;</div></div>
+  <div class="field"><div class="k">Chinese specificity</div><div class="v">Chinese open-source project</div></div>
+  <div class="field key"><div class="k">Western equivalent <span class="hint">← the bridge a directory never gives you</span></div><div class="v">Not identified</div></div>
+  <div class="prov"><span>Maturity: Stable (★ 961, 226 forks, updated 2026-08)</span><a href="https://github.com/sophgo/tpu-mlir" target="_blank" rel="noopener">View on GitHub →</a></div>
 </article>
 </div></section>
 
@@ -273,9 +273,9 @@ h2{font-family:var(--sans);font-size:26px;letter-spacing:-0.02em;margin:0 0 8px;
   <p class="lead">Generic big-tech deliberately filtered down. Quality over quantity.</p>
   <div class="dom">
     <div class="cell"><div class="top"><span class="dot" style="background:var(--d-emb)"></span><b>Embedded</b><span class="c tnum">60</span></div>
-  <div class="bar"><i style="width:100%;background:var(--d-emb)"></i></div><p>RTOS, BSP, drivers, bare-metal firmware.</p></div><div class="cell"><div class="top"><span class="dot" style="background:var(--d-edge)"></span><b>Edge AI</b><span class="c tnum">28</span></div>
-  <div class="bar"><i style="width:47%;background:var(--d-edge)"></i></div><p>NPU/TPU inference, quantization, OCR, vision.</p></div><div class="cell"><div class="top"><span class="dot" style="background:var(--d-rob)"></span><b>Robotics</b><span class="c tnum">17</span></div>
-  <div class="bar"><i style="width:28%;background:var(--d-rob)"></i></div><p>ROS, SLAM, teleop, motor control, quadrupeds.</p></div><div class="cell"><div class="top"><span class="dot" style="background:var(--d-iot)"></span><b>IoT</b><span class="c tnum">4</span></div>
+  <div class="bar"><i style="width:100%;background:var(--d-emb)"></i></div><p>RTOS, BSP, drivers, bare-metal firmware.</p></div><div class="cell"><div class="top"><span class="dot" style="background:var(--d-edge)"></span><b>Edge AI</b><span class="c tnum">31</span></div>
+  <div class="bar"><i style="width:52%;background:var(--d-edge)"></i></div><p>NPU/TPU inference, quantization, OCR, vision.</p></div><div class="cell"><div class="top"><span class="dot" style="background:var(--d-rob)"></span><b>Robotics</b><span class="c tnum">16</span></div>
+  <div class="bar"><i style="width:27%;background:var(--d-rob)"></i></div><p>ROS, SLAM, teleop, motor control, quadrupeds.</p></div><div class="cell"><div class="top"><span class="dot" style="background:var(--d-iot)"></span><b>IoT</b><span class="c tnum">4</span></div>
   <div class="bar"><i style="width:7%;background:var(--d-iot)"></i></div><p>MQTT/CoAP stacks, cellular modules, device OSes.</p></div>
   </div>
 </div></section>

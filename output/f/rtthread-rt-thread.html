@@ -4,19 +4,19 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>rtthread/rt-thread — Minerva</title>
-<meta name="description" content="Provide a scalable real-time operating system that runs on resource-constrained microcontrollers (ARM Cortex-M0 with 3 KB Flash / 1.2 KB RAM) while supporting larger IoT devices (ARM Cortex-A, MIPS32…">
+<meta name="description" content="RT-Thread是一个来自中国的开源物联网操作系统，它提供了非常强的可伸缩能力：从一个可以运行在ARM Cortex-M0芯片上的极小内核，到中等的ARM Cortex-M3/4/7系统，甚至是多核，64位的ARM Cortex-A，MIPS32/64处理器的功能丰富系统">
 <link rel="icon" type="image/svg+xml" href="../favicon.svg">
 <link rel="canonical" href="/f/rtthread-rt-thread.html"><link rel="alternate" hreflang="fr" href="/f/rtthread-rt-thread.fr.html"><link rel="alternate" hreflang="en" href="/f/rtthread-rt-thread.html">
 <meta property="og:type" content="article">
 <meta property="og:title" content="rtthread/rt-thread — Minerva">
-<meta property="og:description" content="Provide a scalable real-time operating system that runs on resource-constrained microcontrollers (ARM Cortex-M0 with 3 KB Flash / 1.2 KB RAM) while supporting larger IoT devices (ARM Cortex-A, MIPS32…">
+<meta property="og:description" content="RT-Thread是一个来自中国的开源物联网操作系统，它提供了非常强的可伸缩能力：从一个可以运行在ARM Cortex-M0芯片上的极小内核，到中等的ARM Cortex-M3/4/7系统，甚至是多核，64位的ARM Cortex-A，MIPS32/64处理器的功能丰富系统">
 <meta property="og:url" content="/f/rtthread-rt-thread.html">
-
+<meta property="og:image" content="/og.png">
 <meta property="og:site_name" content="Minerva">
 <meta property="og:locale" content="en_US">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="rtthread/rt-thread — Minerva">
-<meta name="twitter:description" content="Provide a scalable real-time operating system that runs on resource-constrained microcontrollers (ARM Cortex-M0 with 3 KB Flash / 1.2 KB RAM) while supporting larger IoT devices (ARM Cortex-A, MIPS32…">
+<meta name="twitter:description" content="RT-Thread是一个来自中国的开源物联网操作系统，它提供了非常强的可伸缩能力：从一个可以运行在ARM Cortex-M0芯片上的极小内核，到中等的ARM Cortex-M3/4/7系统，甚至是多核，64位的ARM Cortex-A，MIPS32/64处理器的功能丰富系统">
 <style>
 :root{
   --paper:#F5F6F4; --surface:#FFFFFF; --surface-2:#FAFBF9;
@@ -174,7 +174,7 @@ aside .src:hover{background:var(--signal-2)}
   </span>
 </div></nav>
 <div class="status-line"><div class="wrap srow">
-  <span class="seg"><span class="dot"></span><span class="accent">Snapshot</span>&nbsp;· as of 2026-08-03</span>
+  <span class="seg"><span class="dot"></span><span class="accent">Snapshot</span>&nbsp;· as of 2026-08-10</span>
   <span class="seg">105 fiches</span>
   <span class="seg">reading: fiche</span>
   <span class="ticks"><i></i><i></i><i></i><i></i><i></i></span>
@@ -185,7 +185,7 @@ aside .src:hover{background:var(--signal-2)}
 
   <div class="readout" style="--dom-color:var(--d-emb);margin-top:16px">
     <div class="rblock"><span class="rlab">Score</span><span class="rval tnum">100<span class="unit">/100</span></span></div>
-    <div class="rblock"><span class="rlab">Confidence</span><span class="rval conf">◆◆◆</span></div>
+    <div class="rblock"><span class="rlab">Confidence</span><span class="rval conf">◆<span class="off">◇◇</span></span></div>
     <div class="rblock"><span class="rlab">Domain</span><span class="rval dom">Embedded</span></div>
     <div class="rmeta">RTOS · Stable</div>
   </div>
@@ -199,20 +199,20 @@ aside .src:hover{background:var(--signal-2)}
   <div class="grid">
     <div class="main">
       <h2>Problem solved</h2>
-      <p class="lede">Provide a scalable real-time operating system that runs on resource-constrained microcontrollers (ARM Cortex-M0 with 3 KB Flash / 1.2 KB RAM) while supporting larger IoT devices (ARM Cortex-A, MIPS32/64 multicore). Unifies kernel, BSP, device drivers, and a modular component ecosystem (VFS, FinSH CLI, network stack) under a single C-based RTOS.</p>
+      <p class="lede">RT-Thread是一个来自中国的开源物联网操作系统，它提供了非常强的可伸缩能力：从一个可以运行在ARM Cortex-M0芯片上的极小内核，到中等的ARM Cortex-M3/4/7系统，甚至是多核，64位的ARM Cortex-A，MIPS32/64处理器的功能丰富系统</p>
       <h2>How it works</h2>
-      <p>RT-Thread is a monolithic RTOS kernel written in C, with a layered architecture: kernel layer (threading, scheduling, semaphores, mailbox, message queue, memory management, timers), libcpu/BSP layer (CPU porting and peripheral drivers), and components/services layer (VFS, FinSH command-line interface, network frameworks, device framework). Supports GCC, Keil, and IAR toolchains. Includes a package manager (450+ packages) for modular software composition. Ported to STM32F103 and other mainstream MCUs.</p>
+      <p>&lt;p align=&quot;center&quot;&gt;</p>
       <h2>Chinese specificity</h2>
-      <p>Hosted on Gitee/GitHub by rtthread; no particular Chinese specificity beyond the author. Founded in 2006 as a community-driven open-source project; no documented affiliation with HiSilicon, Rockchip, Espressif, or other Chinese chipset vendors.</p>
+      <p>Chinese open-source project</p>
       <h2 class="key">Western equivalent</h2>
-      <div class="keyblock"><p style="margin:0">FreeRTOS (Amazon), Zephyr (Linux Foundation), RIOT OS</p><div class="hint">← the bridge a directory never gives you</div></div>
+      <div class="keyblock"><p style="margin:0">Not identified</p><div class="hint">← the bridge a directory never gives you</div></div>
     </div>
     <aside>
       <div class="r"><dt>Type</dt><dd>RTOS</dd></div>
       <div class="r"><dt>Language</dt><dd>Bilingual CN-EN</dd></div>
-      <div class="r"><dt>Stars</dt><dd>5 527 ★</dd></div>
-      <div class="r"><dt>Forks</dt><dd>2 264</dd></div>
-      <div class="r"><dt>Last push</dt><dd>2026-07</dd></div>
+      <div class="r"><dt>Stars</dt><dd>5 529 ★</dd></div>
+      <div class="r"><dt>Forks</dt><dd>2 265</dd></div>
+      <div class="r"><dt>Last push</dt><dd>2026-08</dd></div>
       <a class="src" href="https://gitee.com/rtthread/rt-thread" target="_blank" rel="noopener">View on Gitee →</a>
     </aside>
   </div>

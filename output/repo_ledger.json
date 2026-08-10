@@ -75,8 +75,8 @@
     "confidence": "Low",
     "domaine": "Embedded",
     "first_seen": "2026-07-31",
-    "last_changed": "2026-08-03",
-    "pushed_at": "2026-08-01T06:04:44+08:00",
+    "last_changed": "2026-08-10",
+    "pushed_at": "2026-08-05T06:04:36+08:00",
     "pushed_at_month": "2026-08",
     "removed": null,
     "score": 74,
@@ -87,8 +87,8 @@
     "confidence": "Low",
     "domaine": "Embedded",
     "first_seen": "2026-07-31",
-    "last_changed": "2026-08-03",
-    "pushed_at": "2026-08-01T06:04:22+08:00",
+    "last_changed": "2026-08-10",
+    "pushed_at": "2026-08-08T06:03:59+08:00",
     "pushed_at_month": "2026-08",
     "removed": null,
     "score": 73,
@@ -108,14 +108,14 @@
     "stars": 62
   },
   "EspressifSystems/esp-dev-kits": {
-    "confidence": "High",
+    "confidence": "Low",
     "domaine": "Embedded",
     "first_seen": "2026-07-31",
-    "last_changed": "2026-07-31",
-    "pushed_at": "2026-07-25T06:05:47+08:00",
-    "pushed_at_month": "2026-07",
+    "last_changed": "2026-08-10",
+    "pushed_at": "2026-08-07T06:08:00+08:00",
+    "pushed_at_month": "2026-08",
     "removed": null,
-    "score": 80,
+    "score": 68,
     "source": "gitee",
     "stars": 12
   },
@@ -147,8 +147,8 @@
     "confidence": "Low",
     "domaine": "Edge AI",
     "first_seen": "2026-07-31",
-    "last_changed": "2026-08-03",
-    "pushed_at": "2026-08-03T06:03:46+08:00",
+    "last_changed": "2026-08-10",
+    "pushed_at": "2026-08-05T06:03:49+08:00",
     "pushed_at_month": "2026-08",
     "removed": null,
     "score": 89,
@@ -243,8 +243,8 @@
     "confidence": "Low",
     "domaine": "Edge AI",
     "first_seen": "2026-07-31",
-    "last_changed": "2026-08-03",
-    "pushed_at": "2026-08-02T00:27:41+08:00",
+    "last_changed": "2026-08-10",
+    "pushed_at": "2026-08-09T00:28:28+08:00",
     "pushed_at_month": "2026-08",
     "removed": null,
     "score": 82,
@@ -279,13 +279,13 @@
     "confidence": "Low",
     "domaine": "Edge AI",
     "first_seen": "2026-07-31",
-    "last_changed": "2026-08-03",
-    "pushed_at": "2026-08-02T00:14:51+08:00",
+    "last_changed": "2026-08-10",
+    "pushed_at": "2026-08-10T00:11:33+08:00",
     "pushed_at_month": "2026-08",
     "removed": null,
     "score": 60,
     "source": "gitee",
-    "stars": 7
+    "stars": 8
   },
   "alibaba/MNNKit": {
     "confidence": "High",
@@ -420,14 +420,14 @@
     "stars": 6
   },
   "bouffalolab/bouffalo_drivers": {
-    "confidence": "High",
+    "confidence": "Low",
     "domaine": "Embedded",
     "first_seen": "2026-07-31",
-    "last_changed": "2026-07-31",
-    "pushed_at": "2026-07-29T07:00:18Z",
-    "pushed_at_month": "2026-07",
+    "last_changed": "2026-08-10",
+    "pushed_at": "2026-08-10T03:17:26Z",
+    "pushed_at_month": "2026-08",
     "removed": null,
-    "score": 76,
+    "score": 63,
     "source": "github",
     "stars": 6
   },
@@ -444,16 +444,16 @@
     "stars": 4
   },
   "bouffalolab/bouffalo_sdk": {
-    "confidence": "High",
+    "confidence": "Low",
     "domaine": "Embedded",
     "first_seen": "2026-07-31",
-    "last_changed": "2026-07-31",
-    "pushed_at": "2026-07-29T06:58:54Z",
-    "pushed_at_month": "2026-07",
+    "last_changed": "2026-08-10",
+    "pushed_at": "2026-08-10T03:16:05Z",
+    "pushed_at_month": "2026-08",
     "removed": null,
-    "score": 76,
+    "score": 66,
     "source": "github",
-    "stars": 486
+    "stars": 488
   },
   "bouffalolab/toolchain_riscv_sifive_linux64": {
     "confidence": "High",
@@ -495,8 +495,8 @@
     "confidence": "Low",
     "domaine": "Embedded",
     "first_seen": "2026-07-31",
-    "last_changed": "2026-08-03",
-    "pushed_at": "2026-08-02T02:01:02Z",
+    "last_changed": "2026-08-10",
+    "pushed_at": "2026-08-10T04:52:40Z",
     "pushed_at_month": "2026-08",
     "removed": null,
     "score": 50,
@@ -519,13 +519,13 @@
     "confidence": "Low",
     "domaine": "Embedded",
     "first_seen": "2026-07-31",
-    "last_changed": "2026-08-03",
-    "pushed_at": "2026-08-03T17:19:50+08:00",
+    "last_changed": "2026-08-10",
+    "pushed_at": "2026-08-10T15:47:38+08:00",
     "pushed_at_month": "2026-08",
     "removed": null,
     "score": 72,
     "source": "gitee",
-    "stars": 1862
+    "stars": 1865
   },
   "openharmony/device_board_hihope": {
     "confidence": "Medium",
@@ -564,16 +564,16 @@
     "stars": 1
   },
   "rtthread/rt-thread": {
-    "confidence": "High",
+    "confidence": "Low",
     "domaine": "Embedded",
     "first_seen": "2026-07-31",
-    "last_changed": "2026-07-31",
-    "pushed_at": "2026-07-30T03:41:57+08:00",
-    "pushed_at_month": "2026-07",
+    "last_changed": "2026-08-10",
+    "pushed_at": "2026-08-09T03:50:05+08:00",
+    "pushed_at_month": "2026-08",
     "removed": null,
     "score": 100,
     "source": "gitee",
-    "stars": 5527
+    "stars": 5529
   },
   "rtthread/rtthread-manual-doc": {
     "confidence": "Medium",
@@ -600,14 +600,14 @@
     "stars": 0
   },
   "sophgo/LLM-TPU": {
-    "confidence": "High",
+    "confidence": "Low",
     "domaine": "Embedded",
     "first_seen": "2026-07-31",
-    "last_changed": "2026-07-31",
-    "pushed_at": "2026-07-31T09:46:46Z",
-    "pushed_at_month": "2026-07",
+    "last_changed": "2026-08-10",
+    "pushed_at": "2026-08-05T08:45:17Z",
+    "pushed_at_month": "2026-08",
     "removed": null,
-    "score": 67,
+    "score": 70,
     "source": "github",
     "stars": 297
   },
@@ -651,8 +651,8 @@
     "confidence": "Low",
     "domaine": "Embedded",
     "first_seen": "2026-07-31",
-    "last_changed": "2026-08-03",
-    "pushed_at": "2026-08-03T08:32:34Z",
+    "last_changed": "2026-08-10",
+    "pushed_at": "2026-08-04T03:31:58Z",
     "pushed_at_month": "2026-08",
     "removed": null,
     "score": 46,
@@ -744,16 +744,16 @@
     "stars": 0
   },
   "sophgo/libsophon": {
-    "confidence": "High",
+    "confidence": "Low",
     "domaine": "Embedded",
     "first_seen": "2026-07-31",
-    "last_changed": "2026-07-31",
-    "pushed_at": "2026-07-27T02:15:26Z",
-    "pushed_at_month": "2026-07",
+    "last_changed": "2026-08-10",
+    "pushed_at": "2026-08-10T06:52:51Z",
+    "pushed_at_month": "2026-08",
     "removed": null,
     "score": 71,
     "source": "github",
-    "stars": 26
+    "stars": 27
   },
   "sophgo/mcu": {
     "confidence": "Medium",
@@ -852,16 +852,16 @@
     "stars": 12
   },
   "sophgo/tpu-mlir": {
-    "confidence": "High",
+    "confidence": "Low",
     "domaine": "Embedded",
     "first_seen": "2026-07-31",
-    "last_changed": "2026-07-31",
-    "pushed_at": "2026-07-28T03:53:29Z",
-    "pushed_at_month": "2026-07",
+    "last_changed": "2026-08-10",
+    "pushed_at": "2026-08-04T10:32:27Z",
+    "pushed_at_month": "2026-08",
     "removed": null,
-    "score": 78,
+    "score": 70,
     "source": "github",
-    "stars": 954
+    "stars": 961
   },
   "sophgo/vllm-tpu": {
     "confidence": "High",
@@ -876,26 +876,26 @@
     "stars": 6
   },
   "sophgo/zsbl": {
-    "confidence": "Medium",
+    "confidence": "Low",
     "domaine": "Embedded",
     "first_seen": "2026-07-31",
-    "last_changed": "2026-07-31",
-    "pushed_at": "2026-07-22T04:05:56Z",
-    "pushed_at_month": "2026-07",
+    "last_changed": "2026-08-10",
+    "pushed_at": "2026-08-10T07:17:45Z",
+    "pushed_at_month": "2026-08",
     "removed": null,
-    "score": 52,
+    "score": 58,
     "source": "github",
     "stars": 33
   },
   "unitreerobotics/.github": {
-    "confidence": "High",
+    "confidence": "Low",
     "domaine": "Edge AI",
     "first_seen": "2026-07-31",
-    "last_changed": "2026-07-31",
-    "pushed_at": "2026-07-28T02:14:02Z",
-    "pushed_at_month": "2026-07",
+    "last_changed": "2026-08-10",
+    "pushed_at": "2026-08-03T09:49:14Z",
+    "pushed_at_month": "2026-08",
     "removed": null,
-    "score": 44,
+    "score": 65,
     "source": "github",
     "stars": 4
   },
@@ -1152,16 +1152,16 @@
     "stars": 558
   },
   "unitreerobotics/unitree_ros": {
-    "confidence": "High",
-    "domaine": "Robotics",
+    "confidence": "Low",
+    "domaine": "Edge AI",
     "first_seen": "2026-07-31",
-    "last_changed": "2026-07-31",
-    "pushed_at": "2026-07-29T12:51:16Z",
-    "pushed_at_month": "2026-07",
+    "last_changed": "2026-08-10",
+    "pushed_at": "2026-08-10T04:17:08Z",
+    "pushed_at_month": "2026-08",
     "removed": null,
-    "score": 94,
+    "score": 70,
     "source": "github",
-    "stars": 1494
+    "stars": 1508
   },
   "unitreerobotics/unitree_ros2": {
     "confidence": "High",
@@ -1227,13 +1227,13 @@
     "confidence": "Low",
     "domaine": "Robotics",
     "first_seen": "2026-07-31",
-    "last_changed": "2026-08-03",
-    "pushed_at": "2026-08-03T08:48:42Z",
+    "last_changed": "2026-08-10",
+    "pushed_at": "2026-08-03T09:43:14Z",
     "pushed_at_month": "2026-08",
     "removed": null,
     "score": 78,
     "source": "github",
-    "stars": 1587
+    "stars": 1595
   },
   "unitreerobotics/z1_ros": {
     "confidence": "Medium",

@@ -11,7 +11,7 @@
 [![簡體中文版本](https://img.shields.io/badge/Language-%E7%AE%80%E4%BD%93%E4%B8%AD%E
 **Chinese specificity:** Chinese open-source project
 **Western equivalent:** Not identified
-**Maturity:** Active (★ 7, 4 forks, updated 2026-08)
+**Maturity:** Active (★ 8, 4 forks, updated 2026-08)
 **Language:** Bilingual CN-EN
 **Gitee:** https://gitee.com/alibaba/MNN
 ---

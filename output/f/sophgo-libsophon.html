@@ -4,19 +4,19 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>sophgo/libsophon — Minerva</title>
-<meta name="description" content="Provide Linux kernel drivers and runtime libraries for Sophgo AI accelerator chips (TPU, VPU, JPU, VPP modules), enabling host systems to offload inference and media processing workloads to these spe…">
+<meta name="description" content="Sophgo AI chips driver and runtime library.">
 <link rel="icon" type="image/svg+xml" href="../favicon.svg">
 <link rel="canonical" href="/f/sophgo-libsophon.html"><link rel="alternate" hreflang="fr" href="/f/sophgo-libsophon.fr.html"><link rel="alternate" hreflang="en" href="/f/sophgo-libsophon.html">
 <meta property="og:type" content="article">
 <meta property="og:title" content="sophgo/libsophon — Minerva">
-<meta property="og:description" content="Provide Linux kernel drivers and runtime libraries for Sophgo AI accelerator chips (TPU, VPU, JPU, VPP modules), enabling host systems to offload inference and media processing workloads to these spe…">
+<meta property="og:description" content="Sophgo AI chips driver and runtime library.">
 <meta property="og:url" content="/f/sophgo-libsophon.html">
-
+<meta property="og:image" content="/og.png">
 <meta property="og:site_name" content="Minerva">
 <meta property="og:locale" content="en_US">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="sophgo/libsophon — Minerva">
-<meta name="twitter:description" content="Provide Linux kernel drivers and runtime libraries for Sophgo AI accelerator chips (TPU, VPU, JPU, VPP modules), enabling host systems to offload inference and media processing workloads to these spe…">
+<meta name="twitter:description" content="Sophgo AI chips driver and runtime library.">
 <style>
 :root{
   --paper:#F5F6F4; --surface:#FFFFFF; --surface-2:#FAFBF9;
@@ -174,7 +174,7 @@ aside .src:hover{background:var(--signal-2)}
   </span>
 </div></nav>
 <div class="status-line"><div class="wrap srow">
-  <span class="seg"><span class="dot"></span><span class="accent">Snapshot</span>&nbsp;· as of 2026-08-03</span>
+  <span class="seg"><span class="dot"></span><span class="accent">Snapshot</span>&nbsp;· as of 2026-08-10</span>
   <span class="seg">105 fiches</span>
   <span class="seg">reading: fiche</span>
   <span class="ticks"><i></i><i></i><i></i><i></i><i></i></span>
@@ -185,34 +185,34 @@ aside .src:hover{background:var(--signal-2)}
 
   <div class="readout" style="--dom-color:var(--d-emb);margin-top:16px">
     <div class="rblock"><span class="rlab">Score</span><span class="rval tnum">71<span class="unit">/100</span></span></div>
-    <div class="rblock"><span class="rlab">Confidence</span><span class="rval conf">◆◆◆</span></div>
+    <div class="rblock"><span class="rlab">Confidence</span><span class="rval conf">◆<span class="off">◇◇</span></span></div>
     <div class="rblock"><span class="rlab">Domain</span><span class="rval dom">Embedded</span></div>
-    <div class="rmeta">Driver · Active</div>
+    <div class="rmeta">Library · Active</div>
   </div>
   <div class="rlegend"><b>score</b> = a coarse triage signal, 0–100 (semantic similarity to the embedded/IoT/robotics/edge-AI wedge + activity bonuses) — a sort key, not a measurement of the ecosystem · <b>◆ marks</b> = confidence tier (data-quality: enrichment depth, metadata, recency) — method in docs/SCORING.md</div>
 
   <header class="fhead">
     <h1>sophgo/libsophon</h1>
-    <div class="tags"><span class="tag emb"><span class="d"></span>Embedded</span><span class="tag plain">Driver</span><span class="tag plain">Active</span></div>
+    <div class="tags"><span class="tag emb"><span class="d"></span>Embedded</span><span class="tag plain">Library</span><span class="tag plain">Active</span></div>
   </header>
 
   <div class="grid">
     <div class="main">
       <h2>Problem solved</h2>
-      <p class="lede">Provide Linux kernel drivers and runtime libraries for Sophgo AI accelerator chips (TPU, VPU, JPU, VPP modules), enabling host systems to offload inference and media processing workloads to these specialized processors.</p>
+      <p class="lede">Sophgo AI chips driver and runtime library.</p>
       <h2>How it works</h2>
-      <p>libsophon comprises Linux kernel drivers (sg_x86_pcie_device module for PCIe), bmlib runtime library, TPU runtime with static quantization support (int8), bmcv media processing library, and bm-smi monitoring tool. Written in C/C++, built with CMake/Ninja, supports x86_64 PCIe, ARM64 (aarch64), and LoongArch64 architectures via cross-compilation toolchains. Firmware loading via /lib/firmware and kernel module insertion (insmod) required for operation.</p>
+      <p>libsophon概述</p>
       <h2>Chinese specificity</h2>
-      <p>Sophgo is a Chinese AI chip vendor; libsophon is the official driver and runtime stack for their BM1684x and related processors. No integration with Chinese cloud platforms or standards documented in the README.</p>
+      <p>Chinese open-source project</p>
       <h2 class="key">Western equivalent</h2>
-      <div class="keyblock"><p style="margin:0">NVIDIA CUDA (proprietary, x86/ARM), Intel OpenVINO (inference runtime), Qualcomm Hexagon SDK (DSP/NPU drivers)</p><div class="hint">← the bridge a directory never gives you</div></div>
+      <div class="keyblock"><p style="margin:0">Not identified</p><div class="hint">← the bridge a directory never gives you</div></div>
     </div>
     <aside>
-      <div class="r"><dt>Type</dt><dd>Driver</dd></div>
+      <div class="r"><dt>Type</dt><dd>Library</dd></div>
       <div class="r"><dt>Language</dt><dd>Bilingual CN-EN</dd></div>
-      <div class="r"><dt>Stars</dt><dd>26 ★</dd></div>
+      <div class="r"><dt>Stars</dt><dd>27 ★</dd></div>
       <div class="r"><dt>Forks</dt><dd>16</dd></div>
-      <div class="r"><dt>Last push</dt><dd>2026-07</dd></div>
+      <div class="r"><dt>Last push</dt><dd>2026-08</dd></div>
       <a class="src" href="https://github.com/sophgo/libsophon" target="_blank" rel="noopener">View on GitHub →</a>
     </aside>
   </div>

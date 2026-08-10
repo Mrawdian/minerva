@@ -1,13 +1,14 @@
 ---
-## unitreerobotics/unitree_ros
-**Type:** Framework
-**Domain:** Robotics
-**Relevance score:** 94/100
-**Problem solved:** Provide ROS packages for simulation and low-level control (torque, position, angular velocity) of joint articulations for Unitree quadruped and humanoid robots (A1, B1, B2, G1, GO1, GO2, H1, H2, R1, Z1, etc.) via Gazebo, as well as a control interface compatible with real robots via unitree_ros_to_real.
-**How it works:** ROS Melodic/Kinetic architecture with Gazebo8 simulation: URDF description packages for 19 robot models, joint controllers (unitree_controller, z1_controller) using ros-control (controller-interface, effort-controllers, joint-trajectory-controller), and simulation modules (unitree_gazebo, unitree_legged_control). Depends on unitree_legged_msgs (from unitree_ros_to_real) for communication. No NPU support or embedded inference — simulation and low-level control only.
-**Chinese specificity:** Hosted on Gitee by unitreerobotics (Chinese manufacturer of quadruped and humanoid robots); no particular Chinese specificity beyond the author. No Chinese chipset vendor cited, no Chinese cloud integration (Baidu, Aliyun, etc.), no Chinese standard compliance detected.
-**Western equivalent:** ROS Navigation Stack (Open Robotics), Gazebo (Open Robotics), Boston Dynamics Spot SDK (proprietary), ANYmal ROS packages (ANYbotics)
-**Maturity:** Stable (★ 1494, 442 forks, updated 2026-07)
-**Language:** EN
+## unitreerobotics/unitree_ros [MODIFIÉ]
+**Type:** Library
+**Domain:** Edge AI
+**Relevance score:** 70/100
+**Problem solved:** Information not available
+**How it works:** # Introduction
+Here are the ROS simulation packages for Unitree robots, You can load robots and joint controllers in Gazebo, so you can perform low-level control (control the torque, position and angular velocity) of the robot joints. Please be aware that the Gazebo simulation cannot do high-level c
+**Chinese specificity:** Chinese open-source project
+**Western equivalent:** Not identified
+**Maturity:** Stable (★ 1508, 441 forks, updated 2026-08)
+**Language:** English
 **GitHub:** https://github.com/unitreerobotics/unitree_ros
 ---

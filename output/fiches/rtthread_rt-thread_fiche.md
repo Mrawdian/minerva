@@ -3,11 +3,17 @@
 **Type:** RTOS
 **Domain:** Embedded
 **Relevance score:** 100/100
-**Problem solved:** Provide a scalable real-time operating system that runs on resource-constrained microcontrollers (ARM Cortex-M0 with 3 KB Flash / 1.2 KB RAM) while supporting larger IoT devices (ARM Cortex-A, MIPS32/64 multicore). Unifies kernel, BSP, device drivers, and a modular component ecosystem (VFS, FinSH CLI, network stack) under a single C-based RTOS.
-**How it works:** RT-Thread is a monolithic RTOS kernel written in C, with a layered architecture: kernel layer (threading, scheduling, semaphores, mailbox, message queue, memory management, timers), libcpu/BSP layer (CPU porting and peripheral drivers), and components/services layer (VFS, FinSH command-line interface, network frameworks, device framework). Supports GCC, Keil, and IAR toolchains. Includes a package manager (450+ packages) for modular software composition. Ported to STM32F103 and other mainstream MCUs.
-**Chinese specificity:** Hosted on Gitee/GitHub by rtthread; no particular Chinese specificity beyond the author. Founded in 2006 as a community-driven open-source project; no documented affiliation with HiSilicon, Rockchip, Espressif, or other Chinese chipset vendors.
-**Western equivalent:** FreeRTOS (Amazon), Zephyr (Linux Foundation), RIOT OS
-**Maturity:** Stable (★ 5527, 2264 forks, updated 2026-07)
+**Problem solved:** RT-Thread是一个来自中国的开源物联网操作系统，它提供了非常强的可伸缩能力：从一个可以运行在ARM Cortex-M0芯片上的极小内核，到中等的ARM Cortex-M3/4/7系统，甚至是多核，64位的ARM Cortex-A，MIPS32/64处理器的功能丰富系统
+**How it works:** <p align="center">
+<img src="documentation/figures/logo.png" width="60%" >
+</p>
+
+**English** | [中文](README_zh.md) | [Español](README_es.md) | [Deutsch](README_de.md)
+
+[![GitHubStars](https://img.shields.io/github/stars/RT-Thread/rt-thread?style=flat-square&logo=GitHub)](https://github.com/RT-Thread/
+**Chinese specificity:** Chinese open-source project
+**Western equivalent:** Not identified
+**Maturity:** Stable (★ 5529, 2265 forks, updated 2026-08)
 **Language:** Bilingual CN-EN
 **Gitee:** https://gitee.com/rtthread/rt-thread
 ---
