@@ -1,13 +1,36 @@
 ---
-## rtthread/rsoc-rtt
-**Type :** Documentation
+## rtthread/rsoc-rtt [MODIFIÉ]
+**Type :** RTOS
 **Domaine :** Embarqué
-**Score de pertinence :** 75/100
-**Problème résolu :** Organiser et centraliser les notes pédagogiques et travaux pratiques des stagiaires du programme d'été RT-Thread sur différentes plateformes matérielles embarquées.
-**Comment ça marche :** Le dépôt fonctionne comme un système de gestion de contenu pédagogique structuré par cohorte (6 groupes), plateforme matérielle (STM32H750, RA8D1, PSoC62, MCXA156, K230, GD32F527I) et étudiant. Chaque stagiaire maintient deux arborescences parallèles : une section notes couvrant les aspects noyau et pilotes du RTOS RT-Thread, et une section travaux pratiques avec exercices quotidiens. La structure permet le suivi progressif des apprentissages sur une durée définie (5 jours minimum par exercice).
-**Spécificité chinoise :** Intégration directe avec l'écosystème RT-Thread (RTOS temps réel chinois majeur), utilisation de microcontrôleurs GD32 (Gigadevice, fabricant chinois) et CanMV-K230 (plateforme d'IA embarquée chinoise). Programme de formation d'été typique des initiatives chinoises de développement de talents en systèmes embarqués.
-**Équivalent occidental :** Aucun équivalent direct connu - combine aspects de dépôt pédagogique (comme les cours GitHub) avec structure de programme de stage formalisé
-**Maturité :** Expérimental (★ 1, 66 forks, mis à jour 2025-08)
+**Score de pertinence :** 74/100
+**Problème résolu :** RT-Thread 暑期夏令营仓库
+**Comment ça marche :** # RSOC-RTT
+
+RT-Thread夏令营学员笔记
+
+## 学员笔记模板
+
+学生姓名命名文件夹 + 每日笔记 + 每日作业
+
+```c
+└─202x
+    ├─第1组
+    │  └─张三
+    │	  └─笔记
+	│	  	└─内核笔记.md
+    │	  	└─驱动笔记.md
+    │	  	└─xxx.md
+    │	  	└─...
+    │	  └─作业
+	│	  	└─第1天作业.md
+    │	  	└─第2天作业.md
+    │	  	└─第3天作业.md
+    │	  	└─第4天作业.md
+    │	  	└─第5天作业.md
+    ├─第2组
+**Spécificité chinoise :** Chinese open-source project
+**Équivalent occidental :** Not identified
+**Maturité :** Actif (★ 1, 65 forks, mis à jour 2026-08)
 **Langue :** Bilingue CN-EN
 **Gitee :** https://gitee.com/rtthread/rsoc-rtt
 ---

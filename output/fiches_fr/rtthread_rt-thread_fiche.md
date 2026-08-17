@@ -13,7 +13,7 @@
 [![GitHubStars](https://img.shields.io/github/stars/RT-Thread/rt-thread?style=flat-square&logo=GitHub)](https://github.com/RT-Thread/
 **Spécificité chinoise :** Chinese open-source project
 **Équivalent occidental :** Not identified
-**Maturité :** Stable (★ 5529, 2265 forks, mis à jour 2026-08)
+**Maturité :** Stable (★ 5532, 2265 forks, mis à jour 2026-08)
 **Langue :** Bilingue CN-EN
 **Gitee :** https://gitee.com/rtthread/rt-thread
 ---

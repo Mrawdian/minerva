@@ -4,19 +4,19 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>EspressifSystems/esp-drone — Minerva</title>
-<meta name="description" content="Provide a Wi-Fi-controlled quadcopter firmware stack for ESP32/ESP32-S2/ESP32-S3 microcontrollers, enabling flight stabilization and position-hold modes without proprietary drone platforms. Ported fr…">
+<meta name="description" content="基于乐鑫 ESP32-S2/ESP32 开发的小型无人机解决方案。">
 <link rel="icon" type="image/svg+xml" href="../favicon.svg">
 <link rel="canonical" href="/f/espressifsystems-esp-drone.html"><link rel="alternate" hreflang="fr" href="/f/espressifsystems-esp-drone.fr.html"><link rel="alternate" hreflang="en" href="/f/espressifsystems-esp-drone.html">
 <meta property="og:type" content="article">
 <meta property="og:title" content="EspressifSystems/esp-drone — Minerva">
-<meta property="og:description" content="Provide a Wi-Fi-controlled quadcopter firmware stack for ESP32/ESP32-S2/ESP32-S3 microcontrollers, enabling flight stabilization and position-hold modes without proprietary drone platforms. Ported fr…">
+<meta property="og:description" content="基于乐鑫 ESP32-S2/ESP32 开发的小型无人机解决方案。">
 <meta property="og:url" content="/f/espressifsystems-esp-drone.html">
 <meta property="og:image" content="/og.png">
 <meta property="og:site_name" content="Minerva">
 <meta property="og:locale" content="en_US">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="EspressifSystems/esp-drone — Minerva">
-<meta name="twitter:description" content="Provide a Wi-Fi-controlled quadcopter firmware stack for ESP32/ESP32-S2/ESP32-S3 microcontrollers, enabling flight stabilization and position-hold modes without proprietary drone platforms. Ported fr…">
+<meta name="twitter:description" content="基于乐鑫 ESP32-S2/ESP32 开发的小型无人机解决方案。">
 <style>
 :root{
   --paper:#F5F6F4; --surface:#FFFFFF; --surface-2:#FAFBF9;
@@ -174,7 +174,7 @@ aside .src:hover{background:var(--signal-2)}
   </span>
 </div></nav>
 <div class="status-line"><div class="wrap srow">
-  <span class="seg"><span class="dot"></span><span class="accent">Snapshot</span>&nbsp;· as of 2026-08-10</span>
+  <span class="seg"><span class="dot"></span><span class="accent">Snapshot</span>&nbsp;· as of 2026-08-17</span>
   <span class="seg">105 fiches</span>
   <span class="seg">reading: fiche</span>
   <span class="ticks"><i></i><i></i><i></i><i></i><i></i></span>
@@ -183,47 +183,47 @@ aside .src:hover{background:var(--signal-2)}
 <div class="wrap">
   <div class="crumb"><a href="../index.html">Home</a><span class="sep">/</span><a href="../dashboard.html">Dashboard</a><span class="sep">/</span><a href="../dashboard.html?owner=EspressifSystems">EspressifSystems</a><span class="sep">/</span><span>esp-drone</span><span style="margin-left:auto"><a href="espressifsystems-esp-drone.fr.html" style="color:var(--signal);font-weight:600">FR →</a></span></div>
 
-  <div class="readout" style="--dom-color:var(--d-edge);margin-top:16px">
+  <div class="readout" style="--dom-color:var(--d-rob);margin-top:16px">
     <div class="rblock"><span class="rlab">Score</span><span class="rval tnum">73<span class="unit">/100</span></span></div>
-    <div class="rblock"><span class="rlab">Confidence</span><span class="rval conf">◆◆◆</span></div>
-    <div class="rblock"><span class="rlab">Domain</span><span class="rval dom">Edge AI</span></div>
-    <div class="rmeta">Application · Active</div>
+    <div class="rblock"><span class="rlab">Confidence</span><span class="rval conf">◆<span class="off">◇◇</span></span></div>
+    <div class="rblock"><span class="rlab">Domain</span><span class="rval dom">Robotics</span></div>
+    <div class="rmeta">Library · Active</div>
   </div>
   <div class="rlegend"><b>score</b> = a coarse triage signal, 0–100 (semantic similarity to the embedded/IoT/robotics/edge-AI wedge + activity bonuses) — a sort key, not a measurement of the ecosystem · <b>◆ marks</b> = confidence tier (data-quality: enrichment depth, metadata, recency) — method in docs/SCORING.md</div>
 
   <header class="fhead">
     <h1>EspressifSystems/esp-drone</h1>
-    <div class="tags"><span class="tag edge"><span class="d"></span>Edge AI</span><span class="tag plain">Application</span><span class="tag plain">Active</span></div>
+    <div class="tags"><span class="tag rob"><span class="d"></span>Robotics</span><span class="tag plain">Library</span><span class="tag plain">Active</span></div>
   </header>
 
   <div class="grid">
     <div class="main">
       <h2>Problem solved</h2>
-      <p class="lede">Provide a Wi-Fi-controlled quadcopter firmware stack for ESP32/ESP32-S2/ESP32-S3 microcontrollers, enabling flight stabilization and position-hold modes without proprietary drone platforms. Ported from Crazyflie to reduce development friction for educational and hobbyist UAV projects.</p>
+      <p class="lede">基于乐鑫 ESP32-S2/ESP32 开发的小型无人机解决方案。</p>
       <h2>How it works</h2>
-      <p>Core flight control logic (stabilization, height-hold, position-hold) ported from Crazyflie firmware (GPL 3.0); runs on ESP-IDF v5.0 (Espressif&#x27;s FreeRTOS-based framework). Hardware targets ESP32, ESP32-S2, ESP32-S3 SoCs with Wi-Fi radio; control via mobile apps (iOS/Android) or cfclient Python client over Wi-Fi, or ESP-NOW protocol from ESP-BOX3 joystick. Includes DSP library (esp32-lin) for sensor fusion and motor control.</p>
+      <p></p>
       <h2>Chinese specificity</h2>
-      <p>Developed and maintained by Espressif Systems (Shanghai), the manufacturer of ESP32 SoCs; official Gitee mirror synchronized from GitHub. Leverages Espressif&#x27;s ESP-IDF ecosystem and hardware platform as the sole target architecture.</p>
+      <p>Espressif Systems (乐鑫, Shanghai) — fabricant des SoCs ESP8266/ESP32 ; miroir Gitee officiel synchronisé depuis GitHub.</p>
       <h2 class="key">Western equivalent</h2>
-      <div class="keyblock"><p style="margin:0">Crazyflie firmware (Bitcraze), ArduCopter (ArduPilot), PX4 autopilot</p><div class="hint">← the bridge a directory never gives you</div></div>
+      <div class="keyblock"><p style="margin:0">Not identified</p><div class="hint">← the bridge a directory never gives you</div></div>
     </div>
     <aside>
-      <div class="r"><dt>Type</dt><dd>Application</dd></div>
+      <div class="r"><dt>Type</dt><dd>Library</dd></div>
       <div class="r"><dt>Language</dt><dd>Bilingual CN-EN</dd></div>
       <div class="r"><dt>Stars</dt><dd>64 ★</dd></div>
       <div class="r"><dt>Forks</dt><dd>21</dd></div>
-      <div class="r"><dt>Last push</dt><dd>2026-06</dd></div>
+      <div class="r"><dt>Last push</dt><dd>2026-08</dd></div>
       <a class="src" href="https://gitee.com/EspressifSystems/esp-drone" target="_blank" rel="noopener">View on Gitee →</a>
     </aside>
   </div>
 
-  <section class="related"><div class="lbl">Other fiches in Edge AI</div>
-    <div class="rel-grid"><a class="rc" href="unitreerobotics-unitree-sdk2.html"><div class="t"><span class="s tnum">★ 75</span><span class="tag edge"><span class="d"></span>Edge AI</span></div>
-  <h4>unitreerobotics/unitree_sdk2</h4><p>Provide a unified C++ SDK for controlling Unitree quadruped robots (Go1, Go2, B1, H1 series) across heterogeneous compute platforms (aarch64, x86_64) without requiring proprietary closed-source libraries or vendor-specific toolchains.</p></a>
-<a class="rc" href="unitreerobotics-uniarml1.html"><div class="t"><span class="s tnum">★ 71</span><span class="tag edge"><span class="d"></span>Edge AI</span></div>
-  <h4>unitreerobotics/UniArmL1</h4><p>Provide a lightweight 6-DOF robotic arm teleoperation framework with standardized data collection for imitation learning. Enables seamless integration of VR controller, keyboard, and leader-follower control modes with synchronized multi-camera recording at fixed frequency for downstream training pipelines.</p></a>
-<a class="rc" href="unitreerobotics-point-lio-unilidar.html"><div class="t"><span class="s tnum">★ 71</span><span class="tag edge"><span class="d"></span>Edge AI</span></div>
-  <h4>unitreerobotics/point_lio_unilidar</h4><p>Adapt the Point-LIO lidar-inertial odometry algorithm to work with Unitree&#x27;s L1 and L2 LiDAR sensors (360° × 90° FOV, non-repetitive scanning) for low-speed mobile robot localization and mapping under vibration and aggressive motion.</p></a></div></section>
+  <section class="related"><div class="lbl">Other fiches in Robotics</div>
+    <div class="rel-grid"><a class="rc" href="unitreerobotics-unitree-rl-gym.html"><div class="t"><span class="s tnum">★ 73</span><span class="tag rob"><span class="d"></span>Robotics</span></div>
+  <h4>unitreerobotics/unitree_rl_gym</h4><p>Provides a reinforcement learning training pipeline and sim-to-real deployment framework for legged robot locomotion control, bridging the gap between policy training in Isaac Gym simulation and execution on physical Unitree quadruped and humanoid robots (Go2, G1, H1).</p></a>
+<a class="rc" href="unitreerobotics-unitree-rl-mjlab.html"><div class="t"><span class="s tnum">★ 74</span><span class="tag rob"><span class="d"></span>Robotics</span></div>
+  <h4>unitreerobotics/unitree_rl_mjlab</h4><p>Provide a lightweight, modular reinforcement learning framework for training and deploying locomotion policies on Unitree quadruped and humanoid robots using MuJoCo physics simulation, with direct sim-to-real transfer via ONNX export.</p></a>
+<a class="rc" href="unitreerobotics-qmini.html"><div class="t"><span class="s tnum">★ 72</span><span class="tag rob"><span class="d"></span>Robotics</span></div>
+  <h4>unitreerobotics/Qmini</h4><p>Provide a fully open-source, 3D-printable bipedal robot platform with documented hardware (BOM, STEP files, electrical schematics), software stack (URDF, ROS integration via RoboTamer4Qmini), and assembly procedures to lower the barrier to entry for robotics hobbyists, educators, and researchers.</p></a></div></section>
 
   <div class="nlbox">
     <h3>Enjoyed this fiche?</h3>

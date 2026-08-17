@@ -13,7 +13,7 @@
 The `master` branch contains the new features for **ADF v3.0**, which are actively developed and **incompatible** with previous versions. For the stable ADF v2.x version, please switch to the [`release/v2.x`](https:/
 **Chinese specificity:** Espressif Systems (乐鑫, Shanghai) — fabricant des SoCs ESP8266/ESP32 ; miroir Gitee officiel synchronisé depuis GitHub.
 **Western equivalent:** Not identified
-**Maturity:** Active (★ 72, 9 forks, updated 2026-08)
+**Maturity:** Active (★ 73, 9 forks, updated 2026-08)
 **Language:** Bilingual CN-EN
 **Gitee:** https://gitee.com/EspressifSystems/esp-adf
 ---
