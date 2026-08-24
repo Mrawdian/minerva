@@ -18,7 +18,7 @@
   <a href="https://pypi.org/project/tpu_mlir/"><img src="http
 **Spécificité chinoise :** Chinese open-source project
 **Équivalent occidental :** Not identified
-**Maturité :** Stable (★ 961, 226 forks, mis à jour 2026-08)
+**Maturité :** Stable (★ 968, 225 forks, mis à jour 2026-08)
 **Langue :** Bilingue CN-EN
 **GitHub :** https://github.com/sophgo/tpu-mlir
 ---

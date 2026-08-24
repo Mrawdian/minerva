@@ -15,7 +15,7 @@
   <text x="80" y="318" font-family="Segoe UI,Helvetica,Arial,sans-serif" font-size="58" font-weight="700" fill="#1B1E20" letter-spacing="-1.5">on China's open-source hardware.</text>
   <line x1="80" y1="372" x2="1120" y2="372" stroke="#CDD0CB" stroke-width="1"/>
   <g font-family="Consolas,ui-monospace,monospace" font-size="24" fill="#565C61">
-    <text x="80" y="432"><tspan fill="#1B1E20" font-weight="700">105</tspan> fiches</text>
+    <text x="80" y="432"><tspan fill="#1B1E20" font-weight="700">104</tspan> fiches</text>
     <text x="300" y="432">Gitee + GitHub</text>
     <text x="580" y="432"><tspan fill="#1B1E20" font-weight="700">EN / FR</tspan></text>
     <text x="760" y="432">Western-equivalent mapping</text>

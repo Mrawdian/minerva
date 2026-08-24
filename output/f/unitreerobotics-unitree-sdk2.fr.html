@@ -4,19 +4,19 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>unitreerobotics/unitree_sdk2 — Minerva (FR)</title>
-<meta name="description" content="Fournir un SDK C++ unifié pour contrôler les robots quadrupèdes Unitree (séries Go1, Go2, B1, H1) sur des plateformes de calcul hétérogènes (aarch64, x86_64) sans nécessiter de bibliothèques propriét…">
+<meta name="description" content="Unitree robot sdk version 2. https://support.unitree.com/home/zh/developer">
 <link rel="icon" type="image/svg+xml" href="../favicon.svg">
 <link rel="canonical" href="/f/unitreerobotics-unitree-sdk2.fr.html"><link rel="alternate" hreflang="en" href="/f/unitreerobotics-unitree-sdk2.html"><link rel="alternate" hreflang="fr" href="/f/unitreerobotics-unitree-sdk2.fr.html">
 <meta property="og:type" content="article">
 <meta property="og:title" content="unitreerobotics/unitree_sdk2 — Minerva (FR)">
-<meta property="og:description" content="Fournir un SDK C++ unifié pour contrôler les robots quadrupèdes Unitree (séries Go1, Go2, B1, H1) sur des plateformes de calcul hétérogènes (aarch64, x86_64) sans nécessiter de bibliothèques propriét…">
+<meta property="og:description" content="Unitree robot sdk version 2. https://support.unitree.com/home/zh/developer">
 <meta property="og:url" content="/f/unitreerobotics-unitree-sdk2.fr.html">
 <meta property="og:image" content="/og.png">
 <meta property="og:site_name" content="Minerva">
 <meta property="og:locale" content="fr_FR">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="unitreerobotics/unitree_sdk2 — Minerva (FR)">
-<meta name="twitter:description" content="Fournir un SDK C++ unifié pour contrôler les robots quadrupèdes Unitree (séries Go1, Go2, B1, H1) sur des plateformes de calcul hétérogènes (aarch64, x86_64) sans nécessiter de bibliothèques propriét…">
+<meta name="twitter:description" content="Unitree robot sdk version 2. https://support.unitree.com/home/zh/developer">
 <style>
 :root{
   --paper:#F5F6F4; --surface:#FFFFFF; --surface-2:#FAFBF9;
@@ -174,8 +174,8 @@ aside .src:hover{background:var(--signal-2)}
   </span>
 </div></nav>
 <div class="status-line"><div class="wrap srow">
-  <span class="seg"><span class="dot"></span><span class="accent">Snapshot</span>&nbsp;· as of 2026-08-17</span>
-  <span class="seg">105 fiches</span>
+  <span class="seg"><span class="dot"></span><span class="accent">Snapshot</span>&nbsp;· as of 2026-08-24</span>
+  <span class="seg">104 fiches</span>
   <span class="seg">reading: fiche · FR</span>
   <span class="ticks"><i></i><i></i><i></i><i></i><i></i></span>
 </div></div>
@@ -184,46 +184,46 @@ aside .src:hover{background:var(--signal-2)}
   <div class="crumb"><a href="../index.html">Home</a><span class="sep">/</span><a href="../dashboard.html">Dashboard</a><span class="sep">/</span><a href="../dashboard.html?owner=unitreerobotics">unitreerobotics</a><span class="sep">/</span><span>unitree_sdk2</span><span style="margin-left:auto"><a href="unitreerobotics-unitree-sdk2.html" style="color:var(--signal);font-weight:600">EN →</a></span></div>
 
   <div class="readout" style="--dom-color:var(--d-edge);margin-top:16px">
-    <div class="rblock"><span class="rlab">Score</span><span class="rval tnum">75<span class="unit">/100</span></span></div>
-    <div class="rblock"><span class="rlab">Confiance</span><span class="rval conf">◆◆◆</span></div>
+    <div class="rblock"><span class="rlab">Score</span><span class="rval tnum">66<span class="unit">/100</span></span></div>
+    <div class="rblock"><span class="rlab">Confiance</span><span class="rval conf">◆<span class="off">◇◇</span></span></div>
     <div class="rblock"><span class="rlab">Domaine</span><span class="rval dom">Edge AI</span></div>
-    <div class="rmeta">Library · Stable</div>
+    <div class="rmeta">Framework · Stable</div>
   </div>
   <div class="rlegend"><b>score</b> = un signal de tri grossier, 0–100 (similarité sémantique au créneau embarqué/IoT/robotique/edge-AI + bonus d'activité) — une clé de tri, pas une mesure de l'écosystème · <b>marques ◆</b> = niveau de confiance (qualité des données : profondeur d'enrichissement, métadonnées, récence) — méthode dans docs/SCORING.md</div>
 
   <header class="fhead">
     <h1>unitreerobotics/unitree_sdk2</h1>
-    <div class="tags"><span class="tag edge"><span class="d"></span>Edge AI</span><span class="tag plain">Library</span><span class="tag plain">Stable</span></div>
+    <div class="tags"><span class="tag edge"><span class="d"></span>Edge AI</span><span class="tag plain">Framework</span><span class="tag plain">Stable</span></div>
   </header>
 
   <div class="grid">
     <div class="main">
       <h2>Problème résolu</h2>
-      <p class="lede">Fournir un SDK C++ unifié pour contrôler les robots quadrupèdes Unitree (séries Go1, Go2, B1, H1) sur des plateformes de calcul hétérogènes (aarch64, x86_64) sans nécessiter de bibliothèques propriétaires fermées ni de chaînes d&#x27;outils spécifiques aux fournisseurs.</p>
+      <p class="lede">Unitree robot sdk version 2. https://support.unitree.com/home/zh/developer</p>
       <h2>Comment ça marche</h2>
-      <p>Le SDK est une bibliothèque C++ construite sur CMake, dépendant de libyaml-cpp, Eigen3, Boost, spdlog et libfmt. Elle abstrait les interfaces matérielles du robot (contrôle moteur, IMU, retour articulaire) et fournit des API de haut niveau pour la locomotion, les requêtes d&#x27;état et l&#x27;accès aux capteurs. Cible Ubuntu 20.04 LTS avec GCC 9.4.0 ; les exemples montrent l&#x27;intégration via le mécanisme find_package() de CMake. Aucun noyau RTOS n&#x27;est intégré ; la bibliothèque s&#x27;exécute sur Linux standard.</p>
+      <p># unitree_sdk2</p>
       <h2>Spécificité chinoise</h2>
-      <p>Unitree Robotics est un fabricant chinois de robots quadrupèdes (Go1, Go2, B1, H1) basé à Hangzhou ; ce SDK est l&#x27;interface de contrôle officielle de deuxième génération pour leur gamme de produits. Aucune intégration avec les plateformes cloud chinoises (Baidu, Alibaba) ou les normes cellulaires (NB-IoT, 5G) n&#x27;est documentée.</p>
+      <p>Chinese open-source project</p>
       <h2 class="key">Équivalent occidental</h2>
-      <div class="keyblock"><p style="margin:0">Boston Dynamics Spot SDK (propriétaire), pile de pilotes ANYmal ROS2 (ETH Zurich), SDK Warthog de Clearpath Robotics</p><div class="hint">← le pont qu'un annuaire ne vous donnera jamais</div></div>
+      <div class="keyblock"><p style="margin:0">Not identified</p><div class="hint">← le pont qu'un annuaire ne vous donnera jamais</div></div>
     </div>
     <aside>
-      <div class="r"><dt>Type</dt><dd>Library</dd></div>
+      <div class="r"><dt>Type</dt><dd>Framework</dd></div>
       <div class="r"><dt>Langage</dt><dd>Anglais</dd></div>
-      <div class="r"><dt>Étoiles</dt><dd>1 258 ★</dd></div>
-      <div class="r"><dt>Forks</dt><dd>367</dd></div>
-      <div class="r"><dt>Dernier push</dt><dd>2026-07</dd></div>
+      <div class="r"><dt>Étoiles</dt><dd>1 307 ★</dd></div>
+      <div class="r"><dt>Forks</dt><dd>380</dd></div>
+      <div class="r"><dt>Dernier push</dt><dd>2026-08</dd></div>
       <a class="src" href="https://github.com/unitreerobotics/unitree_sdk2" target="_blank" rel="noopener">Voir sur GitHub →</a>
     </aside>
   </div>
 
   <section class="related"><div class="lbl">Autres fiches en Edge AI</div>
-    <div class="rel-grid"><a class="rc" href="unitreerobotics-unitree-lerobot.fr.html"><div class="t"><span class="s tnum">★ 77</span><span class="tag edge"><span class="d"></span>Edge AI</span></div>
-  <h4>unitreerobotics/unitree_lerobot</h4><p>Activer l&#x27;entraînement et le déploiement de politiques d&#x27;apprentissage par imitation sur les robots bi-bras Unitree G1 en utilisant le framework LeRobot, avec des utilitaires de conversion de données pour les formats propriétaires de mains Unitree (Dex1, Dex3, BrainCo, Inspire1) en datasets compatibles LeRobot.</p></a>
-<a class="rc" href="espressifsystems-esp-insights.fr.html"><div class="t"><span class="s tnum">★ 77</span><span class="tag edge"><span class="d"></span>Edge AI</span></div>
-  <h4>EspressifSystems/esp-insights</h4><p>Capturer et transmettre à distance les diagnostics des appareils (journaux d&#x27;erreurs/avertissements, plantages, métriques, raisons de réinitialisation) depuis les appareils ESP32/ESP8266 déployés sur le terrain vers un tableau de bord cloud, permettant aux développeurs de diagnostiquer les problèmes qui ne surviennent que dans des environnements de déploiement spécifiques sans accès physique.</p></a>
-<a class="rc" href="unitreerobotics-uniarml1.fr.html"><div class="t"><span class="s tnum">★ 71</span><span class="tag edge"><span class="d"></span>Edge AI</span></div>
-  <h4>unitreerobotics/UniArmL1</h4><p>Fournir un framework de téléopération de bras robotique 6-DOF léger avec collecte de données standardisée pour l&#x27;apprentissage par imitation. Permet l&#x27;intégration transparente des modes de contrôle par contrôleur VR, clavier et leader-follower avec enregistrement multi-caméra synchronisé à fréquence fixe pour les pipelines d&#x27;entraînement en aval.</p></a></div></section>
+    <div class="rel-grid"><a class="rc" href="alibaba-id2-client-sdk.fr.html"><div class="t"><span class="s tnum">★ 67</span><span class="tag edge"><span class="d"></span>Edge AI</span></div>
+  <h4>alibaba/id2_client_sdk</h4><p>Fournir une identité numérique inviolable et non-contrefaçable pour les appareils IoT, garantissant l&#x27;authentification et l&#x27;intégrité dans les écosystèmes connectés.</p></a>
+<a class="rc" href="unitreerobotics--github.fr.html"><div class="t"><span class="s tnum">★ 65</span><span class="tag edge"><span class="d"></span>Edge AI</span></div>
+  <h4>unitreerobotics/.github</h4><p>Information not available</p></a>
+<a class="rc" href="unitreerobotics-unitree-actuator-sdk.fr.html"><div class="t"><span class="s tnum">★ 64</span><span class="tag edge"><span class="d"></span>Edge AI</span></div>
+  <h4>unitreerobotics/unitree_actuator_sdk</h4><p>Fournir un SDK C++/Python pour contrôler les actionneurs Unitree (moteurs GO-M8010-6, A1, B1) via communication série, en gérant les transformations de coordonnées côté moteur par rapport au côté sortie et les conversions de rapport de réduction qui ne sont pas triviales pour les applications de robotique.</p></a></div></section>
 
   <div class="nlbox">
     <h3>Cette fiche vous a été utile ?</h3>

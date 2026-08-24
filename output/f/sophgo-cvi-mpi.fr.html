@@ -4,19 +4,19 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>sophgo/cvi_mpi — Minerva (FR)</title>
-<meta name="description" content="Fournir des bibliothèques de codecs multimédias et de traitement d&#x27;images (encodage, décodage, pipeline ISP) pour la série SoC CV18xx, qui est une famille de processeurs de vision basse consommation…">
+<meta name="description" content="multimedia libs for cv18xx series soc.">
 <link rel="icon" type="image/svg+xml" href="../favicon.svg">
 <link rel="canonical" href="/f/sophgo-cvi-mpi.fr.html"><link rel="alternate" hreflang="en" href="/f/sophgo-cvi-mpi.html"><link rel="alternate" hreflang="fr" href="/f/sophgo-cvi-mpi.fr.html">
 <meta property="og:type" content="article">
 <meta property="og:title" content="sophgo/cvi_mpi — Minerva (FR)">
-<meta property="og:description" content="Fournir des bibliothèques de codecs multimédias et de traitement d&#x27;images (encodage, décodage, pipeline ISP) pour la série SoC CV18xx, qui est une famille de processeurs de vision basse consommation…">
+<meta property="og:description" content="multimedia libs for cv18xx series soc.">
 <meta property="og:url" content="/f/sophgo-cvi-mpi.fr.html">
 <meta property="og:image" content="/og.png">
 <meta property="og:site_name" content="Minerva">
 <meta property="og:locale" content="fr_FR">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="sophgo/cvi_mpi — Minerva (FR)">
-<meta name="twitter:description" content="Fournir des bibliothèques de codecs multimédias et de traitement d&#x27;images (encodage, décodage, pipeline ISP) pour la série SoC CV18xx, qui est une famille de processeurs de vision basse consommation…">
+<meta name="twitter:description" content="multimedia libs for cv18xx series soc.">
 <style>
 :root{
   --paper:#F5F6F4; --surface:#FFFFFF; --surface-2:#FAFBF9;
@@ -174,8 +174,8 @@ aside .src:hover{background:var(--signal-2)}
   </span>
 </div></nav>
 <div class="status-line"><div class="wrap srow">
-  <span class="seg"><span class="dot"></span><span class="accent">Snapshot</span>&nbsp;· as of 2026-08-17</span>
-  <span class="seg">105 fiches</span>
+  <span class="seg"><span class="dot"></span><span class="accent">Snapshot</span>&nbsp;· as of 2026-08-24</span>
+  <span class="seg">104 fiches</span>
   <span class="seg">reading: fiche · FR</span>
   <span class="ticks"><i></i><i></i><i></i><i></i><i></i></span>
 </div></div>
@@ -184,8 +184,8 @@ aside .src:hover{background:var(--signal-2)}
   <div class="crumb"><a href="../index.html">Home</a><span class="sep">/</span><a href="../dashboard.html">Dashboard</a><span class="sep">/</span><a href="../dashboard.html?owner=sophgo">sophgo</a><span class="sep">/</span><span>cvi_mpi</span><span style="margin-left:auto"><a href="sophgo-cvi-mpi.html" style="color:var(--signal);font-weight:600">EN →</a></span></div>
 
   <div class="readout" style="--dom-color:var(--d-emb);margin-top:16px">
-    <div class="rblock"><span class="rlab">Score</span><span class="rval tnum">66<span class="unit">/100</span></span></div>
-    <div class="rblock"><span class="rlab">Confiance</span><span class="rval conf">◆◆◆</span></div>
+    <div class="rblock"><span class="rlab">Score</span><span class="rval tnum">65<span class="unit">/100</span></span></div>
+    <div class="rblock"><span class="rlab">Confiance</span><span class="rval conf">◆<span class="off">◇◇</span></span></div>
     <div class="rblock"><span class="rlab">Domaine</span><span class="rval dom">Embarqué</span></div>
     <div class="rmeta">Library · Actif</div>
   </div>
@@ -199,31 +199,31 @@ aside .src:hover{background:var(--signal-2)}
   <div class="grid">
     <div class="main">
       <h2>Problème résolu</h2>
-      <p class="lede">Fournir des bibliothèques de codecs multimédias et de traitement d&#x27;images (encodage, décodage, pipeline ISP) pour la série SoC CV18xx, qui est une famille de processeurs de vision basse consommation utilisés dans les applications d&#x27;IA en périphérie et d&#x27;IoT.</p>
+      <p class="lede">multimedia libs for cv18xx series soc.</p>
       <h2>Comment ça marche</h2>
-      <p>Le projet expose une couche Media Processing Interface (MPI) écrite en C, encapsulant les codecs matériels et les blocs ISP sur les puces CV18xx. Il inclut l&#x27;encodage/décodage vidéo (H.264, H.265, JPEG), la mise à l&#x27;échelle d&#x27;images, la conversion d&#x27;espace colorimétrique et les pilotes d&#x27;interface capteur. Les dépendances incluent le micrologiciel propriétaire du SoC et le chargeur d&#x27;amorçage ; la bibliothèque est généralement liée aux applications s&#x27;exécutant sur le noyau Linux embarqué ou RTOS fourni par le fournisseur.</p>
+      <p>See the project README</p>
       <h2>Spécificité chinoise</h2>
-      <p>Sophgo est une entreprise chinoise de semi-conducteurs sans usine spécialisée dans les SoC d&#x27;IA en périphérie et de traitement vidéo. La série CV18xx est leur architecture propriétaire ; cette bibliothèque MPI est la couche d&#x27;abstraction multimédia officielle pour leurs puces, étroitement couplée à la conception matérielle et à l&#x27;écosystème micrologiciel de Sophgo.</p>
+      <p>Chinese open-source project</p>
       <h2 class="key">Équivalent occidental</h2>
-      <div class="keyblock"><p style="margin:0">Qualcomm Snapdragon Heterogeneous Compute SDK (pour vidéo/ISP sur SoC mobiles), NVIDIA Tegra Multimedia API (pour encodage vidéo sur GPU embarqué), MediaTek NeuroPilot (pour SoC d&#x27;IA en périphérie avec support vidéo)</p><div class="hint">← le pont qu'un annuaire ne vous donnera jamais</div></div>
+      <div class="keyblock"><p style="margin:0">Not identified</p><div class="hint">← le pont qu'un annuaire ne vous donnera jamais</div></div>
     </div>
     <aside>
       <div class="r"><dt>Type</dt><dd>Library</dd></div>
       <div class="r"><dt>Langage</dt><dd>Anglais</dd></div>
-      <div class="r"><dt>Étoiles</dt><dd>2 ★</dd></div>
+      <div class="r"><dt>Étoiles</dt><dd>3 ★</dd></div>
       <div class="r"><dt>Forks</dt><dd>7</dd></div>
-      <div class="r"><dt>Dernier push</dt><dd>2026-06</dd></div>
+      <div class="r"><dt>Dernier push</dt><dd>2026-08</dd></div>
       <a class="src" href="https://github.com/sophgo/cvi_mpi" target="_blank" rel="noopener">Voir sur GitHub →</a>
     </aside>
   </div>
 
   <section class="related"><div class="lbl">Autres fiches en Embarqué</div>
-    <div class="rel-grid"><a class="rc" href="sophgo-sophgo-riscv-utils.fr.html"><div class="t"><span class="s tnum">★ 66</span><span class="tag emb"><span class="d"></span>Embarqué</span></div>
-  <h4>sophgo/sophgo-riscv-utils</h4><p>Fournir des utilitaires et des outils pour les systèmes embarqués basés sur RISC-V, en particulier ceux fabriqués par SOPHGO (un fournisseur de SoC chinois). Le projet répond au besoin de support spécifique à RISC-V pour le développement et l&#x27;exécution sur les lignes de processeurs de SOPHGO.</p></a>
-<a class="rc" href="bouffalolab-bouffalo-sdk.fr.html"><div class="t"><span class="s tnum">★ 66</span><span class="tag emb"><span class="d"></span>Embarqué</span></div>
-  <h4>bouffalolab/bouffalo_sdk</h4><p>BouffaloSDK is the IOT and MCU software development kit provided by the Bouffalo Lab Team, supports all the series of Bouffalo chips. Also it is the combination of bl_mcu_sdk and bl_iot_sdk</p></a>
-<a class="rc" href="espressifsystems-esp-skainet.fr.html"><div class="t"><span class="s tnum">★ 67</span><span class="tag emb"><span class="d"></span>Embarqué</span></div>
-  <h4>EspressifSystems/esp-skainet</h4><p>Fournir une solution complète de reconnaissance de mots-clés de réveil et de commandes vocales offline sur microcontrôleurs ESP32 avec faible consommation mémoire et latence réduite.</p></a></div></section>
+    <div class="rel-grid"><a class="rc" href="sophgo-osdrv.fr.html"><div class="t"><span class="s tnum">★ 65</span><span class="tag emb"><span class="d"></span>Embarqué</span></div>
+  <h4>sophgo/osdrv</h4><p>Fournir des pilotes en espace noyau pour la série SoC CV18xx, permettant l&#x27;abstraction matérielle bas niveau et le contrôle des périphériques sur cette famille de processeurs Sophgo.</p></a>
+<a class="rc" href="unitreerobotics-digital-servo.fr.html"><div class="t"><span class="s tnum">★ 65</span><span class="tag emb"><span class="d"></span>Embarqué</span></div>
+  <h4>unitreerobotics/digital_servo</h4><p>Fournir des implémentations de référence pour communiquer avec les servomoteurs articulaires sans balais Unitree J288/S288 sur un bus TTL semi-duplex (6 Mbps, 8N1). Permet à la fois les tests basés sur PC via terminal série et l&#x27;intégration embarquée sur microcontrôleurs STM32 sans dépendre de pilotes propriétaires fermés.</p></a>
+<a class="rc" href="bouffalolab-bouffalo-isp.fr.html"><div class="t"><span class="s tnum">★ 65</span><span class="tag emb"><span class="d"></span>Embarqué</span></div>
+  <h4>bouffalolab/bouffalo_isp</h4><p>Fournir un outil ISP (In-System Programming) hébergé sous Linux pour flasher le firmware dans les MCU RISC-V et ARM de BouffaloLab (séries BL602, BL702, BL616) via interface série, remplaçant les utilitaires de flashage propriétaires Windows uniquement du fournisseur.</p></a></div></section>
 
   <div class="nlbox">
     <h3>Cette fiche vous a été utile ?</h3>

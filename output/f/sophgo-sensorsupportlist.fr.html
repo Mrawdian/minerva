@@ -4,19 +4,19 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>sophgo/SensorSupportList — Minerva (FR)</title>
-<meta name="description" content="Fournir des pilotes de capteurs pour la série CV18xx SoC (une ligne de processeurs de vision de Sophgo). Permet l&#x27;intégration de capteurs de caméra et de périphériques associés avec les systèmes de v…">
+<meta name="description" content="sensor drivers for cv18xx series soc.">
 <link rel="icon" type="image/svg+xml" href="../favicon.svg">
 <link rel="canonical" href="/f/sophgo-sensorsupportlist.fr.html"><link rel="alternate" hreflang="en" href="/f/sophgo-sensorsupportlist.html"><link rel="alternate" hreflang="fr" href="/f/sophgo-sensorsupportlist.fr.html">
 <meta property="og:type" content="article">
 <meta property="og:title" content="sophgo/SensorSupportList — Minerva (FR)">
-<meta property="og:description" content="Fournir des pilotes de capteurs pour la série CV18xx SoC (une ligne de processeurs de vision de Sophgo). Permet l&#x27;intégration de capteurs de caméra et de périphériques associés avec les systèmes de v…">
+<meta property="og:description" content="sensor drivers for cv18xx series soc.">
 <meta property="og:url" content="/f/sophgo-sensorsupportlist.fr.html">
 <meta property="og:image" content="/og.png">
 <meta property="og:site_name" content="Minerva">
 <meta property="og:locale" content="fr_FR">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="sophgo/SensorSupportList — Minerva (FR)">
-<meta name="twitter:description" content="Fournir des pilotes de capteurs pour la série CV18xx SoC (une ligne de processeurs de vision de Sophgo). Permet l&#x27;intégration de capteurs de caméra et de périphériques associés avec les systèmes de v…">
+<meta name="twitter:description" content="sensor drivers for cv18xx series soc.">
 <style>
 :root{
   --paper:#F5F6F4; --surface:#FFFFFF; --surface-2:#FAFBF9;
@@ -174,8 +174,8 @@ aside .src:hover{background:var(--signal-2)}
   </span>
 </div></nav>
 <div class="status-line"><div class="wrap srow">
-  <span class="seg"><span class="dot"></span><span class="accent">Snapshot</span>&nbsp;· as of 2026-08-17</span>
-  <span class="seg">105 fiches</span>
+  <span class="seg"><span class="dot"></span><span class="accent">Snapshot</span>&nbsp;· as of 2026-08-24</span>
+  <span class="seg">104 fiches</span>
   <span class="seg">reading: fiche · FR</span>
   <span class="ticks"><i></i><i></i><i></i><i></i><i></i></span>
 </div></div>
@@ -184,46 +184,46 @@ aside .src:hover{background:var(--signal-2)}
   <div class="crumb"><a href="../index.html">Home</a><span class="sep">/</span><a href="../dashboard.html">Dashboard</a><span class="sep">/</span><a href="../dashboard.html?owner=sophgo">sophgo</a><span class="sep">/</span><span>SensorSupportList</span><span style="margin-left:auto"><a href="sophgo-sensorsupportlist.html" style="color:var(--signal);font-weight:600">EN →</a></span></div>
 
   <div class="readout" style="--dom-color:var(--d-emb);margin-top:16px">
-    <div class="rblock"><span class="rlab">Score</span><span class="rval tnum">60<span class="unit">/100</span></span></div>
-    <div class="rblock"><span class="rlab">Confiance</span><span class="rval conf">◆◆◆</span></div>
+    <div class="rblock"><span class="rlab">Score</span><span class="rval tnum">71<span class="unit">/100</span></span></div>
+    <div class="rblock"><span class="rlab">Confiance</span><span class="rval conf">◆<span class="off">◇◇</span></span></div>
     <div class="rblock"><span class="rlab">Domaine</span><span class="rval dom">Embarqué</span></div>
-    <div class="rmeta">Driver · Actif</div>
+    <div class="rmeta">Library · Actif</div>
   </div>
   <div class="rlegend"><b>score</b> = un signal de tri grossier, 0–100 (similarité sémantique au créneau embarqué/IoT/robotique/edge-AI + bonus d'activité) — une clé de tri, pas une mesure de l'écosystème · <b>marques ◆</b> = niveau de confiance (qualité des données : profondeur d'enrichissement, métadonnées, récence) — méthode dans docs/SCORING.md</div>
 
   <header class="fhead">
     <h1>sophgo/SensorSupportList</h1>
-    <div class="tags"><span class="tag emb"><span class="d"></span>Embarqué</span><span class="tag plain">Driver</span><span class="tag plain">Actif</span></div>
+    <div class="tags"><span class="tag emb"><span class="d"></span>Embarqué</span><span class="tag plain">Library</span><span class="tag plain">Actif</span></div>
   </header>
 
   <div class="grid">
     <div class="main">
       <h2>Problème résolu</h2>
-      <p class="lede">Fournir des pilotes de capteurs pour la série CV18xx SoC (une ligne de processeurs de vision de Sophgo). Permet l&#x27;intégration de capteurs de caméra et de périphériques associés avec les systèmes de vision embarquée basés sur CV18xx.</p>
+      <p class="lede">sensor drivers for cv18xx series soc.</p>
       <h2>Comment ça marche</h2>
-      <p>Une collection de pilotes ciblant la famille SoC CV18xx de Sophgo, écrite en C. Le projet semble être une liste organisée ou un référentiel d&#x27;implémentations d&#x27;interfaces de capteurs (I2C, CSI, analogique) compatibles avec le matériel CV18xx. Les modules de pilotes spécifiques, les dépendances et les détails du système de compilation ne sont pas accessibles à partir des métadonnées disponibles.</p>
+      <p>See the project README</p>
       <h2>Spécificité chinoise</h2>
-      <p>Sophgo est une entreprise chinoise de semi-conducteurs sans usine spécialisée dans les processeurs d&#x27;IA et de vision. La série CV18xx est la ligne SoC propriétaire de Sophgo pour les applications d&#x27;IA en périphérie et de traitement vidéo, largement utilisée dans les déploiements chinois de surveillance, de robotique et d&#x27;IoT.</p>
+      <p>Chinese open-source project</p>
       <h2 class="key">Équivalent occidental</h2>
-      <div class="keyblock"><p style="margin:0">Pilotes de capteurs de caméra du noyau Linux (sous-système V4L2), paquets de pilotes de caméra NXP i.MX, HAL de caméra Qualcomm Snapdragon</p><div class="hint">← le pont qu'un annuaire ne vous donnera jamais</div></div>
+      <div class="keyblock"><p style="margin:0">Not identified</p><div class="hint">← le pont qu'un annuaire ne vous donnera jamais</div></div>
     </div>
     <aside>
-      <div class="r"><dt>Type</dt><dd>Driver</dd></div>
+      <div class="r"><dt>Type</dt><dd>Library</dd></div>
       <div class="r"><dt>Langage</dt><dd>Anglais</dd></div>
       <div class="r"><dt>Étoiles</dt><dd>4 ★</dd></div>
       <div class="r"><dt>Forks</dt><dd>7</dd></div>
-      <div class="r"><dt>Dernier push</dt><dd>2026-06</dd></div>
+      <div class="r"><dt>Dernier push</dt><dd>2026-08</dd></div>
       <a class="src" href="https://github.com/sophgo/SensorSupportList" target="_blank" rel="noopener">Voir sur GitHub →</a>
     </aside>
   </div>
 
   <section class="related"><div class="lbl">Autres fiches en Embarqué</div>
-    <div class="rel-grid"><a class="rc" href="sophgo-bootloader-arm64.fr.html"><div class="t"><span class="s tnum">★ 61</span><span class="tag emb"><span class="d"></span>Embarqué</span></div>
-  <h4>sophgo/bootloader-arm64</h4><p>Fournir un bootloader pour les puces accélérateurs Sophon AI (SoC BM1684) qui initialise le matériel ARM64, charge le noyau Linux et établit un pont entre le firmware propriétaire Sophon et le flux de démarrage du système d&#x27;exploitation open-source.</p></a>
-<a class="rc" href="alibaba-dummy-risc-v-vpu.fr.html"><div class="t"><span class="s tnum">★ 59</span><span class="tag emb"><span class="d"></span>Embarqué</span></div>
-  <h4>alibaba/Dummy-RISC-V-VPU</h4><p>Aucun README ou description accessible ; le nom du projet suggère un simulateur ou émulateur d&#x27;unité de traitement vectoriel RISC-V (VPU), probablement destiné à la validation d&#x27;ensemble d&#x27;instructions ou à l&#x27;exploration architecturale des extensions vectorielles RISC-V, mais la déclaration de problème concrète ne peut pas être vérifiée.</p></a>
-<a class="rc" href="sophgo-cviruntime.fr.html"><div class="t"><span class="s tnum">★ 59</span><span class="tag emb"><span class="d"></span>Embarqué</span></div>
-  <h4>sophgo/cviruntime</h4><p>Fournir une bibliothèque runtime et un SDK pour développer des applications ciblant les accélérateurs TPU SOPHGO (séries CV181x, BM1880v2). Permet l&#x27;exécution d&#x27;inférence sur matériel TPU avec capacités de chargement de modèles, d&#x27;exécution et de profilage.</p></a></div></section>
+    <div class="rel-grid"><a class="rc" href="paddlepaddle-paddleocr.fr.html"><div class="t"><span class="s tnum">★ 71</span><span class="tag emb"><span class="d"></span>Embarqué</span></div>
+  <h4>paddlepaddle/PaddleOCR</h4><p>Convertir des documents PDF et des images en données structurées prêtes pour les LLM (JSON/Markdown) avec une haute précision. Fournir une reconnaissance optique de caractères multilingue (100+ langues) et une analyse de la mise en page des documents pour les applications RAG et IA agentive sans dépendre de solutions commerciales propriétaires.</p></a>
+<a class="rc" href="sophgo-libsophon.fr.html"><div class="t"><span class="s tnum">★ 71</span><span class="tag emb"><span class="d"></span>Embarqué</span></div>
+  <h4>sophgo/libsophon</h4><p>Sophgo AI chips driver and runtime library.</p></a>
+<a class="rc" href="rtthread-smart-build.fr.html"><div class="t"><span class="s tnum">★ 71</span><span class="tag emb"><span class="d"></span>Embarqué</span></div>
+  <h4>rtthread/smart-build</h4><p>Automatiser la compilation croisée du noyau RT-Thread, du rootfs (busybox) et du bootloader pour cibles ARM (qemuarm64, etc.) via une chaîne Bitbake/OpenEmbedded, en évitant la configuration manuelle répétitive des toolchains et des étapes de build.</p></a></div></section>
 
   <div class="nlbox">
     <h3>Cette fiche vous a été utile ?</h3>

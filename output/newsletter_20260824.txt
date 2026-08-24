@@ -1,11 +1,11 @@
-Subject: Minerva — Open Source China Intelligence — 2026-08-17
+Subject: Minerva — Open Source China Intelligence — 2026-08-24
 
 ========================================================================
-  MINERVA NEWSLETTER — 2026-08-17
+  MINERVA NEWSLETTER — 2026-08-24
   Open source China intelligence: embedded / IoT / robotics / edge-AI
 ========================================================================
 
-Last pipeline run: 2026-08-17T07:01:24+00:00
+Last pipeline run: 2026-08-24T07:04:48+00:00
 
 ------------------------------------------------------------------------
 TOP 5 FINDINGS (by relevance score)
@@ -15,11 +15,11 @@ TOP 5 FINDINGS (by relevance score)
    Provides an RTOS-based SDK for the ESP8266 microcontroller with FreeRTOS, lwIP, and Wi-Fi drivers integrated. Addresses the need for a complete development environment to build networked embedded app…
    https://gitee.com/EspressifSystems/ESP8266_RTOS_SDK
 
-2. [100/100] rtthread/rt-thread  (★5532)
+2. [100/100] rtthread/rt-thread  (★5540)
    RT-Thread是一个来自中国的开源物联网操作系统，它提供了非常强的可伸缩能力：从一个可以运行在ARM Cortex-M0芯片上的极小内核，到中等的ARM Cortex-M3/4/7系统，甚至是多核，64位的ARM Cortex-A，MIPS32/64处理器的功能丰富系统
    https://gitee.com/rtthread/rt-thread
 
-3. [ 89/100] EspressifSystems/esp-idf  (★878)
+3. [ 89/100] EspressifSystems/esp-idf  (★879)
    ESP-IDF 是由乐鑫官方推出的针对 ESP32 和 ESP32-S2 系列芯片的开发框架。ESP-IDF 国内镜像仓库，Issues 和 PRs 请仍旧提交到 github。
    https://gitee.com/EspressifSystems/esp-idf
 
@@ -27,7 +27,7 @@ TOP 5 FINDINGS (by relevance score)
    Compiling neural network models (TensorFlow, ONNX, etc.) into optimized code for Kendryte AI accelerators (K210, K510, K230), handling quantization and operation scheduling on specialized compute uni…
    https://github.com/kendryte/nncase
 
-5. [ 82/100] Tencent/ncnn  (★303)
+5. [ 82/100] Tencent/ncnn  (★304)
    ncnn ncnn 是腾讯优图实验室首个开源项目，是一个为手机端极致优化的高性能神经网络前向计算框架
    https://gitee.com/Tencent/ncnn
 
@@ -35,26 +35,26 @@ TOP 5 FINDINGS (by relevance score)
 KEY STATS
 ------------------------------------------------------------------------
 
-  Active fiches         : 105
+  Active fiches         : 104
   Monitored accounts    : 14
-  Edge AI repos         : 30
+  Edge AI repos         : 28
   Big tech repos (8 orgs): 13
 
   Distribution by domain:
-    - Embedded                 61  (58.1%)
-    - Edge AI                  30  (28.6%)
-    - Robotics                 16  (15.2%)
+    - Embedded                 62  (59.6%)
+    - Edge AI                  28  (26.9%)
+    - Robotics                 16  (15.4%)
     - IoT                       4  (3.8%)
 
   Distribution by type:
-    - Library                  35  (33.3%)
-    - Framework                24  (22.9%)
-    - Tool                     13  (12.4%)
-    - Board Support Package    10  (9.5%)
-    - Application               8  (7.6%)
-    - Driver                    6  (5.7%)
+    - Library                  37  (35.6%)
+    - Framework                23  (22.1%)
+    - Tool                     13  (12.5%)
+    - Board Support Package     9  (8.7%)
+    - Application               8  (7.7%)
+    - Documentation             5  (4.8%)
 
 ------------------------------------------------------------------------
 See the interactive dashboard: output/dashboard.html
-Rich version                 : output/newsletter_20260817.html
+Rich version                 : output/newsletter_20260824.html
 ------------------------------------------------------------------------
