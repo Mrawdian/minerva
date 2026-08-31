@@ -4,19 +4,19 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>sophgo/ramdisk — Minerva (FR)</title>
-<meta name="description" content="Générer des images de système de fichiers racine et des binaires d&#x27;arborescence de périphériques (ITB) pour la série de SoC CV18xx, avec support des superpositions de fichiers indépendantes de la pla…">
+<meta name="description" content="rootfs config for cv18xx series soc.">
 <link rel="icon" type="image/svg+xml" href="../favicon.svg">
 <link rel="canonical" href="/f/sophgo-ramdisk.fr.html"><link rel="alternate" hreflang="en" href="/f/sophgo-ramdisk.html"><link rel="alternate" hreflang="fr" href="/f/sophgo-ramdisk.fr.html">
 <meta property="og:type" content="article">
 <meta property="og:title" content="sophgo/ramdisk — Minerva (FR)">
-<meta property="og:description" content="Générer des images de système de fichiers racine et des binaires d&#x27;arborescence de périphériques (ITB) pour la série de SoC CV18xx, avec support des superpositions de fichiers indépendantes de la pla…">
+<meta property="og:description" content="rootfs config for cv18xx series soc.">
 <meta property="og:url" content="/f/sophgo-ramdisk.fr.html">
 <meta property="og:image" content="/og.png">
 <meta property="og:site_name" content="Minerva">
 <meta property="og:locale" content="fr_FR">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="sophgo/ramdisk — Minerva (FR)">
-<meta name="twitter:description" content="Générer des images de système de fichiers racine et des binaires d&#x27;arborescence de périphériques (ITB) pour la série de SoC CV18xx, avec support des superpositions de fichiers indépendantes de la pla…">
+<meta name="twitter:description" content="rootfs config for cv18xx series soc.">
 <style>
 :root{
   --paper:#F5F6F4; --surface:#FFFFFF; --surface-2:#FAFBF9;
@@ -174,8 +174,8 @@ aside .src:hover{background:var(--signal-2)}
   </span>
 </div></nav>
 <div class="status-line"><div class="wrap srow">
-  <span class="seg"><span class="dot"></span><span class="accent">Snapshot</span>&nbsp;· as of 2026-08-24</span>
-  <span class="seg">104 fiches</span>
+  <span class="seg"><span class="dot"></span><span class="accent">Snapshot</span>&nbsp;· as of 2026-08-31</span>
+  <span class="seg">106 fiches</span>
   <span class="seg">reading: fiche · FR</span>
   <span class="ticks"><i></i><i></i><i></i><i></i><i></i></span>
 </div></div>
@@ -184,46 +184,46 @@ aside .src:hover{background:var(--signal-2)}
   <div class="crumb"><a href="../index.html">Home</a><span class="sep">/</span><a href="../dashboard.html">Dashboard</a><span class="sep">/</span><a href="../dashboard.html?owner=sophgo">sophgo</a><span class="sep">/</span><span>ramdisk</span><span style="margin-left:auto"><a href="sophgo-ramdisk.html" style="color:var(--signal);font-weight:600">EN →</a></span></div>
 
   <div class="readout" style="--dom-color:var(--d-emb);margin-top:16px">
-    <div class="rblock"><span class="rlab">Score</span><span class="rval tnum">47<span class="unit">/100</span></span></div>
-    <div class="rblock"><span class="rlab">Confiance</span><span class="rval conf">◆◆◆</span></div>
+    <div class="rblock"><span class="rlab">Score</span><span class="rval tnum">53<span class="unit">/100</span></span></div>
+    <div class="rblock"><span class="rlab">Confiance</span><span class="rval conf">◆<span class="off">◇◇</span></span></div>
     <div class="rblock"><span class="rlab">Domaine</span><span class="rval dom">Embarqué</span></div>
-    <div class="rmeta">Board Support Package · Actif</div>
+    <div class="rmeta">Library · Actif</div>
   </div>
   <div class="rlegend"><b>score</b> = un signal de tri grossier, 0–100 (similarité sémantique au créneau embarqué/IoT/robotique/edge-AI + bonus d'activité) — une clé de tri, pas une mesure de l'écosystème · <b>marques ◆</b> = niveau de confiance (qualité des données : profondeur d'enrichissement, métadonnées, récence) — méthode dans docs/SCORING.md</div>
 
   <header class="fhead">
     <h1>sophgo/ramdisk</h1>
-    <div class="tags"><span class="tag emb"><span class="d"></span>Embarqué</span><span class="tag plain">Board Support Package</span><span class="tag plain">Actif</span></div>
+    <div class="tags"><span class="tag emb"><span class="d"></span>Embarqué</span><span class="tag plain">Library</span><span class="tag plain">Actif</span></div>
   </header>
 
   <div class="grid">
     <div class="main">
       <h2>Problème résolu</h2>
-      <p class="lede">Générer des images de système de fichiers racine et des binaires d&#x27;arborescence de périphériques (ITB) pour la série de SoC CV18xx, avec support des superpositions de fichiers indépendantes de la plateforme et spécifiques à la plateforme lors de la compilation.</p>
+      <p class="lede">rootfs config for cv18xx series soc.</p>
       <h2>Comment ça marche</h2>
-      <p>Le projet organise les composants rootfs en prebuild (en-têtes et bibliothèques de compilation croisée), target (répertoires communs et de superposition fusionnés au moment de la compilation), tools (scripts pour la génération d&#x27;ITB) et configs (listes de fichiers txt et fichiers source d&#x27;arborescence de périphériques ITS). Le processus de compilation fusionne les fichiers de superposition dans la base commune, puis génère les artefacts finaux rootfs et ITB. Écrit en scripts shell/build ; dépend du compilateur d&#x27;arborescence de périphériques et de la chaîne d&#x27;outils de compilation croisée.</p>
+      <p>we have these folders in this repo:</p>
       <h2>Spécificité chinoise</h2>
-      <p>Sophgo est une entreprise chinoise de semi-conducteurs spécialisée dans les accélérateurs d&#x27;IA et les SoC ; CV18xx est leur série propriétaire de processeurs embarqués. Ce projet est la configuration rootfs officielle pour la plateforme CV18xx de Sophgo.</p>
+      <p>Chinese open-source project</p>
       <h2 class="key">Équivalent occidental</h2>
-      <div class="keyblock"><p style="margin:0">Buildroot (Linux Foundation), Yocto Project (Linux Foundation) — tous deux fournissent des mécanismes de génération de rootfs et de superposition pour les systèmes Linux embarqués.</p><div class="hint">← le pont qu'un annuaire ne vous donnera jamais</div></div>
+      <div class="keyblock"><p style="margin:0">Not identified</p><div class="hint">← le pont qu'un annuaire ne vous donnera jamais</div></div>
     </div>
     <aside>
-      <div class="r"><dt>Type</dt><dd>Board Support Package</dd></div>
+      <div class="r"><dt>Type</dt><dd>Library</dd></div>
       <div class="r"><dt>Langage</dt><dd>Anglais</dd></div>
       <div class="r"><dt>Étoiles</dt><dd>1 ★</dd></div>
-      <div class="r"><dt>Forks</dt><dd>12</dd></div>
-      <div class="r"><dt>Dernier push</dt><dd>2026-06</dd></div>
+      <div class="r"><dt>Forks</dt><dd>11</dd></div>
+      <div class="r"><dt>Dernier push</dt><dd>2026-08</dd></div>
       <a class="src" href="https://github.com/sophgo/ramdisk" target="_blank" rel="noopener">Voir sur GitHub →</a>
     </aside>
   </div>
 
   <section class="related"><div class="lbl">Autres fiches en Embarqué</div>
-    <div class="rel-grid"><a class="rc" href="sipeed-maixpy.fr.html"><div class="t"><span class="s tnum">★ 47</span><span class="tag emb"><span class="d"></span>Embarqué</span></div>
-  <h4>Sipeed/MaixPy</h4><p>Sipeed/MaixPy 镜像仓库，star、 提问、贡献代码请到 https://github.com/sipeed/maixpy</p></a>
-<a class="rc" href="sophgo-bootloader-riscv.fr.html"><div class="t"><span class="s tnum">★ 46</span><span class="tag emb"><span class="d"></span>Embarqué</span></div>
-  <h4>sophgo/bootloader-riscv</h4><p>Information not available</p></a>
-<a class="rc" href="sipeed-maixcdk.fr.html"><div class="t"><span class="s tnum">★ 45</span><span class="tag emb"><span class="d"></span>Embarqué</span></div>
-  <h4>Sipeed/MaixCDK</h4><p>https://github.com/Sipeed/MaixCDK 同步镜像</p></a></div></section>
+    <div class="rel-grid"><a class="rc" href="sophgo-sophon-sail.fr.html"><div class="t"><span class="s tnum">★ 54</span><span class="tag emb"><span class="d"></span>Embarqué</span></div>
+  <h4>sophgo/sophon-sail</h4><p>Simplifier le déploiement de modèles d&#x27;inférence d&#x27;apprentissage profond et de traitement d&#x27;images/vidéos sur les accélérateurs TPU SOPHON en fournissant des pipelines unifiés accélérés matériellement pour le décodage, le prétraitement et l&#x27;inférence avec liaisons C++ et Python.</p></a>
+<a class="rc" href="sophgo-tpu-megatron-patch.fr.html"><div class="t"><span class="s tnum">★ 54</span><span class="tag emb"><span class="d"></span>Embarqué</span></div>
+  <h4>sophgo/TPU-Megatron-Patch</h4><p>Adapter le framework d&#x27;entraînement distribué Megatron pour s&#x27;exécuter sur les accélérateurs TPU SOPHGO pour l&#x27;entraînement de modèles de langage volumineux (LLM) et de modèles de langage visuel (VLM), en remplaçant les pipelines d&#x27;entraînement centrés sur GPU par un entraînement distribué optimisé pour TPU.</p></a>
+<a class="rc" href="openharmony-device-board-hihope.fr.html"><div class="t"><span class="s tnum">★ 54</span><span class="tag emb"><span class="d"></span>Embarqué</span></div>
+  <h4>openharmony/device_board_hihope</h4><p>Aucun README ou description disponible ; le dépôt semble être un stub de package de support de carte pour OpenHarmony OS ciblant les cartes de développement HiHope, mais les problèmes techniques spécifiques ou les cibles matérielles ne peuvent pas être déterminés à partir des métadonnées accessibles.</p></a></div></section>
 
   <div class="nlbox">
     <h3>Cette fiche vous a été utile ?</h3>

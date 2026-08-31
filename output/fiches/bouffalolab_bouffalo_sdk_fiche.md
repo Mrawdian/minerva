@@ -13,7 +13,7 @@
 **BouffaloSDK** is the IOT and MCU software development kit provided by the Bouffalo Lab Team, supports all the series of Bouffalo chips. Also it is the combination of **bl_mcu_s
 **Chinese specificity:** Chinese open-source project
 **Western equivalent:** Not identified
-**Maturity:** Active (★ 493, 177 forks, updated 2026-08)
+**Maturity:** Active (★ 495, 179 forks, updated 2026-08)
 **Language:** Bilingual CN-EN
 **GitHub:** https://github.com/bouffalolab/bouffalo_sdk
 ---

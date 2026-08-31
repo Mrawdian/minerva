@@ -16,7 +16,7 @@ K230 RTOS Only SDK 是基于K230芯片和RT-Smart实时操作系统的软件开�
 - **下载地址**: [Daily Build镜像](https://kendryte-download.canaan-creative.com/developer/releases/canmv_k230_micro
 **Chinese specificity:** Chinese open-source project
 **Western equivalent:** Not identified
-**Maturity:** Active (★ 15, 16 forks, updated 2026-08)
+**Maturity:** Active (★ 15, 18 forks, updated 2026-08)
 **Language:** Bilingual CN-EN
 **GitHub:** https://github.com/kendryte/k230_rtos_sdk
 ---

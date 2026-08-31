@@ -4,19 +4,19 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>unitreerobotics/unitree_mujoco — Minerva (FR)</title>
-<meta name="description" content="Permettre un transfert sim-to-real transparent des programmes de contrôle écrits pour les robots quadrupèdes Unitree (Go2, B2, H1, G1, etc.) en fournissant un simulateur basé sur MuJoCo qui parle nat…">
+<meta name="description" content="Information not available">
 <link rel="icon" type="image/svg+xml" href="../favicon.svg">
 <link rel="canonical" href="/f/unitreerobotics-unitree-mujoco.fr.html"><link rel="alternate" hreflang="en" href="/f/unitreerobotics-unitree-mujoco.html"><link rel="alternate" hreflang="fr" href="/f/unitreerobotics-unitree-mujoco.fr.html">
 <meta property="og:type" content="article">
 <meta property="og:title" content="unitreerobotics/unitree_mujoco — Minerva (FR)">
-<meta property="og:description" content="Permettre un transfert sim-to-real transparent des programmes de contrôle écrits pour les robots quadrupèdes Unitree (Go2, B2, H1, G1, etc.) en fournissant un simulateur basé sur MuJoCo qui parle nat…">
+<meta property="og:description" content="Information not available">
 <meta property="og:url" content="/f/unitreerobotics-unitree-mujoco.fr.html">
 <meta property="og:image" content="/og.png">
 <meta property="og:site_name" content="Minerva">
 <meta property="og:locale" content="fr_FR">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="unitreerobotics/unitree_mujoco — Minerva (FR)">
-<meta name="twitter:description" content="Permettre un transfert sim-to-real transparent des programmes de contrôle écrits pour les robots quadrupèdes Unitree (Go2, B2, H1, G1, etc.) en fournissant un simulateur basé sur MuJoCo qui parle nat…">
+<meta name="twitter:description" content="Information not available">
 <style>
 :root{
   --paper:#F5F6F4; --surface:#FFFFFF; --surface-2:#FAFBF9;
@@ -174,8 +174,8 @@ aside .src:hover{background:var(--signal-2)}
   </span>
 </div></nav>
 <div class="status-line"><div class="wrap srow">
-  <span class="seg"><span class="dot"></span><span class="accent">Snapshot</span>&nbsp;· as of 2026-08-24</span>
-  <span class="seg">104 fiches</span>
+  <span class="seg"><span class="dot"></span><span class="accent">Snapshot</span>&nbsp;· as of 2026-08-31</span>
+  <span class="seg">106 fiches</span>
   <span class="seg">reading: fiche · FR</span>
   <span class="ticks"><i></i><i></i><i></i><i></i><i></i></span>
 </div></div>
@@ -183,47 +183,47 @@ aside .src:hover{background:var(--signal-2)}
 <div class="wrap">
   <div class="crumb"><a href="../index.html">Home</a><span class="sep">/</span><a href="../dashboard.html">Dashboard</a><span class="sep">/</span><a href="../dashboard.html?owner=unitreerobotics">unitreerobotics</a><span class="sep">/</span><span>unitree_mujoco</span><span style="margin-left:auto"><a href="unitreerobotics-unitree-mujoco.html" style="color:var(--signal);font-weight:600">EN →</a></span></div>
 
-  <div class="readout" style="--dom-color:var(--d-rob);margin-top:16px">
-    <div class="rblock"><span class="rlab">Score</span><span class="rval tnum">70<span class="unit">/100</span></span></div>
-    <div class="rblock"><span class="rlab">Confiance</span><span class="rval conf">◆◆◆</span></div>
-    <div class="rblock"><span class="rlab">Domaine</span><span class="rval dom">Robotique</span></div>
-    <div class="rmeta">Tool · Stable</div>
+  <div class="readout" style="--dom-color:var(--d-edge);margin-top:16px">
+    <div class="rblock"><span class="rlab">Score</span><span class="rval tnum">68<span class="unit">/100</span></span></div>
+    <div class="rblock"><span class="rlab">Confiance</span><span class="rval conf">◆<span class="off">◇◇</span></span></div>
+    <div class="rblock"><span class="rlab">Domaine</span><span class="rval dom">Edge AI</span></div>
+    <div class="rmeta">Library · Stable</div>
   </div>
   <div class="rlegend"><b>score</b> = un signal de tri grossier, 0–100 (similarité sémantique au créneau embarqué/IoT/robotique/edge-AI + bonus d'activité) — une clé de tri, pas une mesure de l'écosystème · <b>marques ◆</b> = niveau de confiance (qualité des données : profondeur d'enrichissement, métadonnées, récence) — méthode dans docs/SCORING.md</div>
 
   <header class="fhead">
     <h1>unitreerobotics/unitree_mujoco</h1>
-    <div class="tags"><span class="tag rob"><span class="d"></span>Robotique</span><span class="tag plain">Tool</span><span class="tag plain">Stable</span></div>
+    <div class="tags"><span class="tag edge"><span class="d"></span>Edge AI</span><span class="tag plain">Library</span><span class="tag plain">Stable</span></div>
   </header>
 
   <div class="grid">
     <div class="main">
       <h2>Problème résolu</h2>
-      <p class="lede">Permettre un transfert sim-to-real transparent des programmes de contrôle écrits pour les robots quadrupèdes Unitree (Go2, B2, H1, G1, etc.) en fournissant un simulateur basé sur MuJoCo qui parle nativement le protocole de messages Unitree SDK2 (LowCmd, LowState, SportModeState, IMUState) sans nécessiter de réécriture de code.</p>
+      <p class="lede">Information not available</p>
       <h2>Comment ça marche</h2>
-      <p>Le simulateur encapsule le moteur physique MuJoCo avec des liaisons Unitree SDK2 en C++ (principal) et variantes Python. Il accepte des commandes moteur bas niveau (LowCmd) et retourne l&#x27;état moteur (LowState) et les données IMU/odométrie (SportModeState, IMUState) via des types de messages basés sur DDS (unitree_go IDL pour Go2/B2/H1, unitree_hg IDL pour G1/H1-2). Les morphologies de robot sont définies au format MJCF ; un outil de génération de terrain est inclus. Dépendances : libyaml-cpp, libspdlog, libboost, libglfw3, MuJoCo 3.3.6+, unitree_sdk2.</p>
+      <p># Introduction</p>
       <h2>Spécificité chinoise</h2>
-      <p>Hébergé sur Gitee/GitHub par unitreerobotics ; aucune spécificité chinoise particulière au-delà de l&#x27;auteur. Unitree Robotics est un fabricant chinois de robotique quadrupède, mais le simulateur utilise des outils open-source occidentaux (MuJoCo par DeepMind, DDS standard) sans lien propriétaire à une puce ou conformité spécifique au fournisseur.</p>
+      <p>Chinese open-source project</p>
       <h2 class="key">Équivalent occidental</h2>
-      <div class="keyblock"><p style="margin:0">Gazebo (Open Robotics) avec plugin Unitree personnalisé, Isaac Sim (NVIDIA) avec adaptateurs spécifiques au robot, CoppeliaSim avec liaisons Unitree SDK — mais aucun n&#x27;offre une compatibilité native et clé en main avec les messages Unitree SDK2.</p><div class="hint">← le pont qu'un annuaire ne vous donnera jamais</div></div>
+      <div class="keyblock"><p style="margin:0">Not identified</p><div class="hint">← le pont qu'un annuaire ne vous donnera jamais</div></div>
     </div>
     <aside>
-      <div class="r"><dt>Type</dt><dd>Tool</dd></div>
+      <div class="r"><dt>Type</dt><dd>Library</dd></div>
       <div class="r"><dt>Langage</dt><dd>Anglais</dd></div>
-      <div class="r"><dt>Étoiles</dt><dd>1 111 ★</dd></div>
-      <div class="r"><dt>Forks</dt><dd>378</dd></div>
-      <div class="r"><dt>Dernier push</dt><dd>2026-06</dd></div>
+      <div class="r"><dt>Étoiles</dt><dd>1 159 ★</dd></div>
+      <div class="r"><dt>Forks</dt><dd>393</dd></div>
+      <div class="r"><dt>Dernier push</dt><dd>2026-08</dd></div>
       <a class="src" href="https://github.com/unitreerobotics/unitree_mujoco" target="_blank" rel="noopener">Voir sur GitHub →</a>
     </aside>
   </div>
 
-  <section class="related"><div class="lbl">Autres fiches en Robotique</div>
-    <div class="rel-grid"><a class="rc" href="unitreerobotics-unitree-ros2.fr.html"><div class="t"><span class="s tnum">★ 71</span><span class="tag rob"><span class="d"></span>Robotique</span></div>
-  <h4>unitreerobotics/unitree_ros2</h4><p>Activer la communication native ROS2 avec les robots quadrupèdes Unitree (Go2, B2, H1) en exposant leur SDK basé sur CycloneDDS en tant que types de messages ROS2 standard, éliminant le besoin d&#x27;encapsuler les interfaces SDK propriétaires.</p></a>
-<a class="rc" href="unitreerobotics-unitree-model.fr.html"><div class="t"><span class="s tnum">★ 69</span><span class="tag rob"><span class="d"></span>Robotique</span></div>
-  <h4>unitreerobotics/unitree_model</h4><p>Fournir des modèles de robots 3D (format URDF) pour les robots quadrupèdes et humanoïdes Unitree pour permettre la simulation dans les moteurs physiques et les frameworks de robotique sans rétro-ingénierie de fichiers CAO propriétaires.</p></a>
-<a class="rc" href="unitreerobotics-qmini.fr.html"><div class="t"><span class="s tnum">★ 72</span><span class="tag rob"><span class="d"></span>Robotique</span></div>
-  <h4>unitreerobotics/Qmini</h4><p>Fournir une plateforme de robot bipède entièrement open-source et imprimable en 3D avec documentation matérielle (nomenclature, fichiers STEP, schémas électriques), pile logicielle (URDF, intégration ROS via RoboTamer4Qmini) et procédures d&#x27;assemblage pour réduire les barrières à l&#x27;entrée pour les amateurs de robotique, les éducateurs et les chercheurs.</p></a></div></section>
+  <section class="related"><div class="lbl">Autres fiches en Edge AI</div>
+    <div class="rel-grid"><a class="rc" href="alibaba-id2-client-sdk.fr.html"><div class="t"><span class="s tnum">★ 67</span><span class="tag edge"><span class="d"></span>Edge AI</span></div>
+  <h4>alibaba/id2_client_sdk</h4><p>Fournir une identité numérique inviolable et non-contrefaçable pour les appareils IoT, garantissant l&#x27;authentification et l&#x27;intégrité dans les écosystèmes connectés.</p></a>
+<a class="rc" href="unitreerobotics-unitree-ros.fr.html"><div class="t"><span class="s tnum">★ 70</span><span class="tag edge"><span class="d"></span>Edge AI</span></div>
+  <h4>unitreerobotics/unitree_ros</h4><p>Information not available</p></a>
+<a class="rc" href="unitreerobotics-unitree-sdk2.fr.html"><div class="t"><span class="s tnum">★ 66</span><span class="tag edge"><span class="d"></span>Edge AI</span></div>
+  <h4>unitreerobotics/unitree_sdk2</h4><p>Unitree robot sdk version 2. https://support.unitree.com/home/zh/developer</p></a></div></section>
 
   <div class="nlbox">
     <h3>Cette fiche vous a été utile ?</h3>

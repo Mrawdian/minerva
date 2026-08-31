@@ -12,7 +12,7 @@
 [![Download Total Count](https://img.shields.io/github/downloads/Tencent/ncnn/total.svg?style=for-the-
 **Spécificité chinoise :** Chinese open-source project
 **Équivalent occidental :** Not identified
-**Maturité :** Actif (★ 304, 3 forks, mis à jour 2026-08)
+**Maturité :** Actif (★ 305, 3 forks, mis à jour 2026-08)
 **Langue :** Bilingue CN-EN
 **Gitee :** https://gitee.com/Tencent/ncnn
 ---

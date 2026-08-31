@@ -2,7 +2,7 @@
 ## sophgo/LLM-TPU [MODIFIÉ]
 **Type:** Library
 **Domain:** Embedded
-**Relevance score:** 70/100
+**Relevance score:** 75/100
 **Problem solved:** Run generative AI models in sophgo BM1684X/BM1688
 **How it works:** <div align="center">
 
@@ -17,7 +17,7 @@
 [![Python](https://img.shields.io/badge/py
 **Chinese specificity:** Chinese open-source project
 **Western equivalent:** Not identified
-**Maturity:** Active (★ 297, 50 forks, updated 2026-08)
+**Maturity:** Active (★ 303, 53 forks, updated 2026-08)
 **Language:** Bilingual CN-EN
 **GitHub:** https://github.com/sophgo/LLM-TPU
 ---

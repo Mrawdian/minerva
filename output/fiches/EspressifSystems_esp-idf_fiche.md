@@ -18,7 +18,7 @@ ESP-IDF is the development framework for Espressif SoCs supported on Windows, Li
 - Please read [the sup
 **Chinese specificity:** Espressif Systems (乐鑫, Shanghai) — fabricant des SoCs ESP8266/ESP32 ; miroir Gitee officiel synchronisé depuis GitHub.
 **Western equivalent:** Not identified
-**Maturity:** Stable (★ 879, 392 forks, updated 2026-08)
+**Maturity:** Stable (★ 878, 393 forks, updated 2026-08)
 **Language:** Bilingual CN-EN
 **Gitee:** https://gitee.com/EspressifSystems/esp-idf
 ---

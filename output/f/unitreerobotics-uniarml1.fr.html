@@ -4,19 +4,19 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>unitreerobotics/UniArmL1 — Minerva (FR)</title>
-<meta name="description" content="Fournir un framework de téléopération de bras robotique 6-DOF léger avec collecte de données standardisée pour l&#x27;apprentissage par imitation. Permet l&#x27;intégration transparente des modes de contrôle p…">
+<meta name="description" content="UniArmL1 是一个轻量化的机械臂遥操作框架，支持三种控制模式与标准化数据采集，采集数据可无缝对接 unitree_lerobot 进行模仿学习训练与部署">
 <link rel="icon" type="image/svg+xml" href="../favicon.svg">
 <link rel="canonical" href="/f/unitreerobotics-uniarml1.fr.html"><link rel="alternate" hreflang="en" href="/f/unitreerobotics-uniarml1.html"><link rel="alternate" hreflang="fr" href="/f/unitreerobotics-uniarml1.fr.html">
 <meta property="og:type" content="article">
 <meta property="og:title" content="unitreerobotics/UniArmL1 — Minerva (FR)">
-<meta property="og:description" content="Fournir un framework de téléopération de bras robotique 6-DOF léger avec collecte de données standardisée pour l&#x27;apprentissage par imitation. Permet l&#x27;intégration transparente des modes de contrôle p…">
+<meta property="og:description" content="UniArmL1 是一个轻量化的机械臂遥操作框架，支持三种控制模式与标准化数据采集，采集数据可无缝对接 unitree_lerobot 进行模仿学习训练与部署">
 <meta property="og:url" content="/f/unitreerobotics-uniarml1.fr.html">
 <meta property="og:image" content="/og.png">
 <meta property="og:site_name" content="Minerva">
 <meta property="og:locale" content="fr_FR">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="unitreerobotics/UniArmL1 — Minerva (FR)">
-<meta name="twitter:description" content="Fournir un framework de téléopération de bras robotique 6-DOF léger avec collecte de données standardisée pour l&#x27;apprentissage par imitation. Permet l&#x27;intégration transparente des modes de contrôle p…">
+<meta name="twitter:description" content="UniArmL1 是一个轻量化的机械臂遥操作框架，支持三种控制模式与标准化数据采集，采集数据可无缝对接 unitree_lerobot 进行模仿学习训练与部署">
 <style>
 :root{
   --paper:#F5F6F4; --surface:#FFFFFF; --surface-2:#FAFBF9;
@@ -174,8 +174,8 @@ aside .src:hover{background:var(--signal-2)}
   </span>
 </div></nav>
 <div class="status-line"><div class="wrap srow">
-  <span class="seg"><span class="dot"></span><span class="accent">Snapshot</span>&nbsp;· as of 2026-08-24</span>
-  <span class="seg">104 fiches</span>
+  <span class="seg"><span class="dot"></span><span class="accent">Snapshot</span>&nbsp;· as of 2026-08-31</span>
+  <span class="seg">106 fiches</span>
   <span class="seg">reading: fiche · FR</span>
   <span class="ticks"><i></i><i></i><i></i><i></i><i></i></span>
 </div></div>
@@ -184,8 +184,8 @@ aside .src:hover{background:var(--signal-2)}
   <div class="crumb"><a href="../index.html">Home</a><span class="sep">/</span><a href="../dashboard.html">Dashboard</a><span class="sep">/</span><a href="../dashboard.html?owner=unitreerobotics">unitreerobotics</a><span class="sep">/</span><span>UniArmL1</span><span style="margin-left:auto"><a href="unitreerobotics-uniarml1.html" style="color:var(--signal);font-weight:600">EN →</a></span></div>
 
   <div class="readout" style="--dom-color:var(--d-edge);margin-top:16px">
-    <div class="rblock"><span class="rlab">Score</span><span class="rval tnum">71<span class="unit">/100</span></span></div>
-    <div class="rblock"><span class="rlab">Confiance</span><span class="rval conf">◆◆◆</span></div>
+    <div class="rblock"><span class="rlab">Score</span><span class="rval tnum">74<span class="unit">/100</span></span></div>
+    <div class="rblock"><span class="rlab">Confiance</span><span class="rval conf">◆<span class="off">◇◇</span></span></div>
     <div class="rblock"><span class="rlab">Domaine</span><span class="rval dom">Edge AI</span></div>
     <div class="rmeta">Framework · Actif</div>
   </div>
@@ -199,31 +199,31 @@ aside .src:hover{background:var(--signal-2)}
   <div class="grid">
     <div class="main">
       <h2>Problème résolu</h2>
-      <p class="lede">Fournir un framework de téléopération de bras robotique 6-DOF léger avec collecte de données standardisée pour l&#x27;apprentissage par imitation. Permet l&#x27;intégration transparente des modes de contrôle par contrôleur VR, clavier et leader-follower avec enregistrement multi-caméra synchronisé à fréquence fixe pour les pipelines d&#x27;entraînement en aval.</p>
+      <p class="lede">UniArmL1 是一个轻量化的机械臂遥操作框架，支持三种控制模式与标准化数据采集，采集数据可无缝对接 unitree_lerobot 进行模仿学习训练与部署</p>
       <h2>Comment ça marche</h2>
-      <p>Stack de téléopération basée sur Python supportant trois modes d&#x27;entrée (VR via XRoboToolkit, clavier, leader-follower) communiquant avec le firmware du bras via série (par défaut /dev/ttyACM1). La collecte de données enregistre les angles articulaires et les images de caméra à une fréquence configurable (par défaut 50 Hz) dans un format standardisé compatible avec unitree_lerobot (fork HuggingFace LeRobot). Utilise URDF pour la cinématique, Meshcat pour la visualisation optionnelle, et conda pour la gestion des dépendances. Nécessite une nomenclature matérielle et des composants imprimés en 3D documentés séparément.</p>
+      <p>&lt;div align=&quot;center&quot;&gt;</p>
       <h2>Spécificité chinoise</h2>
-      <p>Hébergé sur GitHub par unitreerobotics (Unitree Robotics, une entreprise chinoise de systèmes quadrupèdes/robotiques). Aucune conformité spécifique à un fournisseur de chipset ou à une norme chinoise documentée ; le projet est un framework logiciel pour une conception de bras 6-DOF personnalisée dérivée du matériel open-source SO-ARM100.</p>
+      <p>Chinese open-source project</p>
       <h2 class="key">Équivalent occidental</h2>
-      <div class="keyblock"><p style="margin:0">LeRobot (HuggingFace), DOPE (NVIDIA), Mobile ALOHA (Stanford)</p><div class="hint">← le pont qu'un annuaire ne vous donnera jamais</div></div>
+      <div class="keyblock"><p style="margin:0">Not identified</p><div class="hint">← le pont qu'un annuaire ne vous donnera jamais</div></div>
     </div>
     <aside>
       <div class="r"><dt>Type</dt><dd>Framework</dd></div>
       <div class="r"><dt>Langage</dt><dd>Bilingue CN-EN</dd></div>
-      <div class="r"><dt>Étoiles</dt><dd>11 ★</dd></div>
-      <div class="r"><dt>Forks</dt><dd>4</dd></div>
-      <div class="r"><dt>Dernier push</dt><dd>2026-05</dd></div>
+      <div class="r"><dt>Étoiles</dt><dd>19 ★</dd></div>
+      <div class="r"><dt>Forks</dt><dd>6</dd></div>
+      <div class="r"><dt>Dernier push</dt><dd>2026-08</dd></div>
       <a class="src" href="https://github.com/unitreerobotics/UniArmL1" target="_blank" rel="noopener">Voir sur GitHub →</a>
     </aside>
   </div>
 
   <section class="related"><div class="lbl">Autres fiches en Edge AI</div>
-    <div class="rel-grid"><a class="rc" href="unitreerobotics-point-lio-unilidar.fr.html"><div class="t"><span class="s tnum">★ 71</span><span class="tag edge"><span class="d"></span>Edge AI</span></div>
-  <h4>unitreerobotics/point_lio_unilidar</h4><p>Adapter l&#x27;algorithme d&#x27;odomètrie lidar-inertielle Point-LIO pour fonctionner avec les capteurs LiDAR L1 et L2 d&#x27;Unitree (FOV 360° × 90°, balayage non répétitif) pour la localisation et la cartographie de robots mobiles à basse vitesse en conditions de vibration et de mouvement agressif.</p></a>
-<a class="rc" href="unitreerobotics-unitree-ros.fr.html"><div class="t"><span class="s tnum">★ 70</span><span class="tag edge"><span class="d"></span>Edge AI</span></div>
-  <h4>unitreerobotics/unitree_ros</h4><p>Information not available</p></a>
-<a class="rc" href="alibaba-id2-client-sdk.fr.html"><div class="t"><span class="s tnum">★ 67</span><span class="tag edge"><span class="d"></span>Edge AI</span></div>
-  <h4>alibaba/id2_client_sdk</h4><p>Fournir une identité numérique inviolable et non-contrefaçable pour les appareils IoT, garantissant l&#x27;authentification et l&#x27;intégrité dans les écosystèmes connectés.</p></a></div></section>
+    <div class="rel-grid"><a class="rc" href="unitreerobotics-unitree-lerobot.fr.html"><div class="t"><span class="s tnum">★ 77</span><span class="tag edge"><span class="d"></span>Edge AI</span></div>
+  <h4>unitreerobotics/unitree_lerobot</h4><p>Activer l&#x27;entraînement et le déploiement de politiques d&#x27;apprentissage par imitation sur les robots bi-bras Unitree G1 en utilisant le framework LeRobot, avec des utilitaires de conversion de données pour les formats propriétaires de mains Unitree (Dex1, Dex3, BrainCo, Inspire1) en datasets compatibles LeRobot.</p></a>
+<a class="rc" href="espressifsystems-esp-insights.fr.html"><div class="t"><span class="s tnum">★ 77</span><span class="tag edge"><span class="d"></span>Edge AI</span></div>
+  <h4>EspressifSystems/esp-insights</h4><p>Capturer et transmettre à distance les diagnostics des appareils (journaux d&#x27;erreurs/avertissements, plantages, métriques, raisons de réinitialisation) depuis les appareils ESP32/ESP8266 déployés sur le terrain vers un tableau de bord cloud, permettant aux développeurs de diagnostiquer les problèmes qui ne surviennent que dans des environnements de déploiement spécifiques sans accès physique.</p></a>
+<a class="rc" href="unitreerobotics-point-lio-unilidar.fr.html"><div class="t"><span class="s tnum">★ 71</span><span class="tag edge"><span class="d"></span>Edge AI</span></div>
+  <h4>unitreerobotics/point_lio_unilidar</h4><p>Adapter l&#x27;algorithme d&#x27;odomètrie lidar-inertielle Point-LIO pour fonctionner avec les capteurs LiDAR L1 et L2 d&#x27;Unitree (FOV 360° × 90°, balayage non répétitif) pour la localisation et la cartographie de robots mobiles à basse vitesse en conditions de vibration et de mouvement agressif.</p></a></div></section>
 
   <div class="nlbox">
     <h3>Cette fiche vous a été utile ?</h3>

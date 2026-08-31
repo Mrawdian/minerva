@@ -4,19 +4,19 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>sophgo/fsbl — Minerva (FR)</title>
-<meta name="description" content="Fournir un chargeur d&#x27;amorçage de première étape (FSBL) pour les SoC de la série CV18xx qui agit comme étape BL2 d&#x27;ARM Trusted Firmware (ATF), permettant l&#x27;amorçage sécurisé et le chargement du micro…">
+<meta name="description" content="fsbl project for cv18xx  series soc.">
 <link rel="icon" type="image/svg+xml" href="../favicon.svg">
 <link rel="canonical" href="/f/sophgo-fsbl.fr.html"><link rel="alternate" hreflang="en" href="/f/sophgo-fsbl.html"><link rel="alternate" hreflang="fr" href="/f/sophgo-fsbl.fr.html">
 <meta property="og:type" content="article">
 <meta property="og:title" content="sophgo/fsbl — Minerva (FR)">
-<meta property="og:description" content="Fournir un chargeur d&#x27;amorçage de première étape (FSBL) pour les SoC de la série CV18xx qui agit comme étape BL2 d&#x27;ARM Trusted Firmware (ATF), permettant l&#x27;amorçage sécurisé et le chargement du micro…">
+<meta property="og:description" content="fsbl project for cv18xx  series soc.">
 <meta property="og:url" content="/f/sophgo-fsbl.fr.html">
 <meta property="og:image" content="/og.png">
 <meta property="og:site_name" content="Minerva">
 <meta property="og:locale" content="fr_FR">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="sophgo/fsbl — Minerva (FR)">
-<meta name="twitter:description" content="Fournir un chargeur d&#x27;amorçage de première étape (FSBL) pour les SoC de la série CV18xx qui agit comme étape BL2 d&#x27;ARM Trusted Firmware (ATF), permettant l&#x27;amorçage sécurisé et le chargement du micro…">
+<meta name="twitter:description" content="fsbl project for cv18xx  series soc.">
 <style>
 :root{
   --paper:#F5F6F4; --surface:#FFFFFF; --surface-2:#FAFBF9;
@@ -174,8 +174,8 @@ aside .src:hover{background:var(--signal-2)}
   </span>
 </div></nav>
 <div class="status-line"><div class="wrap srow">
-  <span class="seg"><span class="dot"></span><span class="accent">Snapshot</span>&nbsp;· as of 2026-08-24</span>
-  <span class="seg">104 fiches</span>
+  <span class="seg"><span class="dot"></span><span class="accent">Snapshot</span>&nbsp;· as of 2026-08-31</span>
+  <span class="seg">106 fiches</span>
   <span class="seg">reading: fiche · FR</span>
   <span class="ticks"><i></i><i></i><i></i><i></i><i></i></span>
 </div></div>
@@ -184,46 +184,46 @@ aside .src:hover{background:var(--signal-2)}
   <div class="crumb"><a href="../index.html">Home</a><span class="sep">/</span><a href="../dashboard.html">Dashboard</a><span class="sep">/</span><a href="../dashboard.html?owner=sophgo">sophgo</a><span class="sep">/</span><span>fsbl</span><span style="margin-left:auto"><a href="sophgo-fsbl.html" style="color:var(--signal);font-weight:600">EN →</a></span></div>
 
   <div class="readout" style="--dom-color:var(--d-emb);margin-top:16px">
-    <div class="rblock"><span class="rlab">Score</span><span class="rval tnum">57<span class="unit">/100</span></span></div>
-    <div class="rblock"><span class="rlab">Confiance</span><span class="rval conf">◆◆◆</span></div>
+    <div class="rblock"><span class="rlab">Score</span><span class="rval tnum">61<span class="unit">/100</span></span></div>
+    <div class="rblock"><span class="rlab">Confiance</span><span class="rval conf">◆<span class="off">◇◇</span></span></div>
     <div class="rblock"><span class="rlab">Domaine</span><span class="rval dom">Embarqué</span></div>
-    <div class="rmeta">Board Support Package · Actif</div>
+    <div class="rmeta">Library · Actif</div>
   </div>
   <div class="rlegend"><b>score</b> = un signal de tri grossier, 0–100 (similarité sémantique au créneau embarqué/IoT/robotique/edge-AI + bonus d'activité) — une clé de tri, pas une mesure de l'écosystème · <b>marques ◆</b> = niveau de confiance (qualité des données : profondeur d'enrichissement, métadonnées, récence) — méthode dans docs/SCORING.md</div>
 
   <header class="fhead">
     <h1>sophgo/fsbl</h1>
-    <div class="tags"><span class="tag emb"><span class="d"></span>Embarqué</span><span class="tag plain">Board Support Package</span><span class="tag plain">Actif</span></div>
+    <div class="tags"><span class="tag emb"><span class="d"></span>Embarqué</span><span class="tag plain">Library</span><span class="tag plain">Actif</span></div>
   </header>
 
   <div class="grid">
     <div class="main">
       <h2>Problème résolu</h2>
-      <p class="lede">Fournir un chargeur d&#x27;amorçage de première étape (FSBL) pour les SoC de la série CV18xx qui agit comme étape BL2 d&#x27;ARM Trusted Firmware (ATF), permettant l&#x27;amorçage sécurisé et le chargement du micrologiciel sur les processeurs de Sophgo.</p>
+      <p class="lede">fsbl project for cv18xx  series soc.</p>
       <h2>Comment ça marche</h2>
-      <p>FSBL est un chargeur d&#x27;amorçage écrit en C/assembleur qui initialise le matériel du SoC CV18xx, configure la mémoire et les horloges, et transfère le contrôle à l&#x27;étape d&#x27;amorçage suivante (généralement ATF BL31 ou le noyau du système d&#x27;exploitation principal). Il fonctionne au niveau de privilège le plus bas avant l&#x27;exécution de tout noyau de système d&#x27;exploitation. Le projet s&#x27;intègre aux pilotes spécifiques au SoC de Sophgo et aux définitions de disposition de la mémoire. Les détails des dépendances et du système de compilation doivent être confirmés à partir de la structure du référentiel.</p>
+      <p>FSBL</p>
       <h2>Spécificité chinoise</h2>
-      <p>Sophgo est une entreprise chinoise de semi-conducteurs spécialisée dans les accélérateurs d&#x27;IA et les SoC ; la série CV18xx est leur ligne de processeurs propriétaire. Ce chargeur d&#x27;amorçage est une infrastructure essentielle pour l&#x27;écosystème de produits d&#x27;IA embarqués et périphériques de Sophgo.</p>
+      <p>Chinese open-source project</p>
       <h2 class="key">Équivalent occidental</h2>
-      <div class="keyblock"><p style="margin:0">ARM Trusted Firmware (ATF) étape BL2, U-Boot SPL (Das U-Boot), miniloader Rockchip</p><div class="hint">← le pont qu'un annuaire ne vous donnera jamais</div></div>
+      <div class="keyblock"><p style="margin:0">Not identified</p><div class="hint">← le pont qu'un annuaire ne vous donnera jamais</div></div>
     </div>
     <aside>
-      <div class="r"><dt>Type</dt><dd>Board Support Package</dd></div>
+      <div class="r"><dt>Type</dt><dd>Library</dd></div>
       <div class="r"><dt>Langage</dt><dd>Anglais</dd></div>
-      <div class="r"><dt>Étoiles</dt><dd>11 ★</dd></div>
-      <div class="r"><dt>Forks</dt><dd>24</dd></div>
-      <div class="r"><dt>Dernier push</dt><dd>2026-06</dd></div>
+      <div class="r"><dt>Étoiles</dt><dd>12 ★</dd></div>
+      <div class="r"><dt>Forks</dt><dd>23</dd></div>
+      <div class="r"><dt>Dernier push</dt><dd>2026-08</dd></div>
       <a class="src" href="https://github.com/sophgo/fsbl" target="_blank" rel="noopener">Voir sur GitHub →</a>
     </aside>
   </div>
 
   <section class="related"><div class="lbl">Autres fiches en Embarqué</div>
-    <div class="rel-grid"><a class="rc" href="unitreerobotics-unitree-motor-assistant.fr.html"><div class="t"><span class="s tnum">★ 57</span><span class="tag emb"><span class="d"></span>Embarqué</span></div>
-  <h4>unitreerobotics/Unitree-Motor-Assistant</h4><p>Fournir un utilitaire de débogage et de configuration basé sur Windows pour les modèles de moteurs Unitree (J288/S288, IM6014) sans nécessiter de logiciel propriétaire du fournisseur ni d&#x27;outils en ligne de commande.</p></a>
-<a class="rc" href="sophgo-vllm-tpu.fr.html"><div class="t"><span class="s tnum">★ 57</span><span class="tag emb"><span class="d"></span>Embarqué</span></div>
-  <h4>sophgo/vllm-tpu</h4><p>Activer l&#x27;inférence de grands modèles de langage (LLaMa, Qwen, DeepSeek) sur les accélérateurs Sophon TPU SG2260 en portant vLLM v0.11.0 pour supporter les chemins d&#x27;exécution spécifiques aux TPU, les formats de quantification (w4a16, FP8, BF16) et les topologies multi-puces.</p></a>
-<a class="rc" href="sophgo-zsbl.fr.html"><div class="t"><span class="s tnum">★ 58</span><span class="tag emb"><span class="d"></span>Embarqué</span></div>
-  <h4>sophgo/zsbl</h4><p>SOPHGO RISC-V Zero Stage BootLoader</p></a></div></section>
+    <div class="rel-grid"><a class="rc" href="sophgo-bootloader-arm64.fr.html"><div class="t"><span class="s tnum">★ 61</span><span class="tag emb"><span class="d"></span>Embarqué</span></div>
+  <h4>sophgo/bootloader-arm64</h4><p>Fournir un bootloader pour les puces accélérateurs Sophon AI (SoC BM1684) qui initialise le matériel ARM64, charge le noyau Linux et établit un pont entre le firmware propriétaire Sophon et le flux de démarrage du système d&#x27;exploitation open-source.</p></a>
+<a class="rc" href="sophgo-middleware.fr.html"><div class="t"><span class="s tnum">★ 62</span><span class="tag emb"><span class="d"></span>Embarqué</span></div>
+  <h4>sophgo/middleware</h4><p>Fournir des bibliothèques de codecs multimédias et de traitement d&#x27;images pour le SoC série CV18xx (processeurs CVITEK/SOPHGO), permettant l&#x27;encodage/décodage vidéo, la mise à l&#x27;échelle d&#x27;images et la conversion d&#x27;espace colorimétrique sans dépendre uniquement des implémentations propriétaires fermées du fournisseur.</p></a>
+<a class="rc" href="alibaba-alibaba-rsocket-broker.fr.html"><div class="t"><span class="s tnum">★ 62</span><span class="tag emb"><span class="d"></span>Embarqué</span></div>
+  <h4>alibaba/alibaba-rsocket-broker</h4><p>Fournir un système de communication réactive pair-à-pair basé sur RSocket pour les architectures distribuées (RPC, Pub/Sub, Streaming) sans gestion explicite de threads et avec support du backpressure.</p></a></div></section>
 
   <div class="nlbox">
     <h3>Cette fiche vous a été utile ?</h3>
