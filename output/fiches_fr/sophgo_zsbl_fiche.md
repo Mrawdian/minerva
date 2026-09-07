@@ -7,7 +7,7 @@
 **Comment ça marche :** See the project README
 **Spécificité chinoise :** Chinese open-source project
 **Équivalent occidental :** Not identified
-**Maturité :** Actif (★ 33, 35 forks, mis à jour 2026-08)
+**Maturité :** Actif (★ 33, 34 forks, mis à jour 2026-09)
 **Langue :** Anglais
 **GitHub :** https://github.com/sophgo/zsbl
 ---

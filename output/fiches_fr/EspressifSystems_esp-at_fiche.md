@@ -14,7 +14,7 @@
 esp-at project was started and powered by Espressif Systems (@[espressif](https://github.com/espressif/)) as an official pr
 **Spécificité chinoise :** Espressif Systems (乐鑫, Shanghai) — fabricant des SoCs ESP8266/ESP32 ; miroir Gitee officiel synchronisé depuis GitHub.
 **Équivalent occidental :** Not identified
-**Maturité :** Actif (★ 50, 4 forks, mis à jour 2026-08)
+**Maturité :** Actif (★ 50, 4 forks, mis à jour 2026-09)
 **Langue :** Bilingue CN-EN
 **Gitee :** https://gitee.com/EspressifSystems/esp-at
 ---

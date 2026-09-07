@@ -12,7 +12,7 @@
     <img alt="Try it with
 **Chinese specificity:** Espressif Systems (乐鑫, Shanghai) — fabricant des SoCs ESP8266/ESP32 ; miroir Gitee officiel synchronisé depuis GitHub.
 **Western equivalent:** Not identified
-**Maturity:** Active (★ 12, 3 forks, updated 2026-08)
+**Maturity:** Active (★ 12, 3 forks, updated 2026-09)
 **Language:** Bilingual CN-EN
 **Gitee:** https://gitee.com/EspressifSystems/esp-dev-kits
 ---

@@ -30,7 +30,7 @@ RT-Thread夏令营学员笔记
     ├─第2组
 **Spécificité chinoise :** Chinese open-source project
 **Équivalent occidental :** Not identified
-**Maturité :** Actif (★ 5, 111 forks, mis à jour 2026-08)
+**Maturité :** Actif (★ 5, 111 forks, mis à jour 2026-09)
 **Langue :** Bilingue CN-EN
 **Gitee :** https://gitee.com/rtthread/rsoc-rtt
 ---

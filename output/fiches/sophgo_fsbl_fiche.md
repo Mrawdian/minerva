@@ -20,7 +20,7 @@ Technologies in this repository is licensed under GPL-2.0-or-later
 (see LICENSE at reposi
 **Chinese specificity:** Chinese open-source project
 **Western equivalent:** Not identified
-**Maturity:** Active (★ 12, 23 forks, updated 2026-08)
+**Maturity:** Active (★ 12, 23 forks, updated 2026-09)
 **Language:** English
 **GitHub:** https://github.com/sophgo/fsbl
 ---

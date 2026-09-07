@@ -10,7 +10,7 @@
     <img alt="Try it with ESP Launchpad"
 **Spécificité chinoise :** Espressif Systems (乐鑫, Shanghai) — fabricant des SoCs ESP8266/ESP32 ; miroir Gitee officiel synchronisé depuis GitHub.
 **Équivalent occidental :** Not identified
-**Maturité :** Actif (★ 41, 5 forks, mis à jour 2026-08)
+**Maturité :** Actif (★ 41, 5 forks, mis à jour 2026-09)
 **Langue :** Bilingue CN-EN
 **Gitee :** https://gitee.com/EspressifSystems/esp-iot-solution
 ---

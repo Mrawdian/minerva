@@ -1,8 +1,8 @@
 ---
-## bouffalolab/bouffalolab-skills
+## bouffalolab/bouffalolab-skills [MODIFIÉ]
 **Type :** Library
 **Domaine :** IoT
-**Score de pertinence :** 69/100
+**Score de pertinence :** 67/100
 **Problème résolu :** Structured customer information collection skill for Bouffalo chip WiFi low-power issues
 **Comment ça marche :** # bouffalolab-skills
 
@@ -13,7 +13,7 @@ This repository hosts the skills BouffaloLab publishes for external customers
 and partners. Each skill lives in its own directory under `skills/<name>/
 **Spécificité chinoise :** Chinese open-source project
 **Équivalent occidental :** Not identified
-**Maturité :** Actif (mis à jour 2026-08)
+**Maturité :** Actif (mis à jour 2026-09)
 **Langue :** Bilingue CN-EN
 **GitHub :** https://github.com/bouffalolab/bouffalolab-skills
 ---
