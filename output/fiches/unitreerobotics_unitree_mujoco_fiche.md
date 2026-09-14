@@ -9,7 +9,7 @@
 `unitree_mujoco` is a simulator developed based on `Unitree sdk2` and `mujoco`. Users can easily integrate the control programs developed with `Unitree_sdk2`, `unitree_ros2`, and `unitree_sdk2_python` into this simulator, enabling a seamless transition from simulatio
 **Chinese specificity:** Chinese open-source project
 **Western equivalent:** Not identified
-**Maturity:** Stable (★ 1159, 393 forks, updated 2026-08)
+**Maturity:** Stable (★ 1185, 410 forks, updated 2026-09)
 **Language:** English
 **GitHub:** https://github.com/unitreerobotics/unitree_mujoco
 ---

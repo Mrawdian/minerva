@@ -1,13 +1,30 @@
 ---
 ## unitreerobotics/Unitree-Motor-Assistant [MODIFIÉ]
-**Type:** Tool
-**Domain:** Embedded
-**Relevance score:** 57/100
-**Problem solved:** Provide a Windows-based debugging and configuration utility for Unitree motor models (J288/S288, IM6014) without requiring proprietary vendor software or command-line tools.
-**How it works:** Desktop application written in C++ using Qt 6.6.3 (dynamically linked, LGPLv3). Communicates with Unitree motors via serial protocol over USB. Offers motor parameter configuration, real-time monitoring, and firmware updates through a GUI. Distributed as a Windows executable with bundled Qt libraries and third-party components.
-**Chinese specificity:** Hosted on Gitee/GitHub by unitreerobotics; no particular Chinese specificity beyond the author. Unitree Robotics is a Chinese robotics company, but the tool targets generic motor interfaces without reliance on Chinese chipset vendors or standards.
-**Western equivalent:** STMicroelectronics STM32CubeMX (motor configuration), PEAK PCAN-View (CAN/serial debugging utilities)
-**Maturity:** Active (updated 2026-07)
+**Type:** Library
+**Domain:** Edge AI
+**Relevance score:** 59/100
+**Problem solved:** Information not available
+**How it works:** # Unitree Motor Assistant
+
+## Supported Platform
+
+- **Windows only.** Unitree Motor Assistant currently only supports the Windows operating system.
+
+---
+
+## Compatible Motor Models
+
+- J288 / S288
+- IM6014
+
+---
+
+## User Guide
+
+&emsp;&emsp;For detailed usage instructions, please refer to:  [Unitree Mo
+**Chinese specificity:** Chinese open-source project
+**Western equivalent:** Not identified
+**Maturity:** Active (2 forks, updated 2026-09)
 **Language:** English
 **GitHub:** https://github.com/unitreerobotics/Unitree-Motor-Assistant
 ---

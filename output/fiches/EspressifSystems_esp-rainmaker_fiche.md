@@ -15,7 +15,7 @@
 ESP RainMaker is an end-to-e
 **Chinese specificity:** Espressif Systems (乐鑫, Shanghai) — fabricant des SoCs ESP8266/ESP32 ; miroir Gitee officiel synchronisé depuis GitHub.
 **Western equivalent:** Not identified
-**Maturity:** Active (★ 11, updated 2026-08)
+**Maturity:** Active (★ 11, updated 2026-09)
 **Language:** English
 **Gitee:** https://gitee.com/EspressifSystems/esp-rainmaker
 ---
