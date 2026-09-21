@@ -1,13 +1,17 @@
 ---
-## EspressifSystems/esp-skainet
-**Type :** Framework
-**Domaine :** Embarqué
-**Score de pertinence :** 67/100
-**Problème résolu :** Fournir une solution complète de reconnaissance de mots-clés de réveil et de commandes vocales offline sur microcontrôleurs ESP32 avec faible consommation mémoire et latence réduite.
-**Comment ça marche :** ESP-Skainet intègre deux moteurs de traitement vocal : WakeNet pour la détection de mots-clés de réveil (Alexa, 天猫精灵, etc.) et MultiNet pour la reconnaissance de jusqu'à 200 commandes vocales sans reconnexion réseau. Le pipeline traite les flux audio provenant de microphones ou fichiers stockés en flash/SD via un module Audio Front-End (AFE) effectuant le prétraitement du signal. L'architecture exploite l'ESP32-S3 avec sa PSRAM octal SPI haute vitesse pour déployer les modèles d'inférence optimisés.
-**Spécificité chinoise :** Intégration native de mots-clés chinois (天猫精灵 d'Alibaba, 小爱同学 de Xiaomi) et support des commandes vocales en mandarin. Développé par Espressif Systems, fabricant chinois de SoC WiFi/BLE dominant le marché IoT asiatique.
-**Équivalent occidental :** Amazon Alexa Voice Service SDK, Google Assistant SDK (nécessitent connexion cloud) ; PocketSphinx (reconnaissance vocale offline mais moins optimisé pour microcontrôleurs)
-**Maturité :** Actif (★ 24, 10 forks, mis à jour 2026-02)
+## EspressifSystems/esp-skainet [MODIFIÉ]
+**Type :** Library
+**Domaine :** Edge AI
+**Score de pertinence :** 75/100
+**Problème résolu :** ESP-Skainet 是乐鑫推出的智能语音助手，目前支持唤醒词识别和命令词识别。
+**Comment ça marche :** # ESP-Skainet [[中文]](./README_cn.md)
+
+ESP-Skainet is Espressif's intelligent voice assistant, which currently supports the Wake Word Engine and Speech Commands Recognition.
+
+### ESP32-S3 is recommended to run speech commands recognition, which supports AI instructions and high-speed octal SPI PSRAM.
+**Spécificité chinoise :** Espressif Systems (乐鑫, Shanghai) — fabricant des SoCs ESP8266/ESP32 ; miroir Gitee officiel synchronisé depuis GitHub.
+**Équivalent occidental :** Not identified
+**Maturité :** Actif (★ 25, 11 forks, mis à jour 2026-09)
 **Langue :** Bilingue CN-EN
 **Gitee :** https://gitee.com/EspressifSystems/esp-skainet
 ---

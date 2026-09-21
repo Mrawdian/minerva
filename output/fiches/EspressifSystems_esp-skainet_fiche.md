@@ -1,13 +1,17 @@
 ---
-## EspressifSystems/esp-skainet
-**Type:** Framework
-**Domain:** Embedded
-**Relevance score:** 67/100
-**Problem solved:** Provide a complete solution for wake-word keyword recognition and offline voice commands on ESP32 microcontrollers with low memory consumption and reduced latency.
-**How it works:** ESP-Skainet integrates two voice processing engines: WakeNet for wake-word keyword detection (Alexa, 天猫精灵, etc.) and MultiNet for recognition of up to 200 voice commands without network reconnection. The pipeline processes audio streams from microphones or files stored in flash/SD via an Audio Front-End (AFE) module performing signal preprocessing. The architecture leverages the ESP32-S3 with its high-speed octal SPI PSRAM to deploy optimized inference models.
-**Chinese specificity:** Native integration of Chinese keywords (Alibaba's 天猫精灵, Xiaomi's 小爱同学) and support for Mandarin voice commands. Developed by Espressif Systems, a Chinese SoC WiFi/BLE manufacturer dominating the Asian IoT market.
-**Western equivalent:** Amazon Alexa Voice Service SDK, Google Assistant SDK (require cloud connection); PocketSphinx (offline speech recognition but less optimized for microcontrollers)
-**Maturity:** Active (★ 24, 10 forks, updated 2026-02)
+## EspressifSystems/esp-skainet [MODIFIÉ]
+**Type:** Library
+**Domain:** Edge AI
+**Relevance score:** 75/100
+**Problem solved:** ESP-Skainet 是乐鑫推出的智能语音助手，目前支持唤醒词识别和命令词识别。
+**How it works:** # ESP-Skainet [[中文]](./README_cn.md)
+
+ESP-Skainet is Espressif's intelligent voice assistant, which currently supports the Wake Word Engine and Speech Commands Recognition.
+
+### ESP32-S3 is recommended to run speech commands recognition, which supports AI instructions and high-speed octal SPI PSRAM.
+**Chinese specificity:** Espressif Systems (乐鑫, Shanghai) — fabricant des SoCs ESP8266/ESP32 ; miroir Gitee officiel synchronisé depuis GitHub.
+**Western equivalent:** Not identified
+**Maturity:** Active (★ 25, 11 forks, updated 2026-09)
 **Language:** Bilingual CN-EN
 **Gitee:** https://gitee.com/EspressifSystems/esp-skainet
 ---

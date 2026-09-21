@@ -1,5 +1,5 @@
 ---
-## bouffalolab/bouffalo_sdk-drivers
+## bouffalolab/bouffalo_sdk-drivers [MODIFIÉ]
 **Type :** Driver
 **Domaine :** Embarqué
 **Score de pertinence :** 64/100
@@ -7,7 +7,7 @@
 **Comment ça marche :** See the project README
 **Spécificité chinoise :** Chinese open-source project
 **Équivalent occidental :** Not identified
-**Maturité :** Actif (★ 6, 2 forks, mis à jour 2026-08)
+**Maturité :** Actif (★ 6, 2 forks, mis à jour 2026-09)
 **Langue :** Anglais
 **GitHub :** https://github.com/bouffalolab/bouffalo_sdk-drivers
 ---

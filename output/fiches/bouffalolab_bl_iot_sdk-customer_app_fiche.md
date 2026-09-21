@@ -7,7 +7,7 @@
 **How it works:** See the project README
 **Chinese specificity:** Chinese open-source project
 **Western equivalent:** Not identified
-**Maturity:** Active (★ 1, 1 forks, updated 2026-08)
+**Maturity:** Active (★ 1, 1 forks, updated 2026-09)
 **Language:** English
 **GitHub:** https://github.com/bouffalolab/bl_iot_sdk-customer_app
 ---

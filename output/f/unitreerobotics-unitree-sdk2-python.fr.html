@@ -4,19 +4,19 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>unitreerobotics/unitree_sdk2_python — Minerva (FR)</title>
-<meta name="description" content="Fournit une couche de liaison Python pour le SDK2 de contrôle de robot quadrupède d&#x27;Unitree, permettant des commandes moteur de haut niveau (mode sport, suivi de trajectoire, contrôle d&#x27;attitude) et…">
+<meta name="description" content="Python interface for unitree sdk2">
 <link rel="icon" type="image/svg+xml" href="../favicon.svg">
 <link rel="canonical" href="/f/unitreerobotics-unitree-sdk2-python.fr.html"><link rel="alternate" hreflang="en" href="/f/unitreerobotics-unitree-sdk2-python.html"><link rel="alternate" hreflang="fr" href="/f/unitreerobotics-unitree-sdk2-python.fr.html">
 <meta property="og:type" content="article">
 <meta property="og:title" content="unitreerobotics/unitree_sdk2_python — Minerva (FR)">
-<meta property="og:description" content="Fournit une couche de liaison Python pour le SDK2 de contrôle de robot quadrupède d&#x27;Unitree, permettant des commandes moteur de haut niveau (mode sport, suivi de trajectoire, contrôle d&#x27;attitude) et…">
+<meta property="og:description" content="Python interface for unitree sdk2">
 <meta property="og:url" content="/f/unitreerobotics-unitree-sdk2-python.fr.html">
 <meta property="og:image" content="/og.png">
 <meta property="og:site_name" content="Minerva">
 <meta property="og:locale" content="fr_FR">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="unitreerobotics/unitree_sdk2_python — Minerva (FR)">
-<meta name="twitter:description" content="Fournit une couche de liaison Python pour le SDK2 de contrôle de robot quadrupède d&#x27;Unitree, permettant des commandes moteur de haut niveau (mode sport, suivi de trajectoire, contrôle d&#x27;attitude) et…">
+<meta name="twitter:description" content="Python interface for unitree sdk2">
 <style>
 :root{
   --paper:#F5F6F4; --surface:#FFFFFF; --surface-2:#FAFBF9;
@@ -174,7 +174,7 @@ aside .src:hover{background:var(--signal-2)}
   </span>
 </div></nav>
 <div class="status-line"><div class="wrap srow">
-  <span class="seg"><span class="dot"></span><span class="accent">Snapshot</span>&nbsp;· as of 2026-09-14</span>
+  <span class="seg"><span class="dot"></span><span class="accent">Snapshot</span>&nbsp;· as of 2026-09-21</span>
   <span class="seg">107 fiches</span>
   <span class="seg">reading: fiche · FR</span>
   <span class="ticks"><i></i><i></i><i></i><i></i><i></i></span>
@@ -183,47 +183,47 @@ aside .src:hover{background:var(--signal-2)}
 <div class="wrap">
   <div class="crumb"><a href="../index.html">Home</a><span class="sep">/</span><a href="../dashboard.html">Dashboard</a><span class="sep">/</span><a href="../dashboard.html?owner=unitreerobotics">unitreerobotics</a><span class="sep">/</span><span>unitree_sdk2_python</span><span style="margin-left:auto"><a href="unitreerobotics-unitree-sdk2-python.html" style="color:var(--signal);font-weight:600">EN →</a></span></div>
 
-  <div class="readout" style="--dom-color:var(--d-rob);margin-top:16px">
-    <div class="rblock"><span class="rlab">Score</span><span class="rval tnum">72<span class="unit">/100</span></span></div>
-    <div class="rblock"><span class="rlab">Confiance</span><span class="rval conf">◆◆◆</span></div>
-    <div class="rblock"><span class="rlab">Domaine</span><span class="rval dom">Robotique</span></div>
-    <div class="rmeta">Library · Stable</div>
+  <div class="readout" style="--dom-color:var(--d-edge);margin-top:16px">
+    <div class="rblock"><span class="rlab">Score</span><span class="rval tnum">66<span class="unit">/100</span></span></div>
+    <div class="rblock"><span class="rlab">Confiance</span><span class="rval conf">◆<span class="off">◇◇</span></span></div>
+    <div class="rblock"><span class="rlab">Domaine</span><span class="rval dom">Edge AI</span></div>
+    <div class="rmeta">Framework · Stable</div>
   </div>
   <div class="rlegend"><b>score</b> = un signal de tri grossier, 0–100 (similarité sémantique au créneau embarqué/IoT/robotique/edge-AI + bonus d'activité) — une clé de tri, pas une mesure de l'écosystème · <b>marques ◆</b> = niveau de confiance (qualité des données : profondeur d'enrichissement, métadonnées, récence) — méthode dans docs/SCORING.md</div>
 
   <header class="fhead">
     <h1>unitreerobotics/unitree_sdk2_python</h1>
-    <div class="tags"><span class="tag rob"><span class="d"></span>Robotique</span><span class="tag plain">Library</span><span class="tag plain">Stable</span></div>
+    <div class="tags"><span class="tag edge"><span class="d"></span>Edge AI</span><span class="tag plain">Framework</span><span class="tag plain">Stable</span></div>
   </header>
 
   <div class="grid">
     <div class="main">
       <h2>Problème résolu</h2>
-      <p class="lede">Fournit une couche de liaison Python pour le SDK2 de contrôle de robot quadrupède d&#x27;Unitree, permettant des commandes moteur de haut niveau (mode sport, suivi de trajectoire, contrôle d&#x27;attitude) et de bas niveau (PID articulaire, couple moteur) via Ethernet par le middleware CycloneDDS, éliminant le besoin d&#x27;écrire manuellement des liaisons C++.</p>
+      <p class="lede">Python interface for unitree sdk2</p>
       <h2>Comment ça marche</h2>
-      <p>Wrapper Python 3.8+ autour de unitree_sdk2 utilisant CycloneDDS 0.10.2 comme middleware DDS pour la communication inter-processus. Dépendances principales : numpy, opencv-python. Expose deux couches de contrôle : API haut niveau (StandUpDown, VelocityMove, BalanceAttitude, TrajectoryFollow, SpecialMotions) et API bas niveau (lecture d&#x27;état articulaire, contrôle PID moteur avec gains kp/kd, télémétrie IMU/batterie). Les exemples incluent des modèles éditeur/abonné, interrogation du statut du contrôleur sans fil et capture de trames de caméra frontale via OpenCV.</p>
+      <p># unitree_sdk2_python</p>
       <h2>Spécificité chinoise</h2>
-      <p>Hébergé sur GitHub par unitreerobotics (Unitree Robotics, un fabricant chinois de robotique quadrupède). Aucune conformité à un fournisseur de chipset chinois particulier ou à une norme citée ; le projet est une interface Python pour le SDK2 propriétaire d&#x27;Unitree destiné à leurs plateformes de robot Go1/Go2.</p>
+      <p>Chinese open-source project</p>
       <h2 class="key">Équivalent occidental</h2>
-      <div class="keyblock"><p style="margin:0">Spot SDK (Python) de Boston Dynamics, pile de pilotes ROS2 ANYmal, SDK Warthog de Clearpath Robotics</p><div class="hint">← le pont qu'un annuaire ne vous donnera jamais</div></div>
+      <div class="keyblock"><p style="margin:0">Not identified</p><div class="hint">← le pont qu'un annuaire ne vous donnera jamais</div></div>
     </div>
     <aside>
-      <div class="r"><dt>Type</dt><dd>Library</dd></div>
+      <div class="r"><dt>Type</dt><dd>Framework</dd></div>
       <div class="r"><dt>Langage</dt><dd>Anglais</dd></div>
-      <div class="r"><dt>Étoiles</dt><dd>750 ★</dd></div>
-      <div class="r"><dt>Forks</dt><dd>312</dd></div>
-      <div class="r"><dt>Dernier push</dt><dd>2026-07</dd></div>
+      <div class="r"><dt>Étoiles</dt><dd>809 ★</dd></div>
+      <div class="r"><dt>Forks</dt><dd>336</dd></div>
+      <div class="r"><dt>Dernier push</dt><dd>2026-09</dd></div>
       <a class="src" href="https://github.com/unitreerobotics/unitree_sdk2_python" target="_blank" rel="noopener">Voir sur GitHub →</a>
     </aside>
   </div>
 
-  <section class="related"><div class="lbl">Autres fiches en Robotique</div>
-    <div class="rel-grid"><a class="rc" href="unitreerobotics-qmini.fr.html"><div class="t"><span class="s tnum">★ 72</span><span class="tag rob"><span class="d"></span>Robotique</span></div>
-  <h4>unitreerobotics/Qmini</h4><p>Fournir une plateforme de robot bipède entièrement open-source et imprimable en 3D avec documentation matérielle (nomenclature, fichiers STEP, schémas électriques), pile logicielle (URDF, intégration ROS via RoboTamer4Qmini) et procédures d&#x27;assemblage pour réduire les barrières à l&#x27;entrée pour les amateurs de robotique, les éducateurs et les chercheurs.</p></a>
-<a class="rc" href="espressifsystems-esp-drone.fr.html"><div class="t"><span class="s tnum">★ 73</span><span class="tag rob"><span class="d"></span>Robotique</span></div>
-  <h4>EspressifSystems/esp-drone</h4><p>基于乐鑫 ESP32-S2/ESP32 开发的小型无人机解决方案。</p></a>
-<a class="rc" href="unitreerobotics-unitree-rl-gym.fr.html"><div class="t"><span class="s tnum">★ 73</span><span class="tag rob"><span class="d"></span>Robotique</span></div>
-  <h4>unitreerobotics/unitree_rl_gym</h4><p>Fournit un pipeline d&#x27;entraînement par apprentissage par renforcement et un cadre de déploiement sim-to-real pour le contrôle de la locomotion des robots à pattes, comblant l&#x27;écart entre l&#x27;entraînement des politiques en simulation Isaac Gym et l&#x27;exécution sur des robots quadrupèdes et humanoïdes Unitree physiques (Go2, G1, H1).</p></a></div></section>
+  <section class="related"><div class="lbl">Autres fiches en Edge AI</div>
+    <div class="rel-grid"><a class="rc" href="unitreerobotics-unitree-sdk2.fr.html"><div class="t"><span class="s tnum">★ 66</span><span class="tag edge"><span class="d"></span>Edge AI</span></div>
+  <h4>unitreerobotics/unitree_sdk2</h4><p>Unitree robot sdk version 2. https://support.unitree.com/home/zh/developer</p></a>
+<a class="rc" href="alibaba-id2-client-sdk.fr.html"><div class="t"><span class="s tnum">★ 67</span><span class="tag edge"><span class="d"></span>Edge AI</span></div>
+  <h4>alibaba/id2_client_sdk</h4><p>Fournir une identité numérique inviolable et non-contrefaçable pour les appareils IoT, garantissant l&#x27;authentification et l&#x27;intégrité dans les écosystèmes connectés.</p></a>
+<a class="rc" href="unitreerobotics--github.fr.html"><div class="t"><span class="s tnum">★ 65</span><span class="tag edge"><span class="d"></span>Edge AI</span></div>
+  <h4>unitreerobotics/.github</h4><p>Information not available</p></a></div></section>
 
   <div class="nlbox">
     <h3>Cette fiche vous a été utile ?</h3>

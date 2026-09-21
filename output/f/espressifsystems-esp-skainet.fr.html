@@ -4,19 +4,19 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>EspressifSystems/esp-skainet — Minerva (FR)</title>
-<meta name="description" content="Fournir une solution complète de reconnaissance de mots-clés de réveil et de commandes vocales offline sur microcontrôleurs ESP32 avec faible consommation mémoire et latence réduite.">
+<meta name="description" content="ESP-Skainet 是乐鑫推出的智能语音助手，目前支持唤醒词识别和命令词识别。">
 <link rel="icon" type="image/svg+xml" href="../favicon.svg">
 <link rel="canonical" href="/f/espressifsystems-esp-skainet.fr.html"><link rel="alternate" hreflang="en" href="/f/espressifsystems-esp-skainet.html"><link rel="alternate" hreflang="fr" href="/f/espressifsystems-esp-skainet.fr.html">
 <meta property="og:type" content="article">
 <meta property="og:title" content="EspressifSystems/esp-skainet — Minerva (FR)">
-<meta property="og:description" content="Fournir une solution complète de reconnaissance de mots-clés de réveil et de commandes vocales offline sur microcontrôleurs ESP32 avec faible consommation mémoire et latence réduite.">
+<meta property="og:description" content="ESP-Skainet 是乐鑫推出的智能语音助手，目前支持唤醒词识别和命令词识别。">
 <meta property="og:url" content="/f/espressifsystems-esp-skainet.fr.html">
 <meta property="og:image" content="/og.png">
 <meta property="og:site_name" content="Minerva">
 <meta property="og:locale" content="fr_FR">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="EspressifSystems/esp-skainet — Minerva (FR)">
-<meta name="twitter:description" content="Fournir une solution complète de reconnaissance de mots-clés de réveil et de commandes vocales offline sur microcontrôleurs ESP32 avec faible consommation mémoire et latence réduite.">
+<meta name="twitter:description" content="ESP-Skainet 是乐鑫推出的智能语音助手，目前支持唤醒词识别和命令词识别。">
 <style>
 :root{
   --paper:#F5F6F4; --surface:#FFFFFF; --surface-2:#FAFBF9;
@@ -174,7 +174,7 @@ aside .src:hover{background:var(--signal-2)}
   </span>
 </div></nav>
 <div class="status-line"><div class="wrap srow">
-  <span class="seg"><span class="dot"></span><span class="accent">Snapshot</span>&nbsp;· as of 2026-09-14</span>
+  <span class="seg"><span class="dot"></span><span class="accent">Snapshot</span>&nbsp;· as of 2026-09-21</span>
   <span class="seg">107 fiches</span>
   <span class="seg">reading: fiche · FR</span>
   <span class="ticks"><i></i><i></i><i></i><i></i><i></i></span>
@@ -183,47 +183,47 @@ aside .src:hover{background:var(--signal-2)}
 <div class="wrap">
   <div class="crumb"><a href="../index.html">Home</a><span class="sep">/</span><a href="../dashboard.html">Dashboard</a><span class="sep">/</span><a href="../dashboard.html?owner=EspressifSystems">EspressifSystems</a><span class="sep">/</span><span>esp-skainet</span><span style="margin-left:auto"><a href="espressifsystems-esp-skainet.html" style="color:var(--signal);font-weight:600">EN →</a></span></div>
 
-  <div class="readout" style="--dom-color:var(--d-emb);margin-top:16px">
-    <div class="rblock"><span class="rlab">Score</span><span class="rval tnum">67<span class="unit">/100</span></span></div>
-    <div class="rblock"><span class="rlab">Confiance</span><span class="rval conf">◆◆◆</span></div>
-    <div class="rblock"><span class="rlab">Domaine</span><span class="rval dom">Embarqué</span></div>
-    <div class="rmeta">Framework · Actif</div>
+  <div class="readout" style="--dom-color:var(--d-edge);margin-top:16px">
+    <div class="rblock"><span class="rlab">Score</span><span class="rval tnum">75<span class="unit">/100</span></span></div>
+    <div class="rblock"><span class="rlab">Confiance</span><span class="rval conf">◆<span class="off">◇◇</span></span></div>
+    <div class="rblock"><span class="rlab">Domaine</span><span class="rval dom">Edge AI</span></div>
+    <div class="rmeta">Library · Actif</div>
   </div>
   <div class="rlegend"><b>score</b> = un signal de tri grossier, 0–100 (similarité sémantique au créneau embarqué/IoT/robotique/edge-AI + bonus d'activité) — une clé de tri, pas une mesure de l'écosystème · <b>marques ◆</b> = niveau de confiance (qualité des données : profondeur d'enrichissement, métadonnées, récence) — méthode dans docs/SCORING.md</div>
 
   <header class="fhead">
     <h1>EspressifSystems/esp-skainet</h1>
-    <div class="tags"><span class="tag emb"><span class="d"></span>Embarqué</span><span class="tag plain">Framework</span><span class="tag plain">Actif</span></div>
+    <div class="tags"><span class="tag edge"><span class="d"></span>Edge AI</span><span class="tag plain">Library</span><span class="tag plain">Actif</span></div>
   </header>
 
   <div class="grid">
     <div class="main">
       <h2>Problème résolu</h2>
-      <p class="lede">Fournir une solution complète de reconnaissance de mots-clés de réveil et de commandes vocales offline sur microcontrôleurs ESP32 avec faible consommation mémoire et latence réduite.</p>
+      <p class="lede">ESP-Skainet 是乐鑫推出的智能语音助手，目前支持唤醒词识别和命令词识别。</p>
       <h2>Comment ça marche</h2>
-      <p>ESP-Skainet intègre deux moteurs de traitement vocal : WakeNet pour la détection de mots-clés de réveil (Alexa, 天猫精灵, etc.) et MultiNet pour la reconnaissance de jusqu&#x27;à 200 commandes vocales sans reconnexion réseau. Le pipeline traite les flux audio provenant de microphones ou fichiers stockés en flash/SD via un module Audio Front-End (AFE) effectuant le prétraitement du signal. L&#x27;architecture exploite l&#x27;ESP32-S3 avec sa PSRAM octal SPI haute vitesse pour déployer les modèles d&#x27;inférence optimisés.</p>
+      <p># ESP-Skainet [[中文]](./README_cn.md)</p>
       <h2>Spécificité chinoise</h2>
-      <p>Intégration native de mots-clés chinois (天猫精灵 d&#x27;Alibaba, 小爱同学 de Xiaomi) et support des commandes vocales en mandarin. Développé par Espressif Systems, fabricant chinois de SoC WiFi/BLE dominant le marché IoT asiatique.</p>
+      <p>Espressif Systems (乐鑫, Shanghai) — fabricant des SoCs ESP8266/ESP32 ; miroir Gitee officiel synchronisé depuis GitHub.</p>
       <h2 class="key">Équivalent occidental</h2>
-      <div class="keyblock"><p style="margin:0">Amazon Alexa Voice Service SDK, Google Assistant SDK (nécessitent connexion cloud) ; PocketSphinx (reconnaissance vocale offline mais moins optimisé pour microcontrôleurs)</p><div class="hint">← le pont qu'un annuaire ne vous donnera jamais</div></div>
+      <div class="keyblock"><p style="margin:0">Not identified</p><div class="hint">← le pont qu'un annuaire ne vous donnera jamais</div></div>
     </div>
     <aside>
-      <div class="r"><dt>Type</dt><dd>Framework</dd></div>
+      <div class="r"><dt>Type</dt><dd>Library</dd></div>
       <div class="r"><dt>Langage</dt><dd>Bilingue CN-EN</dd></div>
-      <div class="r"><dt>Étoiles</dt><dd>24 ★</dd></div>
-      <div class="r"><dt>Forks</dt><dd>10</dd></div>
-      <div class="r"><dt>Dernier push</dt><dd>2026-02</dd></div>
+      <div class="r"><dt>Étoiles</dt><dd>25 ★</dd></div>
+      <div class="r"><dt>Forks</dt><dd>11</dd></div>
+      <div class="r"><dt>Dernier push</dt><dd>2026-09</dd></div>
       <a class="src" href="https://gitee.com/EspressifSystems/esp-skainet" target="_blank" rel="noopener">Voir sur Gitee →</a>
     </aside>
   </div>
 
-  <section class="related"><div class="lbl">Autres fiches en Embarqué</div>
-    <div class="rel-grid"><a class="rc" href="embedfire-linux-firmware.fr.html"><div class="t"><span class="s tnum">★ 67</span><span class="tag emb"><span class="d"></span>Embarqué</span></div>
-  <h4>Embedfire/linux-firmware</h4><p>Fournir les blobs de firmware et les binaires d&#x27;arborescence de périphériques requis par le noyau Linux pour initialiser et exploiter les périphériques matériels (WiFi, Bluetooth, GPU, modem, etc.) sur diverses SoCs et cartes embarquées.</p></a>
-<a class="rc" href="espressifsystems-esp-dev-kits.fr.html"><div class="t"><span class="s tnum">★ 68</span><span class="tag emb"><span class="d"></span>Embarqué</span></div>
-  <h4>EspressifSystems/esp-dev-kits</h4><p>Espressif Develop Kit</p></a>
-<a class="rc" href="sophgo-sophgo-riscv-utils.fr.html"><div class="t"><span class="s tnum">★ 66</span><span class="tag emb"><span class="d"></span>Embarqué</span></div>
-  <h4>sophgo/sophgo-riscv-utils</h4><p>Fournir des utilitaires et des outils pour les systèmes embarqués basés sur RISC-V, en particulier ceux fabriqués par SOPHGO (un fournisseur de SoC chinois). Le projet répond au besoin de support spécifique à RISC-V pour le développement et l&#x27;exécution sur les lignes de processeurs de SOPHGO.</p></a></div></section>
+  <section class="related"><div class="lbl">Autres fiches en Edge AI</div>
+    <div class="rel-grid"><a class="rc" href="unitreerobotics-uniarml1.fr.html"><div class="t"><span class="s tnum">★ 74</span><span class="tag edge"><span class="d"></span>Edge AI</span></div>
+  <h4>unitreerobotics/UniArmL1</h4><p>UniArmL1 是一个轻量化的机械臂遥操作框架，支持三种控制模式与标准化数据采集，采集数据可无缝对接 unitree_lerobot 进行模仿学习训练与部署</p></a>
+<a class="rc" href="unitreerobotics-unitree-lerobot.fr.html"><div class="t"><span class="s tnum">★ 77</span><span class="tag edge"><span class="d"></span>Edge AI</span></div>
+  <h4>unitreerobotics/unitree_lerobot</h4><p>Activer l&#x27;entraînement et le déploiement de politiques d&#x27;apprentissage par imitation sur les robots bi-bras Unitree G1 en utilisant le framework LeRobot, avec des utilitaires de conversion de données pour les formats propriétaires de mains Unitree (Dex1, Dex3, BrainCo, Inspire1) en datasets compatibles LeRobot.</p></a>
+<a class="rc" href="espressifsystems-esp-insights.fr.html"><div class="t"><span class="s tnum">★ 77</span><span class="tag edge"><span class="d"></span>Edge AI</span></div>
+  <h4>EspressifSystems/esp-insights</h4><p>Capturer et transmettre à distance les diagnostics des appareils (journaux d&#x27;erreurs/avertissements, plantages, métriques, raisons de réinitialisation) depuis les appareils ESP32/ESP8266 déployés sur le terrain vers un tableau de bord cloud, permettant aux développeurs de diagnostiquer les problèmes qui ne surviennent que dans des environnements de déploiement spécifiques sans accès physique.</p></a></div></section>
 
   <div class="nlbox">
     <h3>Cette fiche vous a été utile ?</h3>
