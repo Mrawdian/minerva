@@ -4,19 +4,19 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>sophgo/middleware — Minerva</title>
-<meta name="description" content="Provide multimedia codec and image processing libraries for the CV18xx series SoC (CVITEK/SOPHGO processors), enabling video encoding/decoding, image scaling, and color space conversion without relyi…">
+<meta name="description" content="multimedia libs for cv18xx series soc.">
 <link rel="icon" type="image/svg+xml" href="../favicon.svg">
 <link rel="canonical" href="/f/sophgo-middleware.html"><link rel="alternate" hreflang="fr" href="/f/sophgo-middleware.fr.html"><link rel="alternate" hreflang="en" href="/f/sophgo-middleware.html">
 <meta property="og:type" content="article">
 <meta property="og:title" content="sophgo/middleware — Minerva">
-<meta property="og:description" content="Provide multimedia codec and image processing libraries for the CV18xx series SoC (CVITEK/SOPHGO processors), enabling video encoding/decoding, image scaling, and color space conversion without relyi…">
+<meta property="og:description" content="multimedia libs for cv18xx series soc.">
 <meta property="og:url" content="/f/sophgo-middleware.html">
 <meta property="og:image" content="/og.png">
 <meta property="og:site_name" content="Minerva">
 <meta property="og:locale" content="en_US">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="sophgo/middleware — Minerva">
-<meta name="twitter:description" content="Provide multimedia codec and image processing libraries for the CV18xx series SoC (CVITEK/SOPHGO processors), enabling video encoding/decoding, image scaling, and color space conversion without relyi…">
+<meta name="twitter:description" content="multimedia libs for cv18xx series soc.">
 <style>
 :root{
   --paper:#F5F6F4; --surface:#FFFFFF; --surface-2:#FAFBF9;
@@ -174,7 +174,7 @@ aside .src:hover{background:var(--signal-2)}
   </span>
 </div></nav>
 <div class="status-line"><div class="wrap srow">
-  <span class="seg"><span class="dot"></span><span class="accent">Snapshot</span>&nbsp;· as of 2026-09-21</span>
+  <span class="seg"><span class="dot"></span><span class="accent">Snapshot</span>&nbsp;· as of 2026-09-28</span>
   <span class="seg">107 fiches</span>
   <span class="seg">reading: fiche</span>
   <span class="ticks"><i></i><i></i><i></i><i></i><i></i></span>
@@ -184,8 +184,8 @@ aside .src:hover{background:var(--signal-2)}
   <div class="crumb"><a href="../index.html">Home</a><span class="sep">/</span><a href="../dashboard.html">Dashboard</a><span class="sep">/</span><a href="../dashboard.html?owner=sophgo">sophgo</a><span class="sep">/</span><span>middleware</span><span style="margin-left:auto"><a href="sophgo-middleware.fr.html" style="color:var(--signal);font-weight:600">FR →</a></span></div>
 
   <div class="readout" style="--dom-color:var(--d-emb);margin-top:16px">
-    <div class="rblock"><span class="rlab">Score</span><span class="rval tnum">62<span class="unit">/100</span></span></div>
-    <div class="rblock"><span class="rlab">Confidence</span><span class="rval conf">◆◆◆</span></div>
+    <div class="rblock"><span class="rlab">Score</span><span class="rval tnum">67<span class="unit">/100</span></span></div>
+    <div class="rblock"><span class="rlab">Confidence</span><span class="rval conf">◆<span class="off">◇◇</span></span></div>
     <div class="rblock"><span class="rlab">Domain</span><span class="rval dom">Embedded</span></div>
     <div class="rmeta">Library · Active</div>
   </div>
@@ -199,31 +199,31 @@ aside .src:hover{background:var(--signal-2)}
   <div class="grid">
     <div class="main">
       <h2>Problem solved</h2>
-      <p class="lede">Provide multimedia codec and image processing libraries for the CV18xx series SoC (CVITEK/SOPHGO processors), enabling video encoding/decoding, image scaling, and color space conversion without relying solely on vendor-proprietary closed-source implementations.</p>
+      <p class="lede">multimedia libs for cv18xx series soc.</p>
       <h2>How it works</h2>
-      <p>The middleware stack includes video codec libraries (H.264, H.265, JPEG), image processing modules (ISP, scaler, color conversion), and audio codec support. Written primarily in C with hardware abstraction layers for the CV18xx SoC family. Dependencies include kernel drivers and bootloader components specific to the CVITEK/SOPHGO platform. Targets embedded Linux deployments on CV1800, CV1812, and related variants.</p>
+      <p>See the project README</p>
       <h2>Chinese specificity</h2>
-      <p>SOPHGO (formerly CVITEK) is a Chinese fabless semiconductor company specializing in edge AI and multimedia SoCs. This middleware is the official support library for their CV18xx processor family, which is widely used in Chinese IoT, surveillance, and robotics applications.</p>
+      <p>Chinese open-source project</p>
       <h2 class="key">Western equivalent</h2>
-      <div class="keyblock"><p style="margin:0">FFmpeg (multimedia codecs), GStreamer (multimedia framework), libx264/libx265 (video encoding) — though those are generic; no direct equivalent for CV18xx-specific hardware acceleration.</p><div class="hint">← the bridge a directory never gives you</div></div>
+      <div class="keyblock"><p style="margin:0">Not identified</p><div class="hint">← the bridge a directory never gives you</div></div>
     </div>
     <aside>
       <div class="r"><dt>Type</dt><dd>Library</dd></div>
       <div class="r"><dt>Language</dt><dd>English</dd></div>
       <div class="r"><dt>Stars</dt><dd>6 ★</dd></div>
       <div class="r"><dt>Forks</dt><dd>13</dd></div>
-      <div class="r"><dt>Last push</dt><dd>2026-04</dd></div>
+      <div class="r"><dt>Last push</dt><dd>2026-09</dd></div>
       <a class="src" href="https://github.com/sophgo/middleware" target="_blank" rel="noopener">View on GitHub →</a>
     </aside>
   </div>
 
   <section class="related"><div class="lbl">Other fiches in Embedded</div>
-    <div class="rel-grid"><a class="rc" href="unitreerobotics-unilidar-sdk2.html"><div class="t"><span class="s tnum">★ 62</span><span class="tag emb"><span class="d"></span>Embedded</span></div>
-  <h4>unitreerobotics/unilidar_sdk2</h4><p>Provide a unified C++ SDK and ROS/ROS2 integration layer for the Unitree L2 LiDAR to acquire point cloud and IMU data, configure sensor parameters, and publish data to robotics middleware without proprietary closed-source drivers.</p></a>
-<a class="rc" href="alibaba-alibaba-rsocket-broker.html"><div class="t"><span class="s tnum">★ 62</span><span class="tag emb"><span class="d"></span>Embedded</span></div>
-  <h4>alibaba/alibaba-rsocket-broker</h4><p>Provide a reactive peer-to-peer communication system based on RSocket for distributed architectures (RPC, Pub/Sub, Streaming) without explicit thread management and with backpressure support.</p></a>
-<a class="rc" href="unitreerobotics-unitree-motor-debugging-assistant.html"><div class="t"><span class="s tnum">★ 63</span><span class="tag emb"><span class="d"></span>Embedded</span></div>
-  <h4>unitreerobotics/unitree-motor-debugging-assistant</h4><p>Provide a Windows desktop GUI for real-time debugging, parameter tuning, and firmware management of Unitree GO-M8010-6 brushless motors over serial communication, eliminating the need for command-line tools or proprietary closed-source utilities.</p></a></div></section>
+    <div class="rel-grid"><a class="rc" href="embedfire-linux-firmware.html"><div class="t"><span class="s tnum">★ 67</span><span class="tag emb"><span class="d"></span>Embedded</span></div>
+  <h4>Embedfire/linux-firmware</h4><p>Provide firmware blobs and device tree binaries required by the Linux kernel to initialize and operate hardware peripherals (WiFi, Bluetooth, GPU, modem, etc.) on various SoCs and embedded boards.</p></a>
+<a class="rc" href="espressifsystems-esp-dev-kits.html"><div class="t"><span class="s tnum">★ 68</span><span class="tag emb"><span class="d"></span>Embedded</span></div>
+  <h4>EspressifSystems/esp-dev-kits</h4><p>Espressif Develop Kit</p></a>
+<a class="rc" href="sophgo-sophgo-riscv-utils.html"><div class="t"><span class="s tnum">★ 66</span><span class="tag emb"><span class="d"></span>Embedded</span></div>
+  <h4>sophgo/sophgo-riscv-utils</h4><p>Provide utilities and tooling for RISC-V based embedded systems, particularly those manufactured by SOPHGO (a Chinese SoC vendor). The project addresses the need for RISC-V-specific development and runtime support on SOPHGO&#x27;s processor lines.</p></a></div></section>
 
   <div class="nlbox">
     <h3>Enjoyed this fiche?</h3>

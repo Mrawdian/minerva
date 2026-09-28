@@ -29,7 +29,7 @@ libsophon目前包含如下组件：
             cmake \
 **Spécificité chinoise :** Chinese open-source project
 **Équivalent occidental :** Not identified
-**Maturité :** Actif (★ 27, 16 forks, mis à jour 2026-08)
+**Maturité :** Actif (★ 28, 15 forks, mis à jour 2026-09)
 **Langue :** Bilingue CN-EN
 **GitHub :** https://github.com/sophgo/libsophon
 ---

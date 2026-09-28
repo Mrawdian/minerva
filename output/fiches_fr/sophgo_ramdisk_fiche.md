@@ -15,7 +15,7 @@ prebuild:
 		when building rootfs, files in ove
 **Spécificité chinoise :** Chinese open-source project
 **Équivalent occidental :** Not identified
-**Maturité :** Actif (★ 1, 11 forks, mis à jour 2026-08)
+**Maturité :** Actif (★ 1, 11 forks, mis à jour 2026-09)
 **Langue :** Anglais
 **GitHub :** https://github.com/sophgo/ramdisk
 ---
