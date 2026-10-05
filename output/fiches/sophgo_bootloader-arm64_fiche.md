@@ -16,7 +16,7 @@ python3 -m dfss --dflag=distro_focal_28ad82b4cf01327b1f81d3d193923424
 NOTE: You need to rename the distro packa
 **Chinese specificity:** Chinese open-source project
 **Western equivalent:** Not identified
-**Maturity:** Active (★ 14, 25 forks, updated 2026-09)
+**Maturity:** Active (★ 13, 25 forks, updated 2026-09)
 **Language:** English
 **GitHub:** https://github.com/sophgo/bootloader-arm64
 ---

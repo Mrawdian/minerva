@@ -7,7 +7,7 @@
 **Comment ça marche :** See the project README
 **Spécificité chinoise :** Chinese open-source project
 **Équivalent occidental :** Not identified
-**Maturité :** Actif (★ 6, 2 forks, mis à jour 2026-09)
+**Maturité :** Actif (★ 6, 2 forks, mis à jour 2026-10)
 **Langue :** Anglais
 **GitHub :** https://github.com/bouffalolab/bouffalo_sdk-drivers
 ---
