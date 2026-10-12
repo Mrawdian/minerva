@@ -7,7 +7,7 @@
 **How it works:** See the project README
 **Chinese specificity:** Chinese open-source project
 **Western equivalent:** Not identified
-**Maturity:** Active (★ 4, 20 forks, updated 2026-09)
+**Maturity:** Active (★ 4, 20 forks, updated 2026-10)
 **Language:** English
 **GitHub:** https://github.com/sophgo/build
 ---

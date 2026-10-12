@@ -7,7 +7,7 @@
 **How it works:** See the project README
 **Chinese specificity:** Chinese open-source project
 **Western equivalent:** Not identified
-**Maturity:** Active (★ 11, 18 forks, updated 2026-09)
+**Maturity:** Active (★ 11, 19 forks, updated 2026-10)
 **Language:** English
 **GitHub:** https://github.com/sophgo/osdrv
 ---

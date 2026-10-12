@@ -7,7 +7,7 @@
 **Comment ça marche :** See the project README
 **Spécificité chinoise :** Chinese open-source project
 **Équivalent occidental :** Not identified
-**Maturité :** Actif (★ 11, 18 forks, mis à jour 2026-09)
+**Maturité :** Actif (★ 11, 19 forks, mis à jour 2026-10)
 **Langue :** Anglais
 **GitHub :** https://github.com/sophgo/osdrv
 ---
