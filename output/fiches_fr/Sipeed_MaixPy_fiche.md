@@ -14,7 +14,7 @@
 [![Back MaixCam 2 on Kickstarter](https://img.shields.io/badge/Kickstarter-Back%20MaixCam%202-05CE78?style=for-the-badge&logo=kickstarter&logoColor=white)](https://www.kickstarter.com/projec
 **Spécificité chinoise :** Chinese open-source project
 **Équivalent occidental :** Not identified
-**Maturité :** Actif (★ 2, mis à jour 2026-08)
+**Maturité :** Actif (★ 2, mis à jour 2026-10)
 **Langue :** Bilingue CN-EN
 **Gitee :** https://gitee.com/Sipeed/MaixPy
 ---

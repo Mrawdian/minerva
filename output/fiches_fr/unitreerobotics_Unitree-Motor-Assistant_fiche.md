@@ -24,7 +24,7 @@
 &emsp;&emsp;For detailed usage instructions, please refer to:  [Unitree Mo
 **Spécificité chinoise :** Chinese open-source project
 **Équivalent occidental :** Not identified
-**Maturité :** Actif (2 forks, mis à jour 2026-09)
+**Maturité :** Actif (★ 1, 2 forks, mis à jour 2026-10)
 **Langue :** Anglais
 **GitHub :** https://github.com/unitreerobotics/Unitree-Motor-Assistant
 ---
