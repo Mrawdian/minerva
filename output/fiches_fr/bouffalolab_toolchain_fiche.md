@@ -1,20 +1,18 @@
 ---
-## bouffalolab/toolchain
+## bouffalolab/toolchain [MODIFIÉ]
 **Type :** Library
 **Domaine :** Edge AI
 **Score de pertinence :** 31/100
 **Problème résolu :** Toolchains for bouffalo
-**Comment ça marche :** 这是一个**交叉编译工具链（Toolchain）发布仓库**的描述，通常用于为嵌入式开发、RISC-V 生态或 Zephyr RTOS 项目提供预编译的 GCC 工具链。 Bouffalo sdk使用这些工具链。
+**Comment ça marche :** # Bouffalo Lab Toolchain
 
-## 仓库概览
+本仓库用于发布 Bouffalo Lab SDK、玄铁（XuanTie）RISC-V 处理器及 Zephyr RTOS 开发所需的预编译 GCC 交叉编译工具链。仓库中只包含发布说明，工具链二进制文件通过 GitHub Releases 提供。
 
-该仓库的 **Releases 页面**会按版本发布预编译的工具链二进制包，覆盖主流桌面操作系统与 CPU 架构组合。
+当前 Release：[`default`](https://github.com/bouffalolab/toolchain/releases/tag/default)
 
-### 支持平台矩阵
+## 版本与支持平台
 
-| 工具链 | MacOS (Apple Silicon) | Linux (ARM64) | Linux (x86_64) | Windows (x86_64) |
-|---|---|---|---|---|
-| **
+| 工具链 | 版本 | macOS ARM64 | Linux ARM64 | Linux x86_
 **Spécificité chinoise :** Chinese open-source project
 **Équivalent occidental :** Not identified
 **Maturité :** Actif (★ 1, mis à jour 2026-10)

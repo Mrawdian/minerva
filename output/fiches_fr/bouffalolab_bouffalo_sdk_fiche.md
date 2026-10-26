@@ -8,12 +8,14 @@
 
 [中文版](README_zh.md)
 
-# Introduction
-
-**BouffaloSDK** is the IOT and MCU software development kit provided by the Bouffalo Lab Team, supports all the series of Bouffalo chips. Also it is the combination of **bl_mcu_s
+> v2.3.37 uses a compact Git history to reduce `git pull` time; run this command locally to join it with v2.3.36:
+>
+> ```bash
+> git replace -f --graft 'v2.3.37-history-base^{}' 'v2.3.36^{}'
+> ``
 **Spécificité chinoise :** Chinese open-source project
 **Équivalent occidental :** Not identified
-**Maturité :** Stable (★ 502, 181 forks, mis à jour 2026-10)
+**Maturité :** Stable (★ 503, 182 forks, mis à jour 2026-10)
 **Langue :** Bilingue CN-EN
 **GitHub :** https://github.com/bouffalolab/bouffalo_sdk
 ---
