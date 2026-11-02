@@ -15,7 +15,7 @@
 > ``
 **Spécificité chinoise :** Chinese open-source project
 **Équivalent occidental :** Not identified
-**Maturité :** Stable (★ 503, 182 forks, mis à jour 2026-10)
+**Maturité :** Stable (★ 504, 181 forks, mis à jour 2026-11)
 **Langue :** Bilingue CN-EN
 **GitHub :** https://github.com/bouffalolab/bouffalo_sdk
 ---

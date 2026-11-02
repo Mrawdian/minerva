@@ -13,10 +13,10 @@
 
 ### Introduction
 
-**ESP-Drone** is an open source solution based on Espressif E
+**ESP-Drone** is an open-source drone solution for Espressif 
 **Chinese specificity:** Espressif Systems (乐鑫, Shanghai) — fabricant des SoCs ESP8266/ESP32 ; miroir Gitee officiel synchronisé depuis GitHub.
 **Western equivalent:** Not identified
-**Maturity:** Active (★ 64, 21 forks, updated 2026-08)
+**Maturity:** Active (★ 65, 22 forks, updated 2026-10)
 **Language:** Bilingual CN-EN
 **Gitee:** https://gitee.com/EspressifSystems/esp-drone
 ---

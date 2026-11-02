@@ -27,7 +27,7 @@ defconfig sg2002_wevb_riscv64_sd
 cle
 **Chinese specificity:** Chinese open-source project
 **Western equivalent:** Not identified
-**Maturity:** Active (★ 60, 35 forks, updated 2026-08)
+**Maturity:** Active (★ 61, 35 forks, updated 2026-10)
 **Language:** Bilingual CN-EN
 **GitHub:** https://github.com/sophgo/sophpi
 ---

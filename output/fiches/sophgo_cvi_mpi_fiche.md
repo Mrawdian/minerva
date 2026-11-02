@@ -7,7 +7,7 @@
 **How it works:** See the project README
 **Chinese specificity:** Chinese open-source project
 **Western equivalent:** Not identified
-**Maturity:** Active (★ 3, 7 forks, updated 2026-08)
+**Maturity:** Active (★ 3, 8 forks, updated 2026-10)
 **Language:** English
 **GitHub:** https://github.com/sophgo/cvi_mpi
 ---

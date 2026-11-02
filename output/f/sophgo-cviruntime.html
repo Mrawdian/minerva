@@ -4,19 +4,19 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>sophgo/cviruntime — Minerva</title>
-<meta name="description" content="Provide a runtime library and SDK for developing applications targeting SOPHGO TPU accelerators (CV181x, BM1880v2 series). Enables inference execution on TPU hardware with model loading, execution, a…">
+<meta name="description" content="cviruntime is a lib released as SDK for use to develop TPU application. As well as a few tools for testing/benchmarking/profiling, etc.">
 <link rel="icon" type="image/svg+xml" href="../favicon.svg">
 <link rel="canonical" href="/f/sophgo-cviruntime.html"><link rel="alternate" hreflang="fr" href="/f/sophgo-cviruntime.fr.html"><link rel="alternate" hreflang="en" href="/f/sophgo-cviruntime.html">
 <meta property="og:type" content="article">
 <meta property="og:title" content="sophgo/cviruntime — Minerva">
-<meta property="og:description" content="Provide a runtime library and SDK for developing applications targeting SOPHGO TPU accelerators (CV181x, BM1880v2 series). Enables inference execution on TPU hardware with model loading, execution, a…">
+<meta property="og:description" content="cviruntime is a lib released as SDK for use to develop TPU application. As well as a few tools for testing/benchmarking/profiling, etc.">
 <meta property="og:url" content="/f/sophgo-cviruntime.html">
 <meta property="og:image" content="/og.png">
 <meta property="og:site_name" content="Minerva">
 <meta property="og:locale" content="en_US">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="sophgo/cviruntime — Minerva">
-<meta name="twitter:description" content="Provide a runtime library and SDK for developing applications targeting SOPHGO TPU accelerators (CV181x, BM1880v2 series). Enables inference execution on TPU hardware with model loading, execution, a…">
+<meta name="twitter:description" content="cviruntime is a lib released as SDK for use to develop TPU application. As well as a few tools for testing/benchmarking/profiling, etc.">
 <style>
 :root{
   --paper:#F5F6F4; --surface:#FFFFFF; --surface-2:#FAFBF9;
@@ -174,8 +174,8 @@ aside .src:hover{background:var(--signal-2)}
   </span>
 </div></nav>
 <div class="status-line"><div class="wrap srow">
-  <span class="seg"><span class="dot"></span><span class="accent">Snapshot</span>&nbsp;· as of 2026-10-26</span>
-  <span class="seg">106 fiches</span>
+  <span class="seg"><span class="dot"></span><span class="accent">Snapshot</span>&nbsp;· as of 2026-11-02</span>
+  <span class="seg">102 fiches</span>
   <span class="seg">reading: fiche</span>
   <span class="ticks"><i></i><i></i><i></i><i></i><i></i></span>
 </div></div>
@@ -184,46 +184,46 @@ aside .src:hover{background:var(--signal-2)}
   <div class="crumb"><a href="../index.html">Home</a><span class="sep">/</span><a href="../dashboard.html">Dashboard</a><span class="sep">/</span><a href="../dashboard.html?owner=sophgo">sophgo</a><span class="sep">/</span><span>cviruntime</span><span style="margin-left:auto"><a href="sophgo-cviruntime.fr.html" style="color:var(--signal);font-weight:600">FR →</a></span></div>
 
   <div class="readout" style="--dom-color:var(--d-emb);margin-top:16px">
-    <div class="rblock"><span class="rlab">Score</span><span class="rval tnum">59<span class="unit">/100</span></span></div>
-    <div class="rblock"><span class="rlab">Confidence</span><span class="rval conf">◆◆◆</span></div>
+    <div class="rblock"><span class="rlab">Score</span><span class="rval tnum">56<span class="unit">/100</span></span></div>
+    <div class="rblock"><span class="rlab">Confidence</span><span class="rval conf">◆<span class="off">◇◇</span></span></div>
     <div class="rblock"><span class="rlab">Domain</span><span class="rval dom">Embedded</span></div>
-    <div class="rmeta">Library · Experimental</div>
+    <div class="rmeta">Framework · Active</div>
   </div>
   <div class="rlegend"><b>score</b> = a coarse triage signal, 0–100 (semantic similarity to the embedded/IoT/robotics/edge-AI wedge + activity bonuses) — a sort key, not a measurement of the ecosystem · <b>◆ marks</b> = confidence tier (data-quality: enrichment depth, metadata, recency) — method in docs/SCORING.md</div>
 
   <header class="fhead">
     <h1>sophgo/cviruntime</h1>
-    <div class="tags"><span class="tag emb"><span class="d"></span>Embedded</span><span class="tag plain">Library</span><span class="tag plain">Experimental</span></div>
+    <div class="tags"><span class="tag emb"><span class="d"></span>Embedded</span><span class="tag plain">Framework</span><span class="tag plain">Active</span></div>
   </header>
 
   <div class="grid">
     <div class="main">
       <h2>Problem solved</h2>
-      <p class="lede">Provide a runtime library and SDK for developing applications targeting SOPHGO TPU accelerators (CV181x, BM1880v2 series). Enables inference execution on TPU hardware with model loading, execution, and profiling capabilities.</p>
+      <p class="lede">cviruntime is a lib released as SDK for use to develop TPU application. As well as a few tools for testing/benchmarking/profiling, etc.</p>
       <h2>How it works</h2>
-      <p>C/C++ runtime library that loads and executes neural network models (via cvimodel format, using FlatBuffers serialization) on SOPHGO TPU hardware. Core dependencies: cvibuilder (model compilation), cvikernel (TPU kernel library), flatbuffers (model format), cnpy (NumPy interop). Builds as libcviruntime.so and libcviruntime-static.a. Supports multiple execution modes: SOC (on-device), CMODEL (simulation). Includes test_cvimodel tool for validation and benchmarking.</p>
+      <p># runtime</p>
       <h2>Chinese specificity</h2>
-      <p>SOPHGO is a Chinese semiconductor company specializing in AI accelerators and TPU design. cviruntime is the official runtime stack for SOPHGO&#x27;s CV-series and BM-series TPU chips, integral to their edge AI inference ecosystem.</p>
+      <p>Chinese open-source project</p>
       <h2 class="key">Western equivalent</h2>
-      <div class="keyblock"><p style="margin:0">TensorFlow Lite (Google), NCNN (Tencent), TVM runtime (Apache), ONNX Runtime (Microsoft)</p><div class="hint">← the bridge a directory never gives you</div></div>
+      <div class="keyblock"><p style="margin:0">Not identified</p><div class="hint">← the bridge a directory never gives you</div></div>
     </div>
     <aside>
-      <div class="r"><dt>Type</dt><dd>Library</dd></div>
+      <div class="r"><dt>Type</dt><dd>Framework</dd></div>
       <div class="r"><dt>Language</dt><dd>Bilingual CN-EN</dd></div>
       <div class="r"><dt>Stars</dt><dd>5 ★</dd></div>
       <div class="r"><dt>Forks</dt><dd>11</dd></div>
-      <div class="r"><dt>Last push</dt><dd>2025-11</dd></div>
+      <div class="r"><dt>Last push</dt><dd>2026-10</dd></div>
       <a class="src" href="https://github.com/sophgo/cviruntime" target="_blank" rel="noopener">View on GitHub →</a>
     </aside>
   </div>
 
   <section class="related"><div class="lbl">Other fiches in Embedded</div>
-    <div class="rel-grid"><a class="rc" href="bouffalolab-bl-iot-sdk-components.html"><div class="t"><span class="s tnum">★ 59</span><span class="tag emb"><span class="d"></span>Embedded</span></div>
-  <h4>bouffalolab/bl_iot_sdk-components</h4><p>sub module for repository bl_iot_sdk_tiny</p></a>
-<a class="rc" href="alibaba-dummy-risc-v-vpu.html"><div class="t"><span class="s tnum">★ 59</span><span class="tag emb"><span class="d"></span>Embedded</span></div>
-  <h4>alibaba/Dummy-RISC-V-VPU</h4><p>No README or description accessible; project name suggests a RISC-V Vector Processing Unit (VPU) simulator or emulator, likely for instruction-set validation or architectural exploration of RISC-V vector extensions, but concrete problem statement cannot be verified.</p></a>
-<a class="rc" href="sophgo-isp-tuning.html"><div class="t"><span class="s tnum">★ 58</span><span class="tag emb"><span class="d"></span>Embedded</span></div>
-  <h4>sophgo/isp_tuning</h4><p>isp param for cv18xx series soc.</p></a></div></section>
+    <div class="rel-grid"><a class="rc" href="sophgo-torch-tpu.html"><div class="t"><span class="s tnum">★ 56</span><span class="tag emb"><span class="d"></span>Embedded</span></div>
+  <h4>sophgo/torch-tpu</h4><p>Enable execution of PyTorch models on Sophgo TPU devices (SG2260, TPU1686) with support for distributed training frameworks (DeepSpeed, Megatron) and large language models, bridging the gap between PyTorch&#x27;s CPU/GPU ecosystem and Sophgo&#x27;s proprietary TPU hardware.</p></a>
+<a class="rc" href="sophgo-build.html"><div class="t"><span class="s tnum">★ 56</span><span class="tag emb"><span class="d"></span>Embedded</span></div>
+  <h4>sophgo/build</h4><p>build config for cv18xx series soc.</p></a>
+<a class="rc" href="sophgo-bootloader-arm64.html"><div class="t"><span class="s tnum">★ 56</span><span class="tag emb"><span class="d"></span>Embedded</span></div>
+  <h4>sophgo/bootloader-arm64</h4><p>bootloader for Sophon AI chips</p></a></div></section>
 
   <div class="nlbox">
     <h3>Enjoyed this fiche?</h3>
