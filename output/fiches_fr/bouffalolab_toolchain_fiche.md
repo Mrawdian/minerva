@@ -10,12 +10,10 @@
 
 当前 Release：[`default`](https://github.com/bouffalolab/toolchain/releases/tag/default)
 
-## 版本与支持平台
-
-| 工具链 | 版本 | macOS ARM64 | Linux ARM64 | Linux x86_
+> **后续版本说明**：后续版本需要使用 **GCC 14.3**。玄铁 GCC（XuanTie GCC）和 Zephyr 
 **Spécificité chinoise :** Chinese open-source project
 **Équivalent occidental :** Not identified
-**Maturité :** Actif (★ 1, mis à jour 2026-10)
+**Maturité :** Actif (★ 1, mis à jour 2026-11)
 **Langue :** Bilingue CN-EN
 **GitHub :** https://github.com/bouffalolab/toolchain
 ---

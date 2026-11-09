@@ -17,7 +17,7 @@
 [![Python](https://img.shields.io/badge/py
 **Spécificité chinoise :** Chinese open-source project
 **Équivalent occidental :** Not identified
-**Maturité :** Actif (★ 321, 56 forks, mis à jour 2026-10)
+**Maturité :** Actif (★ 321, 56 forks, mis à jour 2026-11)
 **Langue :** Bilingue CN-EN
 **GitHub :** https://github.com/sophgo/LLM-TPU
 ---

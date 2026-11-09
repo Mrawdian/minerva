@@ -7,7 +7,7 @@
 **Comment ça marche :** See the project README
 **Spécificité chinoise :** Chinese open-source project
 **Équivalent occidental :** Not identified
-**Maturité :** Actif (★ 6, 8 forks, mis à jour 2026-10)
+**Maturité :** Actif (★ 6, 9 forks, mis à jour 2026-11)
 **Langue :** Anglais
 **GitHub :** https://github.com/sophgo/SensorSupportList
 ---

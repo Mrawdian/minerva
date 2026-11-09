@@ -10,7 +10,7 @@
 [![license](https://img.shields.io/github/license/openLuat/LuatOS)](/L
 **Spécificité chinoise :** Hezhou (合宙) — fabricant chinois de modules cellulaires (gammes Air8000/Air8101/Air780E), très présent dans l'IoT industriel chinois.
 **Équivalent occidental :** Not identified
-**Maturité :** Stable (★ 1894, 532 forks, mis à jour 2026-11)
+**Maturité :** Stable (★ 1895, 533 forks, mis à jour 2026-11)
 **Langue :** Bilingue CN-EN
 **Gitee :** https://gitee.com/openLuat/LuatOS
 ---
