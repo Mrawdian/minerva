@@ -15,12 +15,15 @@ tools
 * test_cvimodel
 
 ## dependency
-ninja
-flatbuffers（https://github.com/google/flatbuffers）
-cvibuilder (for cvimodel_generated.h)（https://g
+
+cvibuilder (for cvimodel_generated.h)
+bmkernel (if run bmkernel directly)
+cmodel (if RUNTIME=CMODEL)
+
+#
 **Chinese specificity:** Chinese open-source project
 **Western equivalent:** Not identified
-**Maturity:** Active (★ 5, 11 forks, updated 2026-10)
-**Language:** Bilingual CN-EN
+**Maturity:** Active (★ 5, 12 forks, updated 2026-11)
+**Language:** English
 **GitHub:** https://github.com/sophgo/cviruntime
 ---

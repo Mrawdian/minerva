@@ -13,7 +13,7 @@
   <a href="https://discord.gg/ZwcVwxv5rq" target="_blank"><img src="https://img.shields.io/badge/-Dis
 **Chinese specificity:** Chinese open-source project
 **Western equivalent:** Not identified
-**Maturity:** Stable (★ 568, 166 forks, updated 2026-11)
+**Maturity:** Stable (★ 572, 167 forks, updated 2026-11)
 **Language:** Bilingual CN-EN
 **GitHub:** https://github.com/unitreerobotics/unitree_sim_isaaclab
 ---

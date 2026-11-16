@@ -11,7 +11,7 @@
 This repository contains the Chinese and English documentation for the Canaan Kendryte K230 RTOS Only SDK, covering SDK builds, firmware flashing, application development, AI a
 **Chinese specificity:** Chinese open-source project
 **Western equivalent:** Not identified
-**Maturity:** Active (★ 2, 2 forks, updated 2026-10)
+**Maturity:** Active (★ 2, 2 forks, updated 2026-11)
 **Language:** Bilingual CN-EN
 **GitHub:** https://github.com/kendryte/k230_rtos_docs
 ---

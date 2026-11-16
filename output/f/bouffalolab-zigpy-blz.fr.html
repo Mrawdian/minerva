@@ -4,19 +4,19 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>bouffalolab/zigpy-blz — Minerva (FR)</title>
-<meta name="description" content="Permettre au matériel radio Zigbee Bouffalo Lab (BLZ) de s&#x27;intégrer à zigpy, la pile Zigbee Python open-source, permettant aux utilisateurs de contrôler les appareils Zigbee via Home Assistant ZHA sa…">
+<meta name="description" content="A Python library for integrating Bouffalo Lab Zigbee (BLZ) radios with zigpy">
 <link rel="icon" type="image/svg+xml" href="../favicon.svg">
 <link rel="canonical" href="/f/bouffalolab-zigpy-blz.fr.html"><link rel="alternate" hreflang="en" href="/f/bouffalolab-zigpy-blz.html"><link rel="alternate" hreflang="fr" href="/f/bouffalolab-zigpy-blz.fr.html">
 <meta property="og:type" content="article">
 <meta property="og:title" content="bouffalolab/zigpy-blz — Minerva (FR)">
-<meta property="og:description" content="Permettre au matériel radio Zigbee Bouffalo Lab (BLZ) de s&#x27;intégrer à zigpy, la pile Zigbee Python open-source, permettant aux utilisateurs de contrôler les appareils Zigbee via Home Assistant ZHA sa…">
+<meta property="og:description" content="A Python library for integrating Bouffalo Lab Zigbee (BLZ) radios with zigpy">
 <meta property="og:url" content="/f/bouffalolab-zigpy-blz.fr.html">
 <meta property="og:image" content="/og.png">
 <meta property="og:site_name" content="Minerva">
 <meta property="og:locale" content="fr_FR">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="bouffalolab/zigpy-blz — Minerva (FR)">
-<meta name="twitter:description" content="Permettre au matériel radio Zigbee Bouffalo Lab (BLZ) de s&#x27;intégrer à zigpy, la pile Zigbee Python open-source, permettant aux utilisateurs de contrôler les appareils Zigbee via Home Assistant ZHA sa…">
+<meta name="twitter:description" content="A Python library for integrating Bouffalo Lab Zigbee (BLZ) radios with zigpy">
 <style>
 :root{
   --paper:#F5F6F4; --surface:#FFFFFF; --surface-2:#FAFBF9;
@@ -174,8 +174,8 @@ aside .src:hover{background:var(--signal-2)}
   </span>
 </div></nav>
 <div class="status-line"><div class="wrap srow">
-  <span class="seg"><span class="dot"></span><span class="accent">Snapshot</span>&nbsp;· as of 2026-11-09</span>
-  <span class="seg">101 fiches</span>
+  <span class="seg"><span class="dot"></span><span class="accent">Snapshot</span>&nbsp;· as of 2026-11-16</span>
+  <span class="seg">102 fiches</span>
   <span class="seg">reading: fiche · FR</span>
   <span class="ticks"><i></i><i></i><i></i><i></i><i></i></span>
 </div></div>
@@ -185,7 +185,7 @@ aside .src:hover{background:var(--signal-2)}
 
   <div class="readout" style="--dom-color:var(--d-iot);margin-top:16px">
     <div class="rblock"><span class="rlab">Score</span><span class="rval tnum">51<span class="unit">/100</span></span></div>
-    <div class="rblock"><span class="rlab">Confiance</span><span class="rval conf">◆◆◆</span></div>
+    <div class="rblock"><span class="rlab">Confiance</span><span class="rval conf">◆<span class="off">◇◇</span></span></div>
     <div class="rblock"><span class="rlab">Domaine</span><span class="rval dom">IoT</span></div>
     <div class="rmeta">Library · Actif</div>
   </div>
@@ -199,20 +199,20 @@ aside .src:hover{background:var(--signal-2)}
   <div class="grid">
     <div class="main">
       <h2>Problème résolu</h2>
-      <p class="lede">Permettre au matériel radio Zigbee Bouffalo Lab (BLZ) de s&#x27;intégrer à zigpy, la pile Zigbee Python open-source, permettant aux utilisateurs de contrôler les appareils Zigbee via Home Assistant ZHA sans logiciel propriétaire du fournisseur.</p>
+      <p class="lede">A Python library for integrating Bouffalo Lab Zigbee (BLZ) radios with zigpy</p>
       <h2>Comment ça marche</h2>
-      <p>zigpy-blz est une bibliothèque Python qui implémente le protocole série Zigbee Bouffalo (BZSP) pour communiquer avec les modules radio BLZ. Elle agit comme une couche de pilote radio dans le framework zigpy, traduisant les commandes Zigbee génériques de zigpy en messages BZSP sur port série. La bibliothèque dépend de zigpy (pile principale), pyserial (communication série) et asyncio pour les E/S asynchrones. Elle supporte le matériel radio BLZ de Bouffalo Lab et s&#x27;intègre au composant ZHA de Home Assistant via un wrapper d&#x27;intégration personnalisé.</p>
+      <p># zigpy-blz</p>
       <h2>Spécificité chinoise</h2>
-      <p>Hébergé sur GitHub par bouffalolab (Bouffalo Lab, une entreprise chinoise de semi-conducteurs). Le projet fournit un support de pilote pour les chipsets radio Zigbee BLZ propriétaires de Bouffalo Lab, qui sont fabriqués et vendus par l&#x27;organisation mère dans le cadre de leur portefeuille de connectivité IoT.</p>
+      <p>Chinese open-source project</p>
       <h2 class="key">Équivalent occidental</h2>
-      <div class="keyblock"><p style="margin:0">zigpy-xbee (support radio Digi XBee), zigpy-deconz (support radio ConBee/RaspBee), zigpy-znp (support radio Texas Instruments Z-Stack)</p><div class="hint">← le pont qu'un annuaire ne vous donnera jamais</div></div>
+      <div class="keyblock"><p style="margin:0">Not identified</p><div class="hint">← le pont qu'un annuaire ne vous donnera jamais</div></div>
     </div>
     <aside>
       <div class="r"><dt>Type</dt><dd>Library</dd></div>
       <div class="r"><dt>Langage</dt><dd>Anglais</dd></div>
-      <div class="r"><dt>Étoiles</dt><dd>9 ★</dd></div>
+      <div class="r"><dt>Étoiles</dt><dd>8 ★</dd></div>
       <div class="r"><dt>Forks</dt><dd>5</dd></div>
-      <div class="r"><dt>Dernier push</dt><dd>2026-06</dd></div>
+      <div class="r"><dt>Dernier push</dt><dd>2026-11</dd></div>
       <a class="src" href="https://github.com/bouffalolab/zigpy-blz" target="_blank" rel="noopener">Voir sur GitHub →</a>
     </aside>
   </div>

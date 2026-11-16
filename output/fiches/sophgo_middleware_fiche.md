@@ -7,7 +7,7 @@
 **How it works:** See the project README
 **Chinese specificity:** Chinese open-source project
 **Western equivalent:** Not identified
-**Maturity:** Active (★ 6, 13 forks, updated 2026-10)
+**Maturity:** Active (★ 6, 13 forks, updated 2026-11)
 **Language:** English
 **GitHub:** https://github.com/sophgo/middleware
 ---
