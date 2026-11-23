@@ -19,7 +19,7 @@ Before building or running the SDK, ensure the following dependencies are instal
 - CMake (version 3.10 or high
 **Spécificité chinoise :** Chinese open-source project
 **Équivalent occidental :** Not identified
-**Maturité :** Stable (★ 1441, 405 forks, mis à jour 2026-11)
+**Maturité :** Stable (★ 1456, 404 forks, mis à jour 2026-11)
 **Langue :** Anglais
 **GitHub :** https://github.com/unitreerobotics/unitree_sdk2
 ---

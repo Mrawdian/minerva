@@ -1,11 +1,11 @@
-Subject: Minerva — Open Source China Intelligence — 2026-11-16
+Subject: Minerva — Open Source China Intelligence — 2026-11-23
 
 ========================================================================
-  MINERVA NEWSLETTER — 2026-11-16
+  MINERVA NEWSLETTER — 2026-11-23
   Open source China intelligence: embedded / IoT / robotics / edge-AI
 ========================================================================
 
-Last pipeline run: 2026-11-16T15:07:25+00:00
+Last pipeline run: 2026-11-23T17:39:54+00:00
 
 ------------------------------------------------------------------------
 TOP 5 FINDINGS (by relevance score)
@@ -15,7 +15,7 @@ TOP 5 FINDINGS (by relevance score)
    Provides an RTOS-based SDK for the ESP8266 microcontroller with FreeRTOS, lwIP, and Wi-Fi drivers integrated. Addresses the need for a complete development environment to build networked embedded app…
    https://gitee.com/EspressifSystems/ESP8266_RTOS_SDK
 
-2. [100/100] rtthread/rt-thread  (★5570)
+2. [100/100] rtthread/rt-thread  (★5581)
    RT-Thread是一个来自中国的开源物联网操作系统，它提供了非常强的可伸缩能力：从一个可以运行在ARM Cortex-M0芯片上的极小内核，到中等的ARM Cortex-M3/4/7系统，甚至是多核，64位的ARM Cortex-A，MIPS32/64处理器的功能丰富系统
    https://gitee.com/rtthread/rt-thread
 
@@ -35,26 +35,26 @@ TOP 5 FINDINGS (by relevance score)
 KEY STATS
 ------------------------------------------------------------------------
 
-  Active fiches         : 102
+  Active fiches         : 103
   Monitored accounts    : 14
   Edge AI repos         : 31
   Big tech repos (8 orgs): 6
 
   Distribution by domain:
-    - Embedded                 56  (54.9%)
-    - Edge AI                  31  (30.4%)
-    - Robotics                 16  (15.7%)
+    - Embedded                 56  (54.4%)
+    - Edge AI                  31  (30.1%)
+    - Robotics                 17  (16.5%)
     - IoT                       3  (2.9%)
 
   Distribution by type:
-    - Library                  49  (48.0%)
-    - Framework                26  (25.5%)
-    - Tool                      7  (6.9%)
+    - Library                  50  (48.5%)
+    - Framework                26  (25.2%)
+    - Tool                      7  (6.8%)
     - Board Support Package     5  (4.9%)
     - Application               5  (4.9%)
     - RTOS                      4  (3.9%)
 
 ------------------------------------------------------------------------
 See the interactive dashboard: output/dashboard.html
-Rich version                 : output/newsletter_20261116.html
+Rich version                 : output/newsletter_20261123.html
 ------------------------------------------------------------------------

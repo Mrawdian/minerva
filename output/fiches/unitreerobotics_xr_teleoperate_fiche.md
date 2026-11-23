@@ -13,7 +13,7 @@
     <a> English </a> | <a href="README_zh
 **Chinese specificity:** Chinese open-source project
 **Western equivalent:** Not identified
-**Maturity:** Stable (★ 1654, 331 forks, updated 2026-09)
+**Maturity:** Stable (★ 1738, 361 forks, updated 2026-11)
 **Language:** Bilingual CN-EN
 **GitHub:** https://github.com/unitreerobotics/xr_teleoperate
 ---

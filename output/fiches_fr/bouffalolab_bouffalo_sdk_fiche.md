@@ -3,19 +3,20 @@
 **Type :** Framework
 **Domaine :** Embarqué / Edge AI
 **Score de pertinence :** 66/100
-**Problème résolu :** BouffaloSDK is the IOT and MCU software development kit provided by the Bouffalo Lab Team, supports all the series of Bouffalo chips. Also it is the combination of bl_mcu_sdk and bl_iot_sdk 
-**Comment ça marche :** [![License](https://img.shields.io/badge/License-Apache--2.0-brightgreen)](LICENSE)
+**Problème résolu :** BouffaloSDK is the IOT and MCU software development kit provided by the Bouffalo Lab Team, supports all the series of Bouffalo chips. Also it is the combination of bl_mcu_sdk and bl_iot_sdk
+**Comment ça marche :** <div align="center">
 
-[中文版](README_zh.md)
+# Bouffalo SDK
 
-> v2.3.37 uses a compact Git history to reduce `git pull` time; run this command locally to join it with v2.3.36:
->
-> ```bash
-> git replace -f --graft 'v2.3.37-history-base^{}' 'v2.3.36^{}'
-> ``
+**The official IoT and MCU SDK for every Bouffalo Lab RISC-V chip**
+
+Wi-Fi 4 / Wi-Fi 6 · Bluetooth LE · Zigbee · Thread · Matter
+
+[![License](https://img.shields.io/badge/license-Apache--2.0-brightgreen)](LICENSE)
+[![Release](https://img.shields.io/github/v/tag/
 **Spécificité chinoise :** Chinese open-source project
 **Équivalent occidental :** Not identified
-**Maturité :** Stable (★ 507, 184 forks, mis à jour 2026-11)
+**Maturité :** Actif (★ 147, 72 forks, mis à jour 2026-11)
 **Langue :** Bilingue CN-EN
-**GitHub :** https://github.com/bouffalolab/bouffalo_sdk
+**Gitee :** https://gitee.com/bouffalolab/bouffalo_sdk
 ---

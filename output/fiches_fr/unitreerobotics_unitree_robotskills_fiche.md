@@ -1,5 +1,5 @@
 ---
-## unitreerobotics/unitree_robotskills
+## unitreerobotics/unitree_robotskills [MODIFIÉ]
 **Type :** Framework
 **Domaine :** Robotique / Edge AI
 **Score de pertinence :** 66/100
@@ -12,7 +12,7 @@
   <p align="center"><b>Unitree Robots · GPT‑6 Astra · Gen
 **Spécificité chinoise :** Chinese open-source project
 **Équivalent occidental :** Not identified
-**Maturité :** Actif (★ 6, 2 forks, mis à jour 2026-10)
+**Maturité :** Actif (★ 22, 1 forks, mis à jour 2026-11)
 **Langue :** Bilingue CN-EN
 **GitHub :** https://github.com/unitreerobotics/unitree_robotskills
 ---
